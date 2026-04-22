@@ -1,0 +1,29 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+---
+
+<BaseLayout
+  title="About Us"
+  description="Custom Fabric Creations has been St. Petersburg\u2019s premier studio for bespoke window treatments and upholstery since 2000. Locally owned, fully insured, in-house workroom."
+>
+  <Hero
+    eyebrow="Our story"
+    title="Twenty-five years of custom work."
+    subtitle="A St. Pete studio built on precision, patience, and the quiet pride of work done well."
+    variant="linen"
+  />
+  <article class="py-20 md:py-28">
+    <div class="container-narrow prose-cfc">
+      <p class="text-xl text-ink-500 leading-relaxed mb-10">
+        <em>[Placeholder \u2014 port full About copy from the live site.]</em>
+      </p>
+      <h2>Our craft</h2>
+      <p>Custom Fabric Creations has been serving Pinellas County since 2000. Every project begins with an in-home consultation and ends with a white-glove installation by our own team.</p>
+      <h2>Our workroom</h2>
+      <p>Unlike retailers who outsource sewing to third parties, every drapery panel, cornice, cushion, and headboard is cut and sewn in our St. Petersburg workroom.</p>
+    </div>
+  </article>
+  <FinalCTA />
+</BaseLayout>

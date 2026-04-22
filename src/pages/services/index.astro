@@ -1,0 +1,21 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import ServiceGrid from '~/components/ServiceGrid.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+---
+
+<BaseLayout
+  title="Our Services"
+  description="Custom drapery, plantation shutters, shades, blinds, cornices, reupholstery, and more \u2014 all crafted in our St. Petersburg workroom."
+>
+  <Hero
+    eyebrow="A full studio of services"
+    title="Custom window treatments, upholstery, and more."
+    subtitle="Every service is measured, crafted, and installed by our own team. No middlemen. No outsourced workrooms."
+    variant="linen"
+    primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
+  />
+  <ServiceGrid heading="All services" eyebrow="Explore" />
+  <FinalCTA />
+</BaseLayout>

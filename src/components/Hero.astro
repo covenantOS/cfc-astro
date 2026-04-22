@@ -1,0 +1,69 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  image?: string;
+  imageAlt?: string;
+  primaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+  variant?: 'image' | 'linen';
+}
+
+const {
+  eyebrow,
+  title,
+  subtitle,
+  image,
+  imageAlt = '',
+  primaryCta,
+  secondaryCta,
+  variant = 'image',
+} = Astro.props;
+---
+
+<section class:list={['relative overflow-hidden', variant === 'linen' && 'bg-linen']}>
+  {variant === 'image' && image && (
+    <div class="absolute inset-0">
+      <img
+        src={image}
+        alt={imageAlt}
+        class="w-full h-full object-cover"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-ink-900/55 via-ink-900/45 to-ink-900/70"></div>
+    </div>
+  )}
+
+  <div class="relative container-site py-24 md:py-36 lg:py-44 max-w-4xl">
+    {eyebrow && (
+      <p class:list={[
+        'eyebrow',
+        variant === 'image' ? 'text-brand-300' : 'text-brand-600',
+      ]}>{eyebrow}</p>
+    )}
+    <h1 class:list={[
+      'font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05]',
+      variant === 'image' ? 'text-white' : 'text-ink-800',
+    ]}>
+      {title}
+    </h1>
+    {subtitle && (
+      <p class:list={[
+        'mt-6 text-lg md:text-xl max-w-2xl leading-relaxed',
+        variant === 'image' ? 'text-white/90' : 'text-ink-600',
+      ]}>{subtitle}</p>
+    )}
+    {(primaryCta || secondaryCta) && (
+      <div class="mt-10 flex flex-wrap gap-4">
+        {primaryCta && <a href={primaryCta.href} class="btn-primary btn-lg">{primaryCta.label}</a>}
+        {secondaryCta && (
+          <a
+            href={secondaryCta.href}
+            class:list={[variant === 'image' ? 'btn-outline btn-lg' : 'btn-ghost btn-lg']}
+          >{secondaryCta.label}</a>
+        )}
+      </div>
+    )}
+  </div>
+</section>

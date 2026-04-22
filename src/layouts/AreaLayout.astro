@@ -1,0 +1,45 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import ServiceGrid from '~/components/ServiceGrid.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  areaName: string;
+  heroImage?: string;
+  heroSubtitle?: string;
+}
+
+const {
+  title,
+  description,
+  areaName,
+  heroImage,
+  heroSubtitle,
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Hero
+    eyebrow="Serving your neighborhood"
+    title={`Custom Window Treatments & Upholstery in ${areaName}`}
+    subtitle={heroSubtitle ?? `Bespoke drapery, shutters, shades, and reupholstery for ${areaName} homes. In-home consultations included.`}
+    image={heroImage}
+    variant={heroImage ? 'image' : 'linen'}
+    primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
+    secondaryCta={{ label: 'Explore Services', href: '/services/' }}
+  />
+  <article class="py-20 md:py-28">
+    <div class="container-narrow prose-cfc">
+      <slot />
+    </div>
+  </article>
+  <ServiceGrid
+    eyebrow="What we offer"
+    heading={`Services available in ${areaName}`}
+    limit={6}
+  />
+  <FinalCTA />
+</BaseLayout>

@@ -1,0 +1,110 @@
+---
+import { NAV, SITE } from '~/lib/site';
+
+const { pathname } = Astro.url;
+const isActive = (href: string) => pathname === href || (href !== '/' && pathname.startsWith(href));
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div class="container-site flex items-center justify-between h-20 gap-8">
+    <a href="/" class="flex items-center gap-3 shrink-0" aria-label={SITE.name}>
+      <span class="font-display text-xl md:text-2xl text-ink-800 tracking-tight leading-none">
+        Custom Fabric<br class="hidden sm:block"/>
+        <span class="text-brand-600">Creations</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8" aria-label="Primary">
+      {NAV.map((item) => (
+        item.children ? (
+          <div class="relative group">
+            <a
+              href={item.href}
+              class:list={[
+                'text-sm font-semibold tracking-wide uppercase transition',
+                isActive(item.href) ? 'text-brand-600' : 'text-ink-700 hover:text-brand-600',
+              ]}
+              style="letter-spacing: 0.08em;"
+            >
+              {item.label}
+            </a>
+            <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
+              <div class="bg-white shadow-soft border border-line rounded-sm py-3 min-w-[260px]">
+                {item.children.map((child) => (
+                  <a
+                    href={child.href}
+                    class="block px-5 py-2 text-sm text-ink-600 hover:bg-cream-50 hover:text-brand-700 transition"
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <a
+            href={item.href}
+            class:list={[
+              'text-sm font-semibold tracking-wide uppercase transition',
+              isActive(item.href) ? 'text-brand-600' : 'text-ink-700 hover:text-brand-600',
+            ]}
+            style="letter-spacing: 0.08em;"
+          >
+            {item.label}
+          </a>
+        )
+      ))}
+    </nav>
+
+    <div class="hidden md:flex items-center gap-4 shrink-0">
+      <a href={SITE.phoneHref} class="text-sm font-semibold text-ink-700 hover:text-brand-600">
+        {SITE.phone}
+      </a>
+      <a href="/contact/" class="btn-primary">
+        Schedule Consultation
+      </a>
+    </div>
+
+    <button
+      id="mobile-nav-toggle"
+      class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-line"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-nav" class="lg:hidden hidden border-t border-line bg-white">
+    <nav class="container-site py-4 flex flex-col" aria-label="Mobile">
+      {NAV.flatMap((item) =>
+        item.children
+          ? [
+              <div class="py-2 font-semibold text-sm uppercase tracking-wide text-ink-800" style="letter-spacing: 0.08em;">{item.label}</div>,
+              ...item.children.map((c) => (
+                <a href={c.href} class="pl-4 py-2 text-ink-600 hover:text-brand-700">{c.label}</a>
+              )),
+            ]
+          : [
+              <a href={item.href} class="py-2 font-semibold text-sm uppercase tracking-wide text-ink-800 hover:text-brand-600" style="letter-spacing: 0.08em;">{item.label}</a>,
+            ]
+      )}
+      <a href="/contact/" class="btn-primary mt-4">Schedule Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('mobile-nav-toggle');
+  const panel = document.getElementById('mobile-nav');
+  toggle?.addEventListener('click', () => {
+    const isOpen = panel?.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>

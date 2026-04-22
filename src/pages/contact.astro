@@ -1,0 +1,65 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import { SITE } from '~/lib/site';
+---
+
+<BaseLayout
+  title="Contact Us"
+  description="Schedule a complimentary in-home consultation with Custom Fabric Creations. Serving St. Petersburg and Pinellas County. Call (727) 240-4512."
+>
+  <Hero
+    eyebrow="Let\u2019s begin"
+    title="Schedule your consultation."
+    subtitle="Tell us about your space. We\u2019ll bring the showroom to you \u2014 fabrics, finishes, and hardware, all in your home, with natural light."
+    variant="linen"
+  />
+
+  <section class="py-20 md:py-28">
+    <div class="container-site grid gap-14 lg:grid-cols-2">
+      <div>
+        <h2 class="font-display text-3xl md:text-4xl title-rule-left">Get in touch</h2>
+        <div class="mt-8 space-y-6 text-ink-600">
+          <div>
+            <p class="eyebrow">Phone</p>
+            <a href={SITE.phoneHref} class="font-display text-3xl text-ink-800 hover:text-brand-700">{SITE.phone}</a>
+          </div>
+          <div>
+            <p class="eyebrow">Email</p>
+            <a href={`mailto:${SITE.email}`} class="text-lg text-ink-700 hover:text-brand-700">{SITE.email}</a>
+          </div>
+          <div>
+            <p class="eyebrow">Hours</p>
+            <p class="text-lg">{SITE.hours}</p>
+          </div>
+          <div>
+            <p class="eyebrow">Area</p>
+            <p class="text-lg">St. Petersburg & Pinellas County</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="bg-cream p-10 rounded-sm border border-line" method="POST" action="/thank-you/">
+        <div class="grid gap-5">
+          <div>
+            <label for="name" class="block text-sm font-semibold text-ink-700 mb-2">Name</label>
+            <input id="name" name="name" required type="text" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-semibold text-ink-700 mb-2">Email</label>
+            <input id="email" name="email" required type="email" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-semibold text-ink-700 mb-2">Phone</label>
+            <input id="phone" name="phone" type="tel" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-semibold text-ink-700 mb-2">Tell us about your project</label>
+            <textarea id="message" name="message" rows="5" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500"></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-lg w-full mt-2">Request Consultation</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

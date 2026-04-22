@@ -1,0 +1,21 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import AreaGrid from '~/components/AreaGrid.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+---
+
+<BaseLayout
+  title="Service Areas"
+  description="Custom Fabric Creations serves St. Petersburg, Clearwater, and the surrounding Pinellas County neighborhoods. In-home consultations always included."
+>
+  <Hero
+    eyebrow="Serving the St. Pete coast"
+    title="Where we work."
+    subtitle="From historic Old Northeast to Tierra Verde and the barrier islands, we bring the studio to your door."
+    variant="linen"
+    primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
+  />
+  <AreaGrid heading="All neighborhoods" eyebrow="Explore" />
+  <FinalCTA />
+</BaseLayout>

@@ -1,0 +1,49 @@
+---
+import AreaLayout from '~/layouts/AreaLayout.astro';
+import { AREAS } from '~/lib/site';
+
+export function getStaticPaths() {
+  return AREAS.map((area) => ({
+    params: { slug: area.slug },
+    props: { area },
+  }));
+}
+
+const { area } = Astro.props;
+
+const INTROS: Record<string, string> = {
+  'st-petersburg': 'From Beach Drive condos to Snell Isle estates, our St. Pete studio has dressed windows and reupholstered furniture across every corner of the city for 25 years.',
+  'downtown-st-pete': 'Custom treatments for Beach Drive, the 400 block, Sundial, and the downtown high-rises \u2014 with sensitivity to hurricane-glass and HOA requirements.',
+  'old-northeast': 'The Historic Old Northeast deserves window treatments that honor its bungalows, Mediterranean revivals, and craftsman architecture.',
+  'snell-isle': 'Estate-scale drapery, shutters, and upholstery for Snell Isle\u2019s waterfront homes.',
+  'shore-acres': 'Practical elegance for Shore Acres \u2014 waterfront-friendly fabrics, hurricane-aware installation, family-durable finishes.',
+  'west-st-pete': 'West St. Pete homes \u2014 from Central Ave bungalows to newer builds \u2014 get the same studio craftsmanship and white-glove service.',
+  'tierra-verde': 'Tierra Verde waterfront homes demand Florida-tough fabrics, UV-resistant shades, and exterior treatments built for the elements.',
+  'st-pete-beach': 'St. Pete Beach condos and homes \u2014 sun-durable shades, salt-air-ready hardware, resort-level finish.',
+  'treasure-island': 'From beach bungalows to high-rise condos, Treasure Island homes get custom treatments sized for the sun and the view.',
+  'clearwater': 'Clearwater estates and Island Estates homes \u2014 bespoke window fashions and reupholstery with full in-home service.',
+  'sand-key': 'Sand Key condos get treatments engineered for floor-to-ceiling glass, salt air, and direct sun exposure.',
+  'belleair-shore': 'Belleair Shore\u2019s private homes deserve designer-quality drapery and upholstery. We come to you.',
+  'seminole': 'Seminole families get bespoke treatments that fit modern construction, preserve view lines, and last for decades.',
+  'largo': 'Largo homeowners get the same studio craftsmanship \u2014 precision measurement, in-house sewing, installation by our own team.',
+};
+
+const intro = INTROS[area.slug] ?? `Custom window treatments and bespoke upholstery for ${area.title} homes.`;
+---
+
+<AreaLayout
+  title={`${area.title} Window Treatments & Upholstery`}
+  description={intro}
+  areaName={area.title}
+  heroSubtitle={intro}
+>
+  <p class="text-xl text-ink-500 leading-relaxed mb-10">
+    <em>[Placeholder \u2014 port full area copy from the live site.]</em>
+  </p>
+  <h2>Serving {area.title}</h2>
+  <p>We\u2019ve served {area.title} homeowners, designers, and commercial properties since 2000. Every project begins with an in-home consultation \u2014 we bring fabric samples, finish chips, and hardware options to your space.</p>
+  <h2>Local craftsmanship</h2>
+  <p>Unlike national retailers, every piece is cut and sewn in our St. Petersburg workroom. Installation is done by our team \u2014 never a subcontractor.</p>
+  <h2>Schedule a consultation</h2>
+  <p>Call <a href="tel:+17272404512">(727) 240-4512</a> or <a href="/contact/">request a consultation online</a>.</p>
+</AreaLayout>

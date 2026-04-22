@@ -1,0 +1,41 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  eyebrow?: string;
+  heroImage?: string;
+  heroTitle?: string;
+  heroSubtitle?: string;
+}
+
+const {
+  title,
+  description,
+  eyebrow = 'Bespoke service',
+  heroImage,
+  heroTitle,
+  heroSubtitle,
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <Hero
+    eyebrow={eyebrow}
+    title={heroTitle ?? title}
+    subtitle={heroSubtitle}
+    image={heroImage}
+    variant={heroImage ? 'image' : 'linen'}
+    primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
+    secondaryCta={{ label: 'View Gallery', href: '/gallery/' }}
+  />
+  <article class="py-20 md:py-28">
+    <div class="container-narrow prose-cfc">
+      <slot />
+    </div>
+  </article>
+  <FinalCTA />
+</BaseLayout>

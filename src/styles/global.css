@@ -1,0 +1,141 @@
+@import "@fontsource-variable/montserrat";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "tailwindcss";
+
+@theme {
+  /* Custom Fabric Creations — bespoke window treatments & upholstery.
+     Palette pulled from the live site: warm gold + ivory cream + charcoal.
+     Positioned for a refined luxury feel. */
+
+  --color-brand-50:  #faf6ec;
+  --color-brand-100: #f3ead0;
+  --color-brand-200: #e7d6a3;
+  --color-brand-300: #d8bf73;
+  --color-brand-400: #caad55;
+  --color-brand-500: #bca050;  /* primary — brass/gold */
+  --color-brand-600: #a28641;
+  --color-brand-700: #826a35;
+  --color-brand-800: #625030;
+  --color-brand-900: #4a3c24;
+
+  --color-cream-50:  #fefcf3;
+  --color-cream-100: #fcf7e3;  /* secondary — ivory */
+  --color-cream-200: #f8efc9;
+  --color-cream-300: #f0e3a2;
+
+  --color-ink-50:   #f5f5f5;
+  --color-ink-100:  #e5e5e5;
+  --color-ink-200:  #c7c7c7;
+  --color-ink-300:  #a8a8a8;
+  --color-ink-400:  #6b6b6b;
+  --color-ink-500:  #4a4a4a;
+  --color-ink-600:  #3a3a3a;
+  --color-ink-700:  #333333;  /* neutral — charcoal body text */
+  --color-ink-800:  #222222;
+  --color-ink-900:  #121212;
+
+  --color-ink:      #333333;
+  --color-ink-soft: #4a4a4a;
+  --color-muted:    #6b6b6b;
+  --color-line:     #e8dfc6;
+  --color-surface:  #fcf7e3;
+  --color-surface-2:#f8efc9;
+
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-body:    "Montserrat Variable", "Montserrat", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-lg: 10px;
+  --shadow-soft: 0 20px 40px -16px rgb(34 34 34 / 0.18);
+  --shadow-card: 0 6px 18px -6px rgb(34 34 34 / 0.12);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    color: var(--color-ink-800);
+    font-weight: 600;
+  }
+  h1 { line-height: 1.08; }
+  h2 { line-height: 1.15; }
+  h3 { line-height: 1.25; font-weight: 500; }
+}
+
+.container-site { @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8; }
+.container-narrow { @apply mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8; }
+
+/* Soft linen/paper texture — subtle, on-brand for a fabric studio */
+.bg-cream {
+  background-color: var(--color-cream-100);
+}
+.bg-linen {
+  background-color: #fcf7e3;
+  background-image:
+    radial-gradient(1200px 360px at 50% 0%, rgba(188,160,80,0.08), transparent 65%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23e8dfc6' stroke-width='.6' opacity='.55'%3E%3Cpath d='M0 0 L160 160'/%3E%3Cpath d='M0 40 L120 160'/%3E%3Cpath d='M40 0 L160 120'/%3E%3Cpath d='M0 80 L80 160'/%3E%3Cpath d='M80 0 L160 80'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Prose — body copy styling for page builder content */
+.prose-cfc p { @apply text-ink-600 leading-relaxed text-[1.0625rem]; }
+.prose-cfc h2 { @apply text-3xl md:text-4xl lg:text-5xl mt-14 mb-5; }
+.prose-cfc h3 { @apply text-xl md:text-2xl mt-10 mb-3; }
+.prose-cfc ul { @apply list-disc pl-5 space-y-2 text-ink-600; }
+.prose-cfc a { @apply text-brand-700 underline underline-offset-4 decoration-brand-300 hover:decoration-brand-600; }
+.prose-cfc strong { @apply text-ink-800 font-semibold; }
+.prose-cfc blockquote {
+  @apply border-l-2 border-brand-500 pl-6 italic text-ink-500 my-8;
+  font-family: var(--font-display);
+}
+
+/* Buttons — luxury refined: solid gold primary, ghost-outline secondary */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-sm bg-brand-500 hover:bg-brand-600 text-white font-semibold px-7 py-3.5 tracking-wide uppercase text-sm shadow-sm transition;
+  letter-spacing: 0.08em;
+}
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-sm border border-white/80 bg-transparent hover:bg-white hover:text-ink-800 text-white font-semibold px-7 py-3.5 tracking-wide uppercase text-sm transition;
+  letter-spacing: 0.08em;
+}
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 rounded-sm border border-brand-500 text-brand-700 hover:bg-brand-50 font-semibold px-7 py-3.5 tracking-wide uppercase text-sm transition;
+  letter-spacing: 0.08em;
+}
+.btn-lg { @apply px-8 py-4 text-sm; }
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:shadow;
+}
+
+/* Eyebrow label — small caps above section titles */
+.eyebrow {
+  @apply inline-block text-xs tracking-[0.25em] uppercase text-brand-600 font-semibold mb-3;
+}
+
+/* Decorative hairline under section titles */
+.title-rule::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: var(--color-brand-500);
+  margin: 18px auto 0;
+}
+.title-rule-left::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: var(--color-brand-500);
+  margin: 18px 0 0;
+}

@@ -1,0 +1,62 @@
+---
+import { SITE, SERVICES, AREAS } from '~/lib/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ink-800 text-ink-100 mt-20">
+  <div class="container-site py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <div class="font-display text-2xl text-white leading-tight mb-4">
+        Custom Fabric<br/><span class="text-brand-400">Creations</span>
+      </div>
+      <p class="text-sm text-ink-200 leading-relaxed mb-6">
+        St. Petersburg\u2019s premier studio for bespoke window treatments and custom upholstery.
+        Locally owned since {SITE.established}.
+      </p>
+      <div class="space-y-2 text-sm">
+        <a href={SITE.phoneHref} class="block text-white font-semibold hover:text-brand-300">{SITE.phone}</a>
+        <a href={`mailto:${SITE.email}`} class="block text-ink-200 hover:text-brand-300">{SITE.email}</a>
+        <p class="text-ink-300">{SITE.address.locality}, {SITE.address.region}</p>
+        <p class="text-ink-300">{SITE.hours}</p>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="text-white font-semibold uppercase text-xs tracking-[0.2em] mb-5">Services</h4>
+      <ul class="space-y-2 text-sm">
+        {SERVICES.slice(0, 8).map((s) => (
+          <li><a href={`/services/${s.slug}/`} class="text-ink-200 hover:text-brand-300">{s.title}</a></li>
+        ))}
+        <li><a href="/services/" class="text-brand-400 font-semibold hover:text-brand-300">All services &rarr;</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white font-semibold uppercase text-xs tracking-[0.2em] mb-5">Service Areas</h4>
+      <ul class="space-y-2 text-sm">
+        {AREAS.slice(0, 8).map((a) => (
+          <li><a href={`/areas/${a.slug}/`} class="text-ink-200 hover:text-brand-300">{a.title}</a></li>
+        ))}
+        <li><a href="/areas/" class="text-brand-400 font-semibold hover:text-brand-300">All areas &rarr;</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white font-semibold uppercase text-xs tracking-[0.2em] mb-5">Company</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/about/" class="text-ink-200 hover:text-brand-300">About</a></li>
+        <li><a href="/brands/" class="text-ink-200 hover:text-brand-300">Brands</a></li>
+        <li><a href="/gallery/" class="text-ink-200 hover:text-brand-300">Gallery</a></li>
+        <li><a href="/contact/" class="text-ink-200 hover:text-brand-300">Contact</a></li>
+      </ul>
+      <a href="/contact/" class="btn-primary mt-6">Schedule Consultation</a>
+    </div>
+  </div>
+
+  <div class="border-t border-ink-700">
+    <div class="container-site py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-ink-300">
+      <p>&copy; {year} {SITE.name}. All rights reserved.</p>
+      <p>Bespoke window treatments \u00b7 Custom upholstery \u00b7 Pinellas County, Florida</p>
+    </div>
+  </div>
+</footer>

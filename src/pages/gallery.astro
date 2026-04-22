@@ -1,0 +1,32 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+---
+
+<BaseLayout
+  title="Gallery"
+  description="Browse recent installations from Custom Fabric Creations \u2014 custom drapery, plantation shutters, shades, and bespoke upholstery across St. Petersburg, FL."
+>
+  <Hero
+    eyebrow="Selected work"
+    title="Our work, in place."
+    subtitle="A look inside recent installations across St. Petersburg, Snell Isle, Tierra Verde, and the coast."
+    variant="linen"
+  />
+
+  <section class="py-20 md:py-28">
+    <div class="container-site">
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {Array.from({ length: 9 }).map((_, i) => (
+          <div class="aspect-[4/5] bg-cream border border-line rounded-sm flex items-center justify-center text-ink-300 font-display text-xl">
+            Photo {i + 1}
+          </div>
+        ))}
+      </div>
+      <p class="mt-10 text-center text-ink-400 italic">[Placeholder \u2014 gallery images to be added.]</p>
+    </div>
+  </section>
+
+  <FinalCTA />
+</BaseLayout>

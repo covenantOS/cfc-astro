@@ -1,0 +1,52 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import ServiceGrid from '~/components/ServiceGrid.astro';
+import AreaGrid from '~/components/AreaGrid.astro';
+import FeatureBand from '~/components/FeatureBand.astro';
+import BrandBand from '~/components/BrandBand.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import { SITE } from '~/lib/site';
+---
+
+<BaseLayout
+  title={SITE.name}
+  description="St. Petersburg\u2019s premier studio for custom window treatments, drapery, plantation shutters, shades, and bespoke upholstery. Established 2000. Free in-home consultations."
+>
+  <Hero
+    eyebrow="St. Petersburg\u2019s premier design studio"
+    title="Bespoke Window Treatments & Custom Upholstery"
+    subtitle="For 25 years, Custom Fabric Creations has crafted refined window fashions and upholstery for the most discerning homes across the St. Pete coast."
+    image="/images/hero-placeholder.jpg"
+    primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
+    secondaryCta={{ label: 'View Our Work', href: '/gallery/' }}
+  />
+
+  <FeatureBand
+    eyebrow="Why Custom Fabric Creations"
+    heading="Studio craftsmanship. White-glove delivery."
+    features={[
+      { title: 'In-house workroom', body: 'Every drapery panel, cornice, cushion, and headboard is cut and sewn in our St. Pete workroom.' },
+      { title: 'Precision measurement', body: 'We measure every window and piece of furniture in person. No guesswork, no surprises.' },
+      { title: 'Authorized dealer', body: 'Hunter Douglas, Norman, Graber, Kravet, and Stout \u2014 the brands interior designers trust.' },
+      { title: 'Established 2000', body: '25 years serving Pinellas County homeowners, designers, and commercial clients.' },
+    ]}
+  />
+
+  <ServiceGrid
+    eyebrow="Bespoke for your home"
+    heading="A full studio of services"
+    subtitle="From custom drapery to motorized shades and full-furniture reupholstery, every project is measured, crafted, and installed by our team."
+    limit={9}
+  />
+
+  <BrandBand />
+
+  <AreaGrid
+    eyebrow="Serving the St. Pete coast"
+    heading="Where we work"
+    subtitle="We travel to you. Free in-home consultations across St. Petersburg and the surrounding Pinellas County neighborhoods."
+  />
+
+  <FinalCTA />
+</BaseLayout>

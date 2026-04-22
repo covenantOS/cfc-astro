@@ -1,0 +1,46 @@
+---
+import { SERVICES } from '~/lib/site';
+
+interface Props {
+  heading?: string;
+  eyebrow?: string;
+  subtitle?: string;
+  limit?: number;
+}
+
+const {
+  heading = 'Our Services',
+  eyebrow = 'Bespoke for your home',
+  subtitle,
+  limit,
+} = Astro.props;
+
+const items = limit ? SERVICES.slice(0, limit) : SERVICES;
+---
+
+<section class="py-20 md:py-28">
+  <div class="container-site">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+      <h2 class="font-display text-4xl md:text-5xl title-rule">{heading}</h2>
+      {subtitle && <p class="mt-6 text-ink-500 text-lg leading-relaxed">{subtitle}</p>}
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((s) => (
+        <a
+          href={`/services/${s.slug}/`}
+          class="group block bg-white border border-line rounded-sm p-8 hover:border-brand-500 hover:shadow-card transition"
+        >
+          <h3 class="text-xl text-ink-800 group-hover:text-brand-700 transition">{s.title}</h3>
+          <span class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 tracking-wide uppercase" style="letter-spacing: 0.08em;">
+            Explore
+            <svg class="ml-2 w-4 h-4 transition group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 10h10M11 5l5 5-5 5"/>
+            </svg>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

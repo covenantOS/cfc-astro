@@ -1,0 +1,31 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import { BRANDS } from '~/lib/site';
+---
+
+<BaseLayout
+  title="Brands We Carry"
+  description="Authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout. Premium window treatments and designer fabrics in St. Petersburg, FL."
+>
+  <Hero
+    eyebrow="Authorized dealer"
+    title="The brands designers trust."
+    subtitle="We partner with the world\u2019s most respected window fashion and textile houses \u2014 so you get designer quality, with local craftsmanship and service."
+    variant="linen"
+  />
+
+  <section class="py-20 md:py-28">
+    <div class="container-site grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      {BRANDS.map((b) => (
+        <div class="border border-line bg-white p-10 rounded-sm">
+          <h3 class="font-display text-2xl text-ink-800 mb-4">{b.name}</h3>
+          <p class="text-ink-500 leading-relaxed">[Placeholder description for {b.name}.]</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <FinalCTA />
+</BaseLayout>

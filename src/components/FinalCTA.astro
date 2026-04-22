@@ -1,0 +1,30 @@
+---
+import { SITE } from '~/lib/site';
+
+interface Props {
+  heading?: string;
+  subtitle?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+}
+
+const {
+  heading = 'Ready to reimagine your space?',
+  subtitle = 'Schedule a complimentary in-home consultation. We bring the showroom to you.',
+  primaryLabel = 'Schedule Consultation',
+  primaryHref = '/contact/',
+} = Astro.props;
+---
+
+<section class="relative py-24 md:py-32 bg-ink-800 text-white overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 30% 30%, var(--color-brand-500) 0%, transparent 50%), radial-gradient(circle at 70% 70%, var(--color-brand-400) 0%, transparent 50%);"></div>
+  <div class="relative container-narrow text-center">
+    <p class="eyebrow text-brand-400">Your consultation awaits</p>
+    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl leading-tight text-white">{heading}</h2>
+    <p class="mt-6 text-lg text-white/85 leading-relaxed max-w-xl mx-auto">{subtitle}</p>
+    <div class="mt-10 flex flex-wrap gap-4 justify-center">
+      <a href={primaryHref} class="btn-primary btn-lg">{primaryLabel}</a>
+      <a href={SITE.phoneHref} class="btn-outline btn-lg">{SITE.phone}</a>
+    </div>
+  </div>
+</section>
