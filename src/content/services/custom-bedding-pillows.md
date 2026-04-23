@@ -67,8 +67,6 @@ Pasco County: Wesley Chapel, Zephyrhills, Land O' Lakes, Trinity
 
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 
-Pinellas County: St. Petersburg, Belleview, Dunnellon
-
 ## Have a bedding problem? Let's solve it.
 
 Call (727) 240-4512 or request your free in-home consultation.

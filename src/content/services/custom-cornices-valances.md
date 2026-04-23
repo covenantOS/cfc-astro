@@ -66,8 +66,6 @@ Pasco County: Wesley Chapel, Zephyrhills, Land O' Lakes, Trinity
 
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 
-Pinellas County: St. Petersburg, Belleview, Dunnellon
-
 Not in one of these areas? Call us — if we can help, we will.
 
 ## Ready to finish the look of your windows?

@@ -60,8 +60,6 @@ Pasco County: Wesley Chapel, Zephyrhills, Land O' Lakes, Trinity
 
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 
-Pinellas County: St. Petersburg, Belleview, Dunnellon
-
 Not in one of these areas? Call us anyway — if we can help, we'll tell you.
 
 ## Ready to make your home feel more like you?

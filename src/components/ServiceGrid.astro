@@ -6,6 +6,7 @@ interface Props {
   eyebrow?: string;
   subtitle?: string;
   limit?: number;
+  slugs?: readonly string[];
 }
 
 const {
@@ -13,9 +14,14 @@ const {
   eyebrow = 'Premium Interior Solutions',
   subtitle = 'We deliver flawless window styling and custom furniture restoration across St. Pete and the Pinellas coast. Backed by over 25 years of precision craftsmanship and trusted by hundreds of local homeowners.',
   limit,
+  slugs,
 } = Astro.props;
 
-const items = limit ? SERVICES.slice(0, limit) : SERVICES;
+const items = slugs
+  ? slugs.map((slug) => SERVICES.find((s) => s.slug === slug)).filter((s): s is (typeof SERVICES)[number] => !!s)
+  : limit
+    ? SERVICES.slice(0, limit)
+    : SERVICES;
 
 const SERVICE_BLURBS: Record<string, string> = {
   'custom-draperies-curtains': 'Transform your space with tailored fabric window coverings. We source exclusive textiles from Kravet and Stout ensuring a perfect color match for your interiors. Our team measures your windows and installs premium hardware for a seamless finish.',

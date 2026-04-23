@@ -90,9 +90,9 @@ What "authorized" means for you: full manufacturer warranty honored, access to e
 
 ![Bottom Middle](/images/services/plantation-shutters/bottom-middle.webp)
 
-## Our In-House Workroom: Since 2007
+## Our In-House Workroom: Since 2000
 
-This is the piece no other St. Pete competitor can match: we've run our own fabric and fabrication workroom on-site since 2007. Custom cornices, valances, drapery, bedding, and shutter finishing all happen under the same roof as our design studio.
+This is the piece no other St. Pete competitor can match: we've run our own fabric and fabrication workroom on-site since 2000. Custom cornices, valances, drapery, bedding, and shutter finishing all happen under the same roof as our design studio.
 
 What that means for your plantation shutter order:
 
@@ -104,7 +104,7 @@ Accountability. If anything needs correction post-install, it goes back to our w
 
 Design continuity. Plantation shutters this year, custom drapery next year, your designer already has your window measurements, trim color, and lighting notes on file.
 
-Since 2007, nearly two decades, one family business, one workroom, one phone number.
+Since 2000, nearly two decades, one family business, one workroom, one phone number.
 
 ## Custom Shutters vs. Retail Shutters What's the Actual Difference
 

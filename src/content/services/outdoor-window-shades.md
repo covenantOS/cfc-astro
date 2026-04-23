@@ -63,8 +63,6 @@ Pasco County: Wesley Chapel, Zephyrhills, Land O' Lakes, Trinity
 
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 
-Pinellas County: St. Petersburg, Belleview, Dunnellon
-
 ## Ready to actually use your porch?
 
 Call (727) 240-4512 or request your free on-site consultation.

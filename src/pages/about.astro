@@ -7,7 +7,35 @@ import CoreValues from '~/components/CoreValues.astro';
 import ImageCTA from '~/components/ImageCTA.astro';
 import BrandStrip from '~/components/BrandStrip.astro';
 import ReviewSection from '~/components/ReviewSection.astro';
+import FAQ from '~/components/FAQ.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
+
+const ABOUT_FAQS = [
+  {
+    q: 'Can I visit your workroom to see fabrics?',
+    a: 'Our working studio in St. Petersburg is available by appointment. We prefer bringing our curated fabric library to your home so you can evaluate samples in your actual lighting — but if you want to see the workroom, call and we will schedule a visit.',
+  },
+  {
+    q: 'Do you provide a warranty on your window treatments?',
+    a: 'Yes. Every product we install is covered by the manufacturer warranty from our authorized brand partners (Hunter Douglas, Norman, Graber, Kravet, Stout), and our workmanship on custom drapery, upholstery, and installation is backed by our own guarantee. We stand behind what leaves our workroom.',
+  },
+  {
+    q: 'Do you provide interior styling advice during the consultation?',
+    a: 'Yes. Your in-home consultation includes design direction for your space — fabric coordination, hardware selection, layering soft treatments with shutters or shades, and how the window treatments relate to the rest of the room. Twenty-five years of design work comes with every appointment.',
+  },
+  {
+    q: 'Are you fully insured and locally owned?',
+    a: 'Yes to both. We are a locally owned St. Petersburg studio, fully insured for residential and commercial work, and our installation crew is in-house — never a subcontractor.',
+  },
+];
+
+const EXPERTISE_CARDS = [
+  { title: 'Over 25 Years of Experience', body: 'Established 2000. Two and a half decades of custom window treatments and upholstery across Pinellas County.' },
+  { title: 'Flawless 5-Star Google Rating', body: 'Hundreds of verified Google reviews, every one earned project by project.' },
+  { title: 'Hundreds of Completed Projects', body: 'From historic Old Northeast bungalows to Snell Isle waterfront homes, our portfolio covers the full range of St. Pete interiors.' },
+  { title: 'Fully Insured Installation Team', body: 'Our own in-house installers — never subcontracted — treat your property with complete respect.' },
+  { title: 'Authorized Elite Brand Dealer', body: 'Direct dealer partnerships with Hunter Douglas, Norman, Graber, Kravet, and Stout give you access to the industry\u2019s top materials and warranties.' },
+];
 ---
 
 <BaseLayout
@@ -36,11 +64,45 @@ import FinalCTA from '~/components/FinalCTA.astro';
     cta={{ label: 'Learn More About Us', href: '/about/#meet-owner' }}
   />
 
+  <!-- Craftsmanship / Precision Tailoring section (replacing old-WP "Craftsmanship" block) -->
+  <section class="py-20 md:py-24 bg-cream-50">
+    <div class="container-site max-w-5xl mx-auto text-center">
+      <p class="eyebrow" style="letter-spacing: 0.3em;">Craftsmanship</p>
+      <h2 class="font-display text-4xl md:text-5xl text-ink-800 leading-tight mb-6">Precision Tailoring and Technical Expertise</h2>
+      <p class="text-ink-500 text-lg leading-relaxed max-w-3xl mx-auto">
+        Bespoke window treatments, premium plantation shutters, and master upholstery built in our St. Pete workroom. Every piece is measured on-site, tailored by hand, and installed by our own team — never a subcontractor.
+      </p>
+    </div>
+  </section>
+
   <!-- Meet The Owner (Terry Popick) -->
   <section id="meet-owner"></section>
   <MeetTheOwner
     image="/images/services/custom-draperies-curtains/top.webp"
   />
+
+  <!-- Proven Industry Expertise — 5 trust signals from old WP site -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="container-site max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="eyebrow" style="letter-spacing: 0.3em;">Why Choose Custom Fabric Creations</p>
+        <h2 class="font-display text-4xl md:text-5xl text-ink-800">Proven Industry Expertise</h2>
+      </div>
+      <ul class="grid gap-5 md:grid-cols-2">
+        {EXPERTISE_CARDS.map((c) => (
+          <li class="flex gap-4 bg-cream-50 border border-line p-6 rounded-sm">
+            <span class="shrink-0 w-9 h-9 rounded-full bg-brand-500 text-white flex items-center justify-center">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            </span>
+            <div>
+              <h3 class="font-display text-lg md:text-xl text-ink-800 mb-1">{c.title}</h3>
+              <p class="text-ink-500 text-sm leading-relaxed">{c.body}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
 
   <!-- Our Core Values — 4 cards per mockup -->
   <CoreValues />
@@ -53,6 +115,13 @@ import FinalCTA from '~/components/FinalCTA.astro';
   />
 
   <BrandStrip showBend={false} />
+
+  <FAQ
+    heading="About Our Studio"
+    subtitle="Questions clients commonly ask before their first consultation."
+    eyebrow="Frequently Asked Questions"
+    items={ABOUT_FAQS}
+  />
 
   <ReviewSection />
 
