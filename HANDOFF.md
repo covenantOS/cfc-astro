@@ -1,40 +1,38 @@
 # CFC Astro — Project Handoff
 
 **Last updated:** 2026-04-22
-**Outgoing operator:** Claude (Opus 4.7) working with Daniel
+**Outgoing operator:** Claude (Opus 4.7)
 **Incoming operator:** Open Claw
 
-This doc is the single source of truth for picking up the Custom Fabric Creations (CFC) migration + SEO engagement without re-reading every conversation. Read this top to bottom before touching anything.
+Pickup doc for the Custom Fabric Creations (CFC) Astro rebuild. **This is a 1:1 port of the live WP site** — don't invent work, read the code to see current state.
+
+> ⚠️ **Don't trust the "open threads" list** of a prior handoff over what the code actually shows. If you think something is unfinished, grep first. Example: Ocala/Central-FL rewrites are already done.
 
 ---
 
 ## 1. What this project is
 
-CFC is **Custom Fabric Creations** — a custom window treatments + upholstery studio that moved its base from Ocala to St. Petersburg, FL. Daniel is the operator driving SEO. Two parallel workstreams:
+CFC is **Custom Fabric Creations** — a custom window treatments + upholstery studio in St. Petersburg, FL. Two workstreams:
 
-1. **Live WordPress site** — `https://www.customfabriccreations.net` on WP + Bricks Builder. Ongoing on-page SEO: content rewrites, schema, internal linking, NAP updates.
-2. **Astro rebuild** (this repo) — 1:1 port of the WP site onto Astro 6 + Tailwind v4, destined for Cloudflare Pages. The rebuild is the long-term home. WP is currently live.
+1. **Live WordPress site** — `https://www.customfabriccreations.net` on WP + Bricks Builder. Ongoing on-page SEO via Python scripts in `_wp-tools/`.
+2. **Astro rebuild** (this repo) — **1:1 port** of the WP site onto Astro 6 + Tailwind v4, destined for Cloudflare Pages. Match what's live; don't redesign.
 
-**Client business facts:**
-- Established 2000 (25+ years), locally owned, in-house workroom, fully insured
+**Single source of truth for facts:** [`src/lib/site.ts`](src/lib/site.ts) — SITE constants, NAV, 12 SERVICES, 14 AREAS, 5 BRANDS. Pull from there, don't duplicate here.
+
+Known live-WP facts (match these when building):
 - Main phone: **(727) 240-4512** (sitewide footer)
-- West St. Pete location (confirmed NAP): **3026 Central Ave Suite 551, St. Petersburg FL 33712 / (352) 266-1262**
-- Main office address TBD (phone inconsistency will drag GBP NAP until resolved — flag it, don't auto-unify)
-- Correct geo for schema: **27.7676, -82.6403**
-- Service area (14 neighborhoods): St. Petersburg, Downtown St. Pete, Old Northeast, Snell Isle, Shore Acres, West St. Pete, Tierra Verde, St. Pete Beach, Treasure Island, Clearwater, Sand Key, Belleair Shore, Seminole, Largo
-- Brands carried: Hunter Douglas, Norman, Graber, Kravet, Stout
+- West St. Pete NAP: **3026 Central Ave Suite 551, St. Petersburg FL 33712 / (352) 266-1262**
+- Schema geo: **27.7676, -82.6403**
 
 ---
 
-## 2. Daniel — how to work with him
+## 2. Working style
 
-- Wants **fast, practical execution** — less theory, more "here's what I'm doing next"
-- Comfortable with SEO concepts (KD, SERP, E-E-A-T) — don't over-explain fundamentals
-- Prefers we set up tooling (MCPs, API access) rather than hand-run repeat tasks
-- Lead with **what I'm pushing now** (code, Bricks REST, DataForSEO pulls) vs. what he has to do manually (GBP, review requests, indexing submission)
-- **Don't pad deliverables with manual tasks I can't execute** (GBP, review outreach, "submit for indexing"). Those belong in a short separate list, not a priority block.
-- Don't cite "site not indexed / no rankings" as a finding on a freshly-launched page — that's the starting state, not an insight.
-- He gets blunt (sometimes colorful) when I'm wrong — take the feedback and fix it without re-litigating.
+- Operator wants fast, practical execution — less theory, more "here's what I'm doing next"
+- Comfortable with SEO concepts — don't over-explain fundamentals
+- Lead with what you're pushing now, not what you'd need a human to do manually
+- Gets blunt when you're wrong or inventing work — take the feedback, fix, don't re-litigate
+- **1:1 rebuild means 1:1.** Don't add "suggested improvements" unless asked.
 
 ---
 
@@ -79,14 +77,14 @@ cfc-astro/
 
 ## 4. Credentials & access (LOCAL-ONLY — do not commit)
 
-These live on Daniel's machine outside the repo. Incoming operator needs to know where to find them locally:
+These live on the operator's machine outside the repo:
 
 | Resource | Location | Purpose |
 |---|---|---|
-| Memory files | `C:\Users\Willb\.claude\projects\C--Users-Willb-Claude-CFC\memory\` | User profile, project context, credentials references, feedback rules |
+| Memory files | `C:\Users\Willb\.claude\projects\C--Users-Willb-Claude-CFC\memory\` | Project context, credentials references, feedback rules |
 | GSC service account | `C:\Users\Willb\Claude\CFC\gsc-service-account.json` | **SECRET** — read-only GSC access. Scope: `webmasters.readonly`. Property: `sc-domain:customfabriccreations.net` |
-| WP application password | memory file `cfc_wp_access.md` | User `daniel`, REST API base `https://www.customfabriccreations.net/wp-json/wp/v2/` |
-| Bricks backups | `C:\Users\Willb\Claude\CFC\bricks_backup_*.json` | Historical Bricks snapshots (pre-phase fallbacks). Not committed — bulky, recoverable. |
+| WP application password | memory file `cfc_wp_access.md` | WP user `daniel`, REST API base `https://www.customfabriccreations.net/wp-json/wp/v2/` |
+| Bricks backups | `C:\Users\Willb\Claude\CFC\bricks_backup_*.json` | Historical Bricks snapshots. Not committed — bulky, recoverable. |
 
 **Never commit** `gsc-service-account.json` or any WP password to this repo.
 
@@ -94,67 +92,40 @@ These live on Daniel's machine outside the repo. Incoming operator needs to know
 
 ---
 
-## 5. What's been shipped (Astro rebuild)
+## 5. Commit history
 
-Git log summary (newest first):
+Run `git log --oneline -20` for current state. Don't trust a frozen list here.
 
-- `7049e6a` — Hero curve fix (home-only), wider richer sticky sidebar, about rebuild
-- `aa654a1` — Homepage matches live section order + content audit pass
-- `8822548` — Fix missing first-char bug (ustom→Custom), rebuild ServiceSidebar, stronger HeroBend
-- `9acef78` — Major overhaul: new sections + real images + hero bend + logo everywhere
-- `f0c32f9` — Fix critical bugs + ship real content: logo, video, escapes, full WP port
-- `0900f85` — Ship full content port, design system, schema, media, and CF Function
-- `cc55d5d` — Add SEO migration plan + per-page audit (seo-plan skill output)
-- `18b88ec` — Initial scaffold: Astro 6 + Tailwind v4 + 1:1 URL structure
-
-**Current in-flight change (this commit):** HeroBend curve direction flipped — was "concave dip down in middle," now "convex arc up in middle" to match the designer's comp. See `src/components/HeroBend.astro`.
+**Last change before handoff:** HeroBend curve flipped to convex (middle arcs up into dark hero). See [`src/components/HeroBend.astro`](src/components/HeroBend.astro).
 
 ---
 
-## 6. What's been shipped (live WP site, 2026-04-22)
+## 6. Live WP workstream (separate)
 
-Separate workstream — these changes live on the WP+Bricks production site, not in this repo. See `_wp-tools/` for the Python scripts that made the edits via Bricks REST.
+Parallel — not part of this Astro repo. Python scripts in `_wp-tools/` hit the live WP + Bricks REST endpoint. See [`_wp-tools/README.md`](_wp-tools/README.md) for categorized index (inspection vs. mutation vs. GSC/keyword data). Planning docs live at [`_wp-tools/phase1_audit.md`](_wp-tools/phase1_audit.md), [`_wp-tools/plantation_shutters_v2.md`](_wp-tools/plantation_shutters_v2.md), [`_seo/2026-action-plan.md`](_seo/2026-action-plan.md).
 
-Snapshot of phases completed today (driven by `_wp-tools/phase1_update.py`, `phase2_content.py`, `phase3_content.py`, `schema_*`, `fix_*`, etc.):
-
-- **Plantation Shutters page (post 524)** — full geo-swap Central FL → St. Pete, 10 FAQs (was 5), 4 new Phase-2 sections (Materials & Construction, Specialty Shapes, Authorized Dealer, In-House Workroom), schema graph (Service + FAQPage + LocalBusiness with correct geo), NAP block (H7), Rank Math title/meta/focus-kw set. Element delta: 217 → 249.
-- **Area pages (14)** — cross-linked, E-E-A-T signals added, wrong phone/desc fixed
-- **About page** — removed broken testimonials, rebuild
-- **Homepage (post 103)** — E-E-A-T, crosslinks, mode fix
-- **Sitewide NAP** — updated where discoverable; West St. Pete location schema live
-
-Full details: [`_seo/2026-action-plan.md`](_seo/2026-action-plan.md), [`_wp-tools/phase1_audit.md`](_wp-tools/phase1_audit.md), [`_wp-tools/plantation_shutters_v2.md`](_wp-tools/plantation_shutters_v2.md).
+Ask the operator what the current state of the WP workstream is — don't assume from doc dates.
 
 ---
 
 ## 7. Migration state (Astro port)
 
-**Ranking-preservation risk:** LOW. GSC shows only 1 of 37 URLs gets any impressions and every top-ranking query is legacy Ocala. This is near-greenfield — migrate WITH improvements, don't port verbatim.
+**Rebuild is 1:1 with live WP.** Match the existing site; improvements only when asked.
 
-**URL structure:** 1:1 preserved. 38/38 routes match (see [`_seo/URL-MAP.md`](_seo/URL-MAP.md)).
+**URL structure:** 1:1 preserved. See [`_seo/URL-MAP.md`](_seo/URL-MAP.md).
 
-### What's done
+**Known in the box:**
+- Astro 6.1.8 + Tailwind v4.2.2, Node ≥22.12
+- All URLs routed via `[slug].astro` dynamics against `src/lib/site.ts`
+- Content in `src/content/services/*.md` and `src/content/areas/*.md`
+- Global `LocalBusiness` schema with geo `27.7676, -82.6403`
+- Contact form → Cloudflare Pages Function (`functions/api/contact.ts`) with Resend + webhook fallback
+- Sitemap via `@astrojs/sitemap` (excludes `/thank-you/`)
+- `npm run build` produces a clean `dist/`
 
-- ✅ Astro 6 scaffold, Tailwind v4, Node 22+ pinned
-- ✅ All 37 URLs routed via `[slug].astro` dynamics
-- ✅ Content ported into `src/content/services/*.md` and `src/content/areas/*.md`
-- ✅ Design system: Montserrat + Playfair Display, luxury palette (`#bca050` gold, `#fcf7e3` cream, `#333333` charcoal)
-- ✅ Global `LocalBusiness` schema with correct geo (27.7676, -82.6403) — fixes the Alabama-coordinate bug
-- ✅ Contact form → Cloudflare Pages Function with Resend + webhook fallback
-- ✅ Sitemap via `@astrojs/sitemap` (excludes `/thank-you/`)
-- ✅ Sticky mobile CTA, hero video, logo treatments
-- ✅ Homepage hero-bend curve (just flipped to correct direction)
-- ✅ Build output: `dist/` is clean (16MB)
+**What's actually done vs. not:** check the code and ask the operator. Don't take a bullet list's word for it.
 
-### What's still open
-
-- ⏳ Cloudflare Pages deployment (repo isn't wired to CF yet — see README deployment section)
-- ⏳ OG images per page (1200×630)
-- ⏳ Gallery captions per installation (neighborhood + service type)
-- ⏳ Brands page thickening (240w → 800+ per-brand sections)
-- ⏳ Ocala residue still in source MD files — check each `_seo/PORTING-ORDER.md` P1 page for "Central Florida" / "Ocala" mentions and rewrite to St. Pete / Pinellas
-- ⏳ DNS cutover: when Astro is approved, repoint `www` at CF Pages; keep WP reachable at a staging URL for 30-day rollback window
-- ⏳ Schema coverage: verify every page type emits the correct JSON-LD (see table in `_seo/MIGRATION-PLAN.md` §Schema Plan)
+> ⚠️ `_media-source/` holds the **designer's original comps/assets**. The current live WP site doesn't necessarily match these pixel-for-pixel — they're reference material, not ground truth. If the Astro port needs to match the LIVE site, scrape the live site (see `scripts/scrape-wp.mjs`) or ask.
 
 ---
 
@@ -175,7 +146,7 @@ Cloudflare Pages, Astro preset.
 - `CONTACT_WEBHOOK_URL` — optional Slack/Zapier/Make
 - `RESEND_API_KEY` — for Resend email delivery
 
-Custom domain: `www.customfabriccreations.net` → Pages project. Keep WP reachable on a staging URL for 30 days post-cutover (rollback window).
+Custom domain: `www.customfabriccreations.net`. DNS cutover is coordinated with the operator — don't assume timing.
 
 ---
 
@@ -195,7 +166,7 @@ Requires **Node ≥22.12**.
 
 ## 10. How to work on the LIVE WP site
 
-All tooling for the WP workstream is in `_wp-tools/`. Python + `requests` + the WP REST API, authenticated with Daniel's application password (loaded from the memory file, not committed).
+All tooling for the WP workstream is in `_wp-tools/`. Python + `requests` + the WP REST API, authenticated with the operator's application password (loaded from the memory file `cfc_wp_access.md` via `$env:CFC_WP_APP_PASS`, not committed).
 
 Common patterns already written:
 
@@ -242,29 +213,23 @@ Source of truth: [`src/styles/global.css`](src/styles/global.css) + [`src/lib/si
 
 ---
 
-## 13. Open threads / next suggested moves
+## 13. Starting work
 
-Priority stack if you inherit cold:
+**Don't trust a stale priority list.** Ask the operator what the current focus is. If pushed to infer:
 
-1. **Finalize CF Pages deployment** — wire the repo to CF Pages, set env vars, get a preview URL in front of Daniel
-2. **Ocala rewrite sweep** — grep `src/content/` for "Ocala", "Marion", "Central Florida"; rewrite each to St. Pete / Pinellas County. See `_seo/PORTING-ORDER.md` P1.
-3. **Schema audit** — walk every page type, confirm the correct JSON-LD emits (no Article on non-articles, correct `LocalBusiness` geo everywhere)
-4. **Brands page expansion** — from 240w to 800+ with a section per brand
-5. **Gallery captions** — pair each gallery image with neighborhood + service type
-6. **OG image generation** — 1200×630 per page type (use the brand gold + a hero image background)
-7. **Post-cutover:** monitor GSC coverage daily for 14 days; Astro replaces WP on DNS cutover.
+1. `git log --oneline -10` to see last changes
+2. `npm run build && npm run preview` to see current state of the port
+3. Compare against `https://www.customfabriccreations.net` — this is a 1:1 rebuild, so deltas = work
+4. Ask
 
-**Live-WP side (parallel workstream):**
-- West St. Pete and main-office NAP consistency — phone conflict (727 vs 352) still open until main office is locked
-- Keep monitoring the plantation-shutters page rank for the primary KWs (`plantation shutters st petersburg fl`, `plantation shutters near me`). See `_seo/2026-action-plan.md` for the full 2026 roadmap.
+Don't fabricate "open threads" (Ocala rewrite, schema audit, brand expansion, etc.) unless the code actually shows them open.
 
 ---
 
 ## 14. Contact
 
 - GitHub: `covenantOS/cfc-astro`
-- Operator: Daniel (SEO lead, CFC)
 - Live site: https://www.customfabriccreations.net
 - Target market: St. Petersburg, FL + Pinellas County
 
-Good luck. Everything else is in the code.
+Everything else is in the code.
