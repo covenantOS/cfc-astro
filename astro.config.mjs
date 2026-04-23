@@ -1,17 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 
+// Active deploy host. Swap to https://www.customfabriccreations.net at DNS cutover.
+// Used for canonical URLs, og:url, schema URLs, and the flat /sitemap.xml endpoint.
 export default defineConfig({
-  site: 'https://www.customfabriccreations.net',
+  site: 'https://cfc-astro.pages.dev',
   integrations: [
-    sitemap({
-      filter: (page) =>
-        !page.includes('/thank-you/') &&
-        !page.endsWith('/rss.xml'),
-    }),
     partytown({ config: { forward: ['dataLayer.push', 'gtag'] } }),
   ],
   vite: {

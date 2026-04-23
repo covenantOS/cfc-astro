@@ -1,7 +1,8 @@
 export const SITE = {
   name: 'Custom Fabric Creations',
   shortName: 'CFC',
-  url: 'https://www.customfabriccreations.net',
+  // Active deploy host. Swap to https://www.customfabriccreations.net at DNS cutover.
+  url: 'https://cfc-astro.pages.dev',
   tagline: 'Bespoke Window Treatments & Custom Upholstery',
   description:
     'St. Petersburg’s premier studio for custom window treatments, drapery, plantation shutters, shades, and bespoke upholstery. Established 2000. Free in-home consultations.',

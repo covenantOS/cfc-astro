@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.customfabriccreations.net/sitemap.xml
-Sitemap: https://www.customfabriccreations.net/sitemap-index.xml
+Sitemap: https://cfc-astro.pages.dev/sitemap.xml
