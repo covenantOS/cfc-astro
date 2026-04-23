@@ -19,6 +19,7 @@ interface Props {
   size?: 'default' | 'tall';
   bend?: boolean;
   bendColor?: string;
+  goldLine?: boolean;
 }
 
 const {
@@ -38,6 +39,7 @@ const {
   size = 'default',
   bend = false,
   bendColor = '#ffffff',
+  goldLine = false,
 } = Astro.props;
 
 const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg:py-36';
@@ -184,4 +186,5 @@ const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg
   </div>
 </section>
 
+{goldLine && <div class="h-[3px] w-full bg-brand-500"></div>}
 {bend && <HeroBend nextBg={bendColor} />}

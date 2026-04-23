@@ -53,13 +53,13 @@ const breadcrumbs = [
     primaryCta={{ label: SITE.phone, href: SITE.phoneHref }}
     secondaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
     breadcrumbs={breadcrumbs}
-    bend
+    goldLine
   />
 
   <section class="py-16 md:py-20 bg-white">
-    <div class="container-site grid gap-10 lg:grid-cols-[320px_1fr]">
+    <div class="container-site grid gap-10 lg:grid-cols-[380px_1fr] items-start">
       <ServiceSidebar kind="service" currentSlug={serviceSlug} />
-      <article class="prose-cfc">
+      <article class="prose-cfc min-w-0">
         <slot />
       </article>
     </div>
