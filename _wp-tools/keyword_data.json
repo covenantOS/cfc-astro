@@ -1,0 +1,29 @@
+{
+  "pulled_at": "2026-04-22",
+  "location": "United States (national volume — note 'near me' terms are geo-localized by Google)",
+  "keywords": [
+    {"kw": "window treatments near me", "sv": 12100, "kd": 1, "cpc": 19.31, "comp": 0.43, "intent": "transactional", "trend_q": -18},
+    {"kw": "plantation shutters near me", "sv": 5400, "kd": 4, "cpc": 19.6, "comp": 0.35, "intent": "transactional", "trend_q": 23},
+    {"kw": "custom drapery near me", "sv": 3600, "kd": 4, "cpc": 17.34, "comp": 0.69, "intent": "commercial", "trend_m": 22},
+    {"kw": "motorized shades near me", "sv": 1600, "kd": 3, "cpc": 20.3, "comp": 0.05, "intent": "transactional", "trend_q": 50},
+    {"kw": "motorized blinds near me", "sv": 1600, "kd": 7, "cpc": 17.07, "comp": 0.37, "intent": "transactional", "trend_q": -55},
+    {"kw": "roller shades near me", "sv": 880, "kd": 6, "cpc": 11.33, "comp": 0.64, "intent": "transactional", "trend_q": 48},
+    {"kw": "custom blinds near me", "sv": 27100, "kd": 27, "cpc": 12.49, "comp": 0.79, "intent": "commercial", "trend_q": -18},
+    {"kw": "window treatments st petersburg fl", "sv": 20, "kd": 14, "cpc": 15.57, "comp": 0.18, "intent": "commercial", "trend_q": 400},
+    {"kw": "plantation shutters st petersburg fl", "sv": 20, "kd": 17, "cpc": 23.35, "comp": 0.95, "intent": "navigational/commercial", "trend_q": -67},
+    {"kw": "window treatments st pete", "sv": 10, "kd": 33, "cpc": null, "comp": 0.21, "intent": "commercial", "trend_q": 300},
+    {"kw": "window treatments clearwater fl", "sv": 10, "kd": null, "cpc": 18.68, "comp": 0.88, "intent": "commercial"},
+    {"kw": "plantation shutters clearwater fl", "sv": 20, "kd": null, "cpc": 60.16, "comp": 0.53, "intent": "navigational", "trend_q": 200},
+    {"kw": "plantation shutters seminole fl", "sv": 10, "kd": null, "cpc": null, "comp": 0.1, "intent": "navigational"},
+    {"kw": "commercial window treatments", "sv": 320, "kd": 6, "cpc": 10.18, "comp": 0.36, "intent": "commercial", "trend_q": 23},
+    {"kw": "window treatments cost", "sv": 210, "kd": 8, "cpc": 11.08, "comp": 0.85, "intent": "commercial", "trend_q": 24},
+    {"kw": "window treatments installation", "sv": 480, "kd": 11, "cpc": 19.62, "comp": 0.35, "intent": "commercial", "trend_q": 50},
+    {"kw": "custom drapery installation", "sv": 20, "kd": 10, "cpc": 2.83, "comp": 0.28, "intent": "commercial", "trend_q": 100},
+    {"kw": "plantation shutters", "sv": 60500, "kd": 18, "cpc": 6.4, "comp": 1.0, "intent": "commercial"},
+    {"kw": "window treatments", "sv": 33100, "kd": 26, "cpc": 7.8, "comp": 1.0, "intent": "commercial"},
+    {"kw": "custom blinds", "sv": 18100, "kd": 10, "cpc": 14.23, "comp": 1.0, "intent": "commercial"},
+    {"kw": "motorized blinds", "sv": 12100, "kd": 10, "cpc": 8.45, "comp": 1.0, "intent": "transactional"},
+    {"kw": "motorized shades", "sv": 8100, "kd": 32, "cpc": 10.11, "comp": 1.0, "intent": "transactional"},
+    {"kw": "cellular shades", "sv": 27100, "kd": null, "cpc": 5.67, "comp": 1.0, "intent": "transactional"}
+  ]
+}

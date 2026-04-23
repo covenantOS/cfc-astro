@@ -14,14 +14,14 @@ const { nextBg = '#ffffff' } = Astro.props;
     class="block w-full h-20 md:h-28 lg:h-32"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <!-- concave curve: top edges are high, middle dips low -->
+    <!-- convex curve: edges low, middle arcs up (white rises into dark) -->
     <path
-      d="M0,0 C360,20 540,120 720,120 C900,120 1080,20 1440,0 L1440,120 L0,120 Z"
+      d="M0,120 C360,100 540,0 720,0 C900,0 1080,100 1440,120 Z"
       fill={nextBg}
     />
     <!-- gold accent stroke tracing the curve -->
     <path
-      d="M0,0 C360,20 540,120 720,120 C900,120 1080,20 1440,0"
+      d="M0,120 C360,100 540,0 720,0 C900,0 1080,100 1440,120"
       fill="none"
       stroke="#bca050"
       stroke-width="4"
