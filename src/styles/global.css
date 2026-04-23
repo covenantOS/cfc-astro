@@ -1,8 +1,4 @@
 @import "@fontsource-variable/montserrat";
-@import "@fontsource/playfair-display/400.css";
-@import "@fontsource/playfair-display/500.css";
-@import "@fontsource/playfair-display/600.css";
-@import "@fontsource/playfair-display/700.css";
 @import "tailwindcss";
 
 @theme {
@@ -44,8 +40,8 @@
   --color-surface:  #fcf7e3;
   --color-surface-2:#f8efc9;
 
-  --font-display: "Playfair Display", ui-serif, Georgia, serif;
-  --font-body:    "Montserrat Variable", "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-body:    "Helvetica Neue", "Helvetica", Arial, ui-sans-serif, sans-serif;
 
   --radius-lg: 10px;
   --shadow-soft: 0 20px 40px -16px rgb(34 34 34 / 0.18);
@@ -65,7 +61,7 @@ body {
     font-family: var(--font-display);
     letter-spacing: -0.01em;
     color: var(--color-ink-800);
-    font-weight: 600;
+    font-weight: 700;
   }
   h1 { line-height: 1.08; }
   h2 { line-height: 1.15; }
