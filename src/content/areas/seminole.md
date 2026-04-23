@@ -1,7 +1,7 @@
 ---
-title: "Seminole FL Blinds Shop"
+title: "Window Treatments in Seminole, FL"
 description: "Seminole FL's premier blinds shop offering custom roman shades, motorized blinds, blackout shades & plantation shutters. Upholstery fabric shop on-site."
-h1: "Blind Shop & Custom Window Treatment in Seminole FL"
+h1: "Custom Window Treatments in Seminole, FL"
 slug: seminole
 type: area
 ---
@@ -14,6 +14,8 @@ Seminole is one of Pinellas County's most practically-minded communities. Sittin
 Window treatment decisions in Seminole reflect this practical character. The homeowners here tend to be informed consumers who do their research, ask good questions, and expect honest answers. They're not looking for the cheapest option or the most expensive one, they're looking for the one that actually works for their specific situation, in their specific home, for their specific budget.
 
 That kind of customer attracts a specific kind of window treatment store. One that knows the difference between products and can explain that difference in practical terms. One that has been around long enough to have actual track record and actual references in the community. One that doesn't disappear after the installation when something needs adjustment. We've been that store for Seminole residents for over two decades, and the customers who come to us tend to stay with us, and refer their neighbors, because the experience matches the expectations.
+
+
 
 
 ![Seminole](/images/areas/seminole.webp)

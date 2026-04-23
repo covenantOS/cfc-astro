@@ -1,7 +1,7 @@
 ---
-title: "Tierra Verde Blinds Shop"
+title: "Window Treatments in Tierra Verde, FL"
 description: "Tierra Verde FL's premier blinds shop offering exterior solar shades, custom bedding, plantation shutters & furniture re-upholstery. Motorized."
-h1: "Blinds Shop & Custom Window Treatment in Tierra Verde FL"
+h1: "Custom Window Treatments in Tierra Verde, FL"
 slug: tierra-verde
 type: area
 ---
@@ -16,6 +16,8 @@ Living in Tierra Verde means living with the reality of coastal exposure on thre
 These are conditions that standard window treatments aren't designed for. The cheap blinds from a home improvement store fail in Tierra Verde faster than almost anywhere else in Pinellas County. Not because the products are inherently bad, but because they were designed for a different climate, a dry inland climate, a mild coastal climate, a climate where the sun doesn't come at your windows with the intensity that it does on a Florida island.
 
 A local window treatment store in Tierra Verde has to understand this. Not just the products, but the specific conditions that determine whether those products will last six months or six years in your home. We've been working in Tierra Verde long enough to know which products fail here, which mounting approaches work, and which solutions actually solve the problems that island living creates.
+
+
 
 
 ![Tierra Verde](/images/areas/tierra-verde.webp)

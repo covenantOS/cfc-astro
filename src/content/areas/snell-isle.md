@@ -1,7 +1,7 @@
 ---
-title: "Snell Isle Blinds Shop"
+title: "Window Treatments in Snell Isle, FL"
 description: "Snell Isle's premier blinds shop offering roller shades, motorized window treatments & custom plantation shutters. Professional installation. Free."
-h1: "Blinds Shop & Custom Window Treatment Snell Isle FL"
+h1: "Custom Window Treatments in Snell Isle, FL"
 slug: snell-isle
 type: area
 ---
@@ -16,6 +16,8 @@ That same standard applies to every window treatment decision in these homes. Th
 The demand on a blinds shop in this neighborhood is different from anywhere else in St. Petersburg. The windows are larger. The architecture is more varied. The expectations are higher. And the level of craft required to satisfy these homeowners, in both product selection and installation, is a different standard entirely.
 
 That's the standard we work to. Not the standard of a big-box store. Not the standard of an online retailer with a local Google listing. The standard of homeowners who notice when something is genuinely well-made.
+
+
 
 
 ![Snell Isle](/images/areas/snell-isle.webp)

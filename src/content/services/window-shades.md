@@ -1,7 +1,7 @@
 ---
 title: "Custom Window Shades in St. Petersburg, FL"
 description: "Custom window shades in St. Petersburg built for Florida's sun & humidity. Roller, roman, solar, cellular & blackout shades by Hunter Douglas, Graber &."
-h1: "Window Shades in St. Petersburg"
+h1: "Custom Window Shades in St. Petersburg, FL"
 slug: window-shades
 type: service
 ---
@@ -20,6 +20,8 @@ Cellular / honeycomb shades — Built with a honeycomb structure that traps air 
 Blackout shades — For rooms where controlling light is non-negotiable: bedrooms, home theaters, nurseries. Properly fitted blackout shades block virtually all light. The key phrase is "properly fitted" off-the-rack shades typically have gaps on the sides. Ours are measured to seal the window completely.
 
 Motorized / smart shades — Operated by wall switch, remote, or smartphone app. Practical for high windows, sliding glass doors, and any room where you want to schedule when shades open and close. We install and configure the motorization so it works smoothly from day one.
+
+
 
 
 ![Top](/images/services/window-shades/top.webp)
@@ -43,6 +45,8 @@ That's the value of working with someone who has 25 years of experience in this 
 - Professional installation. We install and confirm the fit. We show you how everything works. You don't sign off until it's right.
 
 
+
+
 ![Middle](/images/services/window-shades/middle.webp)
 
 ## Serving the Greater St. Petersburg Area
@@ -64,6 +68,8 @@ Not in one of these areas? Call us — if we can help, we will.
 Call (727) 240-4512 or request your free in-home consultation.
 
 We're available
+
+
 
 
 ![Bottom](/images/services/window-shades/bottom.webp)

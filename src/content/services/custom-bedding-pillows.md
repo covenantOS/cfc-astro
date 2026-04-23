@@ -20,6 +20,8 @@ Accent pillows For beds, sofas, and built-in seating. Custom pillow forms with c
 Custom cushions Window seats, built-in benches, banquette seating, and other custom cushion needs. These are almost never standard sizes, which means they're almost never available ready-made. We measure and build exactly what fits your space.
 
 
+
+
 ![Bottom](/images/services/custom-bedding-pillows/bottom.webp)
 
 ## Why St. Petersburg Homes Are Different for Bedding

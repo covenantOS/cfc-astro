@@ -1,7 +1,7 @@
 ---
 title: "Drapery Hardware in St. Petersburg, FL"
 description: "Drapery hardware supply & installation in St. Petersburg. Decorative rods, concealed tracks, motorized systems & custom bay window hardware. Built for."
-h1: "Drapery Hardware in St. Petersburg"
+h1: "Drapery Hardware in St. Petersburg, FL"
 slug: drapery-hardware
 type: service
 ---
@@ -18,6 +18,8 @@ Salt air near the coast. For homes in Pinellas, Manatee, and Sarasota counties, 
 Heavy drapery weight. Lined drapery panels are heavy. The weight adds up across a wide window or a bay window with multiple panels. The hardware system needs to be specified for the actual weight not an approximation.
 
 Non-standard window configurations. Florida's architectural diversity concrete block construction, vaulted ceilings, off-standard window heights creates mounting situations that require custom hardware solutions. Standard rods and brackets from a home store simply don't work.
+
+
 
 
 ![Top](/images/services/drapery-hardware/top.webp)
@@ -53,6 +55,8 @@ Improper clearance. The rod and brackets need to extend beyond the window frame 
 Ceiling-mounted track failures. Vaulted ceilings and concrete ceilings require different mounting methods than standard drywall. We bring the right hardware for each surface type.
 
 
+
+
 ![Top Middle](/images/services/drapery-hardware/top-middle.webp)
 
 ## Custom Drapery Hardware When Standard Sizes Don't Work
@@ -75,6 +79,8 @@ Weight requirements — Heavy lined drapery or layered treatments require hardwa
 - On-site measurement. We measure the window, the mounting surface, the clearance requirements, and the weight of the planned drapery panels. This determines the hardware specification.
 - Specification and proposal. We specify the exact hardware rod diameter, bracket type, mounting method, and finish and provide a written proposal covering hardware and installation.
 - Professional installation. We install the hardware properly. We confirm level, secure mounting, and proper clearance for panel operation. We show you how everything works before we leave.
+
+
 
 
 ![Bottom Middle](/images/services/drapery-hardware/bottom-middle.webp)

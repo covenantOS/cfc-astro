@@ -1,7 +1,7 @@
 ---
-title: "Old Northeast Blinds Shop"
+title: "Window Treatments in Historic Old Northeast"
 description: "Old Northeast St. Petersburg's trusted blinds shop offering custom plantation shutters, blackout curtains, roller & roman shades. Professional motorized."
-h1: "Blinds Shop & Custom Window Treatment Historic Old Northeast FL"
+h1: "Custom Window Treatments in Historic Old Northeast"
 slug: old-northeast
 type: area
 ---
@@ -16,6 +16,8 @@ That architectural variety is exactly what makes Old Northeast beautiful. It's a
 These homes weren't built to any modern standard. Window openings vary wildly. A Craftsman bungalow from 1925 might have windows that are narrower than today's "standard" sizes, with thick wooden frames and deeper wall cavities. A Tudor from the 1930s has those characteristic multi-pane windows with their own framing challenges. And the Florida-specific adaptations, more windows, higher ceilings, different exposure patterns, create conditions that a big-box blind store simply doesn't have experience handling.
 
 A local window treatment store in Old Northeast needs to understand this housing stock intimately. Not just which products exist, but which products work in these specific wall cavities, these specific window shapes, these specific exposures. That's the kind of knowledge you only build by doing the work in this neighborhood for decades, not by reading a product catalog.
+
+
 
 
 ![Old Northeast](/images/areas/old-northeast.webp)

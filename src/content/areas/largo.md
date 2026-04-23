@@ -1,7 +1,7 @@
 ---
-title: "Largo FL Blinds Shop"
+title: "Window Treatments in Largo, FL"
 description: "Largo FL's premier blinds shop offering custom plantation shutters, motorized window shades & custom drapery. Furniture re-upholstery & local upholstery."
-h1: "Blind Shop & Custom Window Treatment in Largo FL"
+h1: "Custom Window Treatments in Largo, FL"
 slug: largo
 type: area
 ---
@@ -14,6 +14,8 @@ Largo is one of Pinellas County's largest and most diverse cities, spanning a ge
 That diversity is also what makes a local window treatment store serving Largo valuable. The company that knows how to handle a 1920s bungalow's non-standard window openings also knows how to handle a new construction home's contemporary window treatments. The installer who understands the climate challenges in a home near the marshy areas of the county also understands them in a home near the beach communities further west. That breadth of knowledge comes from doing the work across the entire community for decades, not from reading a product catalog.
 
 We've been that company for Largo residents. We've handled window treatments in homes throughout the city, from the older established neighborhoods near downtown Largo to the newer developments along the US-19 corridor and the communities near the eastern county line. We've seen which products hold up across the full range of Largo's housing stock and climate conditions. That experience is what we bring to every consultation.
+
+
 
 
 ![Largo](/images/areas/largo.webp)

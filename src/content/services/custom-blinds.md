@@ -1,7 +1,7 @@
 ---
-title: "Custom Blinds St. Petersburg"
+title: "Custom Blinds in St. Petersburg, FL"
 description: "Looking for custom blinds in St. Petersburg? Custom Fabric Creations designs and installs made-to-measure window treatments including blackout blinds."
-h1: "Custom Blinds in St. Petersburg"
+h1: "Custom Blinds in St. Petersburg, FL"
 slug: custom-blinds
 type: service
 ---

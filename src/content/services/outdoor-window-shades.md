@@ -22,6 +22,8 @@ Hurricane exposure. St. Petersburg is hurricane country. Exterior treatments nee
 Humidity and salt air. Along the coast in Pinellas and Manatee counties, salt air accelerates corrosion and material degradation. The right materials and hardware matter more here than almost anywhere else in the region.
 
 
+
+
 ![Bottom](/images/services/outdoor-window-shades/bottom.webp)
 
 ## Types of Exterior Window and Patio Treatments We Offer in St. Petersburg

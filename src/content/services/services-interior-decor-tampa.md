@@ -1,5 +1,5 @@
 ---
-title: "Interior Design St. Petersburg"
+title: "Interior Design in St. Petersburg, FL"
 description: "Interior design services in St. Petersburg focused on custom window treatments, bedding, cushions & soft goods. 25+ years of experience. Free consultation."
 h1: "Interior Design & Products in St. Petersburg"
 slug: services-interior-decor-tampa
@@ -18,6 +18,8 @@ Decorative pillows and throw pillows — Often underestimated, but the right pil
 Valances and top treatments — The top of the window is one of the most-overlooked details in a room. A well-designed valance or cornice finishes the window treatment and ties the ceiling height to the floor in a way that makes the room feel intentional.
 
 Fabric selection service — Not sure what fabric works in a room with two kids and a dog? Not sure what color palette to commit to? We bring samples to your home and walk through options based on your actual lifestyle durability, cleaning, sun exposure, and aesthetic all at once.
+
+
 
 
 ![Top](/images/services/services-interior-decor-tampa/top.webp)
@@ -40,6 +42,8 @@ One point of contact. Terry and her team work directly with you. No junior desig
 - On-site assessment and design discussion. We look at the space, discuss your priorities and preferences, and show you options that make sense for your room. We talk through fabric choices, functionality, budget, and timeline. You don't need to have answers before we arrive — that's our job together.
 - Proposal and agreement. We put together a detailed proposal covering exactly what we're providing, the specifications, and the cost. No hidden charges, no surprises.
 - Manufacturing and delivery. Custom pieces are made in our workroom to your specifications. We deliver and install, and confirm everything is exactly right before we leave.
+
+
 
 
 ![Bottom](/images/services/services-interior-decor-tampa/bottom.webp)

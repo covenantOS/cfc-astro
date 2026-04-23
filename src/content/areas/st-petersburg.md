@@ -1,7 +1,7 @@
 ---
-title: "Blinds Shop St. Petersburg FL"
+title: "Window Treatments in St. Petersburg, FL"
 description: "St. Petersburg's premier blinds shop offering custom plantation shutters, blinds, shades & motorized blinds. Free consultations. Serving Pinellas County."
-h1: "Blinds Shop & Custom Window Treatment St. Petersburg FL"
+h1: "Custom Window Treatments in St. Petersburg, FL"
 slug: st-petersburg
 type: area
 ---
@@ -18,6 +18,8 @@ That's why homeowners across St. Petersburg, from Old Northeast to St. Pete Beac
 When you work with us, you're not guessing whether the measurements will fit. You're not hoping the product holds up in humidity. You're working with a team that has seen what salt air does to cheap hardware, what afternoon sun does to unprotected fabrics, and what happens when plantation shutters are installed without accounting for Florida's concrete-block construction.
 
 We've made those mistakes. We've fixed those mistakes. And we've learned from every single one.
+
+
 
 
 ![St Petersburg](/images/areas/st-petersburg.webp)

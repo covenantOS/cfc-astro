@@ -24,6 +24,8 @@ Hurricane and storm proximity. The Gulf Coast is hurricane country. While we're 
 Light control with a view. The adjustable louver system in plantation shutters gives you precise control over light and privacy in a way that no other window treatment does. You redirect light into a room without fully opening the window useful in a climate where direct sun can overheat a space in minutes.
 
 
+
+
 ![Top](/images/services/plantation-shutters/top.webp)
 
 ## Types of Plantation Shutters We Install in St. Petersburg
@@ -47,6 +49,8 @@ Real Wood (Basswood & Poplar) Best for: formal living rooms, main-living windows
 Hybrid / Premier (Wood core + polymer exterior) Best for: clients who want the look of real wood with composite's humidity resistance. Hardwood frame with a polymer-wrapped louver face. 3.5″ louvers most common. Stainable or paintable; accepts custom color match. Premium tier, the "best of both" option.
 
 Quick decision rule: Bathroom, kitchen, laundry, or within a mile of saltwater → faux wood. Climate-controlled and the room's aesthetic calls for stained wood → basswood. Wood grain without the maintenance → hybrid.
+
+
 
 
 ![Top Middle](/images/services/plantation-shutters/top-middle.webp)
@@ -82,6 +86,8 @@ Stout Textiles : Coordinating fabrics for valances and side panels paired with s
 What "authorized" means for you: full manufacturer warranty honored, access to every color and option on the spec sheet, certified measurement and installation, direct factory recourse if anything isn't right.
 
 
+
+
 ![Bottom Middle](/images/services/plantation-shutters/bottom-middle.webp)
 
 ## Our In-House Workroom: Since 2007
@@ -109,6 +115,8 @@ Fit. Retail shutters come in standard sizes with cut-down framing to approximate
 Material quality. Not all faux wood is the same. The density of the core, the quality of the UV coating, and the hardware used in the louver mechanism all vary significantly by manufacturer. We work with brands that have demonstrated performance in Florida conditions not just the cheapest option that meets a spec sheet.
 
 Installation. We install every shutter we sell. That means the shutter is fitted, leveled, and secured properly not left to the homeowner or a general handyman to figure out.
+
+
 
 
 ![Bottom](/images/services/plantation-shutters/bottom.webp)

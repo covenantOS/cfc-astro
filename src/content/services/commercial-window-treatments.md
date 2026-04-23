@@ -1,5 +1,5 @@
 ---
-title: "Commercial Window Treatments in St. Pete"
+title: "Commercial Window Treatments | St. Pete"
 description: "Commercial window treatments for offices, medical spaces, restaurants & multi-family properties in St. Petersburg. Custom spec, professional installation."
 h1: "Commercial Window Treatments in St. Petersburg"
 slug: commercial-window-treatments
@@ -20,6 +20,8 @@ Retail spaces — Storefronts and retail interiors have specific needs around na
 Multi-family properties — Apartment complexes, condos, and HOA-managed properties often need window treatment specifications for common areas, model units, and unit turnover work. We handle volume specifications and can coordinate with property management schedules.
 
 Hotels and hospitality — Guest rooms, lobbies, and common areas. We understand the specification and procurement requirements of hospitality projects, including compliance with brand standards where applicable.
+
+
 
 
 ![Top](/images/services/commercial-window-treatments/top.webp)
@@ -51,6 +53,8 @@ Vertical blinds — Still common in commercial applications, particularly for sl
 Office blinds — Panel tracks, cellular shades, and other treatments for open-plan offices and workstations where light control needs to be balanced with aesthetics.
 
 
+
+
 ![Middle](/images/services/commercial-window-treatments/middle.webp)
 
 ## Our Commercial Process From Specification to Installation
@@ -74,6 +78,8 @@ Pasco County: Wesley Chapel, Zephyrhills, Land O' Lakes
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton
 
 Pinellas County: St. Petersburg
+
+
 
 
 ![Bottom](/images/services/commercial-window-treatments/bottom.webp)

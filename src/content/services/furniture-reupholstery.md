@@ -1,7 +1,7 @@
 ---
 title: "Furniture Reupholstery in St. Petersburg, FL"
 description: "Expert furniture reupholstery in St. Petersburg. We restore sofas, chairs, sectionals & more with premium fabrics. Free consultation. Serving Tampa Bay."
-h1: "Furniture Reupholstery in St. Petersburg"
+h1: "Furniture Reupholstery in St. Petersburg, FL"
 slug: furniture-reupholstery
 type: service
 ---
@@ -24,6 +24,8 @@ Custom upholstery — New furniture built to your specifications, or custom-buil
 We work on: sofas, sectionals, loveseats, armchairs, dining chairs, ottomans, headboards, and built-in bench seating.
 
 
+
+
 ![Top](/images/services/furniture-reupholstery/top.webp)
 
 ## Custom Upholstery Fabric Selection What Sets Us Apart
@@ -42,6 +44,8 @@ If you have a specific fabric in mind, we can often source it. If you want recom
 - Assessment and estimate. We document the condition of the piece, note any repairs needed, agree on fabric options, and provide a written estimate. This covers everything repairs, materials, labor, and timeline.
 - Workroom preparation. Your furniture comes to or stays with you, depending on the project. Fabric is cut and prepped, repairs are made, cushion interiors are replaced as needed.
 - Professional installation. We deliver and place the finished piece. We confirm the fit in your space. You're not done until the piece is exactly where you want it and looking the way it should.
+
+
 
 
 ![Bottom](/images/services/furniture-reupholstery/bottom.webp)

@@ -1,5 +1,5 @@
 ---
-title: "Custom Banquettes"
+title: "Custom Banquettes in St. Petersburg, FL"
 description: "."
 h1: "Custom Banquettes in St. Petersburg"
 slug: custom-banquettes
@@ -16,6 +16,8 @@ Bay Window Benches Perfectly fitted window seating designed to match your exact 
 Dining Room Banquettes Expansive built in seating spanning full dining room walls to accommodate large family gatherings in total comfort.
 
 Commercial Banquettes Highly durable professional grade upholstered seating engineered specifically for upscale restaurants country clubs and corporate environments.
+
+
 
 
 ![Bottom](/images/services/custom-banquettes/bottom.webp)

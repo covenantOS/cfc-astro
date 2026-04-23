@@ -1,7 +1,7 @@
 ---
-title: "Belleair Shore Blinds Shop"
+title: "Window Treatments in Belleair Shore, FL"
 description: "Belleair Shore FL's premier blinds shop offering custom plantation shutters, exterior solar shades & luxury bedding. Furniture re-upholstery & motorized."
-h1: "Blind Shop & Custom Window Treatment in BelleAir Shore FL"
+h1: "Custom Window Treatments in Belleair Shore, FL"
 slug: belleair-shore
 type: area
 ---
@@ -14,6 +14,8 @@ Belleair Shore is one of the most distinctive communities in Pinellas County, a 
 That character shapes what window treatment decisions look like in Belleair Shore. The homes here tend to be older and more established than in the newer developments further inland. The lot sizes are generous. The streets are tree-lined. Many of the homes have the kind of larger windows and older architectural details that reflect the era when they were built, details that require custom measurement and custom solutions rather than anything off a standard shelf.
 
 The window treatment store that serves Belleair Shore needs to understand this community's specific character. Not just the products, but the neighborhood itself, the older housing stock, the mature landscaping, the proximity to the water and what that means for salt air exposure, the established nature of the community that means neighbors talk to each other and recommendations spread by word of mouth. We've been working in this community long enough to know it that way.
+
+
 
 
 ![Belleair Shore](/images/areas/belleair-shore.webp)

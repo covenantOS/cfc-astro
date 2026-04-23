@@ -1,7 +1,7 @@
 ---
-title: "Custom Draperies & Curtains St. Petersburg"
+title: "Custom Drapery & Curtains in St. Petersburg"
 description: "Custom draperies & curtains made to your exact windows in St. Petersburg. Sheer, blackout, motorized & luxury drapes. Free consultation. Serving Tampa Bay."
-h1: "Custom Draperies & Curtains in St. Petersburg"
+h1: "Custom Draperies & Curtains in St. Petersburg, FL"
 slug: custom-draperies-curtains
 type: service
 ---
@@ -22,6 +22,8 @@ Motorized curtains Controlled by wall switch, remote, or smartphone. A practical
 Modern window drapes Flat, clean panels with minimal hardware. Popular in newer homes and for homeowners who prefer a contemporary aesthetic. These work especially well with concealed or minimal rod systems.
 
 Custom valances and top treatments Sometimes the window needs something above the panel itself. Valances, cornices, and board-mounted treatments add a finished look to the top of the window and can tie the whole room together visually.
+
+
 
 
 ![Top](/images/services/custom-draperies-curtains/top.webp)
@@ -51,6 +53,8 @@ Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 Pinellas County: St. Petersburg, Belleview, Dunnellon
 
 Not sure if we cover your area? Call us. If we don't service your location directly, we'll tell you.
+
+
 
 
 ![Middle](/images/services/custom-draperies-curtains/middle.webp)

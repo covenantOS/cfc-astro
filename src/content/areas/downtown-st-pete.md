@@ -1,7 +1,7 @@
 ---
-title: "Downtown St. Pete Blinds Shop"
+title: "Window Treatments in Downtown St. Pete"
 description: "Downtown St. Petersburg's premier blinds shop offering solar shades for heat control, blackout roller shades & luxury custom window treatments. Motorized."
-h1: "Blinds Shop & Custom Window Treatments in Downtown St. Pete FL"
+h1: "Custom Window Treatments in Downtown St. Pete"
 slug: downtown-st-pete
 type: area
 ---
@@ -16,6 +16,8 @@ A blinds shop serving downtown St. Pete has to understand all of it. Not just on
 The other reality about downtown St. Pete window treatments: they're exposed. Your windows are visible from the street, from neighboring buildings, and from the public areas of your building. This isn't a bedroom in the back of a house where only you see the blinds. The treatment you choose for your downtown living room is part of your interior design, visible to guests, to neighbors, and to anyone who walks past your building. That changes the standard.
 
 You need window treatments that look intentional. That look designed. That look like they belong in that space, not like they were installed as an afterthought by a building manager who needed something cheap and available.
+
+
 
 
 ![Downtown St Pete](/images/areas/downtown-st-pete.webp)
