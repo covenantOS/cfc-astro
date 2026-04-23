@@ -44,12 +44,11 @@ const {
 
 <section class="py-20 md:py-28 bg-cream">
   <div class="container-narrow">
-    <div class="text-center mb-12">
-      <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-ink-900 text-brand-400 mb-5">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
-          <line x1="12" y1="17" x2="12.01" y2="17"/>
+    <div class="text-center mb-14">
+      <div class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-brand-500/60 bg-white text-brand-600 mb-7" aria-hidden="true">
+        <!-- premium quotation-mark motif -->
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7.17 6C4.87 6 3 7.79 3 10.08c0 1.68.94 3.13 2.3 3.81L4 18h3.5l1.42-4.67C9.56 12.05 10 10.79 10 9.42 10 7.47 8.73 6 7.17 6zm9 0C14.87 6 13 7.79 13 10.08c0 1.68.94 3.13 2.3 3.81L14 18h3.5l1.42-4.67c.64-1.28 1.08-2.54 1.08-3.91C20 7.47 18.73 6 17.17 6z"/>
         </svg>
       </div>
       {eyebrow && <p class="eyebrow block mb-3" style="letter-spacing: 0.3em;">{eyebrow}</p>}
@@ -59,11 +58,11 @@ const {
 
     <div class="space-y-4">
       {items.map((item) => (
-        <details class="group bg-white border border-line rounded-sm overflow-hidden">
-          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none">
+        <details class="group bg-white border border-line rounded-sm overflow-hidden hover:border-brand-300 transition-colors">
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none select-none">
             <h3 class="font-display text-lg md:text-xl text-ink-800">{item.q}</h3>
-            <span class="shrink-0 w-8 h-8 rounded-full bg-cream group-open:bg-brand-500 group-open:text-white flex items-center justify-center transition">
-              <svg class="w-4 h-4 group-open:rotate-45 transition" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+            <span class="shrink-0 w-9 h-9 rounded-full border border-brand-500/50 bg-white text-brand-600 group-open:bg-brand-500 group-open:text-white group-open:border-brand-500 flex items-center justify-center transition-colors duration-200">
+              <svg class="w-4 h-4 transition-transform duration-300 ease-out group-open:rotate-45" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round">
                 <path d="M10 4v12M4 10h12"/>
               </svg>
             </span>

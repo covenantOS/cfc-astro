@@ -32,8 +32,9 @@ const brands = [
   {showBend && (
     <div class="absolute top-0 left-0 right-0 h-24 md:h-36 pointer-events-none overflow-hidden" aria-hidden="true">
       <svg viewBox="0 0 1440 180" preserveAspectRatio="none" class="w-full h-full block">
-        <path d="M0,0 L0,40 Q720,180 1440,40 L1440,0 Z" fill="#1a1a1a"/>
-        <path d="M0,40 Q720,180 1440,40" fill="none" stroke="#bca050" stroke-width="4"/>
+        <!-- Circular dip: dark arcs down into white -->
+        <path d="M0,0 L0,40 A 1800 1800 0 0 0 1440 40 L1440,0 Z" fill="#1a1a1a"/>
+        <path d="M0,40 A 1800 1800 0 0 0 1440 40" fill="none" stroke="#bca050" stroke-width="4" vector-effect="non-scaling-stroke"/>
       </svg>
     </div>
   )}
@@ -43,8 +44,8 @@ const brands = [
       <div class="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-14">
         {stats.map((s) => (
           <div class="text-center">
-            <p class="font-display text-3xl md:text-4xl text-brand-600 mb-1">{s.value}</p>
-            <p class="text-xs tracking-[0.2em] uppercase text-ink-500">{s.label}</p>
+            <p class="font-display text-3xl md:text-4xl font-semibold text-brand-600 mb-1">{s.value}</p>
+            <p class="text-[0.72rem] tracking-[0.22em] uppercase text-ink-600 font-semibold">{s.label}</p>
           </div>
         ))}
       </div>

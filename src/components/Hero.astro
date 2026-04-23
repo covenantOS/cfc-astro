@@ -76,7 +76,7 @@ const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg
 
   <div class:list={['relative container-site text-center', padding]}>
     {breadcrumbs && breadcrumbs.length > 0 && (
-      <nav class="mb-5 flex items-center justify-center gap-2 text-xs tracking-wide text-white/70" aria-label="Breadcrumb">
+      <nav class="mb-6 flex items-center justify-center gap-2.5 text-sm md:text-base tracking-wide text-white/85 font-medium" aria-label="Breadcrumb">
         {breadcrumbs.map((b, i) => (
           <>
             {i > 0 && <span class="text-brand-400">/</span>}
