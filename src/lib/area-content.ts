@@ -13,7 +13,7 @@ export interface AreaBlock {
   faqs: Array<{ q: string; a: string }>;
 }
 
-const SHARED_FAQS = [
+Const SHARED_FAQS = [
   {
     q: 'Do you charge for the in-home consultation?',
     a: 'No. Initial in-home consultations are complimentary across the St. Pete coast. We bring fabric samples, finishes, and hardware options to your space.',

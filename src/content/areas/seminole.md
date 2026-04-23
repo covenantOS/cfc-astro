@@ -1,5 +1,5 @@
 ---
-title: "eminole FL Blinds Shop"
+title: "Seminole FL Blinds Shop"
 description: "Seminole FL's premier blinds shop offering custom roman shades, motorized blinds, blackout shades & plantation shutters. Upholstery fabric shop on-site."
 h1: "Blind Shop & Custom Window Treatment in Seminole FL"
 slug: seminole

@@ -1,5 +1,5 @@
 ---
-title: "Commercial Window Treatments \u2014 St. Pete"
+title: "Commercial Window Treatments in St. Pete"
 description: "Commercial window treatments for offices, medical spaces, restaurants & multi-family properties in St. Petersburg. Custom spec, professional installation."
 h1: "Commercial Window Treatments in St. Petersburg"
 slug: commercial-window-treatments

@@ -1,25 +1,31 @@
 ---
-// Decorative curved bend that sits at the bottom edge of the dark hero and
-// transitions into the next section. Gold rule + concave arc.
+// Decorative curved bend that sits at the bottom edge of a dark section and
+// transitions into the next (lighter) section. A pronounced concave arc with
+// a gold stroke at the curve.
 interface Props {
-  nextBg?: string; // background color of the section below (hex or var)
+  nextBg?: string;
+  /** Section this is descending FROM (matches the hero bg so the top of SVG is invisible) */
+  fromBg?: string;
 }
-const { nextBg = '#ffffff' } = Astro.props;
+const { nextBg = '#ffffff', fromBg = 'transparent' } = Astro.props;
 ---
 
-<div class="relative w-full h-16 md:h-20 -mt-px" aria-hidden="true">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="absolute inset-0 w-full h-full block">
-    <!-- Fill of next section, painted as a curve rising from bottom -->
+<div class="relative w-full h-24 md:h-36 -mt-px overflow-hidden" aria-hidden="true">
+  <svg viewBox="0 0 1440 180" preserveAspectRatio="none" class="absolute inset-0 w-full h-full block">
+    <!-- Paint of the source section to hide any gap -->
+    {fromBg !== 'transparent' && <rect x="0" y="0" width="1440" height="180" fill={fromBg}/>}
+    <!-- Fill of NEXT section, rising from bottom with concave arc at top.
+         Dipping point at (720, 160) — deep middle, shallow edges -->
     <path
-      d={`M0,0 L0,10 Q720,80 1440,10 L1440,80 L0,80 Z`}
+      d="M0,40 Q720,180 1440,40 L1440,180 L0,180 Z"
       fill={nextBg}
     />
-    <!-- Gold accent stroke along the top of the curve -->
+    <!-- Gold accent stroke along the curve -->
     <path
-      d={`M0,10 Q720,80 1440,10`}
+      d="M0,40 Q720,180 1440,40"
       fill="none"
       stroke="#bca050"
-      stroke-width="3"
+      stroke-width="4"
     />
   </svg>
 </div>
