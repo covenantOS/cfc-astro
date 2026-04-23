@@ -4,7 +4,7 @@ export const SITE = {
   url: 'https://www.customfabriccreations.net',
   tagline: 'Bespoke Window Treatments & Custom Upholstery',
   description:
-    'St. Petersburg\u2019s premier studio for custom window treatments, drapery, plantation shutters, shades, and bespoke upholstery. Established 2000. Free in-home consultations.',
+    'St. Petersburg’s premier studio for custom window treatments, drapery, plantation shutters, shades, and bespoke upholstery. Established 2000. Free in-home consultations.',
   phone: '(727) 240-4512',
   phoneHref: 'tel:+17272404512',
   email: 'info@customfabriccreations.net',
@@ -13,7 +13,7 @@ export const SITE = {
     region: 'FL',
     country: 'US',
   },
-  hours: 'Monday\u2013Saturday, 9:00am\u20135:00pm',
+  hours: 'Monday–Saturday, 9:00am–5:00pm',
   established: 2000,
 } as const;
 

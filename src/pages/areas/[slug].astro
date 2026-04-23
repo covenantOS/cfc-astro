@@ -1,46 +1,40 @@
 ---
+import { getCollection, render } from 'astro:content';
 import AreaLayout from '~/layouts/AreaLayout.astro';
 import { AREAS } from '~/lib/site';
-import { AREA_CONTENT } from '~/lib/area-content';
 
-export function getStaticPaths() {
-  return AREAS.map((area) => ({
-    params: { slug: area.slug },
-    props: { area },
-  }));
+export async function getStaticPaths() {
+  const entries = await getCollection('areas');
+  return AREAS.map((area) => {
+    const entry = entries.find((e) => e.data.slug === area.slug);
+    return {
+      params: { slug: area.slug },
+      props: { area, entry },
+    };
+  });
 }
 
-const { area } = Astro.props;
-const content = AREA_CONTENT[area.slug];
+const { area, entry } = Astro.props;
 
-if (!content) {
-  throw new Error(`No content defined for area slug: ${area.slug}`);
-}
+const rendered = entry ? await render(entry) : null;
+const Content = rendered?.Content ?? null;
+const data = entry?.data;
+const areaTitle = area.title;
+const displayTitle = data?.title ?? `${areaTitle} Window Treatments & Upholstery`;
+const description = data?.description ?? `Window treatments and upholstery in ${areaTitle}.`;
+const heroTitle = data?.h1 ?? `Custom Window Treatments in ${areaTitle}`;
+const faqs = data?.faqs ?? [];
 ---
 
 <AreaLayout
-  title={content.seoTitle}
-  description={content.description}
+  title={displayTitle}
+  description={description}
   areaSlug={area.slug}
-  areaTitle={content.title}
-  heroTitle={content.heroTitle}
-  heroSubtitle={content.heroSubtitle}
+  areaTitle={areaTitle}
+  heroTitle={heroTitle}
+  heroSubtitle={description}
   heroImage={`/images/areas/${area.slug}.webp`}
-  faqs={content.faqs}
+  faqs={faqs}
 >
-  <div class="prose-cfc max-w-none">
-    {content.sections.map((section) => (
-      <section class="mb-12">
-        <h2>{section.heading}</h2>
-        {section.body.split('\n\n').map((para) => (
-          <p set:html={para.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')}></p>
-        ))}
-      </section>
-    ))}
-
-    <div class="mt-16 p-8 bg-cream border-l-4 border-brand-500">
-      <h3 class="font-display text-2xl text-ink-800 mb-3">Schedule Your {content.title} Consultation</h3>
-      <p class="text-ink-600 mb-5">Call <a href="tel:+17272404512">(727) 240-4512</a> or <a href="/contact/">request a consultation online</a>. We bring the showroom to your door.</p>
-    </div>
-  </div>
+  {Content ? <Content /> : <p>Content coming soon.</p>}
 </AreaLayout>

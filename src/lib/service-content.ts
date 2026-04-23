@@ -80,7 +80,7 @@ Both come with lifetime limited warranties. Both are built to our exact measurem
     slug: 'custom-draperies-curtains',
     title: 'Custom Drapery & Curtains',
     seoTitle: 'Custom Drapery & Curtains in St. Petersburg, FL',
-    description: 'Custom drapery and curtains for St. Petersburg homes. Sheer, blackout, and motorized options \u2014 sewn in our St. Pete workroom.',
+    description: 'Custom drapery and curtains for St. Petersburg homes. Sheer, blackout, and motorized options — sewn in our St. Pete workroom.',
     heroTitle: 'Custom Drapery & Curtains in St. Petersburg',
     heroSubtitle: 'Hand-crafted drapery and curtains, cut and sewn in our St. Pete workroom. From full-length pinch-pleat panels to layered sheers, every drape is measured and finished for your windows.',
     sections: [
@@ -115,7 +115,7 @@ For large openings — sliders, floor-to-ceiling glass, curtain walls — we ins
       },
       {
         q: 'Can you match existing fabric?',
-        a: 'Often yes. Bring us a swatch and we\u2019ll source a match through Kravet, Stout, or one of our specialty mills.',
+        a: 'Often yes. Bring us a swatch and we’ll source a match through Kravet, Stout, or one of our specialty mills.',
       },
       {
         q: 'Do you provide the hardware?',
@@ -187,7 +187,7 @@ Most shade installs finish in a half-day. Motorized systems sometimes need a sec
     heroSubtitle: 'We design, measure, and install made-to-measure blinds built specifically for St. Pete homes — balancing light control, privacy, and style.',
     sections: [
       {
-        heading: 'Why Go Custom? Here\u2019s What Off-the-Rack Can\u2019t Give You',
+        heading: 'Why Go Custom? Here’s What Off-the-Rack Can’t Give You',
         body: `Most retail blinds come in a set of predetermined widths and lengths. What that means in practice: gaps on the sides, awkward overlaps, and a look that says "I grabbed whatever was available."
 
 Custom blinds eliminate those compromises. **Precise fit, every time.** We measure each window individually. The result is a clean, tailored appearance — the kind that makes a room feel finished rather than accessorized.
@@ -214,11 +214,11 @@ Our cordless lift mechanisms use a consistent tension system — no looped cords
       },
       {
         heading: 'How We Measure, Fabricate, and Install',
-        body: `Every custom blind project starts with a complimentary in-home consultation. We bring samples \u2014 real wood, faux wood, aluminum, in every available color \u2014 so you can hold them up against your trim and flooring in your actual light.
+        body: `Every custom blind project starts with a complimentary in-home consultation. We bring samples — real wood, faux wood, aluminum, in every available color — so you can hold them up against your trim and flooring in your actual light.
 
 Next we measure every window individually. Inside mount requires at least 2" of depth; outside mount is used when depth is insufficient or when you want to visually enlarge the window.
 
-Fabrication takes 2\u20134 weeks depending on brand and finish. On install day our team arrives with everything needed \u2014 ladders, brackets, hardware, drop cloths \u2014 and finishes every window before leaving, with a walk-through to make sure every blind operates cleanly.`,
+Fabrication takes 2–4 weeks depending on brand and finish. On install day our team arrives with everything needed — ladders, brackets, hardware, drop cloths — and finishes every window before leaving, with a walk-through to make sure every blind operates cleanly.`,
       },
     ],
     faqs: [
@@ -263,9 +263,9 @@ Fabrication takes 2\u20134 weeks depending on brand and finish. On install day o
       },
       {
         heading: 'Sized to Your Architecture',
-        body: `We size cornice heights proportionate to the ceiling and window \u2014 never a standard "one height fits all." A 10-foot ceiling calls for a taller cornice than an 8-foot ceiling. These proportions are what separate custom work from factory boxes.
+        body: `We size cornice heights proportionate to the ceiling and window — never a standard "one height fits all." A 10-foot ceiling calls for a taller cornice than an 8-foot ceiling. These proportions are what separate custom work from factory boxes.
 
-For living rooms, dining rooms, and primary bedrooms, we typically spec cornices between 12 and 20 inches tall, with the bottom edge 4\u20136 inches below the top of the window. The exact ratio depends on window-to-ceiling gap and the visual weight of the drapery underneath.`,
+For living rooms, dining rooms, and primary bedrooms, we typically spec cornices between 12 and 20 inches tall, with the bottom edge 4–6 inches below the top of the window. The exact ratio depends on window-to-ceiling gap and the visual weight of the drapery underneath.`,
       },
       {
         heading: 'Coordinating with Drapery, Shades, and Upholstery',
@@ -287,7 +287,7 @@ Every cornice frame is built to exact window width plus appropriate returns for 
         a: '4–6 weeks including fabrication and finishing in our workroom.',
       },
       {
-        q: 'What\u2019s the difference between a cornice and a valance?',
+        q: 'What’s the difference between a cornice and a valance?',
         a: 'A cornice is a structured, upholstered wood frame. A valance is soft fabric only, usually gathered, pleated, or swagged. Cornices are more architectural; valances are more decorative.',
       },
     ],
@@ -321,20 +321,20 @@ We supply and install decorative rods, ripplefold tracks, motorized systems, and
         heading: 'Motorization',
         body: `We install motorized drapery tracks from Somfy, Rollease Acmeda, and Lutron. Quiet operation, remote control, and schedule integration with smart home systems like Control4, Savant, and Crestron.
 
-Battery-powered systems use rechargeable lithium-ion packs that last 6\u201312 months between charges \u2014 good for retrofits in homes where running wires isn\u2019t practical. Hardwired systems are the right choice for new construction and major renovations where the wall is already open.`,
+Battery-powered systems use rechargeable lithium-ion packs that last 6–12 months between charges — good for retrofits in homes where running wires isn’t practical. Hardwired systems are the right choice for new construction and major renovations where the wall is already open.`,
         image: '/images/services/drapery-hardware/bottom.webp',
       },
       {
         heading: 'Installation That Holds',
-        body: `Drapery hardware has to anchor into something structural. Drywall alone won\u2019t support heavy linen or velvet panels over a long span. We locate studs, use toggle anchors where needed, and install ceiling-mount brackets in older St. Pete homes where window trim is decorative rather than structural.
+        body: `Drapery hardware has to anchor into something structural. Drywall alone won’t support heavy linen or velvet panels over a long span. We locate studs, use toggle anchors where needed, and install ceiling-mount brackets in older St. Pete homes where window trim is decorative rather than structural.
 
-Every installation includes a weight calculation \u2014 we spec hardware that supports at least 2x the drapery weight, with a safety margin for dynamic loads from opening and closing. Rods don\u2019t sag, brackets don\u2019t pull out, finials don\u2019t fall off. Built to last.`,
+Every installation includes a weight calculation — we spec hardware that supports at least 2x the drapery weight, with a safety margin for dynamic loads from opening and closing. Rods don’t sag, brackets don’t pull out, finials don’t fall off. Built to last.`,
       },
     ],
     faqs: [
       {
         q: 'Can you match my existing drapery hardware?',
-        a: 'Usually yes. Bring us photos and measurements and we\u2019ll source the closest match.',
+        a: 'Usually yes. Bring us photos and measurements and we’ll source the closest match.',
       },
       {
         q: 'Do you install ripplefold (modern) drapery tracks?',
@@ -366,7 +366,7 @@ Every installation includes a weight calculation \u2014 we spec hardware that su
         heading: 'Materials That Survive Florida',
         body: `Standard indoor shade fabrics disintegrate outdoors in Florida within a season. Everything we install outdoors is UV-stabilized, marine-grade, and rated for coastal installation.
 
-We've installed exterior shades in Tierra Verde, St. Pete Beach, Treasure Island, and other salt-air environments \u2014 we know which products hold up. Phifer SheerWeave, Hunter Douglas exterior lines, and Insolroll exterior shades are our go-to brands for Florida coastal conditions.`,
+We've installed exterior shades in Tierra Verde, St. Pete Beach, Treasure Island, and other salt-air environments — we know which products hold up. Phifer SheerWeave, Hunter Douglas exterior lines, and Insolroll exterior shades are our go-to brands for Florida coastal conditions.`,
         image: '/images/services/outdoor-window-shades/bottom.webp',
       },
       {
@@ -375,7 +375,7 @@ We've installed exterior shades in Tierra Verde, St. Pete Beach, Treasure Island
 
 For **pool cages**, we typically install solar screens on the sunny side to cut UV without restricting airflow. For **lanais**, we install motorized drop-down shades that can be closed during midday sun or afternoon rain. For **fully exposed patios**, we use wind-rated weatherproof systems that retract into protective housing during storms.
 
-We also install bug-mesh shades that double as insect barriers \u2014 valuable for evenings when the no-see-ums are active.`,
+We also install bug-mesh shades that double as insect barriers — valuable for evenings when the no-see-ums are active.`,
       },
     ],
     faqs: [
@@ -419,10 +419,10 @@ Then we apply the fabric of your choice. Kravet, Stout, Fabricut, or a fabric yo
 If it has fabric and a frame, we probably work on it. Antique heirlooms, mid-century furniture, estate pieces, and commercial-grade hospitality seating all pass through our workroom regularly.`,
       },
       {
-        heading: 'When Reupholstery Makes Sense \u2014 and When It Doesn\u2019t',
-        body: `Reupholstery is worth doing on pieces with **solid hardwood frames** (usually pre-1980s), **coil or 8-way hand-tied springs**, and **sentimental or aesthetic value** worth preserving. Estate-quality furniture, family heirlooms, custom-built pieces \u2014 all worth restoring.
+        heading: 'When Reupholstery Makes Sense — and When It Doesn’t',
+        body: `Reupholstery is worth doing on pieces with **solid hardwood frames** (usually pre-1980s), **coil or 8-way hand-tied springs**, and **sentimental or aesthetic value** worth preserving. Estate-quality furniture, family heirlooms, custom-built pieces — all worth restoring.
 
-Reupholstery is **not** worth doing on **particleboard-frame furniture**, **stapled-web seating** (the cheap stuff), or pieces with **structural damage** in the frame. We\u2019ll tell you honestly during consultation if we think a piece isn\u2019t worth the investment.
+Reupholstery is **not** worth doing on **particleboard-frame furniture**, **stapled-web seating** (the cheap stuff), or pieces with **structural damage** in the frame. We’ll tell you honestly during consultation if we think a piece isn’t worth the investment.
 
 For borderline cases, we can do a full inspection during pickup and give you a go/no-go recommendation before starting work.`,
       },
@@ -438,7 +438,7 @@ For borderline cases, we can do a full inspection during pickup and give you a g
       },
       {
         q: 'Can I bring my own fabric?',
-        a: 'Yes. We welcome COM (customer\u2019s own material) with a fabric inspection on drop-off.',
+        a: 'Yes. We welcome COM (customer’s own material) with a fabric inspection on drop-off.',
       },
     ],
   },
@@ -460,20 +460,20 @@ Custom bedding fixes all of that. We measure your bed, build the duvet to hang e
       },
       {
         heading: 'What We Make',
-        body: `Duvets and duvet covers \u00b7 bed skirts \u00b7 pillow shams (Euro, standard, king) \u00b7 decorative throw pillows \u00b7 upholstered headboards \u00b7 bench cushions \u00b7 window seat cushions \u00b7 daybed covers \u00b7 bolster pillows.
+        body: `Duvets and duvet covers · bed skirts · pillow shams (Euro, standard, king) · decorative throw pillows · upholstered headboards · bench cushions · window seat cushions · daybed covers · bolster pillows.
 
-Every piece is cut and sewn in our St. Pete workroom. We can match fabrics across a full bedroom composition \u2014 drapery, bedding, headboard, and throw pillows all coordinated.`,
+Every piece is cut and sewn in our St. Pete workroom. We can match fabrics across a full bedroom composition — drapery, bedding, headboard, and throw pillows all coordinated.`,
         image: '/images/services/custom-bedding-pillows/bottom.webp',
       },
       {
         heading: 'Headboards',
         body: `A custom upholstered headboard is one of the highest-impact changes you can make to a primary bedroom. We build headboards to any height, shape, tufting pattern, and fabric. Nailhead trim, welting, and button tufting all available.
 
-Standard residential headboard heights run 54\u201366 inches, but we regularly build 72\u201384 inch headboards for high-ceiling bedrooms where a standard-height piece would look undersized. Tall wingback silhouettes, channel-tufted contemporary designs, and classic button-tufted shapes are all in our portfolio.`,
+Standard residential headboard heights run 54–66 inches, but we regularly build 72–84 inch headboards for high-ceiling bedrooms where a standard-height piece would look undersized. Tall wingback silhouettes, channel-tufted contemporary designs, and classic button-tufted shapes are all in our portfolio.`,
       },
       {
         heading: 'Coordinating a Full Bedroom',
-        body: `The most striking bedrooms we\u2019ve done coordinate drapery, bedding, throw pillows, headboard, and sometimes a bench at the foot of the bed \u2014 all in a considered palette across 2\u20134 fabrics.
+        body: `The most striking bedrooms we’ve done coordinate drapery, bedding, throw pillows, headboard, and sometimes a bench at the foot of the bed — all in a considered palette across 2–4 fabrics.
 
 We plan the whole composition together. A feature fabric on the headboard. A secondary solid on the drapery. A tertiary pattern on throw pillows and shams. The result reads as a curated suite, not a collection of individually-purchased items.`,
       },
@@ -481,7 +481,7 @@ We plan the whole composition together. A feature fabric on the headboard. A sec
     faqs: [
       {
         q: 'Can you match my existing drapery fabric?',
-        a: 'Yes. If the fabric is still available, we\u2019ll order matching yardage. If it\u2019s discontinued, we\u2019ll source a close match.',
+        a: 'Yes. If the fabric is still available, we’ll order matching yardage. If it’s discontinued, we’ll source a close match.',
       },
       {
         q: 'How long does custom bedding take?',
@@ -515,19 +515,19 @@ A poorly designed banquette is an uncomfortable, squeaky, non-cleanable mess. Th
       },
       {
         heading: 'Backs and Side Panels',
-        body: `Full upholstered backs \u2014 tufted, nailheaded, or smooth \u2014 take a banquette from "bench with a pillow" to "built-in bespoke seating." We design these in consultation with your builder, cabinetmaker, or designer.
+        body: `Full upholstered backs — tufted, nailheaded, or smooth — take a banquette from "bench with a pillow" to "built-in bespoke seating." We design these in consultation with your builder, cabinetmaker, or designer.
 
-Channel-tufted banquette backs are particularly popular right now \u2014 clean vertical lines that look tailored without being overly traditional. Button-tufted backs read more classic. Smooth upholstered backs with a decorative welting line read most modern.`,
+Channel-tufted banquette backs are particularly popular right now — clean vertical lines that look tailored without being overly traditional. Button-tufted backs read more classic. Smooth upholstered backs with a decorative welting line read most modern.`,
       },
       {
         heading: 'Breakfast Nook and Kitchen Banquettes',
-        body: `The most common CFC banquette project is a breakfast nook \u2014 an L-shaped or U-shaped bench built into a kitchen corner with a pedestal table in front. This configuration seats 5\u20136 people in a space that would fit 2 chairs, and feels like a cafe.
+        body: `The most common CFC banquette project is a breakfast nook — an L-shaped or U-shaped bench built into a kitchen corner with a pedestal table in front. This configuration seats 5–6 people in a space that would fit 2 chairs, and feels like a cafe.
 
-For kitchen banquettes, we recommend indoor-outdoor performance fabrics from Sunbrella or Crypton \u2014 spill-resistant, bleach-cleanable, and kid/pet-friendly. Hidden zippers on cushion covers make seasonal cleaning easy.`,
+For kitchen banquettes, we recommend indoor-outdoor performance fabrics from Sunbrella or Crypton — spill-resistant, bleach-cleanable, and kid/pet-friendly. Hidden zippers on cushion covers make seasonal cleaning easy.`,
       },
       {
         heading: 'Window Seats and Custom Built-In Seating',
-        body: `Beyond kitchen banquettes, we build cushions, backs, and upholstery for window seats, bay window nooks, mudroom benches, hallway benches, and custom built-in seating throughout the home. Any built-in seating benefits from a properly sized, properly filled, removable-cover cushion \u2014 the difference between "hard seat with a pillow" and "actual comfortable seating you\u2019ll actually use."
+        body: `Beyond kitchen banquettes, we build cushions, backs, and upholstery for window seats, bay window nooks, mudroom benches, hallway benches, and custom built-in seating throughout the home. Any built-in seating benefits from a properly sized, properly filled, removable-cover cushion — the difference between "hard seat with a pillow" and "actual comfortable seating you’ll actually use."
 
 We coordinate with your builder, designer, or cabinetmaker on cushion sizing, fabric selection, and any upholstered back or side panels. Every cushion includes a zippered cover for cleaning, proper foam density for the use case, and welting or piping to tighten the profile.`,
       },
@@ -535,11 +535,11 @@ We coordinate with your builder, designer, or cabinetmaker on cushion sizing, fa
     faqs: [
       {
         q: 'Do you build the banquette frame too?',
-        a: 'We coordinate with your builder or cabinetmaker on the wood frame. We build the cushions, backs, and upholstery. If you don\u2019t have a builder, we have partners we can recommend.',
+        a: 'We coordinate with your builder or cabinetmaker on the wood frame. We build the cushions, backs, and upholstery. If you don’t have a builder, we have partners we can recommend.',
       },
       {
-        q: 'What\u2019s the right cushion depth for a banquette?',
-        a: 'Seat depth is typically 18\u201322 inches. Cushion thickness runs 3\u20136 inches depending on comfort preference and aesthetic. We mock it up during consultation.',
+        q: 'What’s the right cushion depth for a banquette?',
+        a: 'Seat depth is typically 18–22 inches. Cushion thickness runs 3–6 inches depending on comfort preference and aesthetic. We mock it up during consultation.',
       },
     ],
   },
@@ -566,27 +566,27 @@ Typical commercial projects: hotel guest rooms, restaurant dining rooms, medical
       },
       {
         heading: 'Product Range',
-        body: `Motorized solar shades \u00b7 blackout roller shades \u00b7 drapery with hospital track \u00b7 cubicle curtains \u00b7 hurricane-rated exterior screens \u00b7 commercial plantation shutters \u00b7 contract-grade upholstery.
+        body: `Motorized solar shades · blackout roller shades · drapery with hospital track · cubicle curtains · hurricane-rated exterior screens · commercial plantation shutters · contract-grade upholstery.
 
-Every product we install for commercial clients meets or exceeds relevant building code \u2014 fire ratings, ADA operation, warranty terms. We handle the spec sheets, submittals, and closeout documentation that commercial GCs and architects require.`,
+Every product we install for commercial clients meets or exceeds relevant building code — fire ratings, ADA operation, warranty terms. We handle the spec sheets, submittals, and closeout documentation that commercial GCs and architects require.`,
       },
       {
         heading: 'Specifying for Architects and GCs',
         body: `We work with architects, general contractors, and design-build firms across the St. Pete area. We provide CSI-format spec sheets, compete with national bids on pricing, and hold CGL insurance appropriate for commercial jobsites.
 
-If you\u2019re spec\u2019ing window treatments on a new commercial build \u2014 hotel, restaurant, office, medical, multi-family \u2014 we\u2019d love the chance to bid. Call (727) 240-4512 or email info@customfabriccreations.net.`,
+If you’re spec’ing window treatments on a new commercial build — hotel, restaurant, office, medical, multi-family — we’d love the chance to bid. Call (727) 240-4512 or email info@customfabriccreations.net.`,
       },
       {
         heading: 'Multi-Phase and Repeat Projects',
         body: `For property managers and corporate clients, we handle multi-phase rollouts and ongoing replacement contracts. Hotel guest room refreshes, corporate office suite updates, multi-unit apartment turnovers, and restaurant tenant improvements all benefit from a single point of contact who knows the property and the product specifications.
 
-We keep spec records so that follow-up phases match the original install exactly \u2014 same fabric, same finish, same hardware \u2014 even years later.`,
+We keep spec records so that follow-up phases match the original install exactly — same fabric, same finish, same hardware — even years later.`,
       },
     ],
     faqs: [
       {
         q: 'Do you work on multi-unit properties?',
-        a: 'Yes. We\u2019ve done apartment complexes, condo communities, hotel rollouts. Contact us with your property size and we\u2019ll put together a proposal.',
+        a: 'Yes. We’ve done apartment complexes, condo communities, hotel rollouts. Contact us with your property size and we’ll put together a proposal.',
       },
       {
         q: 'Can you meet fire-safety codes?',
@@ -601,7 +601,7 @@ We keep spec records so that follow-up phases match the original install exactly
     seoTitle: 'Interior Design Consultation in St. Petersburg, FL',
     description: 'Interior design consultation in St. Petersburg focused on custom window treatments, bedding, cushions, and soft goods. 25+ years of design experience.',
     heroTitle: 'Interior Design & Products in St. Petersburg',
-    heroSubtitle: 'We help you develop a cohesive design direction \u2014 room by room. Focused specifically on window treatments, bedding, and upholstered soft goods.',
+    heroSubtitle: 'We help you develop a cohesive design direction — room by room. Focused specifically on window treatments, bedding, and upholstered soft goods.',
     sections: [
       {
         heading: 'Design Services Focused on Soft Goods',
@@ -618,7 +618,7 @@ If you're working with another designer on the broader room, we love collaborati
 
 **In-home consultation.** We come to you with a full fabric library. You see textiles in your actual light, against your actual walls and furniture.
 
-**Design direction.** We present 2\u20133 directions for each window and piece. You pick what resonates.
+**Design direction.** We present 2–3 directions for each window and piece. You pick what resonates.
 
 **Quotation.** Written estimate for all recommended items.
 
@@ -627,15 +627,15 @@ If you're working with another designer on the broader room, we love collaborati
       },
       {
         heading: 'Whole-Room and Whole-Home Projects',
-        body: `We take on projects ranging from a single-window refresh to whole-home window treatment packages. Most common project size: 3\u20135 rooms at once, typically the ones a family spends the most time in.
+        body: `We take on projects ranging from a single-window refresh to whole-home window treatment packages. Most common project size: 3–5 rooms at once, typically the ones a family spends the most time in.
 
 For whole-home projects, we coordinate a unified palette across primary living spaces. Drapery in the formal living room pairs with bedding in the primary bedroom. Shades in the kitchen coordinate with window treatments in the breakfast nook. Every decision connects to the next.`,
       },
       {
-        heading: 'What We Don\u2019t Do',
-        body: `We\u2019re focused specifically on the soft-goods layer of interior design. That means we don\u2019t pick paint colors, rugs, art, lighting fixtures, or furniture. We don\u2019t redesign kitchens or baths. We don\u2019t do tile or flooring selection.
+        heading: 'What We Don’t Do',
+        body: `We’re focused specifically on the soft-goods layer of interior design. That means we don’t pick paint colors, rugs, art, lighting fixtures, or furniture. We don’t redesign kitchens or baths. We don’t do tile or flooring selection.
 
-What we do is the soft goods \u2014 window treatments, bedding, upholstery, cushions, headboards, pillows \u2014 with the depth of specialization that comes from 25+ years of doing only this. If you need a full interior designer, we can refer you to trusted partners in the St. Pete area. If you need the soft-goods expert on your project team, that\u2019s us.`,
+What we do is the soft goods — window treatments, bedding, upholstery, cushions, headboards, pillows — with the depth of specialization that comes from 25+ years of doing only this. If you need a full interior designer, we can refer you to trusted partners in the St. Pete area. If you need the soft-goods expert on your project team, that’s us.`,
       },
     ],
     faqs: [

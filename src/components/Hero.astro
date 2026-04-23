@@ -6,6 +6,7 @@ interface Props {
   title: string;
   subtitle?: string;
   image?: string;
+  video?: string;
   imageAlt?: string;
   bullets?: string[];
   primaryCta?: { label: string; href: string };
@@ -21,7 +22,8 @@ const {
   eyebrow,
   title,
   subtitle,
-  image = '/images/hero/homepage.webp',
+  image,
+  video,
   imageAlt = '',
   bullets = [],
   primaryCta,
@@ -37,7 +39,22 @@ const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg
 ---
 
 <section class:list={['relative overflow-hidden', variant === 'linen' && 'bg-linen']}>
-  {variant === 'image' && image && (
+  {variant === 'image' && video && (
+    <div class="absolute inset-0">
+      <video
+        src={video}
+        poster={image}
+        autoplay
+        muted
+        loop
+        playsinline
+        class="w-full h-full object-cover"
+        preload="auto"
+      ></video>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink-900/65 via-ink-900/55 to-ink-900/75"></div>
+    </div>
+  )}
+  {variant === 'image' && !video && image && (
     <div class="absolute inset-0">
       <img
         src={image}
@@ -52,7 +69,7 @@ const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg
 
   <div class:list={['relative container-site text-center', padding]}>
     {breadcrumbs && breadcrumbs.length > 0 && (
-      <nav class="mb-4 flex items-center justify-center gap-2 text-xs tracking-wide text-white/60" aria-label="Breadcrumb">
+      <nav class="mb-5 flex items-center justify-center gap-2 text-xs tracking-wide text-white/70" aria-label="Breadcrumb">
         {breadcrumbs.map((b, i) => (
           <>
             {i > 0 && <span class="text-brand-400">/</span>}
@@ -67,7 +84,7 @@ const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg
     )}
 
     {showRating && (
-      <div class="mb-6 inline-flex items-center gap-2">
+      <div class="mb-6 inline-flex items-center gap-2 bg-ink-900/60 border border-brand-500/30 backdrop-blur px-4 py-2 rounded-full">
         <div class="flex items-center gap-0.5 text-brand-400" aria-hidden="true">
           {[1,2,3,4,5].map(() => (
             <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
@@ -75,7 +92,7 @@ const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg
             </svg>
           ))}
         </div>
-        <span class="text-sm text-white font-semibold tracking-wide">5.0 Stars \u00b7 Verified Reviews</span>
+        <span class="text-xs text-white font-semibold tracking-wide">5.0 · Verified Reviews</span>
       </div>
     )}
 

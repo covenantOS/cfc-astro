@@ -1,55 +1,40 @@
 ---
+import { getCollection, render } from 'astro:content';
 import ServiceLayout from '~/layouts/ServiceLayout.astro';
 import { SERVICES } from '~/lib/site';
-import { SERVICE_CONTENT } from '~/lib/service-content';
 
-export function getStaticPaths() {
-  return SERVICES.map((service) => ({
-    params: { slug: service.slug },
-    props: { service },
-  }));
+export async function getStaticPaths() {
+  const entries = await getCollection('services');
+  return SERVICES.map((service) => {
+    const entry = entries.find((e) => e.data.slug === service.slug);
+    return {
+      params: { slug: service.slug },
+      props: { service, entry },
+    };
+  });
 }
 
-const { service } = Astro.props;
-const content = SERVICE_CONTENT[service.slug];
+const { service, entry } = Astro.props;
 
-if (!content) {
-  throw new Error(`No content defined for service slug: ${service.slug}`);
-}
+const rendered = entry ? await render(entry) : null;
+const Content = rendered?.Content ?? null;
+const data = entry?.data;
+const serviceTitle = service.title;
+const displayTitle = data?.title ?? `${serviceTitle} in St. Petersburg, FL`;
+const description = data?.description ?? `${serviceTitle} services in St. Petersburg, FL.`;
+const heroTitle = data?.h1 ?? `${serviceTitle} in St. Petersburg, FL`;
+const faqs = data?.faqs ?? [];
 ---
 
 <ServiceLayout
-  title={content.seoTitle}
-  description={content.description}
+  title={displayTitle}
+  description={description}
   serviceSlug={service.slug}
-  serviceTitle={content.title}
-  heroTitle={content.heroTitle}
-  heroSubtitle={content.heroSubtitle}
+  serviceTitle={serviceTitle}
+  heroTitle={heroTitle}
+  heroSubtitle={description}
   heroImage={`/images/hero/${service.slug}.webp`}
-  faqs={content.faqs}
+  faqs={faqs}
 >
-  <div class="prose-cfc max-w-none">
-    {content.sections.map((section) => (
-      <section class="mb-12">
-        <h2>{section.heading}</h2>
-        {section.image && (
-          <img
-            src={section.image}
-            alt={section.heading}
-            class="my-8 w-full aspect-[16/10] object-cover rounded-sm"
-            loading="lazy"
-            decoding="async"
-          />
-        )}
-        {section.body.split('\n\n').map((para) => (
-          <p set:html={para.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')}></p>
-        ))}
-      </section>
-    ))}
-
-    <div class="mt-16 p-8 bg-cream border-l-4 border-brand-500">
-      <h3 class="font-display text-2xl text-ink-800 mb-3">Ready to Start Your Project?</h3>
-      <p class="text-ink-600 mb-5">Call <a href="tel:+17272404512">(727) 240-4512</a> to schedule a complimentary in-home consultation, or <a href="/contact/">request a consultation online</a>.</p>
-    </div>
-  </div>
+  {Content ? <Content /> : <p>Content coming soon.</p>}
 </ServiceLayout>

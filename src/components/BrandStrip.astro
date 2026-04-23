@@ -5,7 +5,6 @@ interface Stat {
 }
 interface Props {
   stats?: Stat[];
-  brands?: string[];
 }
 
 const {
@@ -14,8 +13,19 @@ const {
     { value: '100%', label: 'Satisfaction' },
     { value: 'FL', label: 'Serving St. Pete Metro' },
   ],
-  brands = ['Norman Shutters', 'Stout Textiles', 'Kravet', 'Horizons Window Fashions', 'Hunter Douglas', 'Alta Window Fashions', 'Elegant Shutters', 'Graber'],
 } = Astro.props;
+
+// Brand logos — for brands without an image on the live site we use a styled
+// wordmark treatment matching the mockup.
+const brands = [
+  { name: 'Norman Shutters', image: '/images/brands/norman.webp', alt: 'Norman Shutters' },
+  { name: 'Stout Textiles', style: 'script', display: '·SI·' },
+  { name: 'Kravet', image: '/images/brands/kravet.webp', alt: 'Kravet' },
+  { name: 'Horizons Window Fashions', style: 'wordmark', display: 'HORIZONS', sub: 'WINDOW FASHIONS' },
+  { name: 'Hunter Douglas', style: 'dot', display: 'HunterDouglas' },
+  { name: 'Alta Window Fashions', style: 'wordmark', display: 'ALTA', sub: 'WINDOW FASHIONS' },
+  { name: 'Elegant Shutters', style: 'script', display: 'elegant shutters', sub: 'by elegant windows' },
+];
 ---
 
 <section class="py-16 md:py-20 border-t border-line bg-white">
@@ -29,15 +39,34 @@ const {
       ))}
     </div>
 
-    <div class="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-14 gap-y-6">
+    <div class="flex flex-wrap items-center justify-center gap-x-12 md:gap-x-16 gap-y-8">
       {brands.map((b) => (
-        <span class="text-ink-400 font-display text-lg md:text-xl tracking-wide">
-          {b}
-        </span>
+        <div class="flex items-center justify-center h-12 text-ink-700" title={b.name}>
+          {b.image ? (
+            <img src={b.image} alt={b.alt ?? b.name} class="max-h-10 max-w-[140px] w-auto h-auto object-contain" loading="lazy" decoding="async" />
+          ) : b.style === 'wordmark' ? (
+            <div class="text-center">
+              <p class="font-display text-xl md:text-2xl tracking-[0.2em] text-ink-800">{b.display}</p>
+              {b.sub && <p class="text-[9px] md:text-[10px] tracking-[0.3em] text-ink-500 mt-1">{b.sub}</p>}
+            </div>
+          ) : b.style === 'dot' ? (
+            <div class="flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-[#ec6b2e] flex-shrink-0"></span>
+              <span class="font-bold text-lg md:text-xl text-ink-800 tracking-tight">{b.display}</span>
+            </div>
+          ) : b.style === 'script' ? (
+            <div class="text-center">
+              <p class="font-display italic text-lg md:text-xl text-ink-700">{b.display}</p>
+              {b.sub && <p class="text-[9px] md:text-[10px] tracking-wide text-ink-400 italic">{b.sub}</p>}
+            </div>
+          ) : (
+            <span class="font-display text-xl tracking-wide">{b.name}</span>
+          )}
+        </div>
       ))}
     </div>
 
-    <p class="text-center mt-8">
+    <p class="text-center mt-10">
       <a href="/brands/" class="text-sm text-brand-600 hover:text-brand-700 underline underline-offset-4 font-semibold">
         See full list of brands
       </a>

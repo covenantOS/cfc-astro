@@ -45,7 +45,7 @@ We've designed window treatments for every one of them. When we come to your hom
       },
       {
         heading: 'Services We Offer in St. Petersburg',
-        body: `Custom drapery and curtains \u00b7 plantation shutters (faux wood and basswood) \u00b7 window shades (roller, roman, cellular, solar, motorized) \u00b7 custom blinds (wood, faux wood, aluminum) \u00b7 cornices and valances \u00b7 drapery hardware \u00b7 outdoor solar screens \u00b7 furniture reupholstery \u00b7 custom bedding, pillows, and headboards \u00b7 commercial window treatments.
+        body: `Custom drapery and curtains · plantation shutters (faux wood and basswood) · window shades (roller, roman, cellular, solar, motorized) · custom blinds (wood, faux wood, aluminum) · cornices and valances · drapery hardware · outdoor solar screens · furniture reupholstery · custom bedding, pillows, and headboards · commercial window treatments.
 
 Everything is measured in person, cut and sewn in our St. Pete workroom, and installed by our own team.`,
       },
@@ -67,7 +67,7 @@ Everything is measured in person, cut and sewn in our St. Pete workroom, and ins
     seoTitle: 'Window Treatments in Downtown St. Pete, FL',
     description: 'Custom window treatments for Beach Drive, the 400 Block, Sundial, and downtown St. Pete condos and high-rises.',
     heroTitle: 'Custom Window Treatments in Downtown St. Pete',
-    heroSubtitle: 'Beach Drive condos, 400 Block residences, Sundial towers \u2014 we specialize in window treatments designed around high-rise light, hurricane-impact glass, and HOA requirements.',
+    heroSubtitle: 'Beach Drive condos, 400 Block residences, Sundial towers — we specialize in window treatments designed around high-rise light, hurricane-impact glass, and HOA requirements.',
     sections: [
       {
         heading: 'High-Rise Living, Designed Right',
@@ -95,7 +95,7 @@ We've worked in most of the downtown towers — 400 Beach Drive, ONE, Bliss, Sal
     slug: 'old-northeast',
     title: 'Historic Old Northeast',
     seoTitle: 'Window Treatments in Historic Old Northeast, St. Petersburg',
-    description: 'Custom drapery and shutters for the Historic Old Northeast \u2014 bungalows, Mediterranean revivals, and Craftsman homes.',
+    description: 'Custom drapery and shutters for the Historic Old Northeast — bungalows, Mediterranean revivals, and Craftsman homes.',
     heroTitle: 'Window Treatments in Historic Old Northeast',
     heroSubtitle: 'The Historic Old Northeast deserves window treatments that honor its bungalows, Mediterranean revivals, and Craftsman architecture.',
     sections: [
@@ -127,7 +127,7 @@ Window treatments in these homes need to respect the architecture. That means av
     seoTitle: 'Window Treatments & Upholstery in Snell Isle, FL',
     description: 'Bespoke drapery, plantation shutters, and reupholstery for Snell Isle waterfront estates. In-home consultation with designer fabric library.',
     heroTitle: 'Bespoke Window Treatments in Snell Isle',
-    heroSubtitle: 'Estate-scale drapery, shutters, and upholstery for Snell Isle\u2019s waterfront homes. Our work has been installed on Venetian Boulevard, Brightwaters, and Coffee Pot Boulevard for 20+ years.',
+    heroSubtitle: 'Estate-scale drapery, shutters, and upholstery for Snell Isle’s waterfront homes. Our work has been installed on Venetian Boulevard, Brightwaters, and Coffee Pot Boulevard for 20+ years.',
     sections: [
       {
         heading: 'Estate-Scale Work',
@@ -153,7 +153,7 @@ Our workroom is built for this scale. We have the looms, the tracks, and the ins
     seoTitle: 'Window Treatments in Shore Acres, St. Petersburg',
     description: 'Practical, elegant window treatments for Shore Acres family homes. Waterfront-friendly fabrics, hurricane-aware installation, family-durable finishes.',
     heroTitle: 'Window Treatments in Shore Acres',
-    heroSubtitle: 'Practical elegance for Shore Acres \u2014 waterfront-friendly fabrics, hurricane-aware installation, family-durable finishes that hold up to kids, pets, and Florida sun.',
+    heroSubtitle: 'Practical elegance for Shore Acres — waterfront-friendly fabrics, hurricane-aware installation, family-durable finishes that hold up to kids, pets, and Florida sun.',
     sections: [
       {
         heading: 'Family Homes, Designed for Real Life',
@@ -165,7 +165,7 @@ Our workroom is built for this scale. We have the looms, the tracks, and the ins
       },
       {
         heading: 'Services in Shore Acres',
-        body: `Custom drapery \u00b7 plantation shutters \u00b7 window shades \u00b7 blinds \u00b7 reupholstery \u00b7 custom bedding and pillows.`,
+        body: `Custom drapery · plantation shutters · window shades · blinds · reupholstery · custom bedding and pillows.`,
       },
     ],
     faqs: SHARED_FAQS,
@@ -175,9 +175,9 @@ Our workroom is built for this scale. We have the looms, the tracks, and the ins
     slug: 'west-st-pete',
     title: 'West St. Pete',
     seoTitle: 'Window Treatments in West St. Pete, FL',
-    description: 'Custom window treatments and upholstery for West St. Pete homes \u2014 from Central Avenue bungalows to newer builds. Free in-home consultation.',
+    description: 'Custom window treatments and upholstery for West St. Pete homes — from Central Avenue bungalows to newer builds. Free in-home consultation.',
     heroTitle: 'Custom Window Treatments in West St. Pete',
-    heroSubtitle: 'West St. Pete homes \u2014 from Central Avenue bungalows to newer builds \u2014 get the same studio craftsmanship and white-glove service.',
+    heroSubtitle: 'West St. Pete homes — from Central Avenue bungalows to newer builds — get the same studio craftsmanship and white-glove service.',
     sections: [
       {
         heading: 'Serving West St. Pete',
@@ -189,7 +189,7 @@ Our workroom is built for this scale. We have the looms, the tracks, and the ins
       },
       {
         heading: 'Full Service List',
-        body: `Custom drapery, plantation shutters, window shades, blinds, cornices, reupholstery, custom bedding, exterior solar screens \u2014 everything built and installed by our team.`,
+        body: `Custom drapery, plantation shutters, window shades, blinds, cornices, reupholstery, custom bedding, exterior solar screens — everything built and installed by our team.`,
       },
     ],
     faqs: SHARED_FAQS,
@@ -221,9 +221,9 @@ We specialize in solutions that preserve view while controlling heat — solar s
     slug: 'st-pete-beach',
     title: 'St. Pete Beach',
     seoTitle: 'Window Treatments in St. Pete Beach, FL',
-    description: 'Custom window treatments for St. Pete Beach condos and homes \u2014 sun-durable shades, salt-air-ready hardware, resort-level finish.',
+    description: 'Custom window treatments for St. Pete Beach condos and homes — sun-durable shades, salt-air-ready hardware, resort-level finish.',
     heroTitle: 'Window Treatments in St. Pete Beach',
-    heroSubtitle: 'St. Pete Beach condos and homes \u2014 sun-durable shades, salt-air-ready hardware, resort-level finish.',
+    heroSubtitle: 'St. Pete Beach condos and homes — sun-durable shades, salt-air-ready hardware, resort-level finish.',
     sections: [
       {
         heading: 'Beach Condos Designed Right',
@@ -261,9 +261,9 @@ We specialize in solutions that preserve view while controlling heat — solar s
     slug: 'clearwater',
     title: 'Clearwater',
     seoTitle: 'Window Treatments in Clearwater, FL',
-    description: 'Clearwater estates and Island Estates homes \u2014 bespoke window fashions and reupholstery with full in-home service.',
+    description: 'Clearwater estates and Island Estates homes — bespoke window fashions and reupholstery with full in-home service.',
     heroTitle: 'Window Treatments in Clearwater',
-    heroSubtitle: 'Clearwater estates and Island Estates homes \u2014 bespoke window fashions and reupholstery with full in-home service.',
+    heroSubtitle: 'Clearwater estates and Island Estates homes — bespoke window fashions and reupholstery with full in-home service.',
     sections: [
       {
         heading: 'Serving Clearwater',
@@ -287,7 +287,7 @@ We specialize in solutions that preserve view while controlling heat — solar s
     sections: [
       {
         heading: 'Sand Key Condo Living',
-        body: `Sand Key is dominated by waterfront high-rises. Window treatments here must handle 10\u201320-foot glass walls, direct Gulf sun, and HOA rules about exterior appearance.
+        body: `Sand Key is dominated by waterfront high-rises. Window treatments here must handle 10–20-foot glass walls, direct Gulf sun, and HOA rules about exterior appearance.
 
 Our typical Sand Key spec: motorized solar shades for view preservation, layered drapery for softness, blackout shades in bedrooms.`,
       },
@@ -301,7 +301,7 @@ Our typical Sand Key spec: motorized solar shades for view preservation, layered
     seoTitle: 'Window Treatments in Belleair Shore, FL',
     description: 'Belleair Shore private homes deserve designer-quality drapery and upholstery. We come to you.',
     heroTitle: 'Window Treatments in Belleair Shore',
-    heroSubtitle: 'Belleair Shore\u2019s private homes deserve designer-quality drapery and upholstery. We come to you.',
+    heroSubtitle: 'Belleair Shore’s private homes deserve designer-quality drapery and upholstery. We come to you.',
     sections: [
       {
         heading: 'Quiet, Discreet Service',
@@ -331,19 +331,19 @@ Our typical Sand Key spec: motorized solar shades for view preservation, layered
     slug: 'largo',
     title: 'Largo',
     seoTitle: 'Window Treatments in Largo, FL',
-    description: 'Largo homeowners get the same studio craftsmanship \u2014 precision measurement, in-house sewing, installation by our own team.',
+    description: 'Largo homeowners get the same studio craftsmanship — precision measurement, in-house sewing, installation by our own team.',
     heroTitle: 'Window Treatments in Largo',
-    heroSubtitle: 'Largo homeowners get the same studio craftsmanship \u2014 precision measurement, in-house sewing, installation by our own team.',
+    heroSubtitle: 'Largo homeowners get the same studio craftsmanship — precision measurement, in-house sewing, installation by our own team.',
     sections: [
       {
         heading: 'Serving Largo',
-        body: `Largo is Pinellas County\u2019s third-largest city and one of the most architecturally varied in the region. Bay-area ranches, mid-century homes, newer construction, and established estate neighborhoods all sit within its borders. We\u2019ve worked across that full range and understand what fits each house type.
+        body: `Largo is Pinellas County’s third-largest city and one of the most architecturally varied in the region. Bay-area ranches, mid-century homes, newer construction, and established estate neighborhoods all sit within its borders. We’ve worked across that full range and understand what fits each house type.
 
-Whether you\u2019re in Harbor Bluffs, Country Club, Pinebrook Estates, or Ridgecrest, we come to your home with the full studio \u2014 fabric library, hardware samples, and design consultation included.`,
+Whether you’re in Harbor Bluffs, Country Club, Pinebrook Estates, or Ridgecrest, we come to your home with the full studio — fabric library, hardware samples, and design consultation included.`,
       },
       {
         heading: 'Services in Largo',
-        body: `Custom drapery and curtains \u00b7 plantation shutters in faux wood and basswood \u00b7 roller, roman, solar, and cellular shades \u00b7 motorized window systems \u00b7 blinds in wood, faux wood, and aluminum \u00b7 cornices, valances, and drapery hardware \u00b7 furniture reupholstery \u00b7 custom bedding, headboards, and pillows \u00b7 commercial window treatments.
+        body: `Custom drapery and curtains · plantation shutters in faux wood and basswood · roller, roman, solar, and cellular shades · motorized window systems · blinds in wood, faux wood, and aluminum · cornices, valances, and drapery hardware · furniture reupholstery · custom bedding, headboards, and pillows · commercial window treatments.
 
 Every piece is measured in person, fabricated in our St. Pete workroom, and installed by our own team. No subcontractors, no outsourcing.`,
       },
@@ -353,7 +353,7 @@ Every piece is measured in person, fabricated in our St. Pete workroom, and inst
 
 **Authorized dealer.** Hunter Douglas, Norman, Graber, Kravet, Stout. Lifetime limited warranties on most products.
 
-**25+ years.** We\u2019ve been doing window treatments and upholstery across Pinellas County since 2000. Established, insured, locally owned.`,
+**25+ years.** We’ve been doing window treatments and upholstery across Pinellas County since 2000. Established, insured, locally owned.`,
       },
     ],
     faqs: SHARED_FAQS,

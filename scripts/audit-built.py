@@ -92,10 +92,18 @@ def audit(path):
     html = html_file.read_text(encoding="utf-8", errors="replace")
 
     title = re.search(r"<title>([^<]+)</title>", html)
-    title = title.group(1).strip() if title else ""
+    if title:
+        import html as htmlmod
+        title = htmlmod.unescape(title.group(1)).strip()
+    else:
+        title = ""
 
     desc = re.search(r'<meta\s+name="description"\s+content="([^"]+)"', html, re.I)
-    desc = desc.group(1).strip() if desc else ""
+    if desc:
+        import html as htmlmod
+        desc = htmlmod.unescape(desc.group(1)).strip()
+    else:
+        desc = ""
 
     canonical = re.search(r'<link\s+rel="canonical"\s+href="([^"]+)"', html, re.I)
     canonical = canonical.group(1).strip() if canonical else ""

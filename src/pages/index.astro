@@ -7,6 +7,7 @@ import AreasMap from '~/components/AreasMap.astro';
 import BrandStrip from '~/components/BrandStrip.astro';
 import FAQ from '~/components/FAQ.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
+import ReviewSection from '~/components/ReviewSection.astro';
 import { SITE } from '~/lib/site';
 ---
 
@@ -20,6 +21,7 @@ import { SITE } from '~/lib/site';
     eyebrow="St. Pete Premier Design Studio"
     title="Custom Window Treatments and Bespoke Upholstery"
     subtitle="Elevate your home with handcrafted draperies, premium <a href='/services/plantation-shutters/' class='underline decoration-brand-400 hover:text-brand-300'>plantation shutters</a>, and master upholstery. We bring our curated sample library directly to your living room with personalized design."
+    video="/hero-video.mp4"
     image="/images/hero/homepage.webp"
     bullets={['Drapery Hardware', 'Custom Treatments', 'Shades & Blinds']}
     primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
@@ -36,6 +38,8 @@ import { SITE } from '~/lib/site';
   <AreasMap />
 
   <BrandStrip />
+
+  <ReviewSection />
 
   <FAQ />
 
