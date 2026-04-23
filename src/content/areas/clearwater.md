@@ -22,7 +22,7 @@ A window treatment store that serves Clearwater has to understand both communiti
 
 
 
-![Clearwater](/images/areas/clearwater.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Clearwater, FL](/images/areas/clearwater.webp "Clearwater window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Exterior Patio Shades Why Clearwater Patios and Lanais Actually Need Them
 

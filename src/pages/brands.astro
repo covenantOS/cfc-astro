@@ -2,6 +2,7 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
+import { SITE } from '~/lib/site';
 
 const BRANDS = [
   {
@@ -35,11 +36,31 @@ const BRANDS = [
     highlights: ['Signature patterns and solids', 'Performance & Sunbrella-compatible', 'Decorative trims and tapes', 'Exclusive designer collaborations'],
   },
 ];
+
+// ItemList schema — the 5 brands CFC is an authorized dealer for.
+// Emits alongside the global @graph so Google sees the full brand list.
+const brandListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `${SITE.url}/brands/#brands`,
+  name: 'Brands Custom Fabric Creations Carries',
+  description: 'Authorized dealer relationships at Custom Fabric Creations, St. Petersburg, FL.',
+  numberOfItems: BRANDS.length,
+  itemListElement: BRANDS.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Brand',
+      name: b.name,
+      description: b.tagline,
+    },
+  })),
+};
 ---
 
 <BaseLayout
   title="Brands We Carry — Hunter Douglas, Norman, Graber, Kravet"
-  description="Authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout. Premium window treatments and designer fabrics in St. Petersburg, FL."
+  description="Custom Fabric Creations is an authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout — the window-fashion and designer-fabric houses trusted by designers in St. Petersburg, FL. Trade pricing and local installation."
   pageType="brands"
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Brands', url: '/brands/' }]}
 >
@@ -84,4 +105,6 @@ const BRANDS = [
     heading="Find the Right Product for Your Home"
     subtitle="Not sure which brand or product fits your project? We’ll walk every window with you during your in-home consultation."
   />
+
+  <script type="application/ld+json" set:html={JSON.stringify(brandListSchema)} />
 </BaseLayout>

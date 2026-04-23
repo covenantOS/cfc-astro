@@ -1,9 +1,18 @@
 ---
 title: "Custom Window Shades in St. Petersburg, FL"
-description: "Custom window shades in St. Petersburg built for Florida's sun & humidity. Roller, roman, solar, cellular & blackout shades by Hunter Douglas, Graber &."
+description: "Custom window shades in St. Petersburg built for Florida's sun and humidity. Roller, roman, solar, cellular, and blackout shades by Hunter Douglas, Graber, and Norman."
 h1: "Custom Window Shades in St. Petersburg, FL"
 slug: window-shades
 type: service
+faqs:
+  - q: "Do solar shades actually reduce heat?"
+    a: "Yes properly installed solar shades reduce solar heat gain significantly, which lowers the temperature in rooms with high sun exposure and reduces the workload on your AC. The key is proper installation gaps around the shade significantly reduce the effect."
+  - q: "What's the difference between roller shades and roman shades?"
+    a: "Roller shades are a single piece of fabric that rolls up and down on a tube. They're clean, minimal, and easy to operate. Roman shades are fabric panels that fold into pleats when raised — they have a softer, more traditional look. Both come in light-filtering, blackout, and solar options."
+  - q: "Can you motorize existing window shades?"
+    a: "We primarily work with new custom shades, but motorization can sometimes be retrofitted depending on the existing setup. Let's discuss your specific situation."
+  - q: "How long do custom window shades last in Tampa?"
+    a: "High-quality custom shades from the brands we carry — Hunter Douglas, Alta, Graber, Norman — are built to handle Florida conditions and typically last 8-12 years with proper care. The lifespan depends on sun exposure and whether the shade was properly fitted and installed."
 ---
 Window shades in St. Petersburg? Custom Fabric Creations installs roller shades, roman shades, and solar shades built for Florida's intense sun. Brands like Hunter Douglas and Graber. Free in-home consultation.
 
@@ -24,7 +33,7 @@ Motorized / smart shades — Operated by wall switch, remote, or smartphone app.
 
 
 
-![Top](/images/services/window-shades/top.webp)
+![Featured Window Shades project by Custom Fabric Creations — bespoke window shades in St. Petersburg, FL](/images/services/window-shades/top.webp "Window Shades | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Why Window Shades in St. Petersburg Need to Be Chosen Carefully
 
@@ -47,7 +56,7 @@ That's the value of working with someone who has 25 years of experience in this 
 
 
 
-![Middle](/images/services/window-shades/middle.webp)
+![In-progress Window Shades project by Custom Fabric Creations — bespoke window shades in St. Petersburg, FL](/images/services/window-shades/middle.webp "Window Shades | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Serving the Greater St. Petersburg Area
 
@@ -72,26 +81,4 @@ We're available
 
 
 
-![Bottom](/images/services/window-shades/bottom.webp)
-
-## Frequently Asked Questions
-
-### What's the best shade for Florida windows?
-
-It depends on the window. West and south-facing windows that get direct sun benefit most from solar shades or cellular shades. Bedrooms need blackout capability. Living rooms where you want to maintain a view do best with solar shades. We assess each window individually at the consultation.
-
-### Do solar shades actually reduce heat?
-
-Yes properly installed solar shades reduce solar heat gain significantly, which lowers the temperature in rooms with high sun exposure and reduces the workload on your AC. The key is proper installation gaps around the shade significantly reduce the effect.
-
-### What's the difference between roller shades and roman shades?
-
-Roller shades are a single piece of fabric that rolls up and down on a tube. They're clean, minimal, and easy to operate. Roman shades are fabric panels that fold into pleats when raised — they have a softer, more traditional look. Both come in light-filtering, blackout, and solar options.
-
-### Can you motorize existing window shades?
-
-We primarily work with new custom shades, but motorization can sometimes be retrofitted depending on the existing setup. Let's discuss your specific situation.
-
-### How long do custom window shades last in Tampa?
-
-High-quality custom shades from the brands we carry — Hunter Douglas, Alta, Graber, Norman — are built to handle Florida conditions and typically last 8-12 years with proper care. The lifespan depends on sun exposure and whether the shade was properly fitted and installed.
+![Completed Window Shades project by Custom Fabric Creations — bespoke window shades in St. Petersburg, FL](/images/services/window-shades/bottom.webp "Window Shades | Custom Fabric Creations — St. Petersburg, FL")

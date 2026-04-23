@@ -9,13 +9,40 @@ import FAQ from '~/components/FAQ.astro';
 import ReviewSection from '~/components/ReviewSection.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
 import { SITE } from '~/lib/site';
+
+// Homepage FAQ content — 5 questions, mirrors the FAQ component defaults
+// so the on-page FAQ and the FAQPage schema stay in sync.
+const HOMEPAGE_FAQS = [
+  {
+    q: 'How does the design consultation work?',
+    a: 'We bring our premium fabric library directly to your house. This allows you to evaluate textures and colors in your actual room lighting. Our designers measure your windows precisely and help you select the perfect materials for your space.',
+  },
+  {
+    q: 'How long does it take to receive custom window treatments?',
+    a: 'Fabrication timelines depend on the specific materials and brands selected. Because every piece is meticulously tailored to your exact measurements, most projects are completed and ready for white-glove installation within four to eight weeks.',
+  },
+  {
+    q: 'What brands and materials do you carry?',
+    a: 'We are an authorized dealer for the most respected names in interior design, including Hunter Douglas, Norman, Kravet, Graber, and Stout. You receive exclusive access to premium textiles and advanced motorized shade technology.',
+  },
+  {
+    q: 'Do you charge for the initial consultation?',
+    a: 'No. We offer a complimentary initial design consultation for homeowners in St. Pete and across Pinellas County. We bring samples to your home so you can see them in your actual space and lighting.',
+  },
+  {
+    q: 'Do you handle installation?',
+    a: 'Yes. Installation is done by our own team, never a subcontractor. We handle the full white-glove process from measurement to final fit.',
+  },
+];
 ---
 
 <BaseLayout
   title={SITE.name}
-  description="St. Pete's premier studio for bespoke window treatments, drapery, shutters, and upholstery. 25+ years of craftsmanship. Free consultations."
+  description="Custom Fabric Creations is St. Pete's premier studio for bespoke window treatments, custom draperies, plantation shutters, and master upholstery. 25+ years of craftsmanship and complimentary in-home consultations across Pinellas County."
   pageType="home"
   ogImage="/images/hero/homepage.webp"
+  breadcrumbs={[{ name: 'Home', url: '/' }]}
+  faqs={HOMEPAGE_FAQS}
 >
   <Hero
     eyebrow="St. Pete Premier Design Studio"
@@ -43,7 +70,7 @@ import { SITE } from '~/lib/site';
 
   <ReviewSection />
 
-  <FAQ />
+  <FAQ items={HOMEPAGE_FAQS} />
 
   <FinalCTA />
 </BaseLayout>

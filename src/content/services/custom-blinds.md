@@ -4,6 +4,15 @@ description: "Looking for custom blinds in St. Petersburg? Custom Fabric Creatio
 h1: "Custom Blinds in St. Petersburg, FL"
 slug: custom-blinds
 type: service
+faqs:
+  - q: "What's the price difference between custom and retail blinds?"
+    a: "Custom costs more upfront, that's honest. What you're paying for is precise fit, better materials, professional installation, and a product that doesn't need replacing after two Florida summers. For many homeowners, the math works out over the lifespan of the product."
+  - q: "Can you motorize existing blinds or shades?"
+    a: "We primarily work with new custom treatments, but certain retrofit motorization options exist depending on the brand and window type. Let's talk through your situation directly."
+  - q: "Are blackout blinds truly blackout, or just \"dim\"?"
+    a: "When properly measured and installed — with side channels and a precise fit — true blackout blinds block virtually all light. That's what we design for. \"Dim\" blinds are usually the result of a poor fit, not a material limitation."
+  - q: "Do you offer warranties on your installations?"
+    a: "Yes. Manufacturer warranties vary by product. On our installation work, we address any fit or function issues that arise within the first year at no charge."
 ---
 At Custom Fabric Creations, we believe your windows deserve better than a "one-size-fits-most" solution. For over 25 years, we've been helping Tampa Bay homeowners transform their spaces with window treatments that are as functional as they are beautiful.
 
@@ -59,25 +68,3 @@ Pasco County: Wesley Chapel, Zephyrhills, Land O' Lakes
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton
 
 Pinellas County: St. Petersburg
-
-## Frequently Asked Questions
-
-### How long does it take from consultation to installation?
-
-Most projects take 4 to 8 weeks from the initial consultation to the day we install. The timeline depends on the type of treatment and manufacturer lead times. We give you a clear estimate before we begin.
-
-### What's the price difference between custom and retail blinds?
-
-Custom costs more upfront, that's honest. What you're paying for is precise fit, better materials, professional installation, and a product that doesn't need replacing after two Florida summers. For many homeowners, the math works out over the lifespan of the product.
-
-### Can you motorize existing blinds or shades?
-
-We primarily work with new custom treatments, but certain retrofit motorization options exist depending on the brand and window type. Let's talk through your situation directly.
-
-### Are blackout blinds truly blackout, or just "dim"?
-
-When properly measured and installed — with side channels and a precise fit — true blackout blinds block virtually all light. That's what we design for. "Dim" blinds are usually the result of a poor fit, not a material limitation.
-
-### Do you offer warranties on your installations?
-
-Yes. Manufacturer warranties vary by product. On our installation work, we address any fit or function issues that arise within the first year at no charge.

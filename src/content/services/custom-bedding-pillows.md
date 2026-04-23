@@ -1,9 +1,18 @@
 ---
 title: "Custom Bedding in St. Petersburg, FL"
-description: "Custom bedding made to your exact bed dimensions in St. Petersburg. Duvet covers, pillow shams, accent pillows & custom cushions. Fabric coordinated with."
+description: "Custom bedding made to your exact bed dimensions in St. Petersburg. Duvet covers, pillow shams, accent pillows, and custom cushions. Fabric coordinated with your space."
 h1: "Custom Bedding & Pillows in St. Petersburg"
 slug: custom-bedding-pillows
 type: service
+faqs:
+  - q: "Are custom duvet covers worth the cost?"
+    a: "If you've ever fought with a duvet cover that's slightly too small for your mattress or slightly too large and constantly shifting you already know the answer. Custom means it fits. Beyond fit, you're choosing the fabric, the closure system, and the finish. For many St. Petersburg homeowners, the difference between a well-fitted duvet and a frustrating one is worth the investment."
+  - q: "Can you match bedding fabric to my existing window treatments?"
+    a: "Yes that's one of the most common requests and one of the things we do best. When we design window treatments and bedding together, the room tends to look more intentional than when each is chosen separately. If you already have window treatments and want to coordinate, bring a swatch to the consultation."
+  - q: "Do you make bedding for outdoor or covered patio spaces?"
+    a: "Yes we work with outdoor-rated fabrics that hold up to the conditions in covered outdoor spaces in St. Petersburg. Outdoor pillows, cushions for outdoor furniture, and banquette seating for covered porches are all part of what we do."
+  - q: "What if I only need one or two custom pillows?"
+    a: "That's a complete project. There's no minimum. We regularly make single pillows or pairs for homeowners who couldn't find what they needed in a store."
 ---
 Custom bedding in St. Petersburg? Custom Fabric Creations makes tailor-made duvet covers, decorative pillows, and bedding sized exactly for your bed coordinated with your room. Free in-home consultation.
 
@@ -22,7 +31,7 @@ Custom cushions Window seats, built-in benches, banquette seating, and other cus
 
 
 
-![Bottom](/images/services/custom-bedding-pillows/bottom.webp)
+![Completed Custom Bedding & Pillows project by Custom Fabric Creations — bespoke custom bedding & pillows in St. Petersburg, FL](/images/services/custom-bedding-pillows/bottom.webp "Custom Bedding & Pillows | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Why St. Petersburg Homes Are Different for Bedding
 
@@ -72,25 +81,3 @@ Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 Call (727) 240-4512 or request your free in-home consultation.
 
 We're available by appointment evenings and weekends included.
-
-## Frequently Asked Questions
-
-### What's the lead time for custom bedding?
-
-Most custom bedding takes 4 to 8 weeks from consultation to delivery, depending on fabric availability and the complexity of the project. We give you a specific timeline at the estimate.
-
-### Are custom duvet covers worth the cost?
-
-If you've ever fought with a duvet cover that's slightly too small for your mattress or slightly too large and constantly shifting you already know the answer. Custom means it fits. Beyond fit, you're choosing the fabric, the closure system, and the finish. For many St. Petersburg homeowners, the difference between a well-fitted duvet and a frustrating one is worth the investment.
-
-### Can you match bedding fabric to my existing window treatments?
-
-Yes that's one of the most common requests and one of the things we do best. When we design window treatments and bedding together, the room tends to look more intentional than when each is chosen separately. If you already have window treatments and want to coordinate, bring a swatch to the consultation.
-
-### Do you make bedding for outdoor or covered patio spaces?
-
-Yes we work with outdoor-rated fabrics that hold up to the conditions in covered outdoor spaces in St. Petersburg. Outdoor pillows, cushions for outdoor furniture, and banquette seating for covered porches are all part of what we do.
-
-### What if I only need one or two custom pillows?
-
-That's a complete project. There's no minimum. We regularly make single pillows or pairs for homeowners who couldn't find what they needed in a store.

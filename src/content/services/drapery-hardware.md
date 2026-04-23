@@ -1,9 +1,18 @@
 ---
 title: "Drapery Hardware in St. Petersburg, FL"
-description: "Drapery hardware supply & installation in St. Petersburg. Decorative rods, concealed tracks, motorized systems & custom bay window hardware. Built for."
+description: "Drapery hardware supply and installation in St. Petersburg. Decorative rods, concealed tracks, motorized systems, and custom bay window hardware built for Florida homes."
 h1: "Drapery Hardware in St. Petersburg, FL"
 slug: drapery-hardware
 type: service
+faqs:
+  - q: "What's the difference between a drapery rod and a drapery track?"
+    a: "A drapery rod is a visible round or square rod that the drapery panels hang from via rings or pins. A track is a concealed system where the drapery panels hang from carriers inside a low-profile track. Tracks are better for motorization and for clean contemporary aesthetics. Rods are better for traditional and decorative aesthetics. We help you decide which is right for your situation."
+  - q: "Can you motorize an existing drapery rod?"
+    a: "Motorization typically requires a track system rather than a traditional rod. If you have an existing rod and want motorization, we can often retrofit a motorized track system. Let's look at your specific situation."
+  - q: "What finish hardware should I use in a coastal home?"
+    a: "For homes within a few miles of the coast, we recommend marine-grade hardware, stainless steel, or powder-coated aluminum. Standard finishes will corrode faster in salt air. We specify appropriate materials based on your property's exposure."
+  - q: "Do you sell drapery hardware only, or does it come with installation?"
+    a: "We sell and install hardware. We don't typically sell hardware without installation because the installation is where most hardware problems actually happen. When you buy hardware from us, you're also buying our installation expertise."
 ---
 Drapery hardware in St. Petersburg? Custom Fabric Creations supplies and installs custom curtain rods, drapery hardware, and motorized curtain rod systems across Tampa Bay. Free consultation.
 
@@ -22,7 +31,7 @@ Non-standard window configurations. Florida's architectural diversity concrete b
 
 
 
-![Top](/images/services/drapery-hardware/top.webp)
+![Featured Drapery Hardware project by Custom Fabric Creations — bespoke drapery hardware in St. Petersburg, FL](/images/services/drapery-hardware/top.webp "Drapery Hardware | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Types of Drapery Hardware We Provide in Tampa Bay
 
@@ -57,7 +66,7 @@ Ceiling-mounted track failures. Vaulted ceilings and concrete ceilings require d
 
 
 
-![Top Middle](/images/services/drapery-hardware/top-middle.webp)
+![In-progress Drapery Hardware project by Custom Fabric Creations — bespoke drapery hardware in St. Petersburg, FL](/images/services/drapery-hardware/top-middle.webp "Drapery Hardware | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Custom Drapery Hardware When Standard Sizes Don't Work
 
@@ -83,32 +92,10 @@ Weight requirements — Heavy lined drapery or layered treatments require hardwa
 
 
 
-![Bottom Middle](/images/services/drapery-hardware/bottom-middle.webp)
+![In-progress Drapery Hardware project by Custom Fabric Creations — bespoke drapery hardware in St. Petersburg, FL](/images/services/drapery-hardware/bottom-middle.webp "Drapery Hardware | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Need drapery hardware that actually works?
 
 Call (727) 240-4512 or request your free consultation.
 
 We're available by appointment evenings and weekends included.
-
-## Frequently Asked Questions
-
-### Can you install drapery hardware on concrete block walls?
-
-Yes Florida's construction often involves concrete block, which requires specific anchors and drilling methods. We have the equipment and the experience to mount securely in concrete, brick, and stucco surfaces.
-
-### What's the difference between a drapery rod and a drapery track?
-
-A drapery rod is a visible round or square rod that the drapery panels hang from via rings or pins. A track is a concealed system where the drapery panels hang from carriers inside a low-profile track. Tracks are better for motorization and for clean contemporary aesthetics. Rods are better for traditional and decorative aesthetics. We help you decide which is right for your situation.
-
-### Can you motorize an existing drapery rod?
-
-Motorization typically requires a track system rather than a traditional rod. If you have an existing rod and want motorization, we can often retrofit a motorized track system. Let's look at your specific situation.
-
-### What finish hardware should I use in a coastal home?
-
-For homes within a few miles of the coast, we recommend marine-grade hardware, stainless steel, or powder-coated aluminum. Standard finishes will corrode faster in salt air. We specify appropriate materials based on your property's exposure.
-
-### Do you sell drapery hardware only, or does it come with installation?
-
-We sell and install hardware. We don't typically sell hardware without installation because the installation is where most hardware problems actually happen. When you buy hardware from us, you're also buying our installation expertise.

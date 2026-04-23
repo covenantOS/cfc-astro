@@ -14,16 +14,25 @@ const {
   heading = 'Flawless Installation and Complete Precision',
   body = 'Our fully insured in-house installers treat your property with absolute respect. We manage every physical detail to ensure your new interior elements function perfectly.',
   image = '/images/services/custom-bedding-pillows/hero.webp',
-  imageAlt = '',
+  imageAlt,
   phoneLabel = SITE.phone,
   phoneHref = SITE.phoneHref,
 } = Astro.props;
+
+const derivedAlt = imageAlt ?? `${heading} — Custom Fabric Creations in-house installation team, St. Petersburg FL`;
 ---
 
 <section class="py-8 md:py-12 bg-white">
   <div class="container-site max-w-6xl mx-auto">
     <div class="relative overflow-hidden rounded-sm h-[320px] md:h-[380px]">
-      <img src={image} alt={imageAlt} class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
+      <img
+        src={image}
+        alt={derivedAlt}
+        title={derivedAlt}
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
+      />
       <div class="absolute inset-0 bg-gradient-to-r from-ink-900/85 via-ink-900/60 to-ink-900/0"></div>
       <div class="relative h-full flex items-center">
         <div class="max-w-lg p-8 md:p-12">

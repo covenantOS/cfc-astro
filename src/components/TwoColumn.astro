@@ -12,10 +12,12 @@ const {
   eyebrow,
   title,
   image,
-  imageAlt = '',
+  imageAlt,
   imagePosition = 'right',
   cta,
 } = Astro.props;
+
+const derivedAlt = imageAlt ?? `${title} — Custom Fabric Creations, St. Petersburg, FL`;
 ---
 
 <section class="py-20 md:py-28 bg-white">
@@ -34,7 +36,7 @@ const {
     </div>
     {image && (
       <div class:list={['aspect-[4/5] overflow-hidden rounded-sm', imagePosition === 'right' ? 'md:order-2' : 'md:order-1']}>
-        <img src={image} alt={imageAlt} class="w-full h-full object-cover" loading="lazy" />
+        <img src={image} alt={derivedAlt} title={derivedAlt} class="w-full h-full object-cover" loading="lazy" />
       </div>
     )}
   </div>

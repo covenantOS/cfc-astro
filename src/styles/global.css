@@ -57,18 +57,24 @@ body {
 }
 
 /* Gold link accent — base style for inline textual links in body copy.
-   Buttons, nav, and styled anchors override this locally. */
-a { transition: color 140ms ease, border-color 140ms ease; }
+   No default underline. Instead: gold brand color, medium weight, and a gold
+   hover line that slides in. Buttons, nav, and styled anchors override locally. */
+a { transition: color 140ms ease, border-color 140ms ease, background-size 220ms ease; }
 p a:not([class]),
 li a:not([class]) {
   color: var(--color-brand-700);
-  border-bottom: 1px solid color-mix(in srgb, var(--color-brand-500) 45%, transparent);
-  padding-bottom: 1px;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: linear-gradient(var(--color-brand-500), var(--color-brand-500));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1.5px;
+  padding-bottom: 2px;
 }
 p a:not([class]):hover,
 li a:not([class]):hover {
   color: var(--color-brand-600);
-  border-bottom-color: var(--color-brand-500);
+  background-size: 100% 1.5px;
 }
 
 /* Smoother native accordion (<details>) */

@@ -1,9 +1,18 @@
 ---
 title: "Outdoor Window Shades in St. Petersburg"
-description: "Outdoor window shades & exterior treatments for St. Petersburg homes. Solar screens, patio shades, outdoor curtains & screen enclosures built for."
+description: "Outdoor window shades and exterior treatments for St. Petersburg homes. Solar screens, patio shades, outdoor curtains, and screen enclosures built for Florida's coast."
 h1: "Outdoor Window Shades in St. Petersburg"
 slug: outdoor-window-shades
 type: service
+faqs:
+  - q: "Can exterior curtains handle hurricane season?"
+    a: "It depends on the product and how it's installed. Some exterior curtain systems are designed to be retracted and stored before a storm. Others are engineered to remain in place. We discuss the hurricane considerations for your specific installation at the consultation."
+  - q: "What about no-see-ums and mosquitoes on my porch?"
+    a: "Standard window screening doesn't stop no-see-ums the mesh isn't fine enough. We offer no-see-um mesh options specifically rated for St. Petersburg's smallest insects. For many homeowners in mosquito-prone areas, this is the single most impactful upgrade they can make to their outdoor space."
+  - q: "Are exterior treatments allowed by my HOA?"
+    a: "Many St. Petersburg HOAs have regulations about exterior modifications. We have experience working with HOA communities across the region and can help you understand what's typically approved. Solar screens, in particular, are often approved where permanent structures are not."
+  - q: "What's the difference between solar screens and a pool cage?"
+    a: "A pool cage is a full structural enclosure typically aluminum framing with screen that surrounds a pool area. Solar screens are a surface-mounted fabric mesh applied to windows, patios, or existing structures. They're different products for different applications, though they can work together."
 ---
 Outdoor window shades in St. Petersburg? Custom Fabric Creations installs exterior curtains, patio shades, solar screens and more for Florida homes. Extend your outdoor living season. Free consultation.
 
@@ -24,7 +33,7 @@ Humidity and salt air. Along the coast in Pinellas and Manatee counties, salt ai
 
 
 
-![Bottom](/images/services/outdoor-window-shades/bottom.webp)
+![Completed Outdoor Window Shades project by Custom Fabric Creations — bespoke outdoor window shades in St. Petersburg, FL](/images/services/outdoor-window-shades/bottom.webp "Outdoor Window Shades | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Types of Exterior Window and Patio Treatments We Offer in St. Petersburg
 
@@ -68,25 +77,3 @@ Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 Call (727) 240-4512 or request your free on-site consultation.
 
 We're available by appointment evenings and weekends included.
-
-## Frequently Asked Questions
-
-### Do solar screens actually work in Tampa's climate?
-
-Yes solar screens are one of the most effective exterior treatments for Tampa's sun. Properly installed solar screens can reduce solar heat gain by 60-80% on exposed windows and significantly improve the usability of screened porches and patios during high-sun hours.
-
-### Can exterior curtains handle hurricane season?
-
-It depends on the product and how it's installed. Some exterior curtain systems are designed to be retracted and stored before a storm. Others are engineered to remain in place. We discuss the hurricane considerations for your specific installation at the consultation.
-
-### What about no-see-ums and mosquitoes on my porch?
-
-Standard window screening doesn't stop no-see-ums the mesh isn't fine enough. We offer no-see-um mesh options specifically rated for St. Petersburg's smallest insects. For many homeowners in mosquito-prone areas, this is the single most impactful upgrade they can make to their outdoor space.
-
-### Are exterior treatments allowed by my HOA?
-
-Many St. Petersburg HOAs have regulations about exterior modifications. We have experience working with HOA communities across the region and can help you understand what's typically approved. Solar screens, in particular, are often approved where permanent structures are not.
-
-### What's the difference between solar screens and a pool cage?
-
-A pool cage is a full structural enclosure typically aluminum framing with screen that surrounds a pool area. Solar screens are a surface-mounted fabric mesh applied to windows, patios, or existing structures. They're different products for different applications, though they can work together.

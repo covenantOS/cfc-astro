@@ -8,14 +8,14 @@ import FinalCTA from '~/components/FinalCTA.astro';
 
 <BaseLayout
   title="Service Areas"
-  description="Custom Fabric Creations serves St. Petersburg, Clearwater, and surrounding Pinellas County neighborhoods. In-home consultations always included."
+  description="Custom Fabric Creations serves St. Petersburg, Clearwater, and every Pinellas County neighborhood — Downtown, Old Northeast, Snell Isle, Tierra Verde, Sand Key, Treasure Island, St. Pete Beach, and beyond. Complimentary in-home consultations."
   pageType="collection"
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Areas', url: '/areas/' }]}
 >
   <Hero
     eyebrow="Serving the St. Pete Coast"
-    title="Where We Work."
-    subtitle="From historic Old Northeast to Tierra Verde and the barrier islands, we bring the studio to your door."
+    title="Custom Window Treatments & Upholstery Across St. Petersburg and Pinellas County"
+    subtitle="From historic Old Northeast bungalows to Tierra Verde waterfront estates and the Gulf barrier islands, we bring the studio to your door — 14 neighborhoods, one in-house workroom, 25+ years of local craftsmanship."
     image="/images/hero/homepage.webp"
     primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
     breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Areas', url: '/areas/' }]}
@@ -41,7 +41,8 @@ import FinalCTA from '~/components/FinalCTA.astro';
             <div class="aspect-[16/10] overflow-hidden bg-ink-50">
               <img
                 src={`/images/areas/${a.slug}.webp`}
-                alt={a.title}
+                alt={`Custom window treatments and upholstery in ${a.title}, FL — Custom Fabric Creations`}
+                title={`${a.title} window treatments & upholstery — Custom Fabric Creations, St. Petersburg, FL`}
                 class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500"
                 loading="lazy"
                 decoding="async"

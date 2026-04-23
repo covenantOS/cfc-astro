@@ -1,6 +1,6 @@
 ---
 title: "Window Treatments in Historic Old Northeast"
-description: "Old Northeast St. Petersburg's trusted blinds shop offering custom plantation shutters, blackout curtains, roller & roman shades. Professional motorized."
+description: "Old Northeast St. Petersburg's trusted blinds shop offering custom plantation shutters, blackout curtains, and roller and roman shades. Professional motorized installation."
 h1: "Custom Window Treatments in Historic Old Northeast"
 slug: old-northeast
 type: area
@@ -20,7 +20,7 @@ A local window treatment store in Old Northeast needs to understand this housing
 
 
 
-![Old Northeast](/images/areas/old-northeast.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Historic Old Northeast St. Petersburg, FL](/images/areas/old-northeast.webp "Historic Old Northeast St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## The Real Problem With Standard Blinds in Old Northeast's Historic Homes
 

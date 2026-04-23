@@ -18,7 +18,7 @@ We've been that company for Largo residents. We've handled window treatments in 
 
 
 
-![Largo](/images/areas/largo.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Largo, FL](/images/areas/largo.webp "Largo window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Plantation Shutters The Window Treatment Largo Homeowners Keep Coming Back To
 

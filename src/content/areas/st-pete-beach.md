@@ -1,6 +1,6 @@
 ---
 title: "Window Treatments in St. Pete Beach, FL"
-description: "St. Pete Beach FL's premier blinds shop offering blackout roman shades, motorized exterior shades & luxury drapery. UV protection window fashions. Free."
+description: "St. Pete Beach FL's premier blinds shop offering blackout roman shades, motorized exterior shades, and luxury drapery. UV protection window fashions. Free consultation."
 h1: "Custom Window Treatments in St. Pete Beach, FL"
 slug: st-pete-beach
 type: area
@@ -20,7 +20,7 @@ We've been that company for St. Pete Beach. We've replaced the cheap treatments 
 
 
 
-![St Pete Beach](/images/areas/st-pete-beach.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in St. Pete Beach, FL](/images/areas/st-pete-beach.webp "St. Pete Beach window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## The Reality of Window Treatments on St. Pete Beach Why Standard Products Fail
 

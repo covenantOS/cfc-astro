@@ -1,9 +1,30 @@
 ---
 title: "Plantation Shutters in St. Petersburg, FL"
-description: "Custom plantation shutters in St. Petersburg, FL. Faux wood & basswood built for Florida humidity, Gulf sun, hurricane season. Free consultation. across."
+description: "Custom plantation shutters in St. Petersburg, FL. Faux wood and basswood built for Florida humidity, Gulf sun, and hurricane season. Free consultation across Pinellas County."
 h1: "Custom Plantation Shutters in St. Petersburg, FL"
 slug: plantation-shutters
 type: service
+faqs:
+  - q: "What's the difference between plantation shutters and regular interior shutters?"
+    a: "\"Plantation shutters\" refers to the wide-louver style that originated in Florida and the Southern US. They feature wider louvers than traditional interior shutters, which gives better light control and a cleaner architectural look. \"Interior shutters\" is a broader category that includes narrower-louver styles. Most shutters sold today in Florida are plantation style."
+  - q: "Can plantation shutters help with energy efficiency in Florida?"
+    a: "Yes the louver system allows you to redirect light without letting direct sun into the room, which reduces heat gain. Faux wood shutters also provide some insulating value. Combined with Florida's typically high AC usage, this can meaningfully reduce cooling costs in rooms with significant sun exposure."
+  - q: "How long do plantation shutters last in Tampa?"
+    a: "Quality faux wood plantation shutters, properly installed, typically last 15-20 years in Florida conditions. The key factors are material quality (faux wood vs. real wood), installation quality, and the amount of direct sun exposure the windows receive."
+  - q: "What's better faux wood or real wood shutters?"
+    a: "For most St. Pete homeowners, faux wood is the better choice. It handles humidity better, resists UV damage, and costs less. Real wood is appropriate when the aesthetic of real wood is specifically desired and the homeowner is willing to maintain it. We discuss this at the consultation and give honest recommendations based on your specific windows."
+  - q: "How much do plantation shutters cost in St. Petersburg?"
+    a: "Plantation shutters in St. Pete typically run $25-$60 per square foot installed , depending on material, louver size, motorization, and specialty shapes. A standard 36″ × 60″ bedroom window runs roughly $375-$900 for composite faux wood, or $550-$1,400 for custom-stained basswood. A whole-home project (12-18 windows) typically lands between $8,000 and $22,000. We provide itemized quotes per window, no bundled \"starting at\" pricing or mystery upcharges."
+  - q: "What's the downside of plantation shutters?"
+    a: "Three honest trade-offs to know before you commit. Upfront cost is 2-4× comparable blinds, the math favors shutters over 20+ years of service, but the initial invoice is real. Light gaps between louvers , even closed, louvers admit some light, so for true blackout (nurseries, media rooms) we layer blackout shades underneath or instead. Lead time , custom manufacturing runs 3-6 weeks, versus same-day big-box stock (which typically fits roughly and fails in 2-4 years)."
+  - q: "Are plantation shutters still in style in 2026?"
+    a: "Yes, and the trend is accelerating locally. Google search interest for \"plantation shutters St Petersburg\" is up 400% quarter-over-quarter heading into 2026. Plantation shutters have moved from a \"traditional\" look to a neutral design baseline that works with coastal modern, transitional, Mediterranean revival, and mid-century homes, every major St. Pete architectural style. The 2026 update is wider 3.5″-4.5″ louvers, crisper whites, and motorized tilt."
+  - q: "Do plantation shutters add home value in St. Petersburg?"
+    a: "Yes: Pinellas realtors consistently list plantation shutters as a high-ROI interior upgrade. Typical recovery at resale is 70-90% of install cost , and homes with custom shutters often appraise $5,000-$15,000 higher than comparable homes with standard blinds. Unlike drapery (personal taste), shutters convey with the home and buyers perceive them as a permanent premium feature."
+  - q: "Who's the best plantation shutter company in St. Pete?"
+    a: "Biased opinion: we'd argue us. Less-biased criteria to apply when you're shopping: Local workroom or warehouse (not a franchise dispatcher). Named installers, not sub-contractors , ask if they're W-2 or 1099. Authorized dealer status for at least Hunter Douglas or Norman. Written lifetime warranty on materials, plus a labor warranty in writing. Physical showroom you can visit with real samples. Review count and recency , not just stars; check whether reviews are this quarter or three years old."
+  - q: "What's a cheaper option than plantation shutters in St. Petersburg?"
+    a: "Short answer: solar shades, cellular (honeycomb) blinds, or faux wood 2½-inch blinds, all run $150-$400 per window installed versus $300-$1,200+ for plantation shutters. That's 40-60% less upfront. The catch: blinds and shades typically need replacement every 5-8 years in Florida conditions (sun-brittle cords, warped vanes, yellowed cells). Plantation shutters last 15-20 years. Run the 20-year math and shutters win, but if cash flow is tight right now or you plan to move within 3-5 years, quality faux wood 2½-inch blinds are a legitimate step down that still looks intentional. We install all three categories, so the recommendation depends on your budget, tenure in the home, and aesthetic. Ask for a side-by-side quote."
 ---
 Looking for plantation shutters in St. Petersburg, FL? Custom Fabric Creations installs custom interior shutters, including faux wood, built for Florida humidity, Gulf sun, and hurricane season. Free in-home consultation across Pinellas County.
 
@@ -26,7 +47,7 @@ Light control with a view. The adjustable louver system in plantation shutters g
 
 
 
-![Top](/images/services/plantation-shutters/top.webp)
+![Featured Plantation Shutters project by Custom Fabric Creations — bespoke plantation shutters in St. Petersburg, FL](/images/services/plantation-shutters/top.webp "Plantation Shutters | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Types of Plantation Shutters We Install in St. Petersburg
 
@@ -53,7 +74,7 @@ Quick decision rule: Bathroom, kitchen, laundry, or within a mile of saltwater �
 
 
 
-![Top Middle](/images/services/plantation-shutters/top-middle.webp)
+![In-progress Plantation Shutters project by Custom Fabric Creations — bespoke plantation shutters in St. Petersburg, FL](/images/services/plantation-shutters/top-middle.webp "Plantation Shutters | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Specialty Shapes & Applications
 
@@ -88,7 +109,7 @@ What "authorized" means for you: full manufacturer warranty honored, access to e
 
 
 
-![Bottom Middle](/images/services/plantation-shutters/bottom-middle.webp)
+![In-progress Plantation Shutters project by Custom Fabric Creations — bespoke plantation shutters in St. Petersburg, FL](/images/services/plantation-shutters/bottom-middle.webp "Plantation Shutters | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Our In-House Workroom: Since 2000
 
@@ -119,7 +140,7 @@ Installation. We install every shutter we sell. That means the shutter is fitted
 
 
 
-![Bottom](/images/services/plantation-shutters/bottom.webp)
+![Completed Plantation Shutters project by Custom Fabric Creations — bespoke plantation shutters in St. Petersburg, FL](/images/services/plantation-shutters/bottom.webp "Plantation Shutters | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Our Plantation Shutter Installation Process in St. Petersburg
 
@@ -179,65 +200,3 @@ Installers who do only this. Our install crew averages 12+ years hanging shutter
 Whole-window-treatment coverage under one roof. Because we also build custom drapery, cornices, Roman shades, and upholstery, we are the only St. Pete shop that can layer drapery over your new shutters in a single project instead of coordinating between two vendors. That matters for Snell Isle and Old Northeast formal rooms where the shutter-plus-drapery layered look is standard.
 
 Local, family-run, insured, and on your side. We carry full liability and workman's comp, we pull permits when required, and the person who quoted your job is often the person who walks the install with you at the end.
-
-## Frequently Asked Questions
-
-### Are plantation shutters good for Florida humidity?
-
-Yes especially faux wood shutters, which are specifically designed to resist moisture absorption. Real wood shutters can absorb humidity and swell, but faux wood holds its dimensions in high-humidity conditions. We recommend faux wood as the default for most St. Pete windows.
-
-### What's the difference between plantation shutters and regular interior shutters?
-
-"Plantation shutters" refers to the wide-louver style that originated in Florida and the Southern US. They feature wider louvers than traditional interior shutters, which gives better light control and a cleaner architectural look. "Interior shutters" is a broader category that includes narrower-louver styles. Most shutters sold today in Florida are plantation style.
-
-### Can plantation shutters help with energy efficiency in Florida?
-
-Yes the louver system allows you to redirect light without letting direct sun into the room, which reduces heat gain. Faux wood shutters also provide some insulating value. Combined with Florida's typically high AC usage, this can meaningfully reduce cooling costs in rooms with significant sun exposure.
-
-### How long do plantation shutters last in Tampa?
-
-Quality faux wood plantation shutters, properly installed, typically last 15-20 years in Florida conditions. The key factors are material quality (faux wood vs. real wood), installation quality, and the amount of direct sun exposure the windows receive.
-
-### What's better faux wood or real wood shutters?
-
-For most St. Pete homeowners, faux wood is the better choice. It handles humidity better, resists UV damage, and costs less. Real wood is appropriate when the aesthetic of real wood is specifically desired and the homeowner is willing to maintain it. We discuss this at the consultation and give honest recommendations based on your specific windows.
-
-### How much do plantation shutters cost in St. Petersburg?
-
-Plantation shutters in St. Pete typically run $25-$60 per square foot installed , depending on material, louver size, motorization, and specialty shapes. A standard 36″ × 60″ bedroom window runs roughly $375-$900 for composite faux wood, or $550-$1,400 for custom-stained basswood. A whole-home project (12-18 windows) typically lands between $8,000 and $22,000. We provide itemized quotes per window, no bundled "starting at" pricing or mystery upcharges.
-
-### What's the downside of plantation shutters?
-
-Three honest trade-offs to know before you commit. Upfront cost is 2-4× comparable blinds, the math favors shutters over 20+ years of service, but the initial invoice is real. Light gaps between louvers , even closed, louvers admit some light, so for true blackout (nurseries, media rooms) we layer blackout shades underneath or instead. Lead time , custom manufacturing runs 3-6 weeks, versus same-day big-box stock (which typically fits roughly and fails in 2-4 years).
-
-### Are plantation shutters still in style in 2026?
-
-Yes, and the trend is accelerating locally. Google search interest for "plantation shutters St Petersburg" is up 400% quarter-over-quarter heading into 2026. Plantation shutters have moved from a "traditional" look to a neutral design baseline that works with coastal modern, transitional, Mediterranean revival, and mid-century homes, every major St. Pete architectural style. The 2026 update is wider 3.5″-4.5″ louvers, crisper whites, and motorized tilt.
-
-### Do plantation shutters add home value in St. Petersburg?
-
-Yes: Pinellas realtors consistently list plantation shutters as a high-ROI interior upgrade. Typical recovery at resale is 70-90% of install cost , and homes with custom shutters often appraise $5,000-$15,000 higher than comparable homes with standard blinds. Unlike drapery (personal taste), shutters convey with the home and buyers perceive them as a permanent premium feature.
-
-### Who's the best plantation shutter company in St. Pete?
-
-Biased opinion: we'd argue us. Less-biased criteria to apply when you're shopping:
-
-Local workroom or warehouse (not a franchise dispatcher).
-
-Named installers, not sub-contractors , ask if they're W-2 or 1099.
-
-Authorized dealer status for at least Hunter Douglas or Norman.
-
-Written lifetime warranty on materials, plus a labor warranty in writing.
-
-Physical showroom you can visit with real samples.
-
-Review count and recency , not just stars; check whether reviews are this quarter or three years old.
-
-### What's a cheaper option than plantation shutters in St. Petersburg?
-
-Short answer: solar shades, cellular (honeycomb) blinds, or faux wood 2½-inch blinds, all run $150-$400 per window installed versus $300-$1,200+ for plantation shutters. That's 40-60% less upfront.
-
-The catch: blinds and shades typically need replacement every 5-8 years in Florida conditions (sun-brittle cords, warped vanes, yellowed cells). Plantation shutters last 15-20 years. Run the 20-year math and shutters win, but if cash flow is tight right now or you plan to move within 3-5 years, quality faux wood 2½-inch blinds are a legitimate step down that still looks intentional.
-
-We install all three categories, so the recommendation depends on your budget, tenure in the home, and aesthetic. Ask for a side-by-side quote.

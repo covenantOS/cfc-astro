@@ -1,6 +1,6 @@
 ---
 title: "Window Treatments in Downtown St. Pete"
-description: "Downtown St. Petersburg's premier blinds shop offering solar shades for heat control, blackout roller shades & luxury custom window treatments. Motorized."
+description: "Downtown St. Petersburg's premier blinds shop offering solar shades for heat control, blackout roller shades, and luxury custom window treatments. Motorized options available."
 h1: "Custom Window Treatments in Downtown St. Pete"
 slug: downtown-st-pete
 type: area
@@ -20,7 +20,7 @@ You need window treatments that look intentional. That look designed. That look 
 
 
 
-![Downtown St Pete](/images/areas/downtown-st-pete.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Downtown St. Petersburg, FL](/images/areas/downtown-st-pete.webp "Downtown St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Solar Shades for Heat Control The Most Important Window Treatment in Downtown St. Pete
 

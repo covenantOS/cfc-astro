@@ -1,6 +1,6 @@
 ---
 title: "Window Treatments in Snell Isle, FL"
-description: "Snell Isle's premier blinds shop offering roller shades, motorized window treatments & custom plantation shutters. Professional installation. Free."
+description: "Snell Isle's premier blinds shop offering roller shades, motorized window treatments, and custom plantation shutters. Professional installation. Free consultation."
 h1: "Custom Window Treatments in Snell Isle, FL"
 slug: snell-isle
 type: area
@@ -20,7 +20,7 @@ That's the standard we work to. Not the standard of a big-box store. Not the sta
 
 
 
-![Snell Isle](/images/areas/snell-isle.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Snell Isle, FL](/images/areas/snell-isle.webp "Snell Isle window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## What Professional Blind Installers Actually Do Differently in Snell Isle
 

@@ -1,9 +1,18 @@
 ---
 title: "Custom Banquettes in St. Petersburg, FL"
-description: "."
+description: "Custom banquettes in St. Petersburg, FL. Built-in seating upholstered in premium performance fabrics for residential and commercial spaces. Free consultation."
 h1: "Custom Banquettes in St. Petersburg"
 slug: custom-banquettes
 type: service
+faqs:
+  - q: "What's the price difference between custom and retail blinds?"
+    a: "Custom costs more upfront, that's honest. What you're paying for is precise fit, better materials, professional installation, and a product that doesn't need replacing after two Florida summers. For many homeowners, the math works out over the lifespan of the product."
+  - q: "Can you motorize existing blinds or shades?"
+    a: "We primarily work with new custom treatments, but certain retrofit motorization options exist depending on the brand and window type. Let's talk through your situation directly."
+  - q: "Are blackout blinds truly blackout, or just \"dim\"?"
+    a: "When properly measured and installed — with side channels and a precise fit — true blackout blinds block virtually all light. That's what we design for. \"Dim\" blinds are usually the result of a poor fit, not a material limitation."
+  - q: "Do you offer warranties on your installations?"
+    a: "Yes. Manufacturer warranties vary by product. On our installation work, we address any fit or function issues that arise within the first year at no charge."
 ---
 Elevate your dining and entertainment spaces with master crafted custom banquettes. Custom Fabric Creations designs fabricates and installs premium built in seating tailored perfectly to your architecture and upholstered in exclusive designer textiles.
 
@@ -20,7 +29,7 @@ Commercial Banquettes Highly durable professional grade upholstered seating engi
 
 
 
-![Bottom](/images/services/custom-banquettes/bottom.webp)
+![Completed Custom Banquettes project by Custom Fabric Creations — bespoke custom banquettes in St. Petersburg, FL](/images/services/custom-banquettes/bottom.webp "Custom Banquettes | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Our Fabrication Process From Measurement to Installation
 
@@ -57,25 +66,3 @@ Pinellas County: St. Petersburg
 Call (727) 240 4512 or request a private in home consultation.
 
 We will bring our premium fabric library directly to your property and design the perfect built in seating solution for your exact needs.
-
-## Frequently Asked Questions
-
-### How long does it take from consultation to installation?
-
-Most projects take 4 to 8 weeks from the initial consultation to the day we install. The timeline depends on the type of treatment and manufacturer lead times. We give you a clear estimate before we begin.
-
-### What's the price difference between custom and retail blinds?
-
-Custom costs more upfront, that's honest. What you're paying for is precise fit, better materials, professional installation, and a product that doesn't need replacing after two Florida summers. For many homeowners, the math works out over the lifespan of the product.
-
-### Can you motorize existing blinds or shades?
-
-We primarily work with new custom treatments, but certain retrofit motorization options exist depending on the brand and window type. Let's talk through your situation directly.
-
-### Are blackout blinds truly blackout, or just "dim"?
-
-When properly measured and installed — with side channels and a precise fit — true blackout blinds block virtually all light. That's what we design for. "Dim" blinds are usually the result of a poor fit, not a material limitation.
-
-### Do you offer warranties on your installations?
-
-Yes. Manufacturer warranties vary by product. On our installation work, we address any fit or function issues that arise within the first year at no charge.

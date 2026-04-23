@@ -20,7 +20,7 @@ We've been working in Shore Acres for over two decades. We know the specific cha
 
 
 
-![Shore Acres](/images/areas/shore-acres.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Shore Acres, FL](/images/areas/shore-acres.webp "Shore Acres window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Motorized Solar Shades The Practical Solution Shore Acres Homeowners Actually Need
 

@@ -22,7 +22,7 @@ A local window treatment store in Sand Key has to understand these conditions fr
 
 
 
-![Sand Key](/images/areas/sand-key.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Sand Key, FL](/images/areas/sand-key.webp "Sand Key window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Motorized Roller Shades Why Sand Key Homeowners Are Choosing Them
 

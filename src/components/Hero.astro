@@ -9,6 +9,7 @@ interface Props {
   image?: string;
   video?: string;
   imageAlt?: string;
+  imageTitle?: string;
   bullets?: string[];
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
@@ -28,7 +29,8 @@ const {
   subtitle,
   image,
   video,
-  imageAlt = '',
+  imageAlt,
+  imageTitle,
   bullets = [],
   primaryCta,
   secondaryCta,
@@ -43,6 +45,11 @@ const {
 } = Astro.props;
 
 const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg:py-36';
+
+// Build a keyword-rich alt + title if caller didn't supply one.
+// Every Custom Fabric Creations hero image gets a descriptive, brand-tagged alt.
+const derivedAlt = imageAlt ?? `${title} — Custom Fabric Creations St. Petersburg, FL`;
+const derivedTitle = imageTitle ?? derivedAlt;
 ---
 
 <section class:list={['relative overflow-hidden', variant === 'linen' && 'bg-linen']}>
@@ -57,6 +64,8 @@ const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg
         playsinline
         class="w-full h-full object-cover"
         preload="auto"
+        title={derivedTitle}
+        aria-label={derivedAlt}
       ></video>
       <div class="absolute inset-0 bg-gradient-to-b from-ink-900/65 via-ink-900/55 to-ink-900/75"></div>
     </div>
@@ -65,7 +74,8 @@ const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg
     <div class="absolute inset-0">
       <img
         src={image}
-        alt={imageAlt}
+        alt={derivedAlt}
+        title={derivedTitle}
         class="w-full h-full object-cover"
         fetchpriority="high"
         decoding="async"
@@ -90,9 +100,9 @@ const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg
       </nav>
     )}
 
-    <div class="mx-auto max-w-xl">
+    <div class="mx-auto max-w-xl flex flex-col items-center">
       {showRating && (
-        <div class="mb-4 flex items-center justify-center gap-2 rounded-full px-4 py-2 border border-brand-400/40" style="background-color: rgba(188, 160, 80, 0.18); backdrop-filter: blur(8px);">
+        <div class="mb-4 inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 border border-brand-400/40 w-auto max-w-max" style="background-color: rgba(188, 160, 80, 0.18); backdrop-filter: blur(8px);">
           <div class="flex items-center gap-0.5 text-brand-400" aria-hidden="true">
             {[1,2,3,4,5].map(() => (
               <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">

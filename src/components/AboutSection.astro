@@ -16,7 +16,7 @@ const {
   body = 'We opened our doors in 2000 with a clear mission to provide St. Petersburg homeowners with uncompromising quality in custom window treatments and upholstery. Operating from our dedicated local workroom, we bypass mass production to focus entirely on precision tailoring. By bringing our curated designer showroom directly to your living space, we ensure every fabric selection perfectly complements your natural lighting and exact architectural style.',
   pills = ['25+ Years Exp.', 'Local Workroom', 'Fully Insured'],
   image = '/images/services/custom-bedding-pillows/hero.webp',
-  imageAlt = 'Custom bedding and drapery installation',
+  imageAlt = 'Custom bedding, pillows, and drapery designed and installed by Custom Fabric Creations in a St. Petersburg, FL home',
   imageBadge = { title: 'Established 2000', subtitle: 'Serving the St. Pete coast' },
   cta = { label: 'Learn More About Us', href: '/about/' },
 } = Astro.props;
@@ -29,6 +29,7 @@ const {
         <img
           src={image}
           alt={imageAlt}
+          title={imageAlt}
           class="w-full h-full object-cover"
           loading="lazy"
           decoding="async"

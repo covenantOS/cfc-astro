@@ -1,6 +1,6 @@
 ---
-// Circular arc transition from the dark hero to the next (lighter) section.
-// Uses a single elliptical arc so the bend reads as a clean, symmetric circle.
+// Circular-downward bend between the dark hero and the next (lighter) section.
+// The dark hero dips DOWN in the middle into the lighter section — a scoop shape.
 interface Props {
   nextBg?: string;
 }
@@ -14,14 +14,16 @@ const { nextBg = '#ffffff' } = Astro.props;
     class="block w-full h-20 md:h-28 lg:h-32"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <!-- circular bend: edges low at 120, middle rises smoothly to 0 (next-bg rises into dark) -->
+    <!-- scoop: edges at y=0 (dark hero ends at top), middle dips to y=120.
+         next-bg fills BELOW the curve, so the dark hero visibly curves
+         downward into the lighter section (a circular "smile" / scoop). -->
     <path
-      d="M0,120 A 1800 1800 0 0 1 1440 120 L1440,120 L0,120 Z"
+      d="M0,0 Q720,180 1440,0 L1440,120 L0,120 Z"
       fill={nextBg}
     />
-    <!-- gold accent stroke tracing the circular arc -->
+    <!-- gold accent stroke tracing the scoop -->
     <path
-      d="M0,120 A 1800 1800 0 0 1 1440 120"
+      d="M0,0 Q720,180 1440,0"
       fill="none"
       stroke="#bca050"
       stroke-width="4"

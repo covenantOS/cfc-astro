@@ -1,9 +1,18 @@
 ---
 title: "Cornices & Valances in St. Petersburg, FL"
-description: "Custom cornices & valances in St. Petersburg, built to your exact window dimensions. Fabric valances, box cornices & coordinated top treatments. Free."
+description: "Custom cornices and valances in St. Petersburg built to your exact window dimensions. Fabric valances, box cornices, and coordinated top treatments. Free consultation."
 h1: "Custom Cornices & Valances in St. Petersburg"
 slug: custom-cornices-valances
 type: service
+faqs:
+  - q: "Can you add a cornice or valance to existing blinds or shades?"
+    a: "Yes — in many cases, we can add a top treatment to an existing window treatment installation. The key is whether the existing hardware can accommodate it and whether the proportions work. We assess this at the consultation."
+  - q: "What fabric options are available for cornices and valances?"
+    a: "We work with a wide range of upholstery-grade fabrics appropriate for top treatments. We also offer contrasting or complementary fabrics for multi-layer treatments. At the consultation, we show you what's available and discuss which materials work best for the look and the conditions in your home."
+  - q: "Do cornices and valances work with all window types?"
+    a: "They work with most — but they require careful measurement and design for non-standard windows. Florida's concrete block construction, vaulted ceilings, and hurricane-impact window systems can create mounting challenges that require custom solutions. That's exactly what we do."
+  - q: "How long does a custom cornice or valance take?"
+    a: "From the initial consultation to installation, most top treatments take 3 to 5 weeks, depending on material availability and the complexity of the design. We give you a specific timeline at the estimate."
 ---
 Custom cornices and valances in Tampa Bay? Custom Fabric Creations designs and installs tailor-made window top treatments that finish the look of any room. Free in-home consultation.
 
@@ -20,7 +29,7 @@ Both are custom — and both solve the same core problem: the top of the window 
 
 
 
-![Top](/images/services/custom-cornices-valances/top.webp)
+![Featured Custom Cornices & Valances project by Custom Fabric Creations — bespoke custom cornices & valances in St. Petersburg, FL](/images/services/custom-cornices-valances/top.webp "Custom Cornices & Valances | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Why Tampa Bay Windows Often Need Custom Top Treatments
 
@@ -45,7 +54,7 @@ Coordinated drapery top treatments — When we design a full drapery system, we 
 
 
 
-![Bottom](/images/services/custom-cornices-valances/bottom.webp)
+![Completed Custom Cornices & Valances project by Custom Fabric Creations — bespoke custom cornices & valances in St. Petersburg, FL](/images/services/custom-cornices-valances/bottom.webp "Custom Cornices & Valances | Custom Fabric Creations — St. Petersburg, FL")
 
 ## How We Work — From Consultation to Installation
 
@@ -73,25 +82,3 @@ Not in one of these areas? Call us — if we can help, we will.
 Call (727) 240-4512 or request your free in-home consultation.
 
 We're available by appointment — evenings and weekends included.
-
-## Frequently Asked Questions
-
-### What's the difference between a cornice and a valance?
-
-A cornice is a rigid, box-style top treatment — think of it as a finished frame at the top of the window. A valance is softer and made from fabric, with more variety in shape and drape. Both are top treatments; the difference is material and visual weight. Which is right for your room depends on the look you want and whether you have drapery panels below.
-
-### Can you add a cornice or valance to existing blinds or shades?
-
-Yes — in many cases, we can add a top treatment to an existing window treatment installation. The key is whether the existing hardware can accommodate it and whether the proportions work. We assess this at the consultation.
-
-### What fabric options are available for cornices and valances?
-
-We work with a wide range of upholstery-grade fabrics appropriate for top treatments. We also offer contrasting or complementary fabrics for multi-layer treatments. At the consultation, we show you what's available and discuss which materials work best for the look and the conditions in your home.
-
-### Do cornices and valances work with all window types?
-
-They work with most — but they require careful measurement and design for non-standard windows. Florida's concrete block construction, vaulted ceilings, and hurricane-impact window systems can create mounting challenges that require custom solutions. That's exactly what we do.
-
-### How long does a custom cornice or valance take?
-
-From the initial consultation to installation, most top treatments take 3 to 5 weeks, depending on material availability and the complexity of the design. We give you a specific timeline at the estimate.

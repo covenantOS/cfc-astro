@@ -4,6 +4,15 @@ description: "Custom draperies & curtains made to your exact windows in St. Pete
 h1: "Custom Draperies & Curtains in St. Petersburg, FL"
 slug: custom-draperies-curtains
 type: service
+faqs:
+  - q: "What's the difference between sheer curtains and blackout curtains?"
+    a: "Sheer curtains are made from lightweight, translucent fabric that filters light but doesn't block it. Blackout curtains have a lined interlining that blocks most or all light when closed. Many Tampa Bay homeowners use both sheers during the day for softness and light, heavier drapes drawn at night for privacy and darkness."
+  - q: "Can you motorized existing drapes?"
+    a: "Retrofit motorization depends on the existing hardware and the weight of the panel. Let's look at your specific situation if motorization is viable, we can often add it without replacing the entire treatment."
+  - q: "Are custom draperies worth the cost?"
+    a: "Custom costs more upfront than ready-made. What you're paying for is a precise fit, fabrics chosen specifically for your room, and installation by people who care about the result. Ready-made curtains from a retail store are cut to an average if your windows aren't average, that shows. For many homeowners, the difference in how the room looks and performs makes the investment worth it."
+  - q: "Do you offer drapery cleaning or maintenance?"
+    a: "We don't offer a dedicated cleaning service, but we can advise on proper care for different fabric types. For structural issues, hardware adjustments, or re-hemming after carpet or flooring changes, contact us we'll see what we can do."
 ---
 Looking for custom draperies in Florida? Custom Fabric Creations designs and installs tailor-made curtains, sheer drapes, blackout curtains, and motorized window treatments. Free in-home consultation. Serving Florida since 2000.
 
@@ -26,7 +35,7 @@ Custom valances and top treatments Sometimes the window needs something above th
 
 
 
-![Top](/images/services/custom-draperies-curtains/top.webp)
+![Featured Custom Draperies & Curtains project by Custom Fabric Creations — bespoke custom draperies & curtains in St. Petersburg, FL](/images/services/custom-draperies-curtains/top.webp "Custom Draperies & Curtains | Custom Fabric Creations — St. Petersburg, FL")
 
 ## How We Make Your Custom Drapes From Measurement to Installation
 
@@ -55,7 +64,7 @@ Not sure if we cover your area? Call us. If we don't service your location direc
 
 
 
-![Middle](/images/services/custom-draperies-curtains/middle.webp)
+![In-progress Custom Draperies & Curtains project by Custom Fabric Creations — bespoke custom draperies & curtains in St. Petersburg, FL](/images/services/custom-draperies-curtains/middle.webp "Custom Draperies & Curtains | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Ready to see what custom drapes can do for your home?
 
@@ -63,25 +72,3 @@ Call us at (727) 240-4512 or request your free in-home consultation.
 
 We're available by appointment including evenings and weekends.
 (727) 240-4512
-
-## Frequently Asked Questions
-
-### What's the lead time for custom draperies?
-
-From your initial consultation to installation, most projects take 4 to 8 weeks. The timeline depends on fabric availability and the complexity of the treatment. We give you a specific estimate before work begins.
-
-### What's the difference between sheer curtains and blackout curtains?
-
-Sheer curtains are made from lightweight, translucent fabric that filters light but doesn't block it. Blackout curtains have a lined interlining that blocks most or all light when closed. Many Tampa Bay homeowners use both sheers during the day for softness and light, heavier drapes drawn at night for privacy and darkness.
-
-### Can you motorized existing drapes?
-
-Retrofit motorization depends on the existing hardware and the weight of the panel. Let's look at your specific situation if motorization is viable, we can often add it without replacing the entire treatment.
-
-### Are custom draperies worth the cost?
-
-Custom costs more upfront than ready-made. What you're paying for is a precise fit, fabrics chosen specifically for your room, and installation by people who care about the result. Ready-made curtains from a retail store are cut to an average if your windows aren't average, that shows. For many homeowners, the difference in how the room looks and performs makes the investment worth it.
-
-### Do you offer drapery cleaning or maintenance?
-
-We don't offer a dedicated cleaning service, but we can advise on proper care for different fabric types. For structural issues, hardware adjustments, or re-hemming after carpet or flooring changes, contact us we'll see what we can do.

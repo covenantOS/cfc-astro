@@ -1,6 +1,6 @@
 ---
 title: "Window Treatments in Treasure Island, FL"
-description: "Treasure Island FL's premier blinds shop offering composite plantation shutters, blackout roman shades & commercial motorized blinds. Luxury bedding &."
+description: "Treasure Island FL's premier blinds shop offering composite plantation shutters, blackout roman shades, and motorized blinds. Luxury bedding and custom cushions."
 h1: "Custom Window Treatments in Treasure Island, FL"
 slug: treasure-island
 type: area
@@ -20,7 +20,7 @@ A local window treatment store that has worked on Treasure Island for decades un
 
 
 
-![Treasure Island](/images/areas/treasure-island.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Treasure Island, FL](/images/areas/treasure-island.webp "Treasure Island window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## What Barrier Island Conditions Actually Do to Standard Window Treatments
 

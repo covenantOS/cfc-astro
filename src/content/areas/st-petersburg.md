@@ -22,7 +22,7 @@ We've made those mistakes. We've fixed those mistakes. And we've learned from ev
 
 
 
-![St Petersburg](/images/areas/st-petersburg.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in St. Petersburg, FL](/images/areas/st-petersburg.webp "St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## What a Real Blinds Shop in St. Petersburg Actually Offers
 

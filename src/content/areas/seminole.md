@@ -18,7 +18,7 @@ That kind of customer attracts a specific kind of window treatment store. One th
 
 
 
-![Seminole](/images/areas/seminole.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Seminole, FL](/images/areas/seminole.webp "Seminole window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Roman Shades The Custom Window Treatment That Seminole Homeowners Keep Choosing
 

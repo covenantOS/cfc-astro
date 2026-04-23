@@ -4,6 +4,15 @@ description: "Interior design services in St. Petersburg focused on custom windo
 h1: "Interior Design & Products in St. Petersburg"
 slug: services-interior-decor-tampa
 type: service
+faqs:
+  - q: "What makes your approach different from buying decor at a store?"
+    a: "Ready-made home decor comes in standard sizes and styles that have to fit the room by approximation. We make things to fit your specific space windows, furniture, window seats, built-ins. Beyond fit, we help you choose materials and fabrics that are appropriate for how you actually live, not just what looks good in a showroom."
+  - q: "How much does custom interior decor cost?"
+    a: "It varies by project scope. A single window treatment might cost differently than a full room's worth of window treatments plus bedding and custom cushions. We give you a detailed written estimate at the consultation no surprises."
+  - q: "Do I need to commit to a full room or whole house?"
+    a: "No. You can work with us on a single window, a single piece of furniture, or a single room. There's no minimum commitment. We think the best relationships start with one project done well."
+  - q: "Can you coordinate fabrics with my existing furniture?"
+    a: "Yes that's a core part of what we do. We bring samples to your home and show you options that work with your existing pieces, colors, and style. This is why the in-home consultation matters: fabric looks different in your lighting than it does in a showroom."
 ---
 Looking for interior design in St. Petersburg? Custom Fabric Creations offers custom window treatments, bedding, cushions, and home decor products tailored to your space. Terry Popick brings 25+ years of design experience to every project. Free in-home consultation.
 
@@ -22,7 +31,7 @@ Fabric selection service — Not sure what fabric works in a room with two kids 
 
 
 
-![Top](/images/services/services-interior-decor-tampa/top.webp)
+![Featured Interior Design & Decor project by Custom Fabric Creations — bespoke interior design & decor in St. Petersburg, FL](/images/services/services-interior-decor-tampa/top.webp "Interior Design & Decor | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Why St. Petersgurb Homeowners Work With Us Not a Design Firm
 
@@ -46,7 +55,7 @@ One point of contact. Terry and her team work directly with you. No junior desig
 
 
 
-![Bottom](/images/services/services-interior-decor-tampa/bottom.webp)
+![Completed Interior Design & Decor project by Custom Fabric Creations — bespoke interior design & decor in St. Petersburg, FL](/images/services/services-interior-decor-tampa/bottom.webp "Interior Design & Decor | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Serving the Greater St. Petersburg Area
 
@@ -67,25 +76,3 @@ Not in one of these areas? Call us anyway — if we can help, we'll tell you.
 Call (727) 240-4512 or request your free in-home design consultation.
 
 We're available by appointment including evenings and weekends.
-
-## Frequently Asked Questions
-
-### Are you an interior design firm?
-
-We are a custom soft goods and window treatments specialist with a strong design component. We don't do full-scale interior design remodels, but we do design and provide the fabric-based elements that make a room feel complete window treatments, bedding, cushions, and decor products. If you need a full home redesign, we can refer you to a firm that fits your project.
-
-### What makes your approach different from buying decor at a store?
-
-Ready-made home decor comes in standard sizes and styles that have to fit the room by approximation. We make things to fit your specific space windows, furniture, window seats, built-ins. Beyond fit, we help you choose materials and fabrics that are appropriate for how you actually live, not just what looks good in a showroom.
-
-### How much does custom interior decor cost?
-
-It varies by project scope. A single window treatment might cost differently than a full room's worth of window treatments plus bedding and custom cushions. We give you a detailed written estimate at the consultation no surprises.
-
-### Do I need to commit to a full room or whole house?
-
-No. You can work with us on a single window, a single piece of furniture, or a single room. There's no minimum commitment. We think the best relationships start with one project done well.
-
-### Can you coordinate fabrics with my existing furniture?
-
-Yes that's a core part of what we do. We bring samples to your home and show you options that work with your existing pieces, colors, and style. This is why the in-home consultation matters: fabric looks different in your lighting than it does in a showroom.

@@ -4,6 +4,15 @@ description: "Expert furniture reupholstery in St. Petersburg. We restore sofas,
 h1: "Furniture Reupholstery in St. Petersburg, FL"
 slug: furniture-reupholstery
 type: service
+faqs:
+  - q: "What's the difference between reupholstery and refinishing?"
+    a: "Reupholstery covers fabric and cushion work the soft parts of the piece. Refinishing deals with wood surfaces staining, painting, restoring wood grain. We do reupholstery. For wood refinishing, we'd recommend a separate specialist."
+  - q: "How long does a reupholstery project take?"
+    a: "Most projects take 4 to 8 weeks from consultation to delivery, depending on fabric availability and the complexity of the work. We give you a specific estimate at the consultation."
+  - q: "Can you match my existing fabric or a photo I have?"
+    a: "In many cases, yes we can source similar fabrics or direct matches depending on availability. Bring your photo or a swatch to the consultation and we'll see what's possible."
+  - q: "Is reupholstery more expensive than buying new?"
+    a: "It depends on the piece and the fabric you choose. For high-quality furniture that was built to last, reupholstery often costs less than buying a comparable new piece and you keep furniture that fits your space and your life exactly. For lower-quality mass-market furniture, the math may not work. We give you an honest comparison before you decide."
 ---
 Furniture reupholstery in St. Petersburg? Custom Fabric Creations recovers furniture with premium fabrics sofas, chairs, sectionals. Free in-home consultation. Serving Tampa, St. Petersburg, and surrounding counties since 2000.
 
@@ -26,7 +35,7 @@ We work on: sofas, sectionals, loveseats, armchairs, dining chairs, ottomans, he
 
 
 
-![Top](/images/services/furniture-reupholstery/top.webp)
+![Featured Furniture Reupholstery project by Custom Fabric Creations — bespoke furniture reupholstery in St. Petersburg, FL](/images/services/furniture-reupholstery/top.webp "Furniture Reupholstery | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Custom Upholstery Fabric Selection What Sets Us Apart
 
@@ -48,7 +57,7 @@ If you have a specific fabric in mind, we can often source it. If you want recom
 
 
 
-![Bottom](/images/services/furniture-reupholstery/bottom.webp)
+![Completed Furniture Reupholstery project by Custom Fabric Creations — bespoke furniture reupholstery in St. Petersburg, FL](/images/services/furniture-reupholstery/bottom.webp "Furniture Reupholstery | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Serving the Greater St. Petersburg Area
 
@@ -69,25 +78,3 @@ Not in one of these areas? Call us anyway if we can help, we will.
 Call (727) 240-4512 or request your free in-home consultation. We serve Tampa Bay, St. Petersburg, Clearwater, and surrounding counties.
 
 Available by appointment evenings and weekends included.
-
-## Frequently Asked Questions
-
-### How do I know if my furniture is worth reupholstering?
-
-The short answer: if you love the piece and the frame is structurally sound, it's usually worth it. The longer answer depends on the piece — some furniture is built to be recovered, and some is made from materials that don't survive being taken apart and rebuilt. We assess every piece honestly. If reupholstery doesn't make sense for your situation, we'll tell you.
-
-### What's the difference between reupholstery and refinishing?
-
-Reupholstery covers fabric and cushion work the soft parts of the piece. Refinishing deals with wood surfaces staining, painting, restoring wood grain. We do reupholstery. For wood refinishing, we'd recommend a separate specialist.
-
-### How long does a reupholstery project take?
-
-Most projects take 4 to 8 weeks from consultation to delivery, depending on fabric availability and the complexity of the work. We give you a specific estimate at the consultation.
-
-### Can you match my existing fabric or a photo I have?
-
-In many cases, yes we can source similar fabrics or direct matches depending on availability. Bring your photo or a swatch to the consultation and we'll see what's possible.
-
-### Is reupholstery more expensive than buying new?
-
-It depends on the piece and the fabric you choose. For high-quality furniture that was built to last, reupholstery often costs less than buying a comparable new piece and you keep furniture that fits your space and your life exactly. For lower-quality mass-market furniture, the math may not work. We give you an honest comparison before you decide.

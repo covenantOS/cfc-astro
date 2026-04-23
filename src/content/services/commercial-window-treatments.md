@@ -4,6 +4,15 @@ description: "Commercial window treatments for offices, medical spaces, restaura
 h1: "Commercial Window Treatments in St. Petersburg"
 slug: commercial-window-treatments
 type: service
+faqs:
+  - q: "Do you work with property managers and HOA management companies?"
+    a: "Yes we regularly work with property management companies, HOA boards, and commercial property managers on ongoing and project-based work. We're familiar with the documentation and communication requirements these relationships require."
+  - q: "Can you provide submittals for architectural specifications?"
+    a: "Yes. For projects that require formal submittals, we can provide product specifications, lead times, and samples in the format required by your architect or interior designer."
+  - q: "Do you offer volume pricing for larger projects?"
+    a: "Yes we offer pricing that reflects the scope of commercial projects. Larger projects typically have better per-unit economics. We discuss this at the specification stage."
+  - q: "Do you handle installation in occupied spaces?"
+    a: "Yes we install in occupied commercial spaces regularly and coordinate our work to minimize disruption to your business operations. This includes after-hours and weekend installation."
 ---
 Commercial window treatments in St. Petersburg? Custom Fabric Creations installs office blinds, commercial roller shades, and window treatments for businesses across Tampa, St. Petersburg, and surrounding counties. Free consultation for commercial projects..
 
@@ -24,7 +33,7 @@ Hotels and hospitality — Guest rooms, lobbies, and common areas. We understand
 
 
 
-![Top](/images/services/commercial-window-treatments/top.webp)
+![Featured Commercial Window Treatments project by Custom Fabric Creations — bespoke commercial window treatments in St. Petersburg, FL](/images/services/commercial-window-treatments/top.webp "Commercial Window Treatments | Custom Fabric Creations — St. Petersburg, FL")
 
 ## What Makes Commercial Projects Different And How We Handle It
 
@@ -55,7 +64,7 @@ Office blinds — Panel tracks, cellular shades, and other treatments for open-p
 
 
 
-![Middle](/images/services/commercial-window-treatments/middle.webp)
+![In-progress Commercial Window Treatments project by Custom Fabric Creations — bespoke commercial window treatments in St. Petersburg, FL](/images/services/commercial-window-treatments/middle.webp "Commercial Window Treatments | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Our Commercial Process From Specification to Installation
 
@@ -82,32 +91,10 @@ Pinellas County: St. Petersburg
 
 
 
-![Bottom](/images/services/commercial-window-treatments/bottom.webp)
+![Completed Commercial Window Treatments project by Custom Fabric Creations — bespoke commercial window treatments in St. Petersburg, FL](/images/services/commercial-window-treatments/bottom.webp "Commercial Window Treatments | Custom Fabric Creations — St. Petersburg, FL")
 
 ## Have a commercial project? Let's talk scope.
 
 Call (727) 240-4512 or request a commercial consultation.
 
 We're available by appointment evenings and weekends included.
-
-## Frequently Asked Questions
-
-### What's the typical lead time for commercial projects?
-
-Lead times vary by scope and product. We provide a specific timeline at the specification stage. In general, commercial roller shades and solar shades are typically 4 - 8 weeks from specification to installation. Larger projects with custom specifications may take longer.
-
-### Do you work with property managers and HOA management companies?
-
-Yes we regularly work with property management companies, HOA boards, and commercial property managers on ongoing and project-based work. We're familiar with the documentation and communication requirements these relationships require.
-
-### Can you provide submittals for architectural specifications?
-
-Yes. For projects that require formal submittals, we can provide product specifications, lead times, and samples in the format required by your architect or interior designer.
-
-### Do you offer volume pricing for larger projects?
-
-Yes we offer pricing that reflects the scope of commercial projects. Larger projects typically have better per-unit economics. We discuss this at the specification stage.
-
-### Do you handle installation in occupied spaces?
-
-Yes we install in occupied commercial spaces regularly and coordinate our work to minimize disruption to your business operations. This includes after-hours and weekend installation.

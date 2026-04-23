@@ -1,9 +1,18 @@
 ---
 title: "Window Treatments in Belleair Shore, FL"
-description: "Belleair Shore FL's premier blinds shop offering custom plantation shutters, exterior solar shades & luxury bedding. Furniture re-upholstery & motorized."
+description: "Belleair Shore FL's premier blinds shop offering custom plantation shutters, exterior solar shades, and luxury bedding. Furniture reupholstery and motorized options available."
 h1: "Custom Window Treatments in Belleair Shore, FL"
 slug: belleair-shore
 type: area
+faqs:
+  - q: "I have a horse property — do you work with barn windows and stable windows?"
+    a: "Yes. We work with the full range of window situations on equestrian properties — including functional windows in barns, stables, and outbuildings, as well as the main residence."
+  - q: "My home is on an acre or more — does that change what I need?"
+    a: "Properties with more land often have larger windows, higher ceilings, and more exposed positions than standard residential lots. We assess each property individually and specify treatments accordingly."
+  - q: "Are there HOA restrictions in Odessa and Starkey Ranch?"
+    a: "Starkey Ranch and some newer subdivisions have community standards. We're familiar with the requirements in the major Odessa-area communities."
+  - q: "How long does an Odessa project typically take?"
+    a: "Most residential projects take 3 to 5 weeks from consultation to installation. Larger properties with more windows may take longer — we give you a specific timeline at the estimate."
 ---
 Custom window treatments, plantation shutters, motorized blinds, drapery, furniture re-upholstery, and luxury bedding for Belleair Shore homeowners — professionally measured, specified for coastal conditions, and installed to last.
 
@@ -18,7 +27,7 @@ The window treatment store that serves Belleair Shore needs to understand this c
 
 
 
-![Belleair Shore](/images/areas/belleair-shore.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Belleair Shore, FL](/images/areas/belleair-shore.webp "Belleair Shore window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Plantation Shutters The Window Treatment That Belleair Shore Homes Actually Need
 

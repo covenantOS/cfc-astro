@@ -1,6 +1,6 @@
 ---
 title: "Window Treatments in West St. Pete, FL"
-description: "West St. Petersburg's premier blinds shop offering custom plantation shutters, blinds, shades & motorized blinds. Free consultations. Serving Pinellas."
+description: "West St. Petersburg's premier blinds shop offering custom plantation shutters, blinds, shades, and motorized treatments. Free consultations. Serving Pinellas County."
 h1: "Custom Window Treatments in West St. Pete, FL"
 slug: west-st-pete
 type: area
@@ -20,7 +20,7 @@ Custom Banquettes Maximize your dining space with bespoke built in seating. We d
 
 
 
-![West St Pete](/images/areas/west-st-pete.webp)
+![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in West St. Petersburg, FL](/images/areas/west-st-pete.webp "West St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Our Flawless Consultation and Installation Process
 
