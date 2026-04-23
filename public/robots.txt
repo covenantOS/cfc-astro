@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://www.customfabriccreations.net/sitemap.xml
 Sitemap: https://www.customfabriccreations.net/sitemap-index.xml

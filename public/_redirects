@@ -1,5 +1,10 @@
 # Cloudflare Pages redirects — preserve legacy WP URL patterns at cutover.
 
+# Sitemap alias: crawlers / validators expect /sitemap.xml.
+# Astro's @astrojs/sitemap outputs /sitemap-index.xml, so serve that content
+# at /sitemap.xml too (200 = rewrite, not a redirect, so crawlers get the XML directly).
+/sitemap.xml /sitemap-index.xml 200
+
 # Normalize non-trailing-slash URLs to trailing-slash (WordPress default)
 /about       /about/    301
 /brands      /brands/   301
