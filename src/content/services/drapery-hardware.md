@@ -19,6 +19,9 @@ Heavy drapery weight. Lined drapery panels are heavy. The weight adds up across 
 
 Non-standard window configurations. Florida's architectural diversity concrete block construction, vaulted ceilings, off-standard window heights creates mounting situations that require custom hardware solutions. Standard rods and brackets from a home store simply don't work.
 
+
+![Top](/images/services/drapery-hardware/top.webp)
+
 ## Types of Drapery Hardware We Provide in Tampa Bay
 
 Decorative drapery rods — The classic visible rod-and-bracket system. Available in a wide range of materials: steel, iron, wood, and aluminum. We help you select the right rod diameter, bracket projection, and finial style for your drapery weight and your room's aesthetic.
@@ -49,6 +52,9 @@ Improper clearance. The rod and brackets need to extend beyond the window frame 
 
 Ceiling-mounted track failures. Vaulted ceilings and concrete ceilings require different mounting methods than standard drywall. We bring the right hardware for each surface type.
 
+
+![Top Middle](/images/services/drapery-hardware/top-middle.webp)
+
 ## Custom Drapery Hardware When Standard Sizes Don't Work
 
 Standard drapery hardware comes in a limited range of sizes. If your window isn't standard and many St. Petersburg windows aren't you're either making the standard work with gaps and awkward overlaps, or you're getting custom.
@@ -69,6 +75,9 @@ Weight requirements — Heavy lined drapery or layered treatments require hardwa
 - On-site measurement. We measure the window, the mounting surface, the clearance requirements, and the weight of the planned drapery panels. This determines the hardware specification.
 - Specification and proposal. We specify the exact hardware rod diameter, bracket type, mounting method, and finish and provide a written proposal covering hardware and installation.
 - Professional installation. We install the hardware properly. We confirm level, secure mounting, and proper clearance for panel operation. We show you how everything works before we leave.
+
+
+![Bottom Middle](/images/services/drapery-hardware/bottom-middle.webp)
 
 ## Need drapery hardware that actually works?
 

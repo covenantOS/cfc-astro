@@ -17,6 +17,9 @@ These are conditions that standard window treatments aren't designed for. The ch
 
 A local window treatment store in Tierra Verde has to understand this. Not just the products, but the specific conditions that determine whether those products will last six months or six years in your home. We've been working in Tierra Verde long enough to know which products fail here, which mounting approaches work, and which solutions actually solve the problems that island living creates.
 
+
+![Tierra Verde](/images/areas/tierra-verde.webp)
+
 ## Exterior Solar Shades — The Solution That Actually Works for Tierra Verde's Intense Sun Exposure
 
 Tierra Verde's exposure to direct sun is among the most intense in the Tampa Bay area. Sitting at the southern tip of Pinellas County with open water on two sides, the island receives sun from the south, the east, and the west with minimal natural obstruction. For homeowners, this means heat gain through windows is a year-round challenge, not just a summer one.

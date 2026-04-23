@@ -17,6 +17,9 @@ Valances are softer, fabric-based top treatments that hang or drape across the t
 
 Both are custom — and both solve the same core problem: the top of the window needs to look finished, not like an afterthought.
 
+
+![Top](/images/services/custom-cornices-valances/top.webp)
+
 ## Why Tampa Bay Windows Often Need Custom Top Treatments
 
 Florida homes have a window problem that doesn't exist in most other markets.
@@ -36,6 +39,9 @@ Fabric valances — Draped or shaped fabric treatments mounted on a board or bat
 Swagged and shaped valances — More decorative valance styles with cascading fabric or geometric shapes. These work best in formal living rooms, dining rooms, or spaces where the window treatment is a focal point of the room's design.
 
 Coordinated drapery top treatments — When we design a full drapery system, we typically design the top treatment as part of the overall specification — matching the fabric, the heading style, and the proportions so everything reads as one intentional design decision.
+
+
+![Bottom](/images/services/custom-cornices-valances/bottom.webp)
 
 ## How We Work — From Consultation to Installation
 

@@ -17,6 +17,9 @@ The other reality about downtown St. Pete window treatments: they're exposed. Yo
 
 You need window treatments that look intentional. That look designed. That look like they belong in that space, not like they were installed as an afterthought by a building manager who needed something cheap and available.
 
+
+![Downtown St Pete](/images/areas/downtown-st-pete.webp)
+
 ## Solar Shades for Heat Control The Most Important Window Treatment in Downtown St. Pete
 
 If you live in a downtown St. Pete high-rise, you've felt it: the afternoon sun hitting your west-facing windows and turning your living room into a greenhouse despite the air conditioning running full blast. Florida sun is relentless, and downtown buildings with extensive glass exposure amplify the problem dramatically. Solar shades for heat control aren't a luxury in this environment, they're essential infrastructure.

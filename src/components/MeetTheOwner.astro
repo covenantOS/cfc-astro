@@ -1,0 +1,57 @@
+---
+interface Props {
+  name?: string;
+  role?: string;
+  heading?: string;
+  body?: string;
+  image?: string;
+}
+
+const {
+  name = 'Terry Popick',
+  role = 'Owner & Founder',
+  heading = 'Terry Popick and the Heart of Custom Fabric Creations',
+  image = '/images/hero/homepage.webp',
+  body = `Terry has brought entire spaces to life for more than two decades through custom interiors with window treatments, re-upholstery, bedding, and personalized design consultations. From her roots in St. Petersburg to her growing presence in the Tampa Bay area, she's become known not just for her craftsmanship, but for her warmth, wisdom, and undeniable eye for beauty.
+
+Terry treats every project like a calling, not a transaction. With a background in community service, a devotion to her faith, and a genuine love for people, she believes your home should feel like peace wrapped in elegance. Every stitch, fold, and fabric pull is done with care and precision.
+
+Behind her is a loving family, the heartbeat of the operation. Together, they're devoted to providing clients with both creative inspiration and technical expertise. From custom designs to luxurious fabrics, trims, and finishing touches, they combine craftsmanship and care to bring your dream space to life.
+
+Whether refreshing a beloved heirloom chair, designing one-of-a-kind window treatments, blinds, or drapery, selecting the perfect fabric for your space, you'll feel the difference. Because with Custom Fabric Creations, it's never "just fabric."
+
+**It's personal.**`,
+} = Astro.props;
+
+const paragraphs = body.split("\n\n");
+---
+
+<section class="py-20 md:py-28 bg-white">
+  <div class="container-site grid md:grid-cols-[360px_1fr] lg:grid-cols-[420px_1fr] gap-10 lg:gap-16 items-start max-w-6xl mx-auto">
+    <div class="relative">
+      <div class="aspect-[3/4] overflow-hidden rounded-sm bg-ink-100">
+        <img
+          src={image}
+          alt={name}
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="absolute bottom-5 left-5 bg-brand-500 text-white px-5 py-3 shadow-soft">
+        <p class="font-display text-lg leading-tight">{name}</p>
+        <p class="text-xs opacity-90 tracking-wide">{role}</p>
+      </div>
+    </div>
+
+    <div>
+      <p class="eyebrow" style="letter-spacing: 0.3em;">Meet the Owner</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ink-800 leading-tight mb-8">{heading}</h2>
+      <div class="prose-cfc">
+        {paragraphs.map((p) => (
+          <p set:html={p.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')}></p>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

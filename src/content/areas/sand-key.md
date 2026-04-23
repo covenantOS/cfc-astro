@@ -19,6 +19,9 @@ These conditions accelerate the failure of standard window treatments in ways th
 
 A local window treatment store in Sand Key has to understand these conditions from direct experience, not from a manufacturer's spec sheet. We've worked in this community long enough to know which products actually last here, which mounting approaches hold up, and which solutions solve the problems that island living creates. That's the knowledge we bring to every Sand Key consultation.
 
+
+![Sand Key](/images/areas/sand-key.webp)
+
 ## Motorized Roller Shades Why Sand Key Homeowners Are Choosing Them
 
 Motorized roller shades have become one of the most requested window treatments in Sand Key homes, and the reasons are straightforward: they solve real problems that manual shades can't, they look better than their manual alternatives, and the technology has become reliable and affordable enough that the value proposition is clear.

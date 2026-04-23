@@ -1,0 +1,61 @@
+---
+interface CardItem {
+  title: string;
+  body: string;
+}
+interface Props {
+  eyebrow?: string;
+  heading?: string;
+  body?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  cards?: CardItem[];
+}
+
+const {
+  eyebrow = 'Why Choose Custom Fabric Creations',
+  heading = 'Premium Interior Design Treatment',
+  body = 'Standard retail stores force you to guess how fabrics will look in your actual lighting. We eliminate that risk entirely, by bringing our curated designer collections directly to your property we guarantee a perfect match for your interior style.',
+  ctaLabel = 'Explore Our Services',
+  ctaHref = '/services/',
+  cards = [
+    {
+      title: 'The At-Home Showroom',
+      body: 'We bring thousands of premium textile samples directly to your living room for exact color matching.',
+    },
+    {
+      title: 'Elite Designer Brands',
+      body: 'Authorized dealers for top industry names including Kravet, Stout, Hunter Douglas and Norman.',
+    },
+    {
+      title: 'Local Master Tailoring',
+      body: 'Every treatment is custom fabricated in our workroom before professional white glove installation.',
+    },
+  ],
+} = Astro.props;
+---
+
+<section class="py-20 md:py-28 bg-white">
+  <div class="container-site max-w-6xl mx-auto grid gap-6 md:grid-cols-5">
+    <div class="md:col-span-2 bg-brand-500 text-white p-8 md:p-10 rounded-sm flex flex-col">
+      <p class="eyebrow text-white/80 mb-3" style="letter-spacing: 0.3em;">{eyebrow}</p>
+      <h3 class="font-display text-3xl md:text-4xl leading-tight text-white mb-5">{heading}</h3>
+      <p class="text-white/85 leading-relaxed text-sm md:text-base mb-8">{body}</p>
+      <a href={ctaHref} class="mt-auto inline-flex items-center gap-2 bg-white hover:bg-cream-50 text-ink-800 font-semibold px-6 py-3 rounded-sm transition self-start">
+        {ctaLabel}
+        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 10h10M11 5l5 5-5 5"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="md:col-span-3 flex flex-col gap-4">
+      {cards.map((c) => (
+        <div class="bg-ink-800 text-white p-6 md:p-7 rounded-sm">
+          <h4 class="font-display text-xl md:text-2xl text-white mb-2">{c.title}</h4>
+          <p class="text-white/75 leading-relaxed text-[0.95rem]">{c.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

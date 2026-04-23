@@ -17,6 +17,9 @@ Master Furniture Reupholstery Revitalize your cherished seating instead of repla
 
 Custom Banquettes Maximize your dining space with bespoke built in seating. We design and install structural seating upholstered in luxury stain resistant performance fabrics perfect for family gatherings.
 
+
+![West St Pete](/images/areas/west-st-pete.webp)
+
 ## Our Flawless Consultation and Installation Process
 
 - The In Home Consultation. Terry and our professional design team bring our extensive premium fabric library directly to your West St Pete property. We evaluate your natural lighting take exact architectural measurements and provide expert styling recommendations.

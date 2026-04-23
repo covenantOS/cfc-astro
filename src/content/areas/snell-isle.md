@@ -17,6 +17,9 @@ The demand on a blinds shop in this neighborhood is different from anywhere else
 
 That's the standard we work to. Not the standard of a big-box store. Not the standard of an online retailer with a local Google listing. The standard of homeowners who notice when something is genuinely well-made.
 
+
+![Snell Isle](/images/areas/snell-isle.webp)
+
 ## What Professional Blind Installers Actually Do Differently in Snell Isle
 
 There's a difference between hanging a blind and professionally installing one. It shows up in the details that most homeowners don't notice until they've lived with the result for a few years.

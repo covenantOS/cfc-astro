@@ -5,6 +5,7 @@ interface Stat {
 }
 interface Props {
   stats?: Stat[];
+  showBend?: boolean;
 }
 
 const {
@@ -13,63 +14,58 @@ const {
     { value: '100%', label: 'Satisfaction' },
     { value: 'FL', label: 'Serving St. Pete Metro' },
   ],
+  showBend = true,
 } = Astro.props;
 
-// Brand logos — for brands without an image on the live site we use a styled
-// wordmark treatment matching the mockup.
 const brands = [
-  { name: 'Norman Shutters', image: '/images/brands/norman.webp', alt: 'Norman Shutters' },
-  { name: 'Stout Textiles', style: 'script', display: '·SI·' },
-  { name: 'Kravet', image: '/images/brands/kravet.webp', alt: 'Kravet' },
-  { name: 'Horizons Window Fashions', style: 'wordmark', display: 'HORIZONS', sub: 'WINDOW FASHIONS' },
-  { name: 'Hunter Douglas', style: 'dot', display: 'HunterDouglas' },
-  { name: 'Alta Window Fashions', style: 'wordmark', display: 'ALTA', sub: 'WINDOW FASHIONS' },
-  { name: 'Elegant Shutters', style: 'script', display: 'elegant shutters', sub: 'by elegant windows' },
+  { name: 'Norman Shutters', src: '/images/brands/Norman-Shutters.webp' },
+  { name: 'Stout Textiles', src: '/images/brands/Stout.webp' },
+  { name: 'Kravet', src: '/images/brands/Kravet-Fabric.webp' },
+  { name: 'Horizons Window Fashions', src: '/images/brands/Horizon Window Fashions.webp' },
+  { name: 'Hunter Douglas', src: '/images/brands/Hunter Douglas.webp' },
+  { name: 'ALTA Window Fashions', src: '/images/brands/ALTA Window Fashions.webp' },
+  { name: 'Elegant Shutters', src: '/images/brands/Elegant Shutters.webp' },
 ];
 ---
 
-<section class="py-16 md:py-20 border-t border-line bg-white">
-  <div class="container-site">
-    <div class="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
-      {stats.map((s) => (
-        <div class="text-center">
-          <p class="font-display text-3xl md:text-4xl text-brand-600 mb-1">{s.value}</p>
-          <p class="text-xs tracking-widest uppercase text-ink-500">{s.label}</p>
-        </div>
-      ))}
+<section class="relative bg-white">
+  {showBend && (
+    <div class="absolute top-0 left-0 right-0 h-16 md:h-20 pointer-events-none" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="w-full h-full block">
+        <path d="M0,0 L0,10 Q720,80 1440,10 L1440,0 Z" fill="#1a1a1a"/>
+        <path d="M0,10 Q720,80 1440,10" fill="none" stroke="#bca050" stroke-width="3"/>
+      </svg>
     </div>
+  )}
 
-    <div class="flex flex-wrap items-center justify-center gap-x-12 md:gap-x-16 gap-y-8">
-      {brands.map((b) => (
-        <div class="flex items-center justify-center h-12 text-ink-700" title={b.name}>
-          {b.image ? (
-            <img src={b.image} alt={b.alt ?? b.name} class="max-h-10 max-w-[140px] w-auto h-auto object-contain" loading="lazy" decoding="async" />
-          ) : b.style === 'wordmark' ? (
-            <div class="text-center">
-              <p class="font-display text-xl md:text-2xl tracking-[0.2em] text-ink-800">{b.display}</p>
-              {b.sub && <p class="text-[9px] md:text-[10px] tracking-[0.3em] text-ink-500 mt-1">{b.sub}</p>}
-            </div>
-          ) : b.style === 'dot' ? (
-            <div class="flex items-center gap-1.5">
-              <span class="w-5 h-5 rounded-full bg-[#ec6b2e] flex-shrink-0"></span>
-              <span class="font-bold text-lg md:text-xl text-ink-800 tracking-tight">{b.display}</span>
-            </div>
-          ) : b.style === 'script' ? (
-            <div class="text-center">
-              <p class="font-display italic text-lg md:text-xl text-ink-700">{b.display}</p>
-              {b.sub && <p class="text-[9px] md:text-[10px] tracking-wide text-ink-400 italic">{b.sub}</p>}
-            </div>
-          ) : (
-            <span class="font-display text-xl tracking-wide">{b.name}</span>
-          )}
-        </div>
-      ))}
+  <div class="pt-24 pb-16 md:pt-28 md:pb-20">
+    <div class="container-site">
+      <div class="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-14">
+        {stats.map((s) => (
+          <div class="text-center">
+            <p class="font-display text-3xl md:text-4xl text-brand-600 mb-1">{s.value}</p>
+            <p class="text-xs tracking-[0.2em] uppercase text-ink-500">{s.label}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-x-12 md:gap-x-16 gap-y-8">
+        {brands.map((b) => (
+          <img
+            src={b.src}
+            alt={b.name}
+            class="h-10 md:h-12 max-w-[160px] w-auto object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+        ))}
+      </div>
+
+      <p class="text-center mt-10">
+        <a href="/brands/" class="text-sm text-brand-600 hover:text-brand-700 underline underline-offset-4 font-semibold">
+          See full list of brands
+        </a>
+      </p>
     </div>
-
-    <p class="text-center mt-10">
-      <a href="/brands/" class="text-sm text-brand-600 hover:text-brand-700 underline underline-offset-4 font-semibold">
-        See full list of brands
-      </a>
-    </p>
   </div>
 </section>

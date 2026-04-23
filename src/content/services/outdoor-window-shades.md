@@ -21,6 +21,9 @@ Hurricane exposure. St. Petersburg is hurricane country. Exterior treatments nee
 
 Humidity and salt air. Along the coast in Pinellas and Manatee counties, salt air accelerates corrosion and material degradation. The right materials and hardware matter more here than almost anywhere else in the region.
 
+
+![Bottom](/images/services/outdoor-window-shades/bottom.webp)
+
 ## Types of Exterior Window and Patio Treatments We Offer in St. Petersburg
 
 Solar screens — Fabric screens installed on the exterior of windows and patios that block UV rays, reduce heat gain, and maintain visibility and airflow. Solar screens are one of the most effective ways to make a west-facing patio or screen enclosure usable during summer afternoons. They also protect furniture and flooring inside from UV fading.

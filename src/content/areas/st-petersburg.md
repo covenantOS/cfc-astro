@@ -19,6 +19,9 @@ When you work with us, you're not guessing whether the measurements will fit. Yo
 
 We've made those mistakes. We've fixed those mistakes. And we've learned from every single one.
 
+
+![St Petersburg](/images/areas/st-petersburg.webp)
+
 ## What a Real Blinds Shop in St. Petersburg Actually Offers
 
 When you walk into a window treatment store in St. Petersburg, you expect real options. Not three shades bolted to a display board and a catalog you have to flip through by yourself.

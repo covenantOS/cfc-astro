@@ -2,40 +2,43 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
+import BrandStrip from '~/components/BrandStrip.astro';
 
 const GALLERY = [
-  { img: '/images/gallery/custom-drapery-gallery.webp', title: 'Custom Drapery', category: 'Window Treatments' },
-  { img: '/images/gallery/contrast-drapery-gallery.webp', title: 'Contrast Drapery', category: 'Window Treatments' },
-  { img: '/images/gallery/custom-valances-gallery.webp', title: 'Custom Valances', category: 'Top Treatments' },
-  { img: '/images/gallery/panel-tracks-gallery.webp', title: 'Panel Tracks', category: 'Modern Systems' },
-  { img: '/images/gallery/roller-shades-gallery.webp', title: 'Roller Shades', category: 'Window Shades' },
-  { img: '/images/gallery/woven-shades-gallery.webp', title: 'Woven Wood Shades', category: 'Window Shades' },
-  { img: '/images/gallery/lanai-shading-gallery.webp', title: 'Lanai Shading', category: 'Outdoor' },
-  { img: '/images/gallery/master-suite-gallery.webp', title: 'Master Suite', category: 'Custom Bedding' },
-  { img: '/images/gallery/custom-upholstery-gallery.webp', title: 'Custom Upholstery', category: 'Reupholstery' },
+  { img: '/images/gallery/master-suite-gallery.webp', title: 'Master Suite', body: 'A luxury bedroom with custom velvet upholstery, coordinated soft furnishings, and tailored linen draperies.' },
+  { img: '/images/gallery/custom-drapery-gallery.webp', title: 'Patterned Drapery', body: 'Floor to ceiling geometric pattern drapes on modern hardware for expansive corner windows balancing natural light and privacy.' },
+  { img: '/images/gallery/lanai-shading-gallery.webp', title: 'Lanai Shading', body: 'Integrated window shading and coordinating cushion upholstery for a premium year-round covered patio space.' },
+  { img: '/images/gallery/contrast-drapery-gallery.webp', title: 'Contrast Drapery', body: 'Bold contrast-banded drapery panels that frame the view while adding dimension and formal architectural scale.' },
+  { img: '/images/gallery/custom-valances-gallery.webp', title: 'Custom Valances', body: 'Upholstered cornices and soft valances tailored to window proportion, echoing trim colors and room accents.' },
+  { img: '/images/gallery/panel-tracks-gallery.webp', title: 'Panel Tracks', body: 'Modern panel track systems that disappear when open and deliver crisp light control on oversized sliders.' },
+  { img: '/images/gallery/roller-shades-gallery.webp', title: 'Roller Shades', body: 'Designer solar and blackout roller shades engineered for Florida sun, motorized where the opening calls for it.' },
+  { img: '/images/gallery/woven-shades-gallery.webp', title: 'Woven Wood Shades', body: 'Natural woven wood shades add warmth and texture to sun-drenched rooms without heavy visual weight.' },
+  { img: '/images/gallery/custom-upholstery-gallery.webp', title: 'Custom Upholstery', body: 'Frame-up reupholstery with designer textiles from Kravet and Stout, restoring heirloom pieces and custom builds.' },
 ];
 ---
 
 <BaseLayout
   title="Gallery"
-  description="Browse recent installations — custom drapery, shutters, shades, and bespoke upholstery across St. Petersburg and the Pinellas coast."
+  description="Review our completed custom window treatment and master upholstery projects. Explore how our dedicated local workroom delivers flawless tailoring."
   pageType="gallery"
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Gallery', url: '/gallery/' }]}
 >
   <Hero
-    eyebrow="Selected Work"
-    title="Our Work, In Place."
-    subtitle="A look inside recent installations across the St. Pete coast — from Snell Isle estates to Tierra Verde waterfront and downtown condos."
+    eyebrow="Design Portfolio"
+    title="Bespoke Interior Transformations."
+    subtitle="Review our completed custom window treatment and master upholstery projects. Explore how our dedicated local workroom elevates luxury living spaces across the St. Pete coast with flawless tailoring and exclusive designer materials."
     image="/images/hero/homepage.webp"
+    primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
     breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Gallery', url: '/gallery/' }]}
+    bend
   />
 
-  <section class="py-20 md:py-28 bg-white">
-    <div class="container-site">
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container-site max-w-6xl mx-auto">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {GALLERY.map((item) => (
-          <figure class="group overflow-hidden bg-cream">
-            <div class="aspect-[4/5] overflow-hidden">
+          <figure class="group bg-white overflow-hidden border border-line rounded-sm hover:shadow-soft transition">
+            <div class="aspect-[4/3] overflow-hidden bg-ink-50">
               <img
                 src={item.img}
                 alt={item.title}
@@ -44,15 +47,17 @@ const GALLERY = [
                 decoding="async"
               />
             </div>
-            <figcaption class="p-5 text-center">
-              <p class="eyebrow text-brand-600" style="letter-spacing: 0.2em;">{item.category}</p>
-              <p class="font-display text-xl text-ink-800">{item.title}</p>
+            <figcaption class="p-6">
+              <h3 class="font-display text-xl text-ink-800 mb-2">{item.title}</h3>
+              <p class="text-sm text-ink-500 leading-relaxed">{item.body}</p>
             </figcaption>
           </figure>
         ))}
       </div>
     </div>
   </section>
+
+  <BrandStrip showBend={false} />
 
   <FinalCTA
     heading="Want This in Your Home?"

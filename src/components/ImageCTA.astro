@@ -1,0 +1,42 @@
+---
+import { SITE } from '~/lib/site';
+
+interface Props {
+  heading?: string;
+  body?: string;
+  image?: string;
+  imageAlt?: string;
+  phoneLabel?: string;
+  phoneHref?: string;
+}
+
+const {
+  heading = 'Flawless Installation and Complete Precision',
+  body = 'Our fully insured in-house installers treat your property with absolute respect. We manage every physical detail to ensure your new interior elements function perfectly.',
+  image = '/images/services/custom-bedding-pillows/hero.webp',
+  imageAlt = '',
+  phoneLabel = SITE.phone,
+  phoneHref = SITE.phoneHref,
+} = Astro.props;
+---
+
+<section class="py-8 md:py-12 bg-white">
+  <div class="container-site max-w-6xl mx-auto">
+    <div class="relative overflow-hidden rounded-sm h-[320px] md:h-[380px]">
+      <img src={image} alt={imageAlt} class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ink-900/85 via-ink-900/60 to-ink-900/0"></div>
+      <div class="relative h-full flex items-center">
+        <div class="max-w-lg p-8 md:p-12">
+          <h3 class="font-display text-3xl md:text-4xl text-white leading-tight mb-4">{heading}</h3>
+          <p class="text-white/85 leading-relaxed mb-6 text-[0.95rem]">{body}</p>
+          <a href={phoneHref} class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-6 py-3 rounded-sm transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            {phoneLabel}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

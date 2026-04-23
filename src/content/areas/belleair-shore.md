@@ -15,6 +15,9 @@ That character shapes what window treatment decisions look like in Belleair Shor
 
 The window treatment store that serves Belleair Shore needs to understand this community's specific character. Not just the products, but the neighborhood itself, the older housing stock, the mature landscaping, the proximity to the water and what that means for salt air exposure, the established nature of the community that means neighbors talk to each other and recommendations spread by word of mouth. We've been working in this community long enough to know it that way.
 
+
+![Belleair Shore](/images/areas/belleair-shore.webp)
+
 ## Plantation Shutters The Window Treatment That Belleair Shore Homes Actually Need
 
 Plantation shutters are one of the most versatile window treatments available for Belleair Shore homes, and they've been a staple of quality residential window treatments for good reason: they work in almost any architectural context, they provide excellent light control and privacy, and when properly specified they last for decades.

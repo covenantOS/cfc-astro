@@ -19,6 +19,9 @@ Both Clearwaters share one thing: the environmental conditions that make window 
 
 A window treatment store that serves Clearwater has to understand both communities and the full range of conditions that exist across the city. We work in both, the beach condos and the mainland homes, and we know the specific challenges each location presents.
 
+
+![Clearwater](/images/areas/clearwater.webp)
+
 ## Exterior Patio Shades Why Clearwater Patios and Lanais Actually Need Them
 
 Clearwater has genuinely usable outdoor weather for most of the year. Unlike inland cities where summer heat makes outdoor living impractical, Clearwater's relationship with the Gulf moderates the evening temperatures and extends the outdoor living season substantially. Many Clearwater homeowners have covered patios, lanais, and outdoor living spaces that they use throughout the fall, winter, and spring, and wish they could use more during the summer months.

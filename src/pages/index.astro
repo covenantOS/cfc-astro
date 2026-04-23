@@ -8,6 +8,8 @@ import BrandStrip from '~/components/BrandStrip.astro';
 import FAQ from '~/components/FAQ.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
 import ReviewSection from '~/components/ReviewSection.astro';
+import InfoFeatureCards from '~/components/InfoFeatureCards.astro';
+import ImageCTA from '~/components/ImageCTA.astro';
 import { SITE } from '~/lib/site';
 ---
 
@@ -29,13 +31,19 @@ import { SITE } from '~/lib/site';
     showRating
     trustBar
     size="tall"
+    bend
+    bendColor="#fcf7e3"
   />
 
   <ServiceGrid />
 
   <AboutSection />
 
+  <InfoFeatureCards />
+
   <AreasMap />
+
+  <ImageCTA />
 
   <BrandStrip />
 

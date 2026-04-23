@@ -15,6 +15,9 @@ Window treatment decisions in Seminole reflect this practical character. The hom
 
 That kind of customer attracts a specific kind of window treatment store. One that knows the difference between products and can explain that difference in practical terms. One that has been around long enough to have actual track record and actual references in the community. One that doesn't disappear after the installation when something needs adjustment. We've been that store for Seminole residents for over two decades, and the customers who come to us tend to stay with us, and refer their neighbors, because the experience matches the expectations.
 
+
+![Seminole](/images/areas/seminole.webp)
+
 ## Roman Shades The Custom Window Treatment That Seminole Homeowners Keep Choosing
 
 Roman shades have become one of the most consistently requested window treatments in Seminole homes, and the reasons are practical rather than fashionable. They work. They look good. They last. And they solve problems that other treatment types create.

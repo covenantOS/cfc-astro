@@ -1,0 +1,25 @@
+---
+// Decorative curved bend that sits at the bottom edge of the dark hero and
+// transitions into the next section. Gold rule + concave arc.
+interface Props {
+  nextBg?: string; // background color of the section below (hex or var)
+}
+const { nextBg = '#ffffff' } = Astro.props;
+---
+
+<div class="relative w-full h-16 md:h-20 -mt-px" aria-hidden="true">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="absolute inset-0 w-full h-full block">
+    <!-- Fill of next section, painted as a curve rising from bottom -->
+    <path
+      d={`M0,0 L0,10 Q720,80 1440,10 L1440,80 L0,80 Z`}
+      fill={nextBg}
+    />
+    <!-- Gold accent stroke along the top of the curve -->
+    <path
+      d={`M0,10 Q720,80 1440,10`}
+      fill="none"
+      stroke="#bca050"
+      stroke-width="3"
+    />
+  </svg>
+</div>

@@ -1,0 +1,58 @@
+---
+interface Value {
+  title: string;
+  body: string;
+}
+interface Props {
+  eyebrow?: string;
+  heading?: string;
+  items?: Value[];
+}
+
+const {
+  eyebrow = 'Our Core Values',
+  heading = 'The Custom Fabric Creations Advantage',
+  items = [
+    {
+      title: 'Dedicated Local Workroom',
+      body: 'Every window treatment is tailored precisely in our St. Pete facility to guarantee strict quality control and exact pattern matching.',
+    },
+    {
+      title: 'Elite Designer Partnerships',
+      body: 'We source exclusively from trusted industry leaders like Hunter Douglas and Kravet, providing materials strictly reserved for professionals.',
+    },
+    {
+      title: 'The In-Home Showroom',
+      body: 'We bring thousands of premium textiles directly to your property, allowing you to evaluate textures and colors in your true lighting.',
+    },
+    {
+      title: 'White Glove Execution',
+      body: 'Our in-house professionals handle the entire final setup from mounting premium hardware to programming smart shades.',
+    },
+  ],
+} = Astro.props;
+---
+
+<section class="py-20 md:py-28 bg-white">
+  <div class="container-site max-w-5xl mx-auto">
+    <div class="text-center mb-14">
+      <p class="eyebrow" style="letter-spacing: 0.3em;">{eyebrow}</p>
+      <h2 class="font-display text-4xl md:text-5xl text-ink-800">{heading}</h2>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {items.map((v) => (
+        <div class="bg-cream-50 border border-line p-7 md:p-8 rounded-sm">
+          <div class="text-ink-900 mb-4">
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M5 18h14l1-9-5 3-3-6-3 6-5-3z"/>
+              <rect x="5" y="20" width="14" height="2"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl md:text-2xl text-ink-800 mb-3">{v.title}</h3>
+          <p class="text-ink-500 leading-relaxed text-[0.95rem]">{v.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -21,6 +21,9 @@ Multi-family properties — Apartment complexes, condos, and HOA-managed propert
 
 Hotels and hospitality — Guest rooms, lobbies, and common areas. We understand the specification and procurement requirements of hospitality projects, including compliance with brand standards where applicable.
 
+
+![Top](/images/services/commercial-window-treatments/top.webp)
+
 ## What Makes Commercial Projects Different And How We Handle It
 
 Commercial window treatment projects are different from residential in ways that matter:
@@ -47,6 +50,9 @@ Vertical blinds — Still common in commercial applications, particularly for sl
 
 Office blinds — Panel tracks, cellular shades, and other treatments for open-plan offices and workstations where light control needs to be balanced with aesthetics.
 
+
+![Middle](/images/services/commercial-window-treatments/middle.webp)
+
 ## Our Commercial Process From Specification to Installation
 
 - Consultation and specification. We meet with you or your representative to understand the project requirements: scope, timeline, budget, and any compliance requirements. For larger projects, we visit the site and document specifications on location.
@@ -68,6 +74,9 @@ Pasco County: Wesley Chapel, Zephyrhills, Land O' Lakes
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton
 
 Pinellas County: St. Petersburg
+
+
+![Bottom](/images/services/commercial-window-treatments/bottom.webp)
 
 ## Have a commercial project? Let's talk scope.
 

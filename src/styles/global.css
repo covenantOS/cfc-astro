@@ -97,6 +97,11 @@ body {
   @apply border-l-2 border-brand-500 pl-6 italic text-ink-500 my-8;
   font-family: var(--font-display);
 }
+.prose-cfc img {
+  @apply w-full h-auto rounded-sm my-10 shadow-soft;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
 
 /* Buttons — luxury refined: solid gold primary, ghost-outline secondary */
 .btn-primary {

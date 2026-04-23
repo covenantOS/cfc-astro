@@ -17,6 +17,9 @@ These homes weren't built to any modern standard. Window openings vary wildly. A
 
 A local window treatment store in Old Northeast needs to understand this housing stock intimately. Not just which products exist, but which products work in these specific wall cavities, these specific window shapes, these specific exposures. That's the kind of knowledge you only build by doing the work in this neighborhood for decades, not by reading a product catalog.
 
+
+![Old Northeast](/images/areas/old-northeast.webp)
+
 ## The Real Problem With Standard Blinds in Old Northeast's Historic Homes
 
 Standard blinds from a home improvement store come in a narrow range of sizes. Widths in two-inch increments. Lengths that correspond to "standard" window heights. Mounting brackets designed for modern drywall or simple window frames.

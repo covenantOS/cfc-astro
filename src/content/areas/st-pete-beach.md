@@ -17,6 +17,9 @@ The window treatment store that serves St. Pete Beach has to understand this fro
 
 We've been that company for St. Pete Beach. We've replaced the cheap treatments that failed in the first season. We've installed the coastal-grade products that still look new five years later. We've learned through experience which products actually work here and which ones are marketed with claims that don't survive first contact with a St. Pete Beach summer.
 
+
+![St Pete Beach](/images/areas/st-pete-beach.webp)
+
 ## The Reality of Window Treatments on St. Pete Beach Why Standard Products Fail
 
 Standard window treatments are designed for a hypothetical average American home. That home is probably in a suburban inland community with mild climate variations, standard window sizes, and conditions that don't push any material to its limits. That is not a St. Pete Beach home.

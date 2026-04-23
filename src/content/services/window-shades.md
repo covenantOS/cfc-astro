@@ -21,6 +21,9 @@ Blackout shades — For rooms where controlling light is non-negotiable: bedroom
 
 Motorized / smart shades — Operated by wall switch, remote, or smartphone app. Practical for high windows, sliding glass doors, and any room where you want to schedule when shades open and close. We install and configure the motorization so it works smoothly from day one.
 
+
+![Top](/images/services/window-shades/top.webp)
+
 ## Why Window Shades in St. Petersburg Need to Be Chosen Carefully
 
 There's a reason we don't just point you to a catalog and let you pick.
@@ -38,6 +41,9 @@ That's the value of working with someone who has 25 years of experience in this 
 - We present options that make sense for your home. We show you the shades that actually fit your situation. Not every option we carry just the ones that make sense for what you're trying to accomplish. You choose from a shortlist, not a wall.
 - Custom manufacturing. Your shades are built to the exact measurements from your home. No approximations.
 - Professional installation. We install and confirm the fit. We show you how everything works. You don't sign off until it's right.
+
+
+![Middle](/images/services/window-shades/middle.webp)
 
 ## Serving the Greater St. Petersburg Area
 
@@ -58,6 +64,9 @@ Not in one of these areas? Call us — if we can help, we will.
 Call (727) 240-4512 or request your free in-home consultation.
 
 We're available
+
+
+![Bottom](/images/services/window-shades/bottom.webp)
 
 ## Frequently Asked Questions
 

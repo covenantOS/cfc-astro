@@ -17,6 +17,9 @@ Dining Room Banquettes Expansive built in seating spanning full dining room wall
 
 Commercial Banquettes Highly durable professional grade upholstered seating engineered specifically for upscale restaurants country clubs and corporate environments.
 
+
+![Bottom](/images/services/custom-banquettes/bottom.webp)
+
 ## Our Fabrication Process From Measurement to Installation
 
 - The Consultation. Our professional design team evaluates your specific space takes exact architectural measurements and helps you select premium stain resistant performance fabrics.

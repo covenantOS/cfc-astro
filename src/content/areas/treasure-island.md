@@ -17,6 +17,9 @@ These conditions don't just affect exterior-facing windows. They affect the enti
 
 A local window treatment store that has worked on Treasure Island for decades understands this. We've seen which products fail here and why. We've installed the replacements that hold up. We've learned through experience which treatments work in each specific condition on the island, the Gulf-front properties, the canal-front homes on the interior streets, the condos and townhomes along the causeway corridor. That experience is what lets us give honest advice rather than just selling what's popular or in stock.
 
+
+![Treasure Island](/images/areas/treasure-island.webp)
+
 ## What Barrier Island Conditions Actually Do to Standard Window Treatments
 
 Most window treatments are designed for an average climate with average exposure. The testing that goes into a standard window treatment product assumes conditions that don't exist on a barrier island. When you install those products on Treasure Island, the conditions immediately start working against them.

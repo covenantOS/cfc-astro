@@ -23,6 +23,9 @@ Modern window drapes Flat, clean panels with minimal hardware. Popular in newer 
 
 Custom valances and top treatments Sometimes the window needs something above the panel itself. Valances, cornices, and board-mounted treatments add a finished look to the top of the window and can tie the whole room together visually.
 
+
+![Top](/images/services/custom-draperies-curtains/top.webp)
+
 ## How We Make Your Custom Drapes From Measurement to Installation
 
 Step 1: In-home consultation. We come to your home with fabric samples, hardware options, and design ideas. You don't need to have everything figured out before you call that's what the consultation is for.
@@ -48,6 +51,9 @@ Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 Pinellas County: St. Petersburg, Belleview, Dunnellon
 
 Not sure if we cover your area? Call us. If we don't service your location directly, we'll tell you.
+
+
+![Middle](/images/services/custom-draperies-curtains/middle.webp)
 
 ## Ready to see what custom drapes can do for your home?
 

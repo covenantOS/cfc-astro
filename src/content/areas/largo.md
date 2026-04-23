@@ -15,6 +15,9 @@ That diversity is also what makes a local window treatment store serving Largo v
 
 We've been that company for Largo residents. We've handled window treatments in homes throughout the city, from the older established neighborhoods near downtown Largo to the newer developments along the US-19 corridor and the communities near the eastern county line. We've seen which products hold up across the full range of Largo's housing stock and climate conditions. That experience is what we bring to every consultation.
 
+
+![Largo](/images/areas/largo.webp)
+
 ## Plantation Shutters The Window Treatment Largo Homeowners Keep Coming Back To
 
 Plantation shutters are the window treatment that Largo homeowners request most often when they're looking for something that works, looks good, and lasts. They've been a residential window treatment standard for generations because they do exactly what most homeowners need: provide light control, privacy, and architectural appeal without demanding attention or requiring constant maintenance.
