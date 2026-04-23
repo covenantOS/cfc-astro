@@ -1,45 +1,78 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
+import ServiceSidebar from '~/components/ServiceSidebar.astro';
+import GlobalContactMap from '~/components/GlobalContactMap.astro';
 import ServiceGrid from '~/components/ServiceGrid.astro';
-import FinalCTA from '~/components/FinalCTA.astro';
+import FAQ from '~/components/FAQ.astro';
+import { SITE } from '~/lib/site';
 
 interface Props {
   title: string;
-  description?: string;
-  areaName: string;
+  description: string;
+  areaSlug: string;
+  areaTitle: string;
   heroImage?: string;
+  heroTitle?: string;
   heroSubtitle?: string;
+  faqs?: Array<{ q: string; a: string }>;
 }
 
 const {
   title,
   description,
-  areaName,
+  areaSlug,
+  areaTitle,
   heroImage,
+  heroTitle,
   heroSubtitle,
+  faqs,
 } = Astro.props;
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Areas', url: '/areas/' },
+  { name: areaTitle, url: `/areas/${areaSlug}/` },
+];
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  pageType="area"
+  breadcrumbs={breadcrumbs}
+  areaSlug={areaSlug}
+  areaTitle={areaTitle}
+  faqs={faqs}
+  ogImage={heroImage ?? `/images/areas/${areaSlug}.webp`}
+>
   <Hero
-    eyebrow="Serving your neighborhood"
-    title={`Custom Window Treatments & Upholstery in ${areaName}`}
-    subtitle={heroSubtitle ?? `Bespoke drapery, shutters, shades, and reupholstery for ${areaName} homes. In-home consultations included.`}
-    image={heroImage}
-    variant={heroImage ? 'image' : 'linen'}
-    primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
-    secondaryCta={{ label: 'Explore Services', href: '/services/' }}
+    title={heroTitle ?? `Custom Window Treatments & Upholstery in ${areaTitle}`}
+    subtitle={heroSubtitle ?? description}
+    image={heroImage ?? `/images/areas/${areaSlug}.webp`}
+    primaryCta={{ label: SITE.phone, href: SITE.phoneHref }}
+    secondaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
+    breadcrumbs={breadcrumbs}
   />
-  <article class="py-20 md:py-28">
-    <div class="container-narrow prose-cfc">
-      <slot />
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container-site grid gap-10 lg:grid-cols-[320px_1fr]">
+      <ServiceSidebar kind="area" currentSlug={areaSlug} />
+      <article class="prose-cfc">
+        <slot />
+      </article>
     </div>
-  </article>
+  </section>
+
   <ServiceGrid
     eyebrow="What we offer"
-    heading={`Services available in ${areaName}`}
+    heading={`Services available in ${areaTitle}`}
     limit={6}
   />
-  <FinalCTA />
+
+  {faqs && faqs.length > 0 && (
+    <FAQ items={faqs} heading={`${areaTitle} \u2014 Frequently Asked Questions`} eyebrow="Common Questions" subtitle={`Answers about our services in ${areaTitle}.`} />
+  )}
+
+  <GlobalContactMap areaLabel={`Serving ${areaTitle} & the St. Pete coast`} />
 </BaseLayout>

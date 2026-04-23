@@ -2,51 +2,42 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import ServiceGrid from '~/components/ServiceGrid.astro';
-import AreaGrid from '~/components/AreaGrid.astro';
-import FeatureBand from '~/components/FeatureBand.astro';
-import BrandBand from '~/components/BrandBand.astro';
+import AboutSection from '~/components/AboutSection.astro';
+import AreasMap from '~/components/AreasMap.astro';
+import BrandStrip from '~/components/BrandStrip.astro';
+import FAQ from '~/components/FAQ.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
 import { SITE } from '~/lib/site';
 ---
 
 <BaseLayout
   title={SITE.name}
-  description="St. Petersburg\u2019s premier studio for custom window treatments, drapery, plantation shutters, shades, and bespoke upholstery. Established 2000. Free in-home consultations."
+  description="St. Pete's premier studio for bespoke window treatments, drapery, shutters, and upholstery. 25+ years of craftsmanship. Free consultations."
+  pageType="home"
+  ogImage="/images/hero/homepage.webp"
 >
   <Hero
-    eyebrow="St. Petersburg\u2019s premier design studio"
-    title="Bespoke Window Treatments & Custom Upholstery"
-    subtitle="For 25 years, Custom Fabric Creations has crafted refined window fashions and upholstery for the most discerning homes across the St. Pete coast."
-    image="/images/hero-placeholder.jpg"
+    eyebrow="St. Pete Premier Design Studio"
+    title="Custom Window Treatments and Bespoke Upholstery"
+    subtitle="Elevate your home with handcrafted draperies, premium <a href='/services/plantation-shutters/' class='underline decoration-brand-400 hover:text-brand-300'>plantation shutters</a>, and master upholstery. We bring our curated sample library directly to your living room with personalized design."
+    image="/images/hero/homepage.webp"
+    bullets={['Drapery Hardware', 'Custom Treatments', 'Shades & Blinds']}
     primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
-    secondaryCta={{ label: 'View Our Work', href: '/gallery/' }}
+    secondaryCta={{ label: `Call ${SITE.phone}`, href: SITE.phoneHref }}
+    showRating
+    trustBar
+    size="tall"
   />
 
-  <FeatureBand
-    eyebrow="Why Custom Fabric Creations"
-    heading="Studio craftsmanship. White-glove delivery."
-    features={[
-      { title: 'In-house workroom', body: 'Every drapery panel, cornice, cushion, and headboard is cut and sewn in our St. Pete workroom.' },
-      { title: 'Precision measurement', body: 'We measure every window and piece of furniture in person. No guesswork, no surprises.' },
-      { title: 'Authorized dealer', body: 'Hunter Douglas, Norman, Graber, Kravet, and Stout \u2014 the brands interior designers trust.' },
-      { title: 'Established 2000', body: '25 years serving Pinellas County homeowners, designers, and commercial clients.' },
-    ]}
-  />
+  <ServiceGrid />
 
-  <ServiceGrid
-    eyebrow="Bespoke for your home"
-    heading="A full studio of services"
-    subtitle="From custom drapery to motorized shades and full-furniture reupholstery, every project is measured, crafted, and installed by our team."
-    limit={9}
-  />
+  <AboutSection />
 
-  <BrandBand />
+  <AreasMap />
 
-  <AreaGrid
-    eyebrow="Serving the St. Pete coast"
-    heading="Where we work"
-    subtitle="We travel to you. Free in-home consultations across St. Petersburg and the surrounding Pinellas County neighborhoods."
-  />
+  <BrandStrip />
+
+  <FAQ />
 
   <FinalCTA />
 </BaseLayout>

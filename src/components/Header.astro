@@ -5,37 +5,42 @@ const { pathname } = Astro.url;
 const isActive = (href: string) => pathname === href || (href !== '/' && pathname.startsWith(href));
 ---
 
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line">
+<!-- Top gold rule -->
+<div class="h-[6px] bg-brand-500"></div>
+
+<header class="sticky top-0 z-50 bg-ink-900/95 backdrop-blur supports-[backdrop-filter]:bg-ink-900/85 border-b border-brand-700/20">
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <div class="container-site flex items-center justify-between h-20 gap-8">
+  <div class="container-site flex items-center justify-between h-20 gap-6">
     <a href="/" class="flex items-center gap-3 shrink-0" aria-label={SITE.name}>
-      <span class="font-display text-xl md:text-2xl text-ink-800 tracking-tight leading-none">
-        Custom Fabric<br class="hidden sm:block"/>
-        <span class="text-brand-600">Creations</span>
+      <span class="font-display italic text-2xl md:text-3xl text-brand-400 tracking-wide leading-none">
+        Custom Fabric Creations
       </span>
     </a>
 
     <nav class="hidden lg:flex items-center gap-8" aria-label="Primary">
-      {NAV.map((item) => (
+      {NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'About', 'Contact'].includes(n.label)).map((item) => (
         item.children ? (
           <div class="relative group">
             <a
               href={item.href}
               class:list={[
-                'text-sm font-semibold tracking-wide uppercase transition',
-                isActive(item.href) ? 'text-brand-600' : 'text-ink-700 hover:text-brand-600',
+                'flex items-center gap-1 text-sm font-semibold tracking-wider uppercase transition py-8',
+                isActive(item.href) ? 'text-brand-400' : 'text-white hover:text-brand-300',
               ]}
-              style="letter-spacing: 0.08em;"
+              style="letter-spacing: 0.05em;"
             >
               {item.label}
+              <svg class="w-3 h-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M1.5 4L6 8L10.5 4"/>
+              </svg>
             </a>
-            <div class="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition">
-              <div class="bg-white shadow-soft border border-line rounded-sm py-3 min-w-[260px]">
+            <div class="absolute left-1/2 -translate-x-1/2 top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible transition z-50">
+              <div class="bg-ink-900 border border-brand-700/30 shadow-soft py-3 min-w-[280px]">
                 {item.children.map((child) => (
                   <a
                     href={child.href}
-                    class="block px-5 py-2 text-sm text-ink-600 hover:bg-cream-50 hover:text-brand-700 transition"
+                    class="block px-5 py-2.5 text-sm text-white/80 hover:bg-brand-500 hover:text-ink-900 transition"
                   >
                     {child.label}
                   </a>
@@ -47,10 +52,10 @@ const isActive = (href: string) => pathname === href || (href !== '/' && pathnam
           <a
             href={item.href}
             class:list={[
-              'text-sm font-semibold tracking-wide uppercase transition',
-              isActive(item.href) ? 'text-brand-600' : 'text-ink-700 hover:text-brand-600',
+              'text-sm font-semibold tracking-wider uppercase transition py-8',
+              isActive(item.href) ? 'text-brand-400' : 'text-white hover:text-brand-300',
             ]}
-            style="letter-spacing: 0.08em;"
+            style="letter-spacing: 0.05em;"
           >
             {item.label}
           </a>
@@ -58,18 +63,13 @@ const isActive = (href: string) => pathname === href || (href !== '/' && pathnam
       ))}
     </nav>
 
-    <div class="hidden md:flex items-center gap-4 shrink-0">
-      <a href={SITE.phoneHref} class="text-sm font-semibold text-ink-700 hover:text-brand-600">
-        {SITE.phone}
-      </a>
-      <a href="/contact/" class="btn-primary">
-        Schedule Consultation
-      </a>
+    <div class="hidden md:flex items-center gap-3 shrink-0">
+      <a href="/contact/" class="btn-primary">Schedule Consultation</a>
     </div>
 
     <button
       id="mobile-nav-toggle"
-      class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-line"
+      class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-brand-500/40 text-brand-400"
       aria-label="Open menu"
       aria-expanded="false"
     >
@@ -81,18 +81,18 @@ const isActive = (href: string) => pathname === href || (href !== '/' && pathnam
     </button>
   </div>
 
-  <div id="mobile-nav" class="lg:hidden hidden border-t border-line bg-white">
+  <div id="mobile-nav" class="lg:hidden hidden border-t border-brand-700/20 bg-ink-900">
     <nav class="container-site py-4 flex flex-col" aria-label="Mobile">
       {NAV.flatMap((item) =>
         item.children
           ? [
-              <div class="py-2 font-semibold text-sm uppercase tracking-wide text-ink-800" style="letter-spacing: 0.08em;">{item.label}</div>,
+              <div class="py-2 font-semibold text-sm uppercase tracking-wide text-brand-400" style="letter-spacing: 0.08em;">{item.label}</div>,
               ...item.children.map((c) => (
-                <a href={c.href} class="pl-4 py-2 text-ink-600 hover:text-brand-700">{c.label}</a>
+                <a href={c.href} class="pl-4 py-2 text-white/80 hover:text-brand-300">{c.label}</a>
               )),
             ]
           : [
-              <a href={item.href} class="py-2 font-semibold text-sm uppercase tracking-wide text-ink-800 hover:text-brand-600" style="letter-spacing: 0.08em;">{item.label}</a>,
+              <a href={item.href} class="py-2 font-semibold text-sm uppercase tracking-wide text-white hover:text-brand-300" style="letter-spacing: 0.08em;">{item.label}</a>,
             ]
       )}
       <a href="/contact/" class="btn-primary mt-4">Schedule Consultation</a>

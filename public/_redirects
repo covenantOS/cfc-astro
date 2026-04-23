@@ -1,0 +1,16 @@
+# Cloudflare Pages redirects — preserve legacy WP URL patterns at cutover.
+
+# Normalize non-trailing-slash URLs to trailing-slash (WordPress default)
+/about       /about/    301
+/brands      /brands/   301
+/contact     /contact/  301
+/gallery     /gallery/  301
+/services    /services/ 301
+/areas       /areas/    301
+
+# WordPress author/feed artifacts that may have external backlinks
+/author/*    /about/    301
+/feed/       /          301
+/comments/feed/  /      301
+/wp-admin/*  /contact/  301
+/wp-login.php /contact/ 301

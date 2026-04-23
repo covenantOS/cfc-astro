@@ -9,38 +9,85 @@ interface Props {
 }
 
 const {
-  heading = 'Our Services',
-  eyebrow = 'Bespoke for your home',
-  subtitle,
+  heading = 'Bespoke Window Treatments and Master Upholstery',
+  eyebrow = 'Premium Interior Solutions',
+  subtitle = 'We deliver flawless window styling and custom furniture restoration across St. Pete and the Pinellas coast. Backed by over 25 years of precision craftsmanship and trusted by hundreds of local homeowners.',
   limit,
 } = Astro.props;
 
 const items = limit ? SERVICES.slice(0, limit) : SERVICES;
+
+const SERVICE_BLURBS: Record<string, string> = {
+  'custom-draperies-curtains': 'Transform your space with tailored fabric window coverings. We source exclusive textiles from Kravet and Stout ensuring a perfect color match for your interiors. Our team measures your windows and installs premium hardware for a seamless finish.',
+  'plantation-shutters': 'Enhance your privacy and light control with durable interior shutters. We partner with Norman and Graber to provide exact fit solutions that add permanent architectural value and classic style to your home.',
+  'window-shades': 'Designer-grade roller, roman, solar, and cellular shades built for Florida sun and humidity. Motorized options available. Measured, made, and installed by our own team.',
+  'custom-blinds': 'Custom blinds in wood, faux wood, aluminum, and vertical styles \u2014 made to your exact windows. Designed for privacy, light control, and long-term durability.',
+  'custom-cornices-valances': 'Upholstered cornices and soft valances that add architecture and softness to a room. Built in our workroom to your exact measurements.',
+  'drapery-hardware': 'Custom drapery rods, rings, finials, and brackets \u2014 decorative and functional hardware sourced from the industry\u2019s finest makers.',
+  'outdoor-window-shades': 'Exterior window shades and solar screens built for Florida sun, wind, and salt air. Protect your lanai, your furniture, and your view.',
+  'furniture-reupholstery': 'Bring a cherished chair, sofa, or headboard back to life. Frame-up reupholstery with designer fabrics from Kravet, Stout, and beyond.',
+  'custom-bedding-pillows': 'Custom headboards, bed skirts, duvets, shams, and throw pillows. The bedding that finishes the room.',
+  'custom-banquettes': 'Built-in banquette seating for dining nooks and kitchens. Cushions, backs, and details designed to last.',
+  'commercial-window-treatments': 'Window treatments for hotels, restaurants, medical offices, and commercial properties across the St. Pete area.',
+  'services-interior-decor-tampa': 'Interior decor consultation \u2014 we help you develop a cohesive design direction, room by room.',
+};
+
+const SERVICE_CARD_LABELS: Record<string, string> = {
+  'custom-draperies-curtains': 'Custom Drapery',
+  'plantation-shutters': 'Premium Plantation Shutters',
+  'window-shades': 'Window Shades',
+  'custom-blinds': 'Custom Blinds',
+  'custom-cornices-valances': 'Cornices & Valances',
+  'drapery-hardware': 'Drapery Hardware',
+  'outdoor-window-shades': 'Outdoor Window Shades',
+  'furniture-reupholstery': 'Furniture Reupholstery',
+  'custom-bedding-pillows': 'Custom Bedding & Pillows',
+  'custom-banquettes': 'Custom Banquettes',
+  'commercial-window-treatments': 'Commercial Window Treatments',
+  'services-interior-decor-tampa': 'Interior Design',
+};
 ---
 
-<section class="py-20 md:py-28">
+<section class="py-20 md:py-28 bg-cream">
   <div class="container-site">
-    <div class="text-center max-w-2xl mx-auto mb-14">
-      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
-      <h2 class="font-display text-4xl md:text-5xl title-rule">{heading}</h2>
-      {subtitle && <p class="mt-6 text-ink-500 text-lg leading-relaxed">{subtitle}</p>}
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      {eyebrow && <p class="eyebrow" style="letter-spacing: 0.3em;">{eyebrow}</p>}
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-ink-800 mb-5">{heading}</h2>
+      {subtitle && <p class="text-ink-500 text-lg leading-relaxed">{subtitle}</p>}
     </div>
 
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((s) => (
-        <a
-          href={`/services/${s.slug}/`}
-          class="group block bg-white border border-line rounded-sm p-8 hover:border-brand-500 hover:shadow-card transition"
-        >
-          <h3 class="text-xl text-ink-800 group-hover:text-brand-700 transition">{s.title}</h3>
-          <span class="mt-4 inline-flex items-center text-sm font-semibold text-brand-600 tracking-wide uppercase" style="letter-spacing: 0.08em;">
-            Explore
-            <svg class="ml-2 w-4 h-4 transition group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 10h10M11 5l5 5-5 5"/>
-            </svg>
-          </span>
-        </a>
-      ))}
+    <div class="grid gap-8 md:grid-cols-2">
+      {items.map((s) => {
+        const cardLabel = SERVICE_CARD_LABELS[s.slug] ?? s.title;
+        const blurb = SERVICE_BLURBS[s.slug] ?? '';
+        return (
+          <a
+            href={`/services/${s.slug}/`}
+            class="group block bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition"
+          >
+            <div class="aspect-[16/10] overflow-hidden bg-ink-50">
+              <img
+                src={`/images/hero/${s.slug}.webp`}
+                alt={cardLabel}
+                class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500"
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            <div class="p-8">
+              <h3 class="font-display text-2xl text-ink-800 mb-3">{cardLabel}</h3>
+              <p class="text-ink-500 leading-relaxed text-[0.95rem] mb-5">{blurb}</p>
+              <span class="inline-flex items-center text-sm font-semibold text-brand-600 group-hover:text-brand-700 tracking-wide">
+                Explore {cardLabel}
+                <svg class="ml-2 w-4 h-4 transition group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 10h10M11 5l5 5-5 5"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+        );
+      })}
     </div>
   </div>
 </section>

@@ -1,31 +1,91 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
+import FAQ from '~/components/FAQ.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
+
+const faqs = [ { "q": "How much do plantation shutters cost in St. Petersburg, FL?", "a": "In St. Petersburg and Pinellas County, expect $25 to $60 per square foot installed. Faux wood is the low end of that range, basswood is the high end. A typical St. Pete bungalow runs $4,800 to $10,000 in faux wood for the whole house." }, { "q": "What is the cheapest plantation shutter material?", "a": "Faux wood (PVC or vinyl composite) is the most affordable at roughly $25 to $35 per square foot installed. It handles Florida humidity and salt air better than real wood and is the default choice for waterfront homes." }, { "q": "Why do plantation shutter quotes vary so much?", "a": "Window shape (arch, French door, bay), material, louver size, frame type, and mount style all move the price. The same house can have $250 windows next to $800 windows." }, { "q": "Are plantation shutters worth the cost in Florida?", "a": "For most Pinellas County homes yes. They add 1.5 to 3 percent to appraised value, cut cooling bills 10 to 25 percent on sun-exposed windows, and last 15 to 20 years in faux wood compared to 5 to 8 years for cellular shades." }, { "q": "How long does it take to get plantation shutters installed?", "a": "4 to 8 weeks from the signed proposal to install for custom orders in Pinellas County. Installers promising faster than that are either using stock product or skipping steps on the measure." } ];
 ---
 
 <BaseLayout
   title="Plantation Shutters Cost in St. Petersburg, FL: Real 2026 Pricing"
-  description="What plantation shutters actually cost in St. Petersburg in 2026 \u2014 real price ranges by material, size, and brand, from a local studio with 25 years of install history."
+  description="What plantation shutters actually cost in St. Petersburg in 2026 \u2014 real price ranges by material, window size, and brand."
+  pageType="article"
+  articleDate="2026-04-01"
+  faqs={faqs}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Guides', url: '/' },
+    { name: 'Plantation Shutters Cost in St. Petersburg, FL', url: '/plantation-shutters-cost-st-petersburg/' },
+  ]}
+  ogImage="/images/hero/plantation-shutters.webp"
 >
   <Hero
     eyebrow="Guide"
-    title="Plantation Shutters Cost in St. Petersburg, FL"
-    subtitle="Real 2026 pricing \u2014 by material, by size, by brand."
-    variant="linen"
+    title="Plantation Shutters Cost in St. Petersburg, FL: Real 2026 Pricing"
+    image="/images/hero/plantation-shutters.webp"
+    breadcrumbs={[
+      { name: 'Home', url: '/' },
+      { name: 'Plantation Shutters', url: '/services/plantation-shutters/' },
+      { name: 'Guide', url: '/plantation-shutters-cost-st-petersburg/' },
+    ]}
   />
-  <article class="py-20 md:py-28">
+
+  <article class="py-20 md:py-28 bg-white">
     <div class="container-narrow prose-cfc">
-      <p class="text-xl text-ink-500 leading-relaxed mb-10">
-        <em>[Placeholder \u2014 port full article content from the live site.]</em>
-      </p>
-      <h2>Pricing by material</h2>
-      <p>Wood, composite, and vinyl plantation shutters each price differently. Here\u2019s what we see in St. Pete in 2026.</p>
-      <h2>Pricing by window size</h2>
-      <p>Standard double-hung, arch-top, French door, and transom windows all carry different labor and material costs.</p>
-      <h2>Brand comparison</h2>
-      <p>Hunter Douglas NewStyle vs. Norman Woodlore vs. custom \u2014 what the difference really is.</p>
+  <p>Ask three shutter companies for a quote in St. Pete and you will get three different answers. The reason is simple: the price depends on the material you pick, how your windows are shaped, and whether the installer is cutting corners on the measure. Here is what it actually runs, with no sales pitch wrapped around the numbers.</p>
+  <h2>Quick answer: $25 to $60 per square foot installed</h2>
+  <p>For a typical St. Petersburg home with standard rectangular windows, expect to pay between $25 and $60 per square foot installed. That covers the shutter, the frame, the hardware, the measure, and the install by someone who knows what they are doing. If you are getting quotes under $20 per square foot, look carefully at the material and the warranty because something is getting cut.</p>
+  <h3>How that works in practice, window by window</h3>
+  <p>Window sizeSq ftFaux wood (low end)Hybrid / premium fauxBasswood (real wood)Small (24" x 36")6$150 to $210$240 to $300$300 to $360Standard bedroom (36" x 48")12$300 to $420$480 to $600$600 to $720Living room (48" x 60")20$500 to $700$800 to $1,000$1,000 to $1,200Large picture (72" x 60")30$750 to $1,050$1,200 to $1,500$1,500 to $1,800French door (single panel)8 to 10$240 to $350$400 to $500$500 to $600</p>
+  <p>Whole-house ballpark for an average St. Pete bungalow with 10 to 14 windows: $4,800 to $10,000 in faux wood, $8,000 to $15,000 in premium hybrid, and $10,000 to $18,000 in basswood. Waterfront homes in Snell Isle, Shore Acres, and Tierra Verde tend to run higher because of specialty shapes and more windows per room.</p>
+  <h2>What makes the price move up or down</h2>
+  <h3>1. Material</h3>
+  <p>Faux wood (a vinyl or PVC composite) is the most popular choice in Pinellas County for a reason. It handles humidity, salt air, and the afternoon sun without warping. It also costs 30 to 40 percent less than basswood. Real wood looks warmer and holds stain better, but in a bathroom, laundry, or anywhere near a pool deck you will regret it within a few years. Hybrid composites sit in the middle: they look like wood, resist moisture like faux, and cost close to faux wood.</p>
+  <h3>2. Window shape</h3>
+  <p>Standard rectangles are the cheap ones. The price climbs when you have arch tops, circle tops, angles, bay windows, or French doors with divided panels. An arched custom shutter can run two to three times the cost of a rectangular shutter of the same square footage because the jig and frame have to be built for that exact opening.</p>
+  <h3>3. Louver size</h3>
+  <p>Standard louvers are 2.5 inches wide. 3.5 inch louvers let in more light and look better on larger windows, and they cost about 10 to 15 percent more. 4.5 inch louvers exist but they are overkill for most homes here.</p>
+  <h3>4. Mount style and frame</h3>
+  <p>Inside mount (shutter sits inside the window opening) is cleaner and what most St. Pete homes get. Outside mount (shutter frame overlaps the window trim) is used when the window has no depth for an inside mount or the frame is out of square. Outside mount frames cost a bit more. Deco frames, L-frames, and hidden hinge options are upcharges in the $40 to $100 per window range.</p>
+  <h3>5. Tilt style</h3>
+  <p>Standard center tilt bar is free. Hidden tilt (no bar across the louvers) is an upcharge of $30 to $60 per panel and is worth it if you want a cleaner look.</p>
+  <h3>6. Motorization</h3>
+  <p>Automated tilt control exists but it is niche on shutters. Most Pinellas homeowners skip it. Expect $200 to $400 per window if you want it.</p>
+  <h2>Measure and install fees</h2>
+  <p>A real installer includes the measure and the install in the quoted price. If a company wants a separate "measure fee" of $75 to $150 that is not rolled into the final order, that is a red flag. Measure should be free against a signed proposal. Install runs $150 to $350 per window included in the quote depending on how many you are doing at once and whether any framing work is needed.</p>
+  <h2>What about the big box stores</h2>
+  <p>Home Depot and Lowe's will quote you in the same $25 to $45 per square foot range but the products are made-to-measure from national vendors and the install is subcontracted. You get a product that works. You do not get someone who will drive back to your house if a louver breaks in three years. Weigh that against the savings before you decide.</p>
+  <h2>What about the $16.95 per square foot ads</h2>
+  <p>If you have seen the ads from Tampa companies advertising $16.95 per square foot installed with a lifetime warranty, read the fine print. That pricing is usually based on a minimum order (often 10 windows or 150 square feet), standard rectangles only, basic faux wood, standard frame, standard louvers, and no specialty shapes. For a real estimate on your actual windows, the price lands closer to the $25 to $40 range. The headline number is a hook.</p>
+  <h2>How to get an accurate quote without the games</h2>
+  <ul>
+    <li>Count your windows. Measure width and height in inches. Multiply and divide by 144 to get square feet per window.</li>
+    <li>Decide if you want faux, hybrid, or real wood. If you are on the waterfront or have any humidity concern, faux is the default answer.</li>
+    <li>Note any specialty shapes (arch, angle, French door).</li>
+    <li>Ask for pricing per window, not total, so you can compare apples to apples across quotes.</li>
+    <li>Ask about lead time. Quality shutters are 4 to 8 weeks from order to install in Pinellas County. Anyone promising one week either has stock product or is cutting corners on the measure.</li>
+  </ul>
+  <h2>Frequently asked questions</h2>
+  <h3>Why is plantation shutter cost per window so variable?</h3>
+  <p>Because windows are not uniform. The same company will quote $250 for one window and $800 for another in the same house. Specialty shapes, size, material, and mount type all move the number.</p>
+  <h3>Are plantation shutters worth the cost in Florida?</h3>
+  <p>For most St. Pete and Pinellas homes yes, because they pay back in three ways: they boost resale (most realtors in our area tell clients shutters add 1.5 to 3 percent to appraised value), they cut cooling bills by 10 to 25 percent on sun-exposed windows, and they last 15 to 20 years in faux wood versus 5 to 8 for cellular shades.</p>
+  <h3>What is the cheapest way to get plantation shutters in St. Petersburg?</h3>
+  <p>Faux wood, standard rectangular windows, inside mount, 2.5 inch louvers, standard center tilt bar, and a single installer. Buy from a local workroom that handles the measure and install in-house (no subcontractors) and you will typically save 10 to 20 percent over big box pricing.</p>
+  <h3>Is there financing available?</h3>
+  <p>Most local shutter companies in the area including ours offer 0 percent for 12 or 18 months through Synchrony or similar. Ask up front. Expect to provide basic income verification.</p>
+  <h2>Get a real number on your house</h2>
+  <p>We measure in person at your home for free across St. Petersburg, Pinellas County, and the Tampa Bay area. No high-pressure sales pitch, no "today only" pricing, just a real written quote you can take to three other companies if you want. Schedule a free in-home measure or call (352) 266-1262.</p>
+
+      <div class="mt-12 p-8 bg-cream border-l-4 border-brand-500">
+        <h3 class="font-display text-2xl text-ink-800 mb-3">Questions About Your Project?</h3>
+        <p class="text-ink-600 mb-5">Call <a href="tel:+17272404512">(727) 240-4512</a> or <a href="/contact/">schedule a free in-home consultation</a>.</p>
+      </div>
     </div>
   </article>
+
+  {faqs.length > 0 && <FAQ items={faqs} heading="Frequently Asked Questions" eyebrow="FAQ" subtitle="Common questions about plantation shutters in St. Pete." />}
+
   <FinalCTA />
 </BaseLayout>

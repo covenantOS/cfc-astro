@@ -1,0 +1,61 @@
+---
+interface Props {
+  eyebrow?: string;
+  heading?: string;
+  body?: string;
+  pills?: string[];
+  image?: string;
+  imageAlt?: string;
+  imageBadge?: { title: string; subtitle?: string };
+  cta?: { label: string; href: string };
+}
+
+const {
+  eyebrow = 'Our Story',
+  heading = 'Over 25 Years of Bespoke Interior Design',
+  body = 'We opened our doors in 2000 with a clear mission to provide St. Petersburg homeowners with uncompromising quality in custom window treatments and upholstery. Operating from our dedicated local workroom, we bypass mass production to focus entirely on precision tailoring. By bringing our curated designer showroom directly to your living space, we ensure every fabric selection perfectly complements your natural lighting and exact architectural style.',
+  pills = ['25+ Years Exp.', 'Local Workroom', 'Fully Insured'],
+  image = '/images/services/custom-bedding-pillows/hero.webp',
+  imageAlt = 'Custom bedding and drapery installation',
+  imageBadge = { title: 'Established 2000', subtitle: 'Serving the St. Pete coast' },
+  cta = { label: 'Learn More About Us', href: '/about/' },
+} = Astro.props;
+---
+
+<section class="py-20 md:py-28 bg-white">
+  <div class="container-site grid gap-12 md:grid-cols-2 items-center">
+    <div class="relative">
+      <div class="aspect-[4/5] overflow-hidden rounded-sm">
+        <img
+          src={image}
+          alt={imageAlt}
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      {imageBadge && (
+        <div class="absolute bottom-6 left-6 bg-ink-900/85 backdrop-blur text-white px-5 py-4 max-w-[220px]">
+          <p class="font-display text-xl text-brand-400">{imageBadge.title}</p>
+          {imageBadge.subtitle && <p class="text-xs text-white/70 mt-1 uppercase tracking-wide">{imageBadge.subtitle}</p>}
+        </div>
+      )}
+    </div>
+
+    <div>
+      {eyebrow && <p class="eyebrow" style="letter-spacing: 0.3em;">{eyebrow}</p>}
+      <h2 class="font-display text-4xl md:text-5xl text-ink-800 leading-tight mb-6">{heading}</h2>
+      <p class="text-ink-500 leading-relaxed text-lg mb-8">{body}</p>
+
+      <div class="flex flex-wrap gap-3 mb-8">
+        {pills.map((p) => (
+          <span class="inline-flex items-center px-5 py-2 bg-brand-50 border border-brand-200 text-brand-700 text-sm font-semibold rounded-sm">
+            {p}
+          </span>
+        ))}
+      </div>
+
+      {cta && <a href={cta.href} class="btn-primary">{cta.label}</a>}
+    </div>
+  </div>
+</section>

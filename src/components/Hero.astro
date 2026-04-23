@@ -1,25 +1,39 @@
 ---
+import { SITE } from '~/lib/site';
+
 interface Props {
   eyebrow?: string;
   title: string;
   subtitle?: string;
   image?: string;
   imageAlt?: string;
+  bullets?: string[];
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
+  trustBar?: boolean;
+  showRating?: boolean;
+  breadcrumbs?: Array<{ name: string; url: string }>;
   variant?: 'image' | 'linen';
+  size?: 'default' | 'tall';
 }
 
 const {
   eyebrow,
   title,
   subtitle,
-  image,
+  image = '/images/hero/homepage.webp',
   imageAlt = '',
+  bullets = [],
   primaryCta,
   secondaryCta,
+  trustBar = false,
+  showRating = false,
+  breadcrumbs,
   variant = 'image',
+  size = 'default',
 } = Astro.props;
+
+const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg:py-36';
 ---
 
 <section class:list={['relative overflow-hidden', variant === 'linen' && 'bg-linen']}>
@@ -30,32 +44,78 @@ const {
         alt={imageAlt}
         class="w-full h-full object-cover"
         fetchpriority="high"
+        decoding="async"
       />
-      <div class="absolute inset-0 bg-gradient-to-b from-ink-900/55 via-ink-900/45 to-ink-900/70"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-ink-900/70 via-ink-900/60 to-ink-900/80"></div>
     </div>
   )}
 
-  <div class="relative container-site py-24 md:py-36 lg:py-44 max-w-4xl">
+  <div class:list={['relative container-site text-center', padding]}>
+    {breadcrumbs && breadcrumbs.length > 0 && (
+      <nav class="mb-4 flex items-center justify-center gap-2 text-xs tracking-wide text-white/60" aria-label="Breadcrumb">
+        {breadcrumbs.map((b, i) => (
+          <>
+            {i > 0 && <span class="text-brand-400">/</span>}
+            {i === breadcrumbs.length - 1 ? (
+              <span class="text-brand-300">{b.name}</span>
+            ) : (
+              <a href={b.url} class="hover:text-brand-300 transition">{b.name}</a>
+            )}
+          </>
+        ))}
+      </nav>
+    )}
+
+    {showRating && (
+      <div class="mb-6 inline-flex items-center gap-2">
+        <div class="flex items-center gap-0.5 text-brand-400" aria-hidden="true">
+          {[1,2,3,4,5].map(() => (
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+          ))}
+        </div>
+        <span class="text-sm text-white font-semibold tracking-wide">5.0 Stars \u00b7 Verified Reviews</span>
+      </div>
+    )}
+
     {eyebrow && (
       <p class:list={[
         'eyebrow',
         variant === 'image' ? 'text-brand-300' : 'text-brand-600',
-      ]}>{eyebrow}</p>
+      ]} style="letter-spacing: 0.3em;">{eyebrow}</p>
     )}
+
     <h1 class:list={[
-      'font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05]',
+      'font-display mx-auto max-w-5xl leading-[1.05]',
+      size === 'tall' ? 'text-5xl sm:text-6xl md:text-7xl lg:text-[5rem]' : 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl',
       variant === 'image' ? 'text-white' : 'text-ink-800',
     ]}>
       {title}
     </h1>
+
     {subtitle && (
       <p class:list={[
-        'mt-6 text-lg md:text-xl max-w-2xl leading-relaxed',
+        'mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed',
         variant === 'image' ? 'text-white/90' : 'text-ink-600',
-      ]}>{subtitle}</p>
+      ]} set:html={subtitle}></p>
     )}
+
+    {bullets.length > 0 && (
+      <ul class="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
+        {bullets.map((b) => (
+          <li class:list={['flex items-center gap-2', variant === 'image' ? 'text-white' : 'text-ink-600']}>
+            <svg class="w-4 h-4 text-brand-400" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 10l3 3 7-7"/>
+            </svg>
+            <span class="font-medium">{b}</span>
+          </li>
+        ))}
+      </ul>
+    )}
+
     {(primaryCta || secondaryCta) && (
-      <div class="mt-10 flex flex-wrap gap-4">
+      <div class="mt-10 flex flex-wrap gap-4 justify-center">
         {primaryCta && <a href={primaryCta.href} class="btn-primary btn-lg">{primaryCta.label}</a>}
         {secondaryCta && (
           <a
@@ -63,6 +123,36 @@ const {
             class:list={[variant === 'image' ? 'btn-outline btn-lg' : 'btn-ghost btn-lg']}
           >{secondaryCta.label}</a>
         )}
+      </div>
+    )}
+
+    {trustBar && (
+      <div class="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
+        {[
+          { icon: 'shield', label: 'Fully Insured' },
+          { icon: 'award', label: 'Master Craftsmanship' },
+          { icon: 'home', label: 'Locally Owned' },
+        ].map((item) => (
+          <div class:list={['inline-flex items-center gap-2', variant === 'image' ? 'text-white/90' : 'text-ink-600']}>
+            {item.icon === 'shield' && (
+              <svg class="w-4 h-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L4 6v6c0 5.5 3.5 10 8 11 4.5-1 8-5.5 8-11V6l-8-4z"/>
+              </svg>
+            )}
+            {item.icon === 'award' && (
+              <svg class="w-4 h-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="6"/>
+                <path d="M15 14l1 8-4-2-4 2 1-8"/>
+              </svg>
+            )}
+            {item.icon === 'home' && (
+              <svg class="w-4 h-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12l9-9 9 9M5 10v10h14V10"/>
+              </svg>
+            )}
+            <span class="font-semibold">{item.label}</span>
+          </div>
+        ))}
       </div>
     )}
   </div>

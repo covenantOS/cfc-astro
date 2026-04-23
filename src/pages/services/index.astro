@@ -2,20 +2,28 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import ServiceGrid from '~/components/ServiceGrid.astro';
+import BrandStrip from '~/components/BrandStrip.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
 ---
 
 <BaseLayout
   title="Our Services"
-  description="Custom drapery, plantation shutters, shades, blinds, cornices, reupholstery, and more \u2014 all crafted in our St. Petersburg workroom."
+  description="Custom drapery, plantation shutters, shades, blinds, cornices, and reupholstery \u2014 all crafted in our St. Petersburg workroom."
+  pageType="collection"
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }]}
 >
   <Hero
-    eyebrow="A full studio of services"
-    title="Custom window treatments, upholstery, and more."
+    eyebrow="A Full Studio of Services"
+    title="Custom Window Treatments, Upholstery, and More."
     subtitle="Every service is measured, crafted, and installed by our own team. No middlemen. No outsourced workrooms."
-    variant="linen"
+    image="/images/hero/homepage.webp"
     primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
+    breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/' }]}
   />
-  <ServiceGrid heading="All services" eyebrow="Explore" />
+
+  <ServiceGrid heading="All Services" eyebrow="Explore" subtitle={undefined} />
+
+  <BrandStrip />
+
   <FinalCTA />
 </BaseLayout>

@@ -2,31 +2,60 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
+
+const GALLERY = [
+  { img: '/images/gallery/custom-drapery-gallery.webp', title: 'Custom Drapery', category: 'Window Treatments' },
+  { img: '/images/gallery/contrast-drapery-gallery.webp', title: 'Contrast Drapery', category: 'Window Treatments' },
+  { img: '/images/gallery/custom-valances-gallery.webp', title: 'Custom Valances', category: 'Top Treatments' },
+  { img: '/images/gallery/panel-tracks-gallery.webp', title: 'Panel Tracks', category: 'Modern Systems' },
+  { img: '/images/gallery/roller-shades-gallery.webp', title: 'Roller Shades', category: 'Window Shades' },
+  { img: '/images/gallery/woven-shades-gallery.webp', title: 'Woven Wood Shades', category: 'Window Shades' },
+  { img: '/images/gallery/lanai-shading-gallery.webp', title: 'Lanai Shading', category: 'Outdoor' },
+  { img: '/images/gallery/master-suite-gallery.webp', title: 'Master Suite', category: 'Custom Bedding' },
+  { img: '/images/gallery/custom-upholstery-gallery.webp', title: 'Custom Upholstery', category: 'Reupholstery' },
+];
 ---
 
 <BaseLayout
   title="Gallery"
-  description="Browse recent installations from Custom Fabric Creations \u2014 custom drapery, plantation shutters, shades, and bespoke upholstery across St. Petersburg, FL."
+  description="Browse recent installations \u2014 custom drapery, shutters, shades, and bespoke upholstery across St. Petersburg and the Pinellas coast."
+  pageType="gallery"
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Gallery', url: '/gallery/' }]}
 >
   <Hero
-    eyebrow="Selected work"
-    title="Our work, in place."
-    subtitle="A look inside recent installations across St. Petersburg, Snell Isle, Tierra Verde, and the coast."
-    variant="linen"
+    eyebrow="Selected Work"
+    title="Our Work, In Place."
+    subtitle="A look inside recent installations across the St. Pete coast \u2014 from Snell Isle estates to Tierra Verde waterfront and downtown condos."
+    image="/images/hero/homepage.webp"
+    breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Gallery', url: '/gallery/' }]}
   />
 
-  <section class="py-20 md:py-28">
+  <section class="py-20 md:py-28 bg-white">
     <div class="container-site">
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {Array.from({ length: 9 }).map((_, i) => (
-          <div class="aspect-[4/5] bg-cream border border-line rounded-sm flex items-center justify-center text-ink-300 font-display text-xl">
-            Photo {i + 1}
-          </div>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {GALLERY.map((item) => (
+          <figure class="group overflow-hidden bg-cream">
+            <div class="aspect-[4/5] overflow-hidden">
+              <img
+                src={item.img}
+                alt={item.title}
+                class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-700"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="p-5 text-center">
+              <p class="eyebrow text-brand-600" style="letter-spacing: 0.2em;">{item.category}</p>
+              <p class="font-display text-xl text-ink-800">{item.title}</p>
+            </figcaption>
+          </figure>
         ))}
       </div>
-      <p class="mt-10 text-center text-ink-400 italic">[Placeholder \u2014 gallery images to be added.]</p>
     </div>
   </section>
 
-  <FinalCTA />
+  <FinalCTA
+    heading="Want This in Your Home?"
+    subtitle="Every piece in this gallery started with a complimentary in-home consultation."
+  />
 </BaseLayout>

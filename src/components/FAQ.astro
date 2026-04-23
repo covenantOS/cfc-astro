@@ -1,0 +1,78 @@
+---
+interface FAQ {
+  q: string;
+  a: string;
+}
+
+interface Props {
+  heading?: string;
+  subtitle?: string;
+  eyebrow?: string;
+  items?: FAQ[];
+}
+
+const DEFAULT_ITEMS: FAQ[] = [
+  {
+    q: 'How does the design consultation work?',
+    a: 'We bring our premium fabric library directly to your house. This allows you to evaluate textures and colors in your actual room lighting. Our designers measure your windows precisely and help you select the perfect materials for your space.',
+  },
+  {
+    q: 'How long does it take to receive custom window treatments?',
+    a: 'Fabrication timelines depend on the specific materials and brands selected. Because every piece is meticulously tailored to your exact measurements, most projects are completed and ready for white-glove installation within four to eight weeks.',
+  },
+  {
+    q: 'What brands and materials do you carry?',
+    a: 'We are an authorized dealer for the most respected names in interior design, including Hunter Douglas, Norman, Kravet, Graber, and Stout. You receive exclusive access to premium textiles and advanced motorized shade technology.',
+  },
+  {
+    q: 'Do you charge for the initial consultation?',
+    a: 'No. We offer a complimentary initial design consultation for homeowners in St. Pete and across Pinellas County. We bring samples to your home so you can see them in your actual space and lighting.',
+  },
+  {
+    q: 'Do you handle installation?',
+    a: 'Yes. Installation is done by our own team, never a subcontractor. We handle the full white-glove process from measurement to final fit.',
+  },
+];
+
+const {
+  heading = 'Frequently Asked Questions',
+  subtitle = 'Learn exactly what to expect from our custom design process and professional installation.',
+  eyebrow = 'Frequently Asked Questions',
+  items = DEFAULT_ITEMS,
+} = Astro.props;
+---
+
+<section class="py-20 md:py-28 bg-cream">
+  <div class="container-narrow">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-ink-900 text-brand-400 mb-5">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      </div>
+      {eyebrow && <p class="eyebrow block mb-3" style="letter-spacing: 0.3em;">{eyebrow}</p>}
+      <h2 class="font-display text-4xl md:text-5xl text-ink-800 mb-4">{heading}</h2>
+      {subtitle && <p class="text-ink-500 text-lg max-w-xl mx-auto">{subtitle}</p>}
+    </div>
+
+    <div class="space-y-4">
+      {items.map((item) => (
+        <details class="group bg-white border border-line rounded-sm overflow-hidden">
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none">
+            <h3 class="font-display text-lg md:text-xl text-ink-800">{item.q}</h3>
+            <span class="shrink-0 w-8 h-8 rounded-full bg-cream group-open:bg-brand-500 group-open:text-white flex items-center justify-center transition">
+              <svg class="w-4 h-4 group-open:rotate-45 transition" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 4v12M4 10h12"/>
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 pt-0 text-ink-600 leading-relaxed">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,262 @@
+---
+import { SITE, AREAS, SERVICES } from '~/lib/site';
+
+type BreadcrumbItem = { name: string; url: string };
+
+interface Props {
+  pageType: 'home' | 'service' | 'area' | 'article' | 'contact' | 'about' | 'gallery' | 'brands' | 'collection' | 'page';
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  breadcrumbs?: BreadcrumbItem[];
+  serviceSlug?: string;
+  serviceTitle?: string;
+  areaSlug?: string;
+  areaTitle?: string;
+  articleDate?: string;
+  faqs?: Array<{ q: string; a: string }>;
+  image?: string;
+}
+
+const {
+  pageType,
+  title,
+  description,
+  canonicalUrl,
+  breadcrumbs = [],
+  serviceSlug,
+  serviceTitle,
+  areaTitle,
+  articleDate,
+  faqs = [],
+  image,
+} = Astro.props;
+
+// Correct geo for St. Petersburg, FL (replaces the Alabama coords in the old WP site)
+const GEO = { latitude: 27.7676, longitude: -82.6403 };
+
+const orgId = `${SITE.url}/#organization`;
+const placeId = `${SITE.url}/#place`;
+const websiteId = `${SITE.url}/#website`;
+const logoUrl = `${SITE.url}/favicon.svg`;
+const imageUrl = image ? new URL(image, SITE.url).toString() : `${SITE.url}/images/og-default.jpg`;
+
+// Core LocalBusiness node — emitted on every page
+const localBusiness = {
+  '@type': 'LocalBusiness',
+  '@id': orgId,
+  name: SITE.name,
+  alternateName: SITE.shortName,
+  url: SITE.url,
+  telephone: '+1-727-240-4512',
+  email: SITE.email,
+  priceRange: '$$$',
+  foundingDate: '2000',
+  description: SITE.description,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'St. Petersburg',
+    addressRegion: 'FL',
+    postalCode: '33701',
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: GEO.latitude,
+    longitude: GEO.longitude,
+  },
+  hasMap: `https://www.google.com/maps/search/?api=1&query=${GEO.latitude},${GEO.longitude}`,
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
+  ],
+  areaServed: AREAS.map((a) => ({
+    '@type': 'City',
+    name: a.title,
+  })),
+  makesOffer: SERVICES.map((s) => ({
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: s.title,
+      url: `${SITE.url}/services/${s.slug}/`,
+    },
+  })),
+  image: {
+    '@type': 'ImageObject',
+    url: logoUrl,
+    caption: SITE.name,
+  },
+};
+
+const website = {
+  '@type': 'WebSite',
+  '@id': websiteId,
+  url: SITE.url,
+  name: SITE.name,
+  alternateName: SITE.shortName,
+  publisher: { '@id': orgId },
+  inLanguage: 'en-US',
+};
+
+const place = {
+  '@type': 'Place',
+  '@id': placeId,
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: GEO.latitude,
+    longitude: GEO.longitude,
+  },
+  hasMap: `https://www.google.com/maps/search/?api=1&query=${GEO.latitude},${GEO.longitude}`,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'St. Petersburg',
+    addressRegion: 'FL',
+    postalCode: '33701',
+    addressCountry: 'US',
+  },
+};
+
+// Breadcrumb list
+const breadcrumbNode = breadcrumbs.length
+  ? {
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((b, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: b.name,
+        item: new URL(b.url, SITE.url).toString(),
+      })),
+    }
+  : null;
+
+// Per-page-type additions
+const graph: any[] = [localBusiness, website, place];
+if (breadcrumbNode) graph.push(breadcrumbNode);
+
+if (pageType === 'home') {
+  graph.push({
+    '@type': 'WebPage',
+    '@id': `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: title,
+    description,
+    isPartOf: { '@id': websiteId },
+    about: { '@id': orgId },
+    primaryImageOfPage: imageUrl ? { '@type': 'ImageObject', url: imageUrl } : undefined,
+  });
+}
+
+if (pageType === 'service' && serviceSlug && serviceTitle) {
+  graph.push({
+    '@type': 'Service',
+    '@id': `${canonicalUrl}#service`,
+    name: serviceTitle,
+    description,
+    url: canonicalUrl,
+    provider: { '@id': orgId },
+    areaServed: AREAS.map((a) => ({ '@type': 'City', name: a.title })),
+    serviceType: serviceTitle,
+  });
+}
+
+if (pageType === 'area' && areaTitle) {
+  // Area pages get their own LocalBusiness-flavored node representing the branch
+  graph.push({
+    '@type': 'LocalBusiness',
+    '@id': `${canonicalUrl}#localbusiness`,
+    name: `${SITE.name} \u2014 ${areaTitle}`,
+    description,
+    url: canonicalUrl,
+    parentOrganization: { '@id': orgId },
+    areaServed: { '@type': 'City', name: areaTitle },
+    telephone: '+1-727-240-4512',
+    priceRange: '$$$',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: areaTitle,
+      addressRegion: 'FL',
+      addressCountry: 'US',
+    },
+  });
+}
+
+if (pageType === 'article' && articleDate) {
+  graph.push({
+    '@type': 'Article',
+    '@id': `${canonicalUrl}#article`,
+    headline: title,
+    description,
+    author: { '@id': orgId },
+    publisher: { '@id': orgId },
+    datePublished: articleDate,
+    dateModified: articleDate,
+    image: imageUrl,
+    mainEntityOfPage: canonicalUrl,
+  });
+}
+
+if (pageType === 'contact') {
+  graph.push({
+    '@type': 'ContactPage',
+    '@id': `${canonicalUrl}#contactpage`,
+    url: canonicalUrl,
+    name: title,
+    description,
+  });
+}
+
+if (pageType === 'about') {
+  graph.push({
+    '@type': 'AboutPage',
+    '@id': `${canonicalUrl}#aboutpage`,
+    url: canonicalUrl,
+    name: title,
+    description,
+    mainEntity: { '@id': orgId },
+  });
+}
+
+if (pageType === 'collection') {
+  graph.push({
+    '@type': 'CollectionPage',
+    '@id': `${canonicalUrl}#collection`,
+    url: canonicalUrl,
+    name: title,
+    description,
+  });
+}
+
+if (pageType === 'gallery') {
+  graph.push({
+    '@type': 'ImageGallery',
+    '@id': `${canonicalUrl}#gallery`,
+    url: canonicalUrl,
+    name: title,
+    description,
+  });
+}
+
+if (faqs.length) {
+  graph.push({
+    '@type': 'FAQPage',
+    '@id': `${canonicalUrl}#faq`,
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  });
+}
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': graph,
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

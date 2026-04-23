@@ -1,0 +1,46 @@
+---
+interface Stat {
+  value: string;
+  label: string;
+}
+interface Props {
+  stats?: Stat[];
+  brands?: string[];
+}
+
+const {
+  stats = [
+    { value: '25+', label: 'Years Experience' },
+    { value: '100%', label: 'Satisfaction' },
+    { value: 'FL', label: 'Serving St. Pete Metro' },
+  ],
+  brands = ['Norman Shutters', 'Stout Textiles', 'Kravet', 'Horizons Window Fashions', 'Hunter Douglas', 'Alta Window Fashions', 'Elegant Shutters', 'Graber'],
+} = Astro.props;
+---
+
+<section class="py-16 md:py-20 border-t border-line bg-white">
+  <div class="container-site">
+    <div class="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
+      {stats.map((s) => (
+        <div class="text-center">
+          <p class="font-display text-3xl md:text-4xl text-brand-600 mb-1">{s.value}</p>
+          <p class="text-xs tracking-widest uppercase text-ink-500">{s.label}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-x-10 md:gap-x-14 gap-y-6">
+      {brands.map((b) => (
+        <span class="text-ink-400 font-display text-lg md:text-xl tracking-wide">
+          {b}
+        </span>
+      ))}
+    </div>
+
+    <p class="text-center mt-8">
+      <a href="/brands/" class="text-sm text-brand-600 hover:text-brand-700 underline underline-offset-4 font-semibold">
+        See full list of brands
+      </a>
+    </p>
+  </div>
+</section>

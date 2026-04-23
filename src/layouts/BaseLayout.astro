@@ -2,6 +2,8 @@
 import '~/styles/global.css';
 import Header from '~/components/Header.astro';
 import Footer from '~/components/Footer.astro';
+import StickyMobileCTA from '~/components/StickyMobileCTA.astro';
+import Schema from '~/components/Schema.astro';
 import { SITE } from '~/lib/site';
 
 interface Props {
@@ -10,6 +12,15 @@ interface Props {
   canonical?: string;
   ogImage?: string;
   noindex?: boolean;
+  pageType?: 'home' | 'service' | 'area' | 'article' | 'contact' | 'about' | 'gallery' | 'brands' | 'collection' | 'page';
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  serviceSlug?: string;
+  serviceTitle?: string;
+  areaSlug?: string;
+  areaTitle?: string;
+  articleDate?: string;
+  faqs?: Array<{ q: string; a: string }>;
+  hideMobileCta?: boolean;
 }
 
 const {
@@ -18,10 +29,27 @@ const {
   canonical,
   ogImage = '/images/og-default.jpg',
   noindex = false,
+  pageType = 'page',
+  breadcrumbs,
+  serviceSlug,
+  serviceTitle,
+  areaSlug,
+  areaTitle,
+  articleDate,
+  faqs,
+  hideMobileCta = false,
 } = Astro.props;
 
-const fullTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
+// Append " | Custom Fabric Creations" only when it still fits under 60c.
+// Otherwise use the page title as-is — we already include brand signals in copy.
+const BRAND_SUFFIX = ` | ${SITE.name}`;
+const fullTitle = title === SITE.name
+  ? `${SITE.name} | St. Pete Window Treatments`
+  : title.length + BRAND_SUFFIX.length <= 60
+    ? `${title}${BRAND_SUFFIX}`
+    : title;
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, SITE.url).toString();
+const ogImageUrl = new URL(ogImage, SITE.url).toString();
 ---
 
 <!doctype html>
@@ -30,26 +58,46 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, SITE.url).toString
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#333333" />
 
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    {noindex
+      ? <meta name="robots" content="noindex,nofollow" />
+      : <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+    }
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={pageType === 'article' ? 'article' : 'website'} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:site_name" content={SITE.name} />
-    <meta property="og:image" content={new URL(ogImage, SITE.url).toString()} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(ogImage, SITE.url).toString()} />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <Schema
+      pageType={pageType}
+      title={fullTitle}
+      description={description}
+      canonicalUrl={canonicalUrl}
+      breadcrumbs={breadcrumbs}
+      serviceSlug={serviceSlug}
+      serviceTitle={serviceTitle}
+      areaSlug={areaSlug}
+      areaTitle={areaTitle}
+      articleDate={articleDate}
+      faqs={faqs}
+      image={ogImage}
+    />
   </head>
   <body class="min-h-screen flex flex-col">
     <Header />
@@ -57,5 +105,6 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, SITE.url).toString
       <slot />
     </main>
     <Footer />
+    {!hideMobileCta && <StickyMobileCTA />}
   </body>
 </html>

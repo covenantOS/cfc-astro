@@ -1,41 +1,72 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
+import ServiceSidebar from '~/components/ServiceSidebar.astro';
+import GlobalContactMap from '~/components/GlobalContactMap.astro';
+import FAQ from '~/components/FAQ.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
+import { SITE } from '~/lib/site';
 
 interface Props {
   title: string;
-  description?: string;
-  eyebrow?: string;
+  description: string;
+  serviceSlug: string;
+  serviceTitle: string;
   heroImage?: string;
   heroTitle?: string;
   heroSubtitle?: string;
+  faqs?: Array<{ q: string; a: string }>;
 }
 
 const {
   title,
   description,
-  eyebrow = 'Bespoke service',
+  serviceSlug,
+  serviceTitle,
   heroImage,
   heroTitle,
   heroSubtitle,
+  faqs,
 } = Astro.props;
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Services', url: '/services/' },
+  { name: serviceTitle, url: `/services/${serviceSlug}/` },
+];
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  pageType="service"
+  breadcrumbs={breadcrumbs}
+  serviceSlug={serviceSlug}
+  serviceTitle={serviceTitle}
+  faqs={faqs}
+  ogImage={heroImage ?? `/images/hero/${serviceSlug}.webp`}
+>
   <Hero
-    eyebrow={eyebrow}
-    title={heroTitle ?? title}
-    subtitle={heroSubtitle}
-    image={heroImage}
-    variant={heroImage ? 'image' : 'linen'}
-    primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
-    secondaryCta={{ label: 'View Gallery', href: '/gallery/' }}
+    title={heroTitle ?? `${serviceTitle} in St. Petersburg, FL`}
+    subtitle={heroSubtitle ?? description}
+    image={heroImage ?? `/images/hero/${serviceSlug}.webp`}
+    primaryCta={{ label: SITE.phone, href: SITE.phoneHref }}
+    secondaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
+    breadcrumbs={breadcrumbs}
   />
-  <article class="py-20 md:py-28">
-    <div class="container-narrow prose-cfc">
-      <slot />
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container-site grid gap-10 lg:grid-cols-[320px_1fr]">
+      <ServiceSidebar kind="service" currentSlug={serviceSlug} />
+      <article class="prose-cfc">
+        <slot />
+      </article>
     </div>
-  </article>
-  <FinalCTA />
+  </section>
+
+  {faqs && faqs.length > 0 && (
+    <FAQ items={faqs} heading={`${serviceTitle} — Frequently Asked Questions`} eyebrow="Common Questions" subtitle={`Answers about our ${serviceTitle.toLowerCase()} process.`} />
+  )}
+
+  <GlobalContactMap />
 </BaseLayout>

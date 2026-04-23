@@ -1,0 +1,25 @@
+---
+import { SITE } from '~/lib/site';
+---
+
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-line shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
+  <div class="grid grid-cols-2">
+    <a
+      href={SITE.phoneHref}
+      class="flex items-center justify-center gap-2 py-4 text-ink-800 font-semibold border-r border-line"
+    >
+      <svg class="w-5 h-5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+      <span class="text-sm">Call</span>
+    </a>
+    <a
+      href="/contact/"
+      class="flex items-center justify-center py-4 bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm uppercase tracking-wide"
+      style="letter-spacing: 0.08em;"
+    >
+      Get Quote
+    </a>
+  </div>
+</div>
+<div class="md:hidden h-16" aria-hidden="true"></div>

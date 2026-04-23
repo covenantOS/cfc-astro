@@ -1,29 +1,62 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
+import AboutSection from '~/components/AboutSection.astro';
+import BrandStrip from '~/components/BrandStrip.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
 ---
 
 <BaseLayout
-  title="About Us"
-  description="Custom Fabric Creations has been St. Petersburg\u2019s premier studio for bespoke window treatments and upholstery since 2000. Locally owned, fully insured, in-house workroom."
+  title="About Custom Fabric Creations"
+  description="St. Petersburg's premier studio for bespoke window treatments and upholstery since 2000. Locally owned, fully insured, in-house workroom."
+  pageType="about"
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'About', url: '/about/' }]}
 >
   <Hero
-    eyebrow="Our story"
-    title="Twenty-five years of custom work."
+    eyebrow="Our Story"
+    title="Twenty-Five Years of Custom Work."
     subtitle="A St. Pete studio built on precision, patience, and the quiet pride of work done well."
-    variant="linen"
+    image="/images/hero/homepage.webp"
+    breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'About', url: '/about/' }]}
   />
-  <article class="py-20 md:py-28">
+
+  <section class="py-20 md:py-28 bg-white">
     <div class="container-narrow prose-cfc">
-      <p class="text-xl text-ink-500 leading-relaxed mb-10">
-        <em>[Placeholder \u2014 port full About copy from the live site.]</em>
+      <p class="text-xl text-ink-500 leading-relaxed mb-10 first-letter:text-7xl first-letter:font-display first-letter:text-brand-600 first-letter:float-left first-letter:leading-none first-letter:mr-3 first-letter:mt-1">
+        Custom Fabric Creations opened its doors in 2000 with a clear mission: to provide Pinellas County homeowners with uncompromising quality in custom window treatments and furniture reupholstery. Twenty-five years later, that mission hasn\u2019t changed \u2014 but the studio has grown into the premier destination for bespoke interior design across the St. Pete coast.
       </p>
-      <h2>Our craft</h2>
-      <p>Custom Fabric Creations has been serving Pinellas County since 2000. Every project begins with an in-home consultation and ends with a white-glove installation by our own team.</p>
-      <h2>Our workroom</h2>
-      <p>Unlike retailers who outsource sewing to third parties, every drapery panel, cornice, cushion, and headboard is cut and sewn in our St. Petersburg workroom.</p>
+
+      <h2>Our Craft</h2>
+      <p>Unlike national retailers who outsource sewing to third-party workrooms, every drapery panel, cornice, cushion, and headboard we make is cut and sewn in our St. Petersburg workroom. The advantage shows up in the details: proportions, hems, welting, corner construction. Things most customers don\u2019t consciously notice but feel when a room is done right.</p>
+
+      <h2>Our Team</h2>
+      <p>Our lead designer, Terry, has over 25 years of experience with window treatments and upholstery in Florida. Our install team has been with us for a decade. We don\u2019t use subcontractors. The person who measures your window is the person who installs the finished product.</p>
+
+      <h2>Our Process</h2>
+      <p>Every project begins with a complimentary in-home consultation. We bring fabric samples, finish chips, hardware options, and design references to your space. You see materials in your actual light, against your actual walls. Once direction is set, we provide a written estimate, fabricate in our workroom, and handle a white-glove installation.</p>
+
+      <h2>Brands We Trust</h2>
+      <p>We\u2019re authorized dealers for the most respected names in the industry \u2014 Hunter Douglas, Norman, Graber, Kravet, and Stout. These brands come with lifetime limited warranties and designer-grade fabric libraries that set the standard for what custom work can look like.</p>
+
+      <h2>Locally Owned, Fully Insured</h2>
+      <p>Custom Fabric Creations is locally owned and fully insured. We live here. We shop at the same grocery stores, drive the same roads, deal with the same humidity and hurricane seasons as our clients. That local perspective shapes every recommendation we make.</p>
     </div>
-  </article>
-  <FinalCTA />
+  </section>
+
+  <AboutSection
+    eyebrow="What Drives Us"
+    heading="Craftsmanship is the measurement of attention."
+    body="We measure to the eighth of an inch. We sew to designer spec. We install with white-glove care. Every project is finished to a standard that would make our lead designer proud to put her name on it \u2014 because she does."
+    pills={['25+ Years Exp.', 'Local Workroom', 'Authorized Dealer', 'Fully Insured']}
+    image="/images/services/plantation-shutters/top.webp"
+    imageBadge={{ title: 'Established 2000', subtitle: 'St. Petersburg, FL' }}
+    cta={{ label: 'View Our Work', href: '/gallery/' }}
+  />
+
+  <BrandStrip />
+
+  <FinalCTA
+    heading="Let\u2019s Design Something Beautiful Together"
+    subtitle="Schedule a complimentary in-home consultation. We bring the showroom to you."
+  />
 </BaseLayout>

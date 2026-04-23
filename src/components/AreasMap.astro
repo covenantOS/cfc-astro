@@ -1,0 +1,57 @@
+---
+import { AREAS } from '~/lib/site';
+
+interface Props {
+  heading?: string;
+  subtitle?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+
+const {
+  heading = 'Find Us in the St. Pete Area',
+  subtitle = 'We bring our premium design showroom directly to your home. Operating from our local workroom, our professionals provide expert fabric consultations, precise measurements, and white-glove installation throughout Pinellas County.',
+  ctaLabel = 'See All Service Areas',
+  ctaHref = '/areas/',
+} = Astro.props;
+
+const leftAreas = AREAS.slice(0, Math.ceil(AREAS.length / 2));
+const rightAreas = AREAS.slice(Math.ceil(AREAS.length / 2));
+---
+
+<section class="relative">
+  <!-- Map background -->
+  <div class="absolute inset-0">
+    <img src="/images/st-pete-map.webp" alt="St. Petersburg service area map" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+    <div class="absolute inset-0 bg-white/40"></div>
+  </div>
+
+  <div class="relative container-site py-20 md:py-28">
+    <div class="grid md:grid-cols-2 gap-0 max-w-5xl mx-auto shadow-soft">
+      <div class="bg-white p-10 md:p-12">
+        <p class="eyebrow" style="letter-spacing: 0.3em;">Our Service Areas</p>
+        <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-6 leading-tight">{heading}</h2>
+        <p class="text-ink-500 leading-relaxed mb-8">{subtitle}</p>
+        <a href={ctaHref} class="btn-primary">{ctaLabel}</a>
+      </div>
+
+      <div class="bg-brand-500 text-white p-10 md:p-12">
+        <h3 class="font-display text-3xl md:text-4xl mb-8 leading-tight text-white">Serving the St. Pete coast</h3>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-3">
+          {[...leftAreas, ...rightAreas].map((a) => (
+            <a href={`/areas/${a.slug}/`} class="text-white/95 hover:text-ink-900 transition text-[0.95rem] font-medium">
+              {a.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gold banner below -->
+  <div class="bg-brand-500 text-white py-5">
+    <div class="container-site text-center text-sm tracking-[0.25em] uppercase font-semibold">
+      Serving St. Petersburg & Pinellas County
+    </div>
+  </div>
+</section>

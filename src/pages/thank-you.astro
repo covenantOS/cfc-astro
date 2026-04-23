@@ -7,13 +7,20 @@ import { SITE } from '~/lib/site';
   title="Thank You"
   description="Thank you for reaching out to Custom Fabric Creations."
   noindex
+  hideMobileCta
 >
-  <section class="py-32 md:py-40 bg-linen">
-    <div class="container-narrow text-center">
-      <p class="eyebrow">Message received</p>
-      <h1 class="font-display text-5xl md:text-6xl text-ink-800 title-rule">Thank you.</h1>
-      <p class="mt-8 text-lg text-ink-500 leading-relaxed max-w-xl mx-auto">
-        A member of our studio will be in touch within one business day. For urgent requests, please call us directly.
+  <section class="py-32 md:py-40 bg-linen text-center">
+    <div class="container-narrow">
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-brand-500 text-white rounded-full mb-8">
+        <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 6L9 17l-5-5"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow" style="letter-spacing: 0.3em;">Message Received</p>
+      <h1 class="font-display text-5xl md:text-6xl text-ink-800">Thank you.</h1>
+      <p class="mt-6 text-lg text-ink-500 leading-relaxed max-w-xl mx-auto">
+        A member of our studio will be in touch within one business day to schedule your complimentary in-home consultation. For urgent requests, please call us directly.
       </p>
       <div class="mt-10 flex flex-wrap gap-4 justify-center">
         <a href={SITE.phoneHref} class="btn-primary btn-lg">{SITE.phone}</a>

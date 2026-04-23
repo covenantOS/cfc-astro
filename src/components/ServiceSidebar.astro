@@ -1,0 +1,117 @@
+---
+import { SITE, SERVICES, AREAS } from '~/lib/site';
+
+interface Props {
+  kind?: 'service' | 'area';
+  currentSlug?: string;
+}
+
+const { kind = 'service', currentSlug } = Astro.props;
+
+// Group services by category (matches layout mockup)
+const SERVICE_GROUPS = [
+  {
+    label: 'Window Treatments',
+    items: [
+      { slug: 'custom-blinds', title: 'Custom Blinds' },
+      { slug: 'window-shades', title: 'Window Shades' },
+      { slug: 'plantation-shutters', title: 'Plantation Shutters' },
+      { slug: 'outdoor-window-shades', title: 'Exterior Window Options' },
+    ],
+  },
+  {
+    label: 'Draperies & Curtains',
+    items: [
+      { slug: 'custom-draperies-curtains', title: 'Draperies & Curtains' },
+      { slug: 'custom-cornices-valances', title: 'Cornices & Valances' },
+      { slug: 'drapery-hardware', title: 'Drapery Hardware' },
+    ],
+  },
+  {
+    label: 'Interior Decor',
+    items: [
+      { slug: 'services-interior-decor-tampa', title: 'Interior Decor & Products' },
+      { slug: 'custom-bedding-pillows', title: 'Bedding & Pillows' },
+    ],
+  },
+  {
+    label: 'Specialty',
+    items: [
+      { slug: 'furniture-reupholstery', title: 'Furniture Reupholstery' },
+      { slug: 'custom-banquettes', title: 'Custom Banquettes' },
+      { slug: 'commercial-window-treatments', title: 'Commercial Window Treatments' },
+    ],
+  },
+];
+---
+
+<aside class="lg:sticky lg:top-28 space-y-8">
+  <div class="bg-ink-800 text-white p-6 rounded-sm">
+    <h3 class="text-xl text-white font-display mb-2">Get Your Free Estimate</h3>
+    <p class="text-white/70 text-sm mb-5">Call us today or fill out the form below</p>
+    <a href={SITE.phoneHref} class="block text-center bg-brand-500 hover:bg-brand-600 text-white font-semibold py-3 rounded-sm mb-3">
+      <span class="inline-flex items-center gap-2 justify-center">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        {SITE.phone}
+      </span>
+    </a>
+    <a href="/contact/" class="block text-center border border-white/40 hover:bg-white/10 text-white font-semibold py-3 rounded-sm text-sm tracking-wide uppercase" style="letter-spacing: 0.05em;">
+      Schedule Consultation
+    </a>
+  </div>
+
+  {kind === 'service' && (
+    <div>
+      <h3 class="font-display text-2xl text-ink-800 mb-4 border-b border-line pb-3">Services & Products</h3>
+      <div class="space-y-5">
+        {SERVICE_GROUPS.map((group) => (
+          <div>
+            <h4 class="font-display text-ink-800 text-base mb-2">{group.label}</h4>
+            <ul class="space-y-1.5">
+              {group.items.map((item) => (
+                <li>
+                  <a
+                    href={`/services/${item.slug}/`}
+                    class:list={[
+                      'block text-sm pl-3 py-1 border-l-2 transition',
+                      currentSlug === item.slug
+                        ? 'border-brand-500 text-brand-700 font-semibold'
+                        : 'border-transparent text-ink-500 hover:border-brand-300 hover:text-brand-700',
+                    ]}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {kind === 'area' && (
+    <div>
+      <h3 class="font-display text-2xl text-ink-800 mb-4 border-b border-line pb-3">Service Areas</h3>
+      <ul class="space-y-1.5">
+        {AREAS.map((a) => (
+          <li>
+            <a
+              href={`/areas/${a.slug}/`}
+              class:list={[
+                'block text-sm pl-3 py-1 border-l-2 transition',
+                currentSlug === a.slug
+                  ? 'border-brand-500 text-brand-700 font-semibold'
+                  : 'border-transparent text-ink-500 hover:border-brand-300 hover:text-brand-700',
+              ]}
+            >
+              {a.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</aside>

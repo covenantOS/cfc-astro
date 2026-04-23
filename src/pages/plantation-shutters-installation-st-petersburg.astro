@@ -1,31 +1,109 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
+import FAQ from '~/components/FAQ.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
+
+const faqs = [ { "q": "How long does plantation shutter installation take?", "a": "Installation day takes 4 to 8 hours for a typical 10 to 15 window home. Total timeline from signed proposal to install is 4 to 8 weeks because shutters are made-to-order at a factory." }, { "q": "Do I need to be home during install?", "a": "For the initial measure yes, so you can walk through options and approve specs. On install day you need to be home at the start for access and walkthrough but can step out during the middle of the job." }, { "q": "What does plantation shutter installation cost in St. Petersburg?", "a": "Installation is typically included in the per-window price at reputable companies. Total installed cost runs $250 to $800 per window depending on material, size, and shape." } ];
 ---
 
 <BaseLayout
-  title="Plantation Shutter Installation in St. Petersburg, FL: What Actually Happens"
-  description="A step-by-step look at what plantation shutter installation actually involves in a St. Petersburg home \u2014 from measurement to finish, by a local installer."
+  title="Plantation Shutter Installation in St. Petersburg, FL"
+  description="A step-by-step look at what plantation shutter installation actually involves in a St. Petersburg home — from measurement to finish, by a local installer."
+  pageType="article"
+  articleDate="2026-04-10"
+  faqs={faqs}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Guides', url: '/' },
+    { name: 'Plantation Shutter Installation in St. Petersburg, FL', url: '/plantation-shutters-installation-st-petersburg/' },
+  ]}
+  ogImage="/images/hero/plantation-shutters.webp"
 >
   <Hero
     eyebrow="Guide"
-    title="Plantation Shutter Installation in St. Petersburg"
-    subtitle="What actually happens from measurement to finish."
-    variant="linen"
+    title="Plantation Shutter Installation in St. Petersburg, FL: What Actually Happens"
+    image="/images/hero/plantation-shutters.webp"
+    breadcrumbs={[
+      { name: 'Home', url: '/' },
+      { name: 'Plantation Shutters', url: '/services/plantation-shutters/' },
+      { name: 'Guide', url: '/plantation-shutters-installation-st-petersburg/' },
+    ]}
   />
-  <article class="py-20 md:py-28">
+
+  <article class="py-20 md:py-28 bg-white">
     <div class="container-narrow prose-cfc">
-      <p class="text-xl text-ink-500 leading-relaxed mb-10">
-        <em>[Placeholder \u2014 port full article content from the live site.]</em>
-      </p>
-      <h2>Step 1: Precision measurement</h2>
-      <p>We measure every window \u2014 width, height, squareness, depth, and obstructions. Rough openings lie. Actual measurements don\u2019t.</p>
-      <h2>Step 2: Production</h2>
-      <p>Your shutters are made to your measurements. Lead time depends on brand and material.</p>
-      <h2>Step 3: Installation</h2>
-      <p>Our own team installs \u2014 never a subcontractor. Typical single-home install takes a few hours to a day.</p>
+  <p>The internet is full of vague "we install shutters" pages that tell you nothing. Here is the actual, step-by-step process for a real plantation shutter installation in a Pinellas County home, including timelines, what your installer should be doing, and what to look out for.</p>
+  <h2>Day 1: The in-home measure (usually 45 to 90 minutes)</h2>
+  <p>A real shutter install starts before any product is ordered. We come to the house with a laser measure, a framing square, a level, and a plumb bob. For every window, we check:</p>
+  <ul>
+    <li>Inside the frame, width and height at top, middle, and bottom</li>
+    <li>Depth of the window well (determines if inside or outside mount works)</li>
+    <li>Whether the frame is square (older Old Northeast bungalows rarely are)</li>
+    <li>Any obstructions: crank handles, sill depth, window hardware, AC units</li>
+    <li>Existing trim condition and whether it needs prep work</li>
+  </ul>
+  <p>We write it all down by hand even with a laser. One typo on a measurement can cost a $400 panel and a 4 week delay. During the measure we also walk through material options, louver size, tilt style, frame style, and mount type with you. No samples on a website are going to settle the "faux wood vs hybrid vs basswood" question the way actually holding them in your living room light does.</p>
+  <h2>Between measure and install: 4 to 8 weeks</h2>
+  <p>Custom plantation shutters are built to order in a facility, not off a shelf. Here is what the lead time actually covers:</p>
+  <ul>
+    <li>Week 1: Order submission, final sign-off on specs (we send you a printout of every window with final specs before anything goes into production)</li>
+    <li>Weeks 2 to 4: Factory production (frames cut, louvers cut, finish applied, QC)</li>
+    <li>Weeks 4 to 6: Shipping to St. Petersburg and unboxing/inspection (we inspect every panel before it goes on your install schedule)</li>
+    <li>Weeks 6 to 8: Install scheduled at your convenience</li>
+  </ul>
+  <p>If a company is promising you shutters in 10 days, either they are stocking standard sizes (which means less custom fit for your actual windows) or they are skipping a step. A good Pinellas shutter install is worth the 5 to 7 week wait.</p>
+  <h2>Install day: typically 4 to 8 hours for a full house</h2>
+  <p>For a 10 to 15 window home in St. Pete, expect one installer or a two-person team to be at the house for most of a day. Here is what they should be doing:</p>
+  <ul>
+    <li>Protect the work area. Drop cloths, covering furniture near windows, moving curtains and rods out of the way.</li>
+    <li>Dry fit each shutter. Place the frame in the opening, check for gaps, check square. Shim where needed.</li>
+    <li>Secure the frame. Pre-drill, countersink, anchor to the jamb with the right screws for the wall type. In older Old Northeast or Downtown St. Pete homes with plaster, this requires different hardware than new construction.</li>
+    <li>Hang the panels. Check alignment, louver tension, tilt rod smoothness. Adjust hinges.</li>
+    <li>Test operation. Every louver should move smoothly. Every panel should open and close without dragging. Tilt bars should feel firm but not stiff.</li>
+    <li>Caulk and touch up. Fill gaps between frame and wall with color-matched caulk if needed. Touch up any nicks in the finish.</li>
+    <li>Walk-through with you. Before they leave, they show you every window, operate every louver, hand you the warranty paperwork, and answer questions.</li>
+  </ul>
+  <h2>What your installer should bring that a lot skip</h2>
+  <ul>
+    <li>A non-scratch hammer (for the rare times a frame needs a light seating tap)</li>
+    <li>Color-matched caulk and touch-up paint or pens</li>
+    <li>Extra screws, shims, and finishing nails</li>
+    <li>A level and a framing square (for every window, every time)</li>
+    <li>A vacuum or dust pan (no good install ends with drywall dust on your floor)</li>
+  </ul>
+  <h2>What a bad install looks like</h2>
+  <p>We have been called in to fix other installers' work enough times to recognize the pattern:</p>
+  <ul>
+    <li>Panels that do not sit flush against the frame at the top or bottom</li>
+    <li>Louvers that sag or rattle when the tilt bar moves</li>
+    <li>Visible gaps between the frame and the wall (no caulk finish)</li>
+    <li>Hinge screws stripped or over-tightened</li>
+    <li>Frames mounted out of plumb (you can see the gap widen at the top vs bottom)</li>
+  </ul>
+  <p>If you see any of these on a new install, call the installer back. A good company fixes their work.</p>
+  <h2>Warranty: what to look for</h2>
+  <p>Industry standard is a lifetime warranty on the product (frame, panel, louvers) and a 2 to 5 year warranty on the finish. Hardware (hinges, tilt mechanisms) typically carries a 5 to 10 year warranty. Installation labor should carry at minimum a 1 year workmanship warranty. Anyone offering less on labor is telling you something about their confidence in the install.</p>
+  <h2>What the install costs in St. Petersburg</h2>
+  <p>Most reputable companies in Pinellas County roll the install cost into the per-window price. Expect the installed price to be $250 to $800 per window depending on material, size, and complexity. Pure install labor (if you were buying shutters elsewhere and needed install only) runs roughly $80 to $200 per window for standard rectangular installs, more for specialty shapes. See our full plantation shutter cost breakdown for a complete picture.</p>
+  <h2>Special cases in St. Pete and Pinellas County</h2>
+  <h3>Waterfront homes (Snell Isle, Tierra Verde, Shore Acres, St. Pete Beach)</h3>
+  <p>Salt air eats metal hardware. Use stainless steel screws and hinges. For enclosed lanai installations, we mount with salt-spray-rated hardware at no extra cost.</p>
+  <h3>Historic Old Northeast and Downtown St. Pete bungalows</h3>
+  <p>Original plaster walls need different anchors than modern drywall. Out-of-square window openings are common (1920s and 1930s carpentry was not laser-perfect). Expect the installer to spend extra time on shimming and squaring up the frame.</p>
+  <h3>Condos and HOAs (Sand Key, Clearwater Beach, Downtown St. Pete condos)</h3>
+  <p>Some HOAs require approval before exterior-facing window treatments. We handle the submission paperwork for free. Let the HOA know before the measure so we can grab the spec sheet they need.</p>
+  <h2>Schedule an in-home measure</h2>
+  <p>Free measures across St. Petersburg, Clearwater, and greater Pinellas County. Mon through Sat. Book online or call (352) 266-1262.</p>
+
+      <div class="mt-12 p-8 bg-cream border-l-4 border-brand-500">
+        <h3 class="font-display text-2xl text-ink-800 mb-3">Questions About Your Project?</h3>
+        <p class="text-ink-600 mb-5">Call <a href="tel:+17272404512">(727) 240-4512</a> or <a href="/contact/">schedule a free in-home consultation</a>.</p>
+      </div>
     </div>
   </article>
+
+  {faqs.length > 0 && <FAQ items={faqs} heading="Frequently Asked Questions" eyebrow="FAQ" subtitle="Common questions about plantation shutters in St. Pete." />}
+
   <FinalCTA />
 </BaseLayout>
