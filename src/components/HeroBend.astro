@@ -1,29 +1,41 @@
 ---
-// Circular-downward bend between the dark hero and the next (lighter) section.
-// The dark hero dips DOWN in the middle into the lighter section — a scoop shape.
+// Circular-downward divider between the dark hero and the next (lighter) section.
+//
+// The SVG paints BOTH colors so the curve is a true visual divider:
+//   - Top region = hero dark (#1a1a1a, matches the hero bottom gradient)
+//   - Bottom region = nextBg (white by default)
+//   - Gold stroke traces the dividing curve
+//
+// The dark curves DOWNWARD in the middle — a "smile" scoop — so the hero
+// dips into the white section instead of ending in a flat horizontal line.
 interface Props {
   nextBg?: string;
+  heroColor?: string;
 }
-const { nextBg = '#ffffff' } = Astro.props;
+const { nextBg = '#ffffff', heroColor = '#1a1a1a' } = Astro.props;
 ---
 
-<div class="relative w-full block" style="line-height:0;" aria-hidden="true">
+<div class="relative w-full block" style="line-height:0; background-color:#1a1a1a;" aria-hidden="true">
   <svg
     viewBox="0 0 1440 120"
     preserveAspectRatio="none"
     class="block w-full h-20 md:h-28 lg:h-32"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <!-- scoop: edges at y=0 (dark hero ends at top), middle dips to y=120.
-         next-bg fills BELOW the curve, so the dark hero visibly curves
-         downward into the lighter section (a circular "smile" / scoop). -->
+    <!-- Dark region: top-left -> top-right along y=0, then curve back to
+         top-left dipping to apex y=80 at x=720. Fills the upper lens. -->
     <path
-      d="M0,0 Q720,180 1440,0 L1440,120 L0,120 Z"
+      d="M0,0 L1440,0 Q720,160 0,0 Z"
+      fill={heroColor}
+    />
+    <!-- White region: same curve, then down to bottom corners. Fills below. -->
+    <path
+      d="M0,0 Q720,160 1440,0 L1440,120 L0,120 Z"
       fill={nextBg}
     />
-    <!-- gold accent stroke tracing the scoop -->
+    <!-- Gold accent tracing the dividing curve -->
     <path
-      d="M0,0 Q720,180 1440,0"
+      d="M0,0 Q720,160 1440,0"
       fill="none"
       stroke="#bca050"
       stroke-width="4"
