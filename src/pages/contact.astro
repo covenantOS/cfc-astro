@@ -157,32 +157,43 @@ const GOOGLE_MAPS_API_KEY =
       var cityInput = document.getElementById('city-input');
       if (!streetInput || !window.google || !window.google.maps || !window.google.maps.places) return;
 
-      var ac = new window.google.maps.places.Autocomplete(streetInput, {
-        types: ['address'],
-        componentRestrictions: { country: ['us'] },
-        fields: ['address_components', 'formatted_address'],
-      });
-
-      ac.addListener('place_changed', function () {
-        var place = ac.getPlace();
-        if (!place || !place.address_components) return;
-
-        var streetNumber = '';
-        var route = '';
-        var city = '';
-        place.address_components.forEach(function (c) {
-          if (c.types.indexOf('street_number') !== -1) streetNumber = c.long_name;
-          else if (c.types.indexOf('route') !== -1) route = c.long_name;
-          else if (c.types.indexOf('locality') !== -1) city = c.long_name;
-          else if (!city && c.types.indexOf('postal_town') !== -1) city = c.long_name;
-          else if (!city && c.types.indexOf('sublocality') !== -1) city = c.long_name;
+      try {
+        var ac = new window.google.maps.places.Autocomplete(streetInput, {
+          types: ['address'],
+          componentRestrictions: { country: ['us'] },
+          fields: ['address_components', 'formatted_address'],
         });
 
-        var streetLine = (streetNumber + ' ' + route).trim();
-        if (streetLine) streetInput.value = streetLine;
-        if (city && cityInput && !cityInput.value) cityInput.value = city;
-      });
+        ac.addListener('place_changed', function () {
+          var place = ac.getPlace();
+          if (!place || !place.address_components) return;
+
+          var streetNumber = '';
+          var route = '';
+          var city = '';
+          place.address_components.forEach(function (c) {
+            if (c.types.indexOf('street_number') !== -1) streetNumber = c.long_name;
+            else if (c.types.indexOf('route') !== -1) route = c.long_name;
+            else if (c.types.indexOf('locality') !== -1) city = c.long_name;
+            else if (!city && c.types.indexOf('postal_town') !== -1) city = c.long_name;
+            else if (!city && c.types.indexOf('sublocality') !== -1) city = c.long_name;
+          });
+
+          var streetLine = (streetNumber + ' ' + route).trim();
+          if (streetLine) streetInput.value = streetLine;
+          if (city && cityInput && !cityInput.value) cityInput.value = city;
+        });
+      } catch (err) {
+        // If Places init throws, leave the field as a plain text input.
+        console.warn('Places autocomplete unavailable:', err);
+      }
     }
+
+    // If Google's loader fails (bad key, billing off, network, etc.) the field
+    // stays a normal text input — user can always type their address by hand.
+    window.gm_authFailure = function () {
+      console.warn('Google Maps authFailure — falling back to plain input');
+    };
 
     // Standard async loader. Calls initPlacesAutocomplete once Maps + Places load.
     window.__cfcInitPlaces = initPlacesAutocomplete;
