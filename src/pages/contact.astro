@@ -103,12 +103,12 @@ import { SITE, AREAS } from '~/lib/site';
 </BaseLayout>
 
 <script>
-  document.querySelectorAll<HTMLButtonElement>('button[data-space]').forEach((btn) => {
+  document.querySelectorAll('button[data-space]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll<HTMLButtonElement>('button[data-space]').forEach((b) => b.classList.remove('border-brand-500', 'bg-brand-50'));
+      document.querySelectorAll('button[data-space]').forEach((b) => b.classList.remove('border-brand-500', 'bg-brand-50'));
       btn.classList.add('border-brand-500', 'bg-brand-50');
-      const input = document.getElementById('space') as HTMLInputElement | null;
-      if (input) input.value = btn.dataset.space ?? 'residential';
+      const input = document.getElementById('space');
+      if (input) input.value = btn.dataset.space || 'residential';
     });
   });
 </script>
