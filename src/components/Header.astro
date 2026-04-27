@@ -81,30 +81,76 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'About'
       class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-brand-500/40 text-brand-400"
       aria-label="Open menu"
       aria-expanded="false"
+      aria-controls="mobile-nav"
     >
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg id="mobile-nav-icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <line x1="3" y1="6" x2="21" y2="6"/>
         <line x1="3" y1="12" x2="21" y2="12"/>
         <line x1="3" y1="18" x2="21" y2="18"/>
       </svg>
+      <svg id="mobile-nav-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden">
+        <line x1="6" y1="6" x2="18" y2="18"/>
+        <line x1="18" y1="6" x2="6" y2="18"/>
+      </svg>
     </button>
   </div>
 
-  <div id="mobile-nav" class="lg:hidden hidden border-t border-brand-500/10 bg-ink-900">
-    <nav class="container-site py-4 flex flex-col" aria-label="Mobile">
-      {NAV.flatMap((item) =>
-        item.children
-          ? [
-              <div class="py-2 font-semibold text-sm uppercase tracking-wide text-brand-400" style="letter-spacing: 0.08em;">{item.label}</div>,
-              ...item.children.map((c) => (
-                <a href={c.href} class="pl-4 py-2 text-white/80 hover:text-brand-300">{c.label}</a>
-              )),
-            ]
-          : [
-              <a href={item.href} class="py-2 font-semibold text-sm uppercase tracking-wide text-white hover:text-brand-300" style="letter-spacing: 0.08em;">{item.label}</a>,
-            ]
-      )}
-      <a href="/contact/" class="btn-primary mt-4">Schedule Consultation</a>
+  <!-- Mobile overlay panel.
+       - Fixed position so the page underneath does NOT scroll when interacting.
+       - Sits below the 24-tall header (top-24) and the 6px gold rule (so total top = 6 + 96 = 102px).
+       - Internal scroll via overflow-y-auto + max-height calc, so long lists fit any device.
+       - Services/Areas use native <details> for accessible collapse with no JS deps.
+       - Body scroll is locked via JS when open. -->
+  <div
+    id="mobile-nav"
+    class="lg:hidden hidden fixed left-0 right-0 z-40 bg-ink-900 border-t border-brand-500/10"
+    style="top: calc(6px + 6rem); height: calc(100dvh - 6px - 6rem); overflow-y: auto; overscroll-behavior: contain;"
+  >
+    <nav class="container-site py-6 flex flex-col" aria-label="Mobile">
+      {NAV.map((item) => (
+        item.children ? (
+          <details class="group border-b border-white/5">
+            <summary class="flex items-center justify-between py-4 cursor-pointer list-none select-none">
+              <span class="font-semibold text-sm uppercase tracking-wide text-white" style="letter-spacing: 0.08em;">{item.label}</span>
+              <span class="flex items-center gap-3">
+                <a
+                  href={item.href}
+                  class="text-xs text-brand-400 hover:text-brand-300 underline underline-offset-2"
+                  data-mobile-nav-link
+                  onclick="event.stopPropagation();"
+                >View all</a>
+                <svg class="w-4 h-4 text-brand-400 transition-transform duration-200 group-open:rotate-180" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 8l5 5 5-5"/>
+                </svg>
+              </span>
+            </summary>
+            <ul class="pb-3">
+              {item.children.map((c) => (
+                <li>
+                  <a
+                    href={c.href}
+                    class="block pl-4 pr-2 py-2.5 text-sm text-white/80 hover:text-brand-300 hover:bg-white/5 rounded-sm"
+                    data-mobile-nav-link
+                  >{c.label}</a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        ) : (
+          <a
+            href={item.href}
+            class="block py-4 font-semibold text-sm uppercase tracking-wide text-white hover:text-brand-300 border-b border-white/5"
+            style="letter-spacing: 0.08em;"
+            data-mobile-nav-link
+          >{item.label}</a>
+        )
+      ))}
+
+      <a href="/reviews/" class="block py-4 font-semibold text-sm uppercase tracking-wide text-white hover:text-brand-300 border-b border-white/5" style="letter-spacing: 0.08em;" data-mobile-nav-link>Reviews</a>
+
+      <a href="/contact/" class="btn-primary mt-6" data-mobile-nav-link>Schedule Consultation</a>
+
+      <a href={SITE.phoneHref} class="mt-3 text-center text-brand-400 font-semibold py-2 hover:text-brand-300" data-mobile-nav-link>Call {SITE.phone}</a>
     </nav>
   </div>
 </header>
@@ -112,8 +158,38 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'About'
 <script>
   const toggle = document.getElementById('mobile-nav-toggle');
   const panel = document.getElementById('mobile-nav');
+  const iconOpen = document.getElementById('mobile-nav-icon-open');
+  const iconClose = document.getElementById('mobile-nav-icon-close');
+
+  function setOpen(open: boolean) {
+    if (!panel || !toggle) return;
+    panel.classList.toggle('hidden', !open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    iconOpen?.classList.toggle('hidden', open);
+    iconClose?.classList.toggle('hidden', !open);
+    // Lock body scroll while the overlay is open so the page behind does
+    // not scroll when the user pans inside the menu.
+    document.documentElement.style.overflow = open ? 'hidden' : '';
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
   toggle?.addEventListener('click', () => {
-    const isOpen = panel?.classList.toggle('hidden') === false;
-    toggle.setAttribute('aria-expanded', String(isOpen));
+    const willOpen = panel?.classList.contains('hidden') ?? false;
+    setOpen(willOpen);
   });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !panel?.classList.contains('hidden')) setOpen(false);
+  });
+
+  // Close after tapping any link so navigation feels smooth on slow connections
+  document.querySelectorAll<HTMLElement>('[data-mobile-nav-link]').forEach((el) => {
+    el.addEventListener('click', () => setOpen(false));
+  });
+
+  // If the user resizes from mobile to desktop with the menu open, reset state
+  const mq = window.matchMedia('(min-width: 1024px)');
+  mq.addEventListener('change', (e) => { if (e.matches) setOpen(false); });
 </script>
