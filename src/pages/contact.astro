@@ -103,12 +103,25 @@ import { SITE, AREAS } from '~/lib/site';
 </BaseLayout>
 
 <script>
-  document.querySelectorAll<HTMLButtonElement>('button[data-space]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll<HTMLButtonElement>('button[data-space]').forEach((b) => b.classList.remove('border-brand-500', 'bg-brand-50'));
+  // Initialize residential as selected by default
+  document.addEventListener('DOMContentLoaded', function() {
+    var residentialBtn = document.querySelector('button[data-space="residential"]');
+    if (residentialBtn) {
+      residentialBtn.classList.add('border-brand-500', 'bg-brand-50');
+    }
+  });
+
+  document.querySelectorAll('button[data-space]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      // Remove highlight from all buttons
+      document.querySelectorAll('button[data-space]').forEach(function(b) {
+        b.classList.remove('border-brand-500', 'bg-brand-50');
+      });
+      // Add highlight to clicked button
       btn.classList.add('border-brand-500', 'bg-brand-50');
-      const input = document.getElementById('space') as HTMLInputElement | null;
-      if (input) input.value = btn.dataset.space ?? 'residential';
+      // Update hidden input
+      var input = document.getElementById('space');
+      if (input) input.value = btn.dataset.space || 'residential';
     });
   });
 </script>
