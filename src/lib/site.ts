@@ -1,8 +1,9 @@
 export const SITE = {
   name: 'Custom Fabric Creations',
   shortName: 'CFC',
-  // Active deploy host. Swap to https://www.customfabriccreations.net at DNS cutover.
-  url: 'https://cfc-astro.pages.dev',
+  // Canonical production host. www is canonical (per GSC: 100% of search traffic
+  // historically lives at www). Apex 301-redirects to www at the Cloudflare edge.
+  url: 'https://www.customfabriccreations.net',
   tagline: 'Bespoke Window Treatments & Custom Upholstery',
   description:
     'St. Petersburg’s premier studio for custom window treatments, drapery, plantation shutters, shades, and bespoke upholstery. Established 2000. Free in-home consultations.',

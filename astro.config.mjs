@@ -3,10 +3,11 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import partytown from '@astrojs/partytown';
 
-// Active deploy host. Swap to https://www.customfabriccreations.net at DNS cutover.
+// Canonical production host. www is canonical (per GSC: 100% of search traffic
+// historically lives at www). Apex 301-redirects to www at the Cloudflare edge.
 // Used for canonical URLs, og:url, schema URLs, and the flat /sitemap.xml endpoint.
 export default defineConfig({
-  site: 'https://cfc-astro.pages.dev',
+  site: 'https://www.customfabriccreations.net',
   integrations: [
     partytown({ config: { forward: ['dataLayer.push', 'gtag'] } }),
   ],
