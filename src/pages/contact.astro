@@ -3,6 +3,12 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import ReviewSection from '~/components/ReviewSection.astro';
 import { SITE, AREAS } from '~/lib/site';
+
+// Public Maps JS key. Restrict by HTTP referrer in Google Cloud Console;
+// the key ships to the browser regardless. Override via env var if rotated.
+const GOOGLE_MAPS_API_KEY =
+  import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY ||
+  'AIzaSyBUJIKu-1Mz89rsF9sDUQrobzM-rNa1COw';
 ---
 
 <BaseLayout
@@ -70,8 +76,8 @@ import { SITE, AREAS } from '~/lib/site';
             <input name="phone" required type="tel" placeholder="Phone *" autocomplete="tel" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
           </div>
           <input name="email" required type="email" placeholder="Email *" autocomplete="email" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
-          <input name="street" placeholder="Street address" autocomplete="street-address" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
-          <input name="area" placeholder="City" autocomplete="address-level2" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+          <input id="street-input" name="street" placeholder="Street address" autocomplete="street-address" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+          <input id="city-input" name="area" placeholder="City" autocomplete="address-level2" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
           <textarea name="message" rows="4" placeholder="Tell us about your project..." autocomplete="off" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500"></textarea>
           <button type="submit" class="btn-primary btn-lg w-full">Request Consultation</button>
         </form>
@@ -138,4 +144,55 @@ import { SITE, AREAS } from '~/lib/site';
       if (input) input.value = btn.getAttribute('data-space') || 'residential';
     });
   });
+</script>
+
+<script is:inline define:vars={{ GOOGLE_MAPS_API_KEY }}>
+  // Google Places Autocomplete on street-address input.
+  // Loader pattern from https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+  (function () {
+    if (!GOOGLE_MAPS_API_KEY) return;
+
+    function initPlacesAutocomplete() {
+      var streetInput = document.getElementById('street-input');
+      var cityInput = document.getElementById('city-input');
+      if (!streetInput || !window.google || !window.google.maps || !window.google.maps.places) return;
+
+      var ac = new window.google.maps.places.Autocomplete(streetInput, {
+        types: ['address'],
+        componentRestrictions: { country: ['us'] },
+        fields: ['address_components', 'formatted_address'],
+      });
+
+      ac.addListener('place_changed', function () {
+        var place = ac.getPlace();
+        if (!place || !place.address_components) return;
+
+        var streetNumber = '';
+        var route = '';
+        var city = '';
+        place.address_components.forEach(function (c) {
+          if (c.types.indexOf('street_number') !== -1) streetNumber = c.long_name;
+          else if (c.types.indexOf('route') !== -1) route = c.long_name;
+          else if (c.types.indexOf('locality') !== -1) city = c.long_name;
+          else if (!city && c.types.indexOf('postal_town') !== -1) city = c.long_name;
+          else if (!city && c.types.indexOf('sublocality') !== -1) city = c.long_name;
+        });
+
+        var streetLine = (streetNumber + ' ' + route).trim();
+        if (streetLine) streetInput.value = streetLine;
+        if (city && cityInput && !cityInput.value) cityInput.value = city;
+      });
+    }
+
+    // Standard async loader. Calls initPlacesAutocomplete once Maps + Places load.
+    window.__cfcInitPlaces = initPlacesAutocomplete;
+    var s = document.createElement('script');
+    s.src =
+      'https://maps.googleapis.com/maps/api/js?key=' +
+      encodeURIComponent(GOOGLE_MAPS_API_KEY) +
+      '&libraries=places&loading=async&callback=__cfcInitPlaces';
+    s.async = true;
+    s.defer = true;
+    document.head.appendChild(s);
+  })();
 </script>
