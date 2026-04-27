@@ -63,15 +63,15 @@ import { SITE, AREAS } from '~/lib/site';
           </button>
         </div>
 
-        <form method="POST" action="/api/contact/" class="space-y-4">
+        <form method="POST" action="/api/contact/" class="space-y-4" autocomplete="on">
           <input type="hidden" id="space" name="space" value="residential"/>
           <div class="grid sm:grid-cols-2 gap-4">
-            <input name="name" required placeholder="Your name *" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
-            <input name="phone" required type="tel" placeholder="Phone *" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+            <input name="name" required placeholder="Your name *" autocomplete="name" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+            <input name="phone" required type="tel" placeholder="Phone *" autocomplete="tel" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
           </div>
-          <input name="email" required type="email" placeholder="Email *" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
-          <input name="area" placeholder="Neighborhood or city" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
-          <textarea name="message" rows="4" placeholder="Tell us about your project..." class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500"></textarea>
+          <input name="email" required type="email" placeholder="Email *" autocomplete="email" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+          <input name="area" placeholder="Neighborhood or city" autocomplete="address-level2" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+          <textarea name="message" rows="4" placeholder="Tell us about your project..." autocomplete="off" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500"></textarea>
           <button type="submit" class="btn-primary btn-lg w-full">Request Consultation</button>
         </form>
       </div>
