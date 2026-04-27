@@ -16,6 +16,12 @@ interface Env {
   RESEND_API_KEY?: string;
 }
 
+// GoHighLevel webhook-trigger fallback. The CONTACT_WEBHOOK_URL env var
+// takes precedence if set, so the URL can be rotated in the CF Pages
+// dashboard without a code change.
+const DEFAULT_WEBHOOK_URL =
+  'https://services.leadconnectorhq.com/hooks/Xg4LNpuuKN5aNBM9djkU/webhook-trigger/3290635e-00f9-43ed-9547-850c1368d5a6';
+
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   let payload: Record<string, string> = {};
   try {
@@ -40,24 +46,37 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     }
   }
 
+  const fullName = (payload.name ?? '').trim();
+  const nameParts = fullName.split(/\s+/);
+  const firstName = nameParts[0] ?? '';
+  const lastName = nameParts.slice(1).join(' ');
+
   const submission = {
     timestamp: new Date().toISOString(),
-    name: payload.name,
+    name: fullName,
+    full_name: fullName,
+    first_name: firstName,
+    last_name: lastName,
     email: payload.email,
     phone: payload.phone,
     area: payload.area ?? '',
+    city: payload.area ?? '',
     service: payload.service ?? '',
+    space: payload.space ?? '',
     message: payload.message ?? '',
+    notes: payload.message ?? '',
+    source: 'customfabriccreations.net contact form',
     ip: request.headers.get('cf-connecting-ip') ?? '',
     ua: request.headers.get('user-agent') ?? '',
   };
 
   const deliveryTasks: Promise<Response | void>[] = [];
 
-  // Optional webhook (Slack / Zapier / Make)
-  if (env.CONTACT_WEBHOOK_URL) {
+  // Webhook (GHL by default, override via CONTACT_WEBHOOK_URL env var)
+  const webhookUrl = env.CONTACT_WEBHOOK_URL || DEFAULT_WEBHOOK_URL;
+  if (webhookUrl) {
     deliveryTasks.push(
-      fetch(env.CONTACT_WEBHOOK_URL, {
+      fetch(webhookUrl, {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(submission),
