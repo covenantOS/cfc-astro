@@ -134,27 +134,45 @@ const GOOGLE_MAPS_API_KEY =
     opacity: 1;
   }
 
-  /* Match Google's PlaceAutocompleteElement to the rest of the form */
+  /* Match Google's PlaceAutocompleteElement to the rest of the form.
+     The element ships with a dark Material theme; force light scheme and
+     override the internal input + dropdown via every selector that works. */
   gmp-place-autocomplete {
+    display: block;
     width: 100%;
-    --gmpx-color-surface: #ffffff;
-    --gmpx-color-on-surface: #1a1a1a;
-    --gmpx-color-primary: #bca050;
-    --gmpx-font-family-base: inherit;
-    --gmpx-font-size-base: 1rem;
-  }
-  gmp-place-autocomplete::part(input) {
-    width: 100%;
-    border: 1px solid var(--color-line, #e5e0d3);
+    color-scheme: light;
     background: #ffffff;
-    padding: 0.75rem 1rem;
+    color: #1a1a1a;
+    border: 1px solid var(--color-line, #e5e0d3);
     border-radius: 0.125rem;
     font-family: inherit;
     font-size: 1rem;
+    --gmpx-color-surface: #ffffff;
+    --gmpx-color-on-surface: #1a1a1a;
+    --gmpx-color-on-surface-variant: #6b6b6b;
+    --gmpx-color-primary: #bca050;
+    --gmpx-color-outline: #e5e0d3;
+    --gmpx-font-family-base: inherit;
+    --gmpx-font-size-base: 1rem;
   }
-  gmp-place-autocomplete::part(input):focus {
-    outline: none;
+  gmp-place-autocomplete:focus-within {
     border-color: #bca050;
+  }
+  gmp-place-autocomplete input {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+    border: 0 !important;
+    padding: 0.75rem 1rem !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  gmp-place-autocomplete::part(input),
+  gmp-place-autocomplete::part(prediction-item),
+  gmp-place-autocomplete::part(prediction-list) {
+    background: #ffffff;
+    color: #1a1a1a;
   }
 </style>
 
