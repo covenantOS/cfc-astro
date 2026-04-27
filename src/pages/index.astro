@@ -8,7 +8,7 @@ import AreasMap from '~/components/AreasMap.astro';
 import FAQ from '~/components/FAQ.astro';
 import ReviewSection from '~/components/ReviewSection.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
-import { SITE } from '~/lib/site';
+import { SITE, AREAS } from '~/lib/site';
 
 // Homepage FAQ content — 5 questions, mirrors the FAQ component defaults
 // so the on-page FAQ and the FAQPage schema stay in sync.
@@ -61,6 +61,23 @@ const HOMEPAGE_FAQS = [
   />
 
   <BrandStrip showBend={false} />
+
+  <!-- Neighborhood strip — surfaces 14 Pinellas neighborhoods above the fold for
+       entity-association SEO. Each is a deep link to a dedicated area page. -->
+  <section class="bg-cream-50 py-8 md:py-10 border-y border-line">
+    <div class="container-site">
+      <p class="text-center text-xs uppercase tracking-[0.25em] text-brand-700 font-semibold mb-4">Serving Pinellas County & Tampa Bay</p>
+      <ul class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm">
+        {AREAS.map((a, i) => (
+          <li class="inline-flex items-center gap-4">
+            <a href={`/areas/${a.slug}/`} class="text-ink-700 hover:text-brand-700 font-medium transition">{a.title}</a>
+            {i < AREAS.length - 1 && <span class="text-brand-400" aria-hidden="true">·</span>}
+          </li>
+        ))}
+      </ul>
+      <p class="text-center mt-4 text-xs text-ink-500">Plus all of Tampa Bay — <a href="/areas/" class="text-brand-700 hover:text-brand-600 font-semibold">see every neighborhood we serve →</a></p>
+    </div>
+  </section>
 
   <ServiceGrid slugs={['custom-draperies-curtains', 'plantation-shutters', 'window-shades', 'furniture-reupholstery']} />
 

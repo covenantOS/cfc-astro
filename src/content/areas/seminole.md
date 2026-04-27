@@ -1,6 +1,6 @@
 ---
-title: "Window Treatments in Seminole, FL"
-description: "Seminole FL's premier blinds shop offering custom roman shades, motorized blinds, blackout shades & plantation shutters. Upholstery fabric shop on-site."
+title: "Seminole Window Treatments, Roman Shades & Plantation Shutters | Custom Fabric Creations"
+description: "Custom Roman shades, motorized blinds, blackout shades, plantation shutters, and upholstery for Seminole, FL homeowners. 25+ years across Pinellas County. Free in-home consultation."
 h1: "Custom Window Treatments in Seminole, FL"
 slug: seminole
 type: area

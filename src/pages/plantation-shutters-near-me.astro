@@ -1,0 +1,160 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import FAQ from '~/components/FAQ.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import ServiceGrid from '~/components/ServiceGrid.astro';
+import { SITE, AREAS } from '~/lib/site';
+
+// Targets: "plantation shutters near me" (KD 4, 5,400/mo) +
+//          "plantation shutters tampa" (320/mo, low competition) +
+//          long-tail "{neighborhood} plantation shutters" combos.
+const faqs = [
+  {
+    q: "Are there plantation shutter installers near me in St. Petersburg?",
+    a: "Yes. Custom Fabric Creations is a locally owned plantation shutter installer based at 3026 Central Ave Suite 551, St. Petersburg, FL 33712. We measure and install across all 14 Pinellas County neighborhoods plus Tampa Bay — Snell Isle, Old Northeast, Tierra Verde, Shore Acres, Sand Key, St. Pete Beach, Treasure Island, Clearwater, Belleair Shore, Seminole, Largo, Downtown St. Pete, and West St. Pete. Call (727) 240-4512 to book a free in-home measure."
+  },
+  {
+    q: "What plantation shutter brands do you carry near St. Petersburg?",
+    a: "We are an authorized dealer for Hunter Douglas (NewStyle, Heritance, Palm Beach), Norman (Woodlore faux wood, Normandy basswood), and Graber. All come with manufacturer lifetime warranties and trade pricing passed through to you."
+  },
+  {
+    q: "How quickly can you install plantation shutters near me?",
+    a: "From signed proposal to installed shutters typically runs 4 to 8 weeks for custom orders in Pinellas County. The measure happens within 3 to 5 business days. Installation day is one full day for most homes (10 to 15 windows). We hold install slots for emergency / closing-day situations when needed."
+  },
+  {
+    q: "How much do plantation shutters cost in St. Petersburg, FL?",
+    a: "Expect $25 to $60 per square foot installed in Pinellas. Faux wood is the low end ($25 to $35), basswood is the high end ($40 to $60). A typical St. Pete bungalow runs $4,800 to $10,000 in faux wood for the whole house. Specialty shapes (arches, French doors, bay windows) cost more. We provide itemized per-window quotes with no bundled pricing or mystery upcharges."
+  },
+  {
+    q: "Why is faux wood the most popular plantation shutter material in St. Pete?",
+    a: "Faux wood (PVC or vinyl composite) handles Florida humidity, salt air, and Gulf sun without warping, cracking, or discoloration. Real wood looks warmer but in coastal humidity it fails within a few years. For waterfront homes in Snell Isle, Tierra Verde, Shore Acres, or any of the barrier islands, faux wood or hybrid composite is the default."
+  },
+  {
+    q: "Do you install plantation shutters in Tampa as well?",
+    a: "Yes. While our workroom is in St. Petersburg, we install across all of Tampa Bay including Tampa, Brandon, Riverview, Apollo Beach, Tarpon Springs, Palm Harbor, Westchase, Wesley Chapel, and Carrollwood. The drive from St. Pete to most of Tampa is under 45 minutes."
+  },
+];
+
+const localBusinessExtra = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE.url}/plantation-shutters-near-me/#service`,
+  name: 'Plantation Shutter Installation Near St. Petersburg, FL',
+  provider: { '@id': `${SITE.url}/#organization` },
+  areaServed: [
+    'St. Petersburg, FL', 'Snell Isle, FL', 'Old Northeast St. Petersburg, FL',
+    'Tierra Verde, FL', 'Shore Acres, FL', 'Sand Key, FL', 'St. Pete Beach, FL',
+    'Treasure Island, FL', 'Clearwater, FL', 'Belleair Shore, FL', 'Seminole, FL',
+    'Largo, FL', 'Downtown St. Petersburg, FL', 'West St. Petersburg, FL',
+    'Tampa, FL', 'Tampa Bay, FL',
+  ],
+  serviceType: 'Plantation Shutter Installation',
+  description: 'Custom plantation shutter installation across Pinellas County and Tampa Bay. Authorized dealer for Hunter Douglas, Norman, and Graber. Free in-home measure, lifetime warranty.',
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    lowPrice: '25',
+    highPrice: '60',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      unitText: 'square foot installed',
+    },
+  },
+};
+---
+
+<BaseLayout
+  title="Plantation Shutters Near Me St. Petersburg & Tampa Bay | Free In-Home Measure"
+  description="Looking for plantation shutters near St. Petersburg, FL? Custom Fabric Creations installs custom faux wood and basswood shutters across all 14 Pinellas neighborhoods plus Tampa Bay. Authorized Hunter Douglas, Norman, and Graber dealer. Free in-home measure, lifetime warranty."
+  pageType="service"
+  serviceSlug="plantation-shutters-near-me"
+  serviceTitle="Plantation Shutters Near Me"
+  ogImage="/images/hero/plantation-shutters.webp"
+  faqs={faqs}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Plantation Shutters Near Me', url: '/plantation-shutters-near-me/' },
+  ]}
+>
+  <Hero
+    eyebrow="Pinellas & Tampa Bay"
+    title="Plantation Shutters Near Me — St. Petersburg & Tampa Bay"
+    subtitle="Custom faux wood and basswood plantation shutters across all 14 Pinellas County neighborhoods. Authorized dealer for Hunter Douglas, Norman, and Graber. Free in-home measure, lifetime warranty."
+    image="/images/hero/plantation-shutters.webp"
+    primaryCta={{ label: 'Schedule Free Measure', href: '/contact/' }}
+    secondaryCta={{ label: `Call ${SITE.phone}`, href: SITE.phoneHref }}
+    breadcrumbs={[
+      { name: 'Home', url: '/' },
+      { name: 'Plantation Shutters Near Me', url: '/plantation-shutters-near-me/' },
+    ]}
+    goldLine
+  />
+
+  <article class="py-20 md:py-28 bg-white">
+    <div class="container-narrow prose-cfc">
+      <h2>Plantation shutter installer based in St. Pete, serving the whole bay</h2>
+      <p>If you searched <em>plantation shutters near me</em> from a Pinellas County zip code, you are in the right place. Custom Fabric Creations has been measuring and installing custom plantation shutters across St. Petersburg and Tampa Bay since 2000. Our workroom is at 3026 Central Ave in West St. Pete; our installers cover everywhere from Snell Isle to Tarpon Springs without subcontracting.</p>
+
+      <h2>14 Pinellas neighborhoods we install in</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        {AREAS.map((a) => (
+          <li><a href={`/areas/${a.slug}/`}>Plantation shutters in {a.title}</a></li>
+        ))}
+      </ul>
+      <p>Plus Tampa Bay overall: Tampa, Brandon, Riverview, Apollo Beach, Tarpon Springs, Palm Harbor, Westchase, Wesley Chapel, and Carrollwood. Drive time from our workroom to most of Tampa is under 45 minutes — we are a Bay-wide installer with a St. Pete address.</p>
+
+      <h2>Why "near me" matters for plantation shutters</h2>
+      <p>Plantation shutters are not a product you order online and bolt up. The measure has to be exact (1/16 inch tolerance), the frame style has to match your window depth and trim, and the install needs someone who knows the difference between a 1980s aluminum-frame Florida ranch window and a 1920s Mediterranean Revival arch top. A local installer drives back when a louver breaks in three years. A drop-shipper from out of state does not.</p>
+
+      <h2>What we install</h2>
+      <h3>Hunter Douglas</h3>
+      <p><strong>NewStyle</strong> hybrid shutters and <strong>Heritance</strong> hardwood shutters. Lifetime limited warranty. The premium tier — best for resale value, hand-finished, real wood look in moisture-resistant composite.</p>
+      <h3>Norman</h3>
+      <p><strong>Woodlore</strong> and <strong>Woodlore Plus</strong> faux wood, <strong>Normandy</strong> basswood. Most-installed in Pinellas. Lifetime warranty, factory-direct pricing, 4-week typical lead time.</p>
+      <h3>Graber</h3>
+      <p>Solid mid-range plantation shutters. Slightly faster lead time. Good value for budget-conscious whole-house projects.</p>
+
+      <h2>Honest pricing for plantation shutters near St. Petersburg</h2>
+      <p>$25 to $60 per square foot installed depending on material, window shape, and louver size. Faux wood is the low end. Basswood is the high end. A whole-house project (10 to 18 windows) typically lands between $4,800 and $18,000. We give itemized per-window quotes — no bundled pricing, no "starting at" footnotes.</p>
+      <p>For a deeper pricing breakdown by window size and material, see our <a href="/plantation-shutters-cost-st-petersburg/">St. Petersburg plantation shutter pricing guide</a>.</p>
+
+      <h2>Our process — start to install in 4 to 8 weeks</h2>
+      <ol>
+        <li><strong>Free in-home measure</strong> — we drive to you with material samples, hinge hardware, and louver-size mockups so you can compare 2.5 inch, 3.5 inch, and 4.5 inch louvers against your actual window. Typically one hour, no deposit.</li>
+        <li><strong>Laser measurement & specs</strong> — every opening to 1/16 inch. Specialty shapes (arches, hexagons, bays) get a physical template taken on-site, never estimated off a drawing.</li>
+        <li><strong>Order placed and built</strong> — 3 to 5 weeks for standard rectangular, 5 to 7 weeks for specialty shapes. We call when the shutters arrive at our local warehouse for QC before install day.</li>
+        <li><strong>Installation</strong> — two-person crew, one-day install for most whole-home projects. Touch-up paint and extra slats included. Drop cloths down, full cleanup, walk-through of operation and care.</li>
+      </ol>
+
+      <h2>Why CFC over the franchise / chain options</h2>
+      <ul>
+        <li><strong>In-house workroom in St. Pete.</strong> When a louver needs adjusting or a panel needs re-hanging after a remodel, we handle it here, often same day. No shipping panels back to a factory three states away.</li>
+        <li><strong>Installers who do only this.</strong> Our crew averages 12+ years installing in Florida homes. We know how Craftsman trim profiles behave, how concrete-block walls take anchors, and how to hang specialty shapes without callbacks.</li>
+        <li><strong>Authorized dealer pricing.</strong> Hunter Douglas + Norman + Graber + Kravet + Stout direct-dealer relationships mean trade pricing passed to you and full manufacturer warranties.</li>
+        <li><strong>Locally owned, fully insured.</strong> We carry full liability and workman's comp, pull permits when required, and the person who quoted your job often walks the install with you at the end.</li>
+      </ul>
+    </div>
+  </article>
+
+  <ServiceGrid
+    eyebrow="Other services we offer"
+    heading="Bundle plantation shutters with these"
+    subtitle="One workroom, one project manager, one install crew — combine plantation shutters with custom drapery, motorized shades, or upholstery for a fully styled space."
+    slugs={['custom-draperies-curtains', 'window-shades', 'custom-blinds', 'furniture-reupholstery']}
+  />
+
+  <FAQ
+    heading="Plantation Shutters Near Me — FAQ"
+    eyebrow="Common questions"
+    subtitle="What St. Pete and Tampa Bay homeowners ask most before booking."
+    items={faqs}
+  />
+
+  <FinalCTA
+    heading="Plantation Shutters in Pinellas, Done Right"
+    subtitle="Book your free in-home measure today. We bring the showroom to you — material samples, hinge hardware, and louver mockups, in your actual rooms, in your actual light."
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessExtra)} />
+</BaseLayout>

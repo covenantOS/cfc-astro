@@ -1,6 +1,6 @@
 ---
-title: "Outdoor Window Shades in St. Petersburg"
-description: "Outdoor window shades and exterior treatments for St. Petersburg homes. Solar screens, patio shades, outdoor curtains, and screen enclosures built for Florida's coast."
+title: "Outdoor Window Shades St. Petersburg | Solar Screens & Patio Shades"
+description: "Outdoor window shades and exterior treatments for St. Petersburg homes. Solar screens, patio shades, outdoor curtains, and screen enclosures built for Florida's Gulf coast. Free on-site consultation across Pinellas County."
 h1: "Outdoor Window Shades in St. Petersburg"
 slug: outdoor-window-shades
 type: service

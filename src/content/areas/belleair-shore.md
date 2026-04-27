@@ -1,6 +1,6 @@
 ---
-title: "Window Treatments in Belleair Shore, FL"
-description: "Belleair Shore FL's premier blinds shop offering custom plantation shutters, exterior solar shades, and luxury bedding. Furniture reupholstery and motorized options available."
+title: "Belleair Shore Window Treatments, Shutters & Drapery | Custom Fabric Creations"
+description: "Custom plantation shutters, exterior solar shades, luxury bedding, drapery, and reupholstery for Belleair Shore, FL homeowners. Specified for coastal conditions. Free in-home consultation."
 h1: "Custom Window Treatments in Belleair Shore, FL"
 slug: belleair-shore
 type: area

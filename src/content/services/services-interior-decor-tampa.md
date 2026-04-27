@@ -1,6 +1,6 @@
 ---
-title: "Interior Design in St. Petersburg, FL"
-description: "Interior design services in St. Petersburg focused on custom window treatments, bedding, cushions & soft goods. 25+ years of experience. Free consultation."
+title: "Interior Design St. Petersburg & Tampa Bay | Soft Goods & Decor"
+description: "Interior design services in St. Petersburg and Tampa Bay focused on custom window treatments, bedding, cushions, and soft goods. 25+ years of experience. Free in-home consultation across Pinellas County."
 h1: "Interior Design & Products in St. Petersburg"
 slug: services-interior-decor-tampa
 type: service

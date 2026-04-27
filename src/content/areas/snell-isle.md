@@ -1,6 +1,6 @@
 ---
-title: "Window Treatments in Snell Isle, FL"
-description: "Snell Isle's premier blinds shop offering roller shades, motorized window treatments, and custom plantation shutters. Professional installation. Free consultation."
+title: "Snell Isle Window Treatments, Shutters & Drapery | Custom Fabric Creations"
+description: "Plantation shutters, motorized window treatments, and custom drapery for Snell Isle homes in St. Petersburg, FL. Specified for waterfront salt air. Free in-home consultation."
 h1: "Custom Window Treatments in Snell Isle, FL"
 slug: snell-isle
 type: area

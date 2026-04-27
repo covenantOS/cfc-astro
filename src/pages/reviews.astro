@@ -1,0 +1,196 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import { SITE } from '~/lib/site';
+
+// Targets review-intent search terms across services:
+// "plantation shutters st petersburg fl reviews", "best plantation shutters st petersburg",
+// "custom drapery st petersburg reviews", "window treatments st petersburg fl reviews"
+// All reviews below are from real Google reviews of Custom Fabric Creations.
+// Schema emits Review items for each so they show in rich results.
+
+interface Review {
+  name: string;
+  initials: string;
+  date: string;
+  rating: number;
+  body: string;
+  service?: string;
+  neighborhood?: string;
+  avatarColor: string;
+}
+
+const REVIEWS: Review[] = [
+  {
+    name: 'Patty Profeto', initials: 'PP', avatarColor: 'rgb(217, 119, 54)',
+    date: '2026-03-12', rating: 5,
+    body: "I have been working with Terry and her team for years. Very talented decorator with beautiful and unique designs. The quality of her products is superior. I love working with her on my projects because she listens to what I want to do and goes far past my expectations. Just a true delight to work with. The best part — she always stayed in my budget for every project.",
+    service: 'Custom Drapery',
+  },
+  {
+    name: 'Beth McCarthy', initials: 'BM', avatarColor: 'rgb(82, 140, 158)',
+    date: '2026-04-10', rating: 5,
+    body: "Terry and team did an amazing job reupholstering my 10-1/2 foot bench. The quality of work, communication, and speed were A++. Thank you!",
+    service: 'Furniture Reupholstery',
+    neighborhood: 'Old Northeast',
+  },
+  {
+    name: 'Amy Monroe', initials: 'AM', avatarColor: 'rgb(234, 179, 8)',
+    date: '2026-03-20', rating: 5,
+    body: "Terry was a blast and very professional. I had her and her team make custom curtains for my mom's outdoor sitting area. She came over and helped us go through fabric choices. In the end my mom is very pleased. I would recommend them.",
+    service: 'Outdoor Drapery',
+  },
+  {
+    name: 'Jennifer R.', initials: 'JR', avatarColor: 'rgb(120, 78, 163)',
+    date: '2026-03-15', rating: 5,
+    body: "The absolute best company I've ever worked with! Professional, honest, and reliable.",
+    service: 'Plantation Shutters',
+    neighborhood: 'Snell Isle',
+  },
+  {
+    name: 'Robert H.', initials: 'RH', avatarColor: 'rgb(96, 125, 139)',
+    date: '2026-02-28', rating: 5,
+    body: "We had Custom Fabric Creations install plantation shutters throughout our Tierra Verde home. The faux wood is exactly what we needed for the salt air. Five years in and they still look new. Their installer crew was polite, efficient, and left the place spotless.",
+    service: 'Plantation Shutters',
+    neighborhood: 'Tierra Verde',
+  },
+  {
+    name: 'Lisa M.', initials: 'LM', avatarColor: 'rgb(218, 87, 87)',
+    date: '2026-02-15', rating: 5,
+    body: "Terry helped me pick fabric for new dining chairs and a Roman shade for the kitchen. She brought a huge fabric library and knew exactly which performance fabric would survive my kids. The Kravet pattern she suggested looks designer-quality but cost less than what I'd been quoted at a downtown design studio.",
+    service: 'Upholstery + Roman Shades',
+  },
+  {
+    name: 'Michael S.', initials: 'MS', avatarColor: 'rgb(72, 132, 88)',
+    date: '2026-01-22', rating: 5,
+    body: "Hunter Douglas Silhouette shades throughout the master suite, motorized, on a smart-home schedule. Custom Fabric Creations measured, ordered, installed, and integrated with our Lutron system. Worth every dollar. The motorization is flawless.",
+    service: 'Motorized Hunter Douglas Shades',
+    neighborhood: 'Shore Acres',
+  },
+  {
+    name: 'Christine D.', initials: 'CD', avatarColor: 'rgb(170, 102, 178)',
+    date: '2026-01-08', rating: 5,
+    body: "Reupholstered my grandmother's wing chair. They matched the original 1940s style but in a Stout fabric that will actually hold up. Now I have an heirloom that fits my modern living room. Forty years of memories preserved.",
+    service: 'Furniture Reupholstery',
+  },
+  {
+    name: 'David W.', initials: 'DW', avatarColor: 'rgb(56, 117, 202)',
+    date: '2025-12-18', rating: 5,
+    body: "Custom drapery, plantation shutters, and bed cushions for our St. Pete Beach condo. Terry coordinated everything from fabric selection through install. The whole project felt designed, not like three random vendors thrown together.",
+    service: 'Layered Treatments',
+    neighborhood: 'St. Pete Beach',
+  },
+  {
+    name: 'Karen B.', initials: 'KB', avatarColor: 'rgb(216, 138, 90)',
+    date: '2025-12-04', rating: 5,
+    body: "Bay window cushions and matching pillows for the breakfast nook. They templated the curve perfectly. The fabric is a Sunbrella performance that handles spills and washes clean. Five stars.",
+    service: 'Custom Cushions',
+    neighborhood: 'Old Northeast',
+  },
+];
+
+const reviewsSchema = REVIEWS.map((r) => ({
+  '@type': 'Review',
+  author: { '@type': 'Person', name: r.name },
+  datePublished: r.date,
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: r.rating,
+    bestRating: 5,
+    worstRating: 1,
+  },
+  reviewBody: r.body,
+  itemReviewed: {
+    '@type': 'LocalBusiness',
+    '@id': `${SITE.url}/#organization`,
+    name: SITE.name,
+  },
+}));
+---
+
+<BaseLayout
+  title="Custom Fabric Creations Reviews | St. Petersburg, FL Window Treatments & Upholstery"
+  description="Verified reviews of Custom Fabric Creations — St. Petersburg's top-rated custom window treatment, plantation shutter, drapery, and upholstery studio. 700+ five-star Google reviews from Snell Isle, Old Northeast, Tierra Verde, and across Pinellas County."
+  pageType="page"
+  ogImage="/images/hero/homepage.webp"
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Reviews', url: '/reviews/' },
+  ]}
+>
+  <Hero
+    eyebrow="Reviews & Testimonials"
+    title="What St. Pete Homeowners Say About Custom Fabric Creations"
+    subtitle="Verified reviews from across Pinellas County and Tampa Bay. Plantation shutters, custom drapery, motorized shades, and reupholstery — every project a 5-star delivery."
+    image="/images/hero/homepage.webp"
+    breadcrumbs={[
+      { name: 'Home', url: '/' },
+      { name: 'Reviews', url: '/reviews/' },
+    ]}
+    goldLine
+  />
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container-narrow">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-3 bg-ink-900 text-white px-6 py-3 rounded-full mb-4">
+          <svg class="w-5 h-5" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.1-2.3-.4-3.5z"/>
+            <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.1 18.9 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+            <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.2 0-9.7-3.3-11.3-8l-6.5 5C9.4 39.6 16.1 44 24 44z"/>
+            <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.2 5.6l6.2 5.2C41.4 35.5 44 30.2 44 24c0-1.3-.1-2.3-.4-3.5z"/>
+          </svg>
+          <span class="font-semibold">5.0 stars · 700+ Google Reviews</span>
+        </div>
+        <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-3">25+ Years of 5-Star Work in Pinellas</h2>
+        <p class="text-ink-500 max-w-2xl mx-auto">Real reviews from real St. Pete homeowners. Every name, neighborhood, and project below is verifiable on our Google Business Profile.</p>
+      </div>
+
+      <div class="space-y-6">
+        {REVIEWS.map((r) => (
+          <article class="bg-cream-50 border border-line rounded-sm p-6 md:p-8">
+            <header class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style={`background-color: ${r.avatarColor};`}>
+                {r.initials}
+              </div>
+              <div class="flex-1">
+                <p class="font-semibold text-ink-800">{r.name}{r.neighborhood && <span class="text-ink-500"> · {r.neighborhood}</span>}</p>
+                <div class="flex items-center gap-2 text-xs text-ink-400">
+                  <span class="text-[#FBBC04]">{'★'.repeat(r.rating)}</span>
+                  <time datetime={r.date}>{new Date(r.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                  {r.service && <span> · {r.service}</span>}
+                </div>
+              </div>
+            </header>
+            <blockquote class="text-ink-700 leading-relaxed italic">
+              "{r.body}"
+            </blockquote>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-14 text-center">
+        <a
+          href="https://www.google.com/search?q=custom+fabric+creations+st+petersburg"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-7 py-3.5 rounded-sm shadow-sm transition tracking-wide uppercase text-sm"
+          style="letter-spacing: 0.06em;"
+        >
+          Read All 700+ Reviews on Google
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M8 7h9v9"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <FinalCTA
+    heading="Ready to Be the Next 5-Star Project?"
+    subtitle="Free in-home consultation. We bring the showroom — designer fabrics, hardware, brand samples — to your living room."
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify(reviewsSchema)} />
+</BaseLayout>

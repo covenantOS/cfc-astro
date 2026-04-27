@@ -1,6 +1,6 @@
 ---
-title: "Plantation Shutters in St. Petersburg, FL"
-description: "Custom plantation shutters in St. Petersburg, FL. Faux wood and basswood built for Florida humidity, Gulf sun, and hurricane season. Free consultation across Pinellas County."
+title: "Plantation Shutters St. Petersburg & Tampa Bay | Custom Faux Wood & Basswood"
+description: "Custom plantation shutters in St. Petersburg, FL. Faux wood and basswood built for Florida humidity, Gulf sun, and hurricane season. Free in-home consultation across Pinellas County and Tampa Bay."
 h1: "Custom Plantation Shutters in St. Petersburg, FL"
 slug: plantation-shutters
 type: service

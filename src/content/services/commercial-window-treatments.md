@@ -1,6 +1,6 @@
 ---
-title: "Commercial Window Treatments | St. Pete"
-description: "Commercial window treatments for offices, medical spaces, restaurants & multi-family properties in St. Petersburg. Custom spec, professional installation."
+title: "Commercial Window Treatments St. Petersburg | Office, Hospitality & Multi-Family"
+description: "Commercial window treatments for offices, medical spaces, restaurants, and multi-family properties in St. Petersburg, FL. Custom spec, professional installation across Pinellas County and Tampa Bay."
 h1: "Commercial Window Treatments in St. Petersburg"
 slug: commercial-window-treatments
 type: service

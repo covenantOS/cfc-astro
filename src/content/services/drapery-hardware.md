@@ -1,6 +1,6 @@
 ---
-title: "Drapery Hardware in St. Petersburg, FL"
-description: "Drapery hardware supply and installation in St. Petersburg. Decorative rods, concealed tracks, motorized systems, and custom bay window hardware built for Florida homes."
+title: "Drapery Hardware St. Petersburg | Decorative Rods, Tracks & Motorization"
+description: "Drapery hardware supply and installation in St. Petersburg, FL. Decorative rods, concealed tracks, motorized systems, and custom bay window hardware engineered for Florida homes. Free consultation across Pinellas County."
 h1: "Drapery Hardware in St. Petersburg, FL"
 slug: drapery-hardware
 type: service

@@ -1,6 +1,6 @@
 ---
-title: "Custom Blinds in St. Petersburg, FL"
-description: "Looking for custom blinds in St. Petersburg? Custom Fabric Creations designs and installs made-to-measure window treatments including blackout blinds."
+title: "Custom Blinds St. Petersburg & Tampa Bay | Wood, Faux Wood & Vertical"
+description: "Custom blinds in St. Petersburg, FL made to your exact windows. Wood, faux wood, aluminum, and vertical blinds engineered for Florida humidity. Free in-home consultation across Pinellas County and Tampa Bay."
 h1: "Custom Blinds in St. Petersburg, FL"
 slug: custom-blinds
 type: service

@@ -1,6 +1,6 @@
 ---
-title: "Window Treatments in Clearwater, FL"
-description: "Clearwater FL's premier blinds shop offering exterior patio shades, custom plantation shutters & designer drapery hardware. Commercial window treatments."
+title: "Clearwater Window Treatments, Plantation Shutters & Drapery | Custom Fabric Creations"
+description: "Custom plantation shutters, exterior patio shades, motorized blinds, and designer drapery for Clearwater, FL homes and businesses. Specified for Gulf coast conditions. Free in-home consultation."
 h1: "Custom Window Treatments in Clearwater, FL"
 slug: clearwater
 type: area

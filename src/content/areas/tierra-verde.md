@@ -1,6 +1,6 @@
 ---
-title: "Window Treatments in Tierra Verde, FL"
-description: "Tierra Verde FL's premier blinds shop offering exterior solar shades, custom bedding, plantation shutters, and furniture reupholstery. Motorized options available."
+title: "Tierra Verde Window Treatments & Plantation Shutters | Custom Fabric Creations"
+description: "Exterior solar shades, plantation shutters, custom bedding, and motorized window treatments for Tierra Verde, FL. Specified for island salt air and intense sun. Free in-home consultation."
 h1: "Custom Window Treatments in Tierra Verde, FL"
 slug: tierra-verde
 type: area

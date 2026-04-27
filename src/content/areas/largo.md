@@ -1,6 +1,6 @@
 ---
-title: "Window Treatments in Largo, FL"
-description: "Largo FL's premier blinds shop offering custom plantation shutters, motorized window shades & custom drapery. Furniture re-upholstery & local upholstery."
+title: "Largo Window Treatments, Plantation Shutters & Motorized Shades | Custom Fabric Creations"
+description: "Custom plantation shutters, motorized window shades, drapery, and furniture reupholstery for Largo, FL homeowners. Specified for Pinellas County's climate. Free in-home consultation."
 h1: "Custom Window Treatments in Largo, FL"
 slug: largo
 type: area

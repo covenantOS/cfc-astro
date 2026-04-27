@@ -1,6 +1,6 @@
 ---
-title: "Cornices & Valances in St. Petersburg, FL"
-description: "Custom cornices and valances in St. Petersburg built to your exact window dimensions. Fabric valances, box cornices, and coordinated top treatments. Free consultation."
+title: "Cornices & Valances St. Petersburg | Upholstered Top Treatments"
+description: "Custom cornices and valances built in our St. Petersburg workroom to your exact window dimensions. Fabric valances, box cornices, and coordinated top treatments. Free in-home consultation across Pinellas County."
 h1: "Custom Cornices & Valances in St. Petersburg"
 slug: custom-cornices-valances
 type: service

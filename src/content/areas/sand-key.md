@@ -1,6 +1,6 @@
 ---
-title: "Window Treatments in Sand Key, FL"
-description: "Sand Key FL's premier blinds shop offering motorized roller shades, custom bedding, plantation shutters & blackout window treatments. Free consultation."
+title: "Sand Key Window Treatments, Shutters & Motorized Roller Shades | Custom Fabric Creations"
+description: "Motorized roller shades, blackout treatments, coastal plantation shutters, custom bedding, and high-end drapery for Sand Key barrier island homes in Clearwater, FL. Free consultation."
 h1: "Custom Window Treatments in Sand Key, FL"
 slug: sand-key
 type: area

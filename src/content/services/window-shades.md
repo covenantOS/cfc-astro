@@ -1,6 +1,6 @@
 ---
-title: "Custom Window Shades in St. Petersburg, FL"
-description: "Custom window shades in St. Petersburg built for Florida's sun and humidity. Roller, roman, solar, cellular, and blackout shades by Hunter Douglas, Graber, and Norman."
+title: "Custom Window Shades St. Petersburg & Tampa Bay | Roller, Roman & Solar"
+description: "Custom window shades in St. Petersburg, FL built for Florida sun. Roller, roman, solar, cellular, and blackout shades by Hunter Douglas, Graber, and Norman. Motorization available. Free in-home consultation across Pinellas County."
 h1: "Custom Window Shades in St. Petersburg, FL"
 slug: window-shades
 type: service

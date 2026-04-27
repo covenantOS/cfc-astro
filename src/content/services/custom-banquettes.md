@@ -1,6 +1,6 @@
 ---
-title: "Custom Banquettes in St. Petersburg, FL"
-description: "Custom banquettes in St. Petersburg, FL. Built-in seating upholstered in premium performance fabrics for residential and commercial spaces. Free consultation."
+title: "Custom Banquettes St. Petersburg, FL | Built-in Kitchen & Dining Seating"
+description: "Custom banquettes in St. Petersburg, FL. Built-in kitchen, dining, and bay-window seating upholstered in premium performance fabrics for residential and commercial spaces. Free in-home consultation across Pinellas County."
 h1: "Custom Banquettes in St. Petersburg"
 slug: custom-banquettes
 type: service

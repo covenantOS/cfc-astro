@@ -1,6 +1,6 @@
 ---
-title: "Custom Drapery & Curtains in St. Petersburg"
-description: "Custom draperies & curtains made to your exact windows in St. Petersburg. Sheer, blackout, motorized & luxury drapes. Free consultation. Serving Tampa Bay."
+title: "Custom Drapery St. Petersburg, FL | Tailored Curtains & Designer Fabrics"
+description: "Custom draperies and curtains made to your exact windows in St. Petersburg, FL. Sheer, blackout, motorized, and luxury drapery panels using Kravet and Stout fabrics. Free in-home consultation across Pinellas County and Tampa Bay."
 h1: "Custom Draperies & Curtains in St. Petersburg, FL"
 slug: custom-draperies-curtains
 type: service

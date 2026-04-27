@@ -1,6 +1,6 @@
 ---
-title: "Custom Bedding in St. Petersburg, FL"
-description: "Custom bedding made to your exact bed dimensions in St. Petersburg. Duvet covers, pillow shams, accent pillows, and custom cushions. Fabric coordinated with your space."
+title: "Custom Bedding & Pillows St. Petersburg | Headboards, Duvets & Shams"
+description: "Custom bedding made to your exact bed dimensions in St. Petersburg, FL. Duvet covers, pillow shams, accent pillows, headboards, and custom cushions. Fabric coordinated with your space. Free consultation across Pinellas County."
 h1: "Custom Bedding & Pillows in St. Petersburg"
 slug: custom-bedding-pillows
 type: service

@@ -1,0 +1,162 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import FAQ from '~/components/FAQ.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+import ServiceGrid from '~/components/ServiceGrid.astro';
+import { SITE, AREAS } from '~/lib/site';
+
+// Target: "drapery near me" (KD 3, 22,200/mo) — high-volume,
+// low-difficulty national-but-local-intent term.
+const faqs = [
+  {
+    q: "Where can I find a custom drapery installer near me in St. Petersburg?",
+    a: "Custom Fabric Creations is a locally owned drapery workroom at 3026 Central Ave Suite 551, St. Petersburg, FL 33712. We have been measuring, fabricating, and installing custom drapery in Pinellas County and Tampa Bay since 2000. Call (727) 240-4512 to schedule a free in-home consultation."
+  },
+  {
+    q: "Do you offer custom drapery, or do I have to pick from stock?",
+    a: "Everything we make is custom. We bring our designer fabric library to your house — Kravet, Stout, Lee Jofa, Brunschwig & Fils, GP & J Baker, Crypton, and indoor-outdoor performance lines. You see fabrics in your actual lighting, against your walls, before any commitment. Drapery panels, sheers, blackout curtains, and motorized treatments are all measured and sewn in our St. Pete workroom."
+  },
+  {
+    q: "What does custom drapery cost near St. Petersburg, FL?",
+    a: "Custom drapery in Pinellas typically runs $400 to $1,500+ per window depending on fabric, lining, hardware, and length. A pair of full-length lined panels in a mid-range Kravet fabric on standard hardware runs about $600 to $900 per window installed. Designer silks, motorization, or specialty hardware push higher. We give itemized quotes so you can see exactly where the cost goes."
+  },
+  {
+    q: "How long does custom drapery take?",
+    a: "Four to six weeks from approved fabric and final measurement to installation. Fabric lead time is the gating item — most premium fabrics ship in 1 to 3 weeks from the mill. Our workroom turns most projects in 2 to 3 weeks once fabric arrives. Rush options exist for closing-day or move-in projects."
+  },
+  {
+    q: "Do you install drapery hardware too, or just the panels?",
+    a: "Both. Hardware is half the look. We supply and install custom rods, rings, finials, brackets, motorized track systems, and specialty hardware for bay windows and arched openings. Decorative and concealed hardware available across budget ranges."
+  },
+  {
+    q: "Do you serve homes outside St. Petersburg?",
+    a: "Yes. We install across all 14 Pinellas County neighborhoods plus the broader Tampa Bay area — Tampa, Brandon, Riverview, Apollo Beach, Tarpon Springs, Palm Harbor, Westchase, Wesley Chapel. Drive time from our workroom is rarely more than 45 minutes."
+  },
+];
+
+const localBusinessExtra = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE.url}/drapery-near-me/#service`,
+  name: 'Custom Drapery Near St. Petersburg, FL',
+  provider: { '@id': `${SITE.url}/#organization` },
+  areaServed: [
+    'St. Petersburg, FL', 'Snell Isle, FL', 'Old Northeast St. Petersburg, FL',
+    'Tierra Verde, FL', 'Shore Acres, FL', 'Sand Key, FL', 'St. Pete Beach, FL',
+    'Treasure Island, FL', 'Clearwater, FL', 'Belleair Shore, FL', 'Seminole, FL',
+    'Largo, FL', 'Downtown St. Petersburg, FL', 'West St. Petersburg, FL',
+    'Tampa, FL', 'Tampa Bay, FL',
+  ],
+  serviceType: 'Custom Drapery & Curtain Installation',
+  description: 'Custom drapery and curtain workroom in St. Petersburg, FL. Designer fabrics from Kravet, Stout, Lee Jofa. In-house fabrication and installation across Pinellas County and Tampa Bay.',
+};
+---
+
+<BaseLayout
+  title="Custom Drapery Near Me St. Petersburg & Tampa Bay | Designer Fabrics In-Home"
+  description="Searching for custom drapery near St. Petersburg, FL? Custom Fabric Creations brings designer fabrics from Kravet, Stout, and Lee Jofa to your living room. Tailored panels, sheers, blackout, and motorized drapery sewn in our St. Pete workroom. 25+ years across Pinellas and Tampa Bay."
+  pageType="service"
+  serviceSlug="drapery-near-me"
+  serviceTitle="Custom Drapery Near Me"
+  ogImage="/images/hero/custom-draperies-curtains.webp"
+  faqs={faqs}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Drapery Near Me', url: '/drapery-near-me/' },
+  ]}
+>
+  <Hero
+    eyebrow="Custom Drapery Workroom"
+    title="Drapery Near Me — St. Petersburg & Tampa Bay"
+    subtitle="Custom drapery sewn in our St. Pete workroom. Designer fabrics from Kravet, Stout, Lee Jofa, and Brunschwig & Fils. We bring the showroom to your living room. 25+ years, all of Pinellas and Tampa Bay."
+    image="/images/hero/custom-draperies-curtains.webp"
+    primaryCta={{ label: 'Schedule In-Home Consultation', href: '/contact/' }}
+    secondaryCta={{ label: `Call ${SITE.phone}`, href: SITE.phoneHref }}
+    breadcrumbs={[
+      { name: 'Home', url: '/' },
+      { name: 'Drapery Near Me', url: '/drapery-near-me/' },
+    ]}
+    goldLine
+  />
+
+  <article class="py-20 md:py-28 bg-white">
+    <div class="container-narrow prose-cfc">
+      <h2>The drapery workroom locals search for</h2>
+      <p>If you searched <em>drapery near me</em>, you are typing what most St. Pete homeowners type when they want one specific thing — drapery panels that actually fit, in fabric they actually love, installed by someone who answers the phone. We are an authorized workroom at 3026 Central Ave Suite 551, St. Petersburg, FL 33712. We have been making custom drapery for Pinellas and Tampa Bay homes since 2000.</p>
+
+      <h2>What "custom drapery" means here</h2>
+      <p>Off-the-shelf drapery is sized for one of four standard rod heights and three standard widths. Real homes do not work like that. Our drapery is sewn to your exact opening, with your chosen fabric, on hardware specified for your window's depth and weight. Sheers that filter the Gulf afternoon light. Blackout liners that actually black out a baby's room. Motorized tracks that disappear into a soffit. Layered treatments that combine drapery with shutters or shades.</p>
+
+      <h2>14 Pinellas neighborhoods we serve</h2>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        {AREAS.map((a) => (
+          <li><a href={`/areas/${a.slug}/`}>Custom drapery in {a.title}</a></li>
+        ))}
+      </ul>
+      <p>Plus Tampa Bay overall: Tampa, Brandon, Riverview, Apollo Beach, Tarpon Springs, Palm Harbor, Westchase, Wesley Chapel, and Carrollwood. We drive to your home with the full fabric library — typically a 30-minute drive within Pinellas, under 45 minutes anywhere in the bay.</p>
+
+      <h2>Designer fabrics in your living room</h2>
+      <p>We are an authorized workroom for the designer fabric houses, which means trade pricing passes through to you instead of stopping at a designer's markup. The lines we use most:</p>
+      <ul>
+        <li><strong>Kravet</strong> — the designer's choice. Thousands of patterns across velvets, linens, embroidered silks, indoor-outdoor performance, and leather.</li>
+        <li><strong>Stout</strong> — woven jacquards, textured solids, bold patterns, and exceptional trims. Performance lines for indoor-outdoor.</li>
+        <li><strong>Lee Jofa, Brunschwig & Fils, GP & J Baker</strong> — premium European fabric houses available through Kravet's distribution.</li>
+        <li><strong>Crypton</strong> — performance fabric rated for kitchens, kids, and pets.</li>
+      </ul>
+      <p>If a fabric is in our library or any of these mills, we can source it. Bring a Pinterest board or a paint chip — we match.</p>
+
+      <h2>What custom drapery costs near St. Pete</h2>
+      <p>$400 to $1,500+ per window installed, depending on fabric, lining, hardware, and length. A typical pair of lined floor-length drapery panels in a mid-range Kravet on standard 1-inch decorative hardware lands around $600 to $900 per window. Specialty silks, motorized track systems, or 12-foot ceilings push higher. Layered treatments (drapery over shades, drapery with cornice) bundle into the project quote. We give itemized estimates so you see the cost line by line.</p>
+
+      <h2>What you get on the in-home consultation</h2>
+      <ul>
+        <li>Designer brings 60 to 100 fabric memos, plus full hardware samples.</li>
+        <li>Walk every window, mark sizes, identify constraints (low ceilings, off-center windows, bay shapes, ceiling-mount openings).</li>
+        <li>Discuss layering — drapery alone, drapery with shades, drapery with shutters.</li>
+        <li>Recommend fabric weight, lining, and trim based on the room (formal vs. casual, light filtering vs. blackout, high-traffic vs. low).</li>
+        <li>Itemized written quote within 48 hours. No deposit to consult.</li>
+      </ul>
+
+      <h2>Process and timeline</h2>
+      <ol>
+        <li><strong>In-home consultation</strong> (1.5-2 hours, free).</li>
+        <li><strong>Fabric selection and approval</strong> (1-2 weeks; we drop memos for final review against your existing furniture and walls).</li>
+        <li><strong>Final measure</strong> after hardware is approved.</li>
+        <li><strong>Workroom fabrication</strong> (2-3 weeks once fabric arrives).</li>
+        <li><strong>Installation</strong> by our in-house crew, typically a half-day.</li>
+      </ol>
+      <p>Total: 4 to 6 weeks from approved fabric to installed panels.</p>
+
+      <h2>Why a local workroom beats the alternatives</h2>
+      <p><strong>Big-box stock drapery:</strong> sized for standard windows. Comes in three widths and four lengths. Stops at the level of "OK." If your window is 64 inches wide, none of the standard sizes fit.</p>
+      <p><strong>Online custom drapery sites:</strong> you measure your own windows, you pick fabric from a phone screen, you install. Errors compound. The fabric in person never matches the fabric on the screen.</p>
+      <p><strong>Traveling drapery sales reps:</strong> the rep takes your order and ships it to a workroom in another state. If something is off, you ship the panel back. The rep is gone.</p>
+      <p><strong>Local workroom (us):</strong> we measure, we sew, we install. If a panel hangs wrong, we are 20 minutes away.</p>
+
+      <h2>Drapery, with everything else</h2>
+      <p>Most clients combine custom drapery with at least one other treatment. We are the only St. Pete workroom that handles drapery + shades + shutters + upholstery + cornices + bedding under one roof — which means one project manager, one install date, and one styled outcome instead of three vendors.</p>
+    </div>
+  </article>
+
+  <ServiceGrid
+    eyebrow="Pair drapery with"
+    heading="One workroom, layered treatments"
+    subtitle="Custom drapery is the centerpiece, but the room comes together when it is layered with the right shades, shutters, or upholstery."
+    slugs={['plantation-shutters', 'window-shades', 'custom-cornices-valances', 'custom-bedding-pillows']}
+  />
+
+  <FAQ
+    heading="Custom Drapery Near Me — FAQ"
+    eyebrow="Common questions"
+    subtitle="What St. Pete and Tampa Bay homeowners ask before booking."
+    items={faqs}
+  />
+
+  <FinalCTA
+    heading="Drapery That Fits Your Windows, Not Someone Else's"
+    subtitle="Free in-home consultation. We bring the fabric library to your living room — no markups stopping at a designer's office, no out-of-state workrooms, no traveling sales reps."
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify(localBusinessExtra)} />
+</BaseLayout>

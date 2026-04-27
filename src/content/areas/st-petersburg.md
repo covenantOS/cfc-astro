@@ -1,6 +1,6 @@
 ---
-title: "Window Treatments in St. Petersburg, FL"
-description: "St. Petersburg's premier blinds shop offering custom plantation shutters, blinds, shades & motorized blinds. Free consultations. Serving Pinellas County."
+title: "St. Petersburg Window Treatments, Shutters & Drapery | Custom Fabric Creations"
+description: "Custom window treatments, plantation shutters, drapery, and reupholstery in St. Petersburg, FL. Locally owned, 25+ years, all of Pinellas County. Free in-home consultation."
 h1: "Custom Window Treatments in St. Petersburg, FL"
 slug: st-petersburg
 type: area

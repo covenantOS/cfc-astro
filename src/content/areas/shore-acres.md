@@ -1,6 +1,6 @@
 ---
-title: "Window Treatments in Shore Acres, FL"
-description: "Shore Acres FL's premier blinds shop offering motorized solar shades, cordless cellular shades & custom plantation shutters. Custom outdoor patio blinds."
+title: "Shore Acres Window Treatments, Shutters & Motorized Shades | Custom Fabric Creations"
+description: "Motorized solar shades, cordless cellular shades, and coastal plantation shutters for Shore Acres waterfront homes in St. Petersburg, FL. Specified for canal-front humidity. Free consultation."
 h1: "Custom Window Treatments in Shore Acres, FL"
 slug: shore-acres
 type: area

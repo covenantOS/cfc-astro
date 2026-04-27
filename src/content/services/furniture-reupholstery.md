@@ -1,6 +1,6 @@
 ---
-title: "Furniture Reupholstery in St. Petersburg, FL"
-description: "Expert furniture reupholstery in St. Petersburg. We restore sofas, chairs, sectionals & more with premium fabrics. Free consultation. Serving Tampa Bay."
+title: "Furniture Reupholstery St. Petersburg, FL | Sofas, Chairs & Heirlooms"
+description: "Expert furniture reupholstery in St. Petersburg, FL. Sofa, chair, sectional, and headboard reupholstery with premium designer fabrics from Kravet and Stout. Free in-home consultation across Pinellas County and Tampa Bay."
 h1: "Furniture Reupholstery in St. Petersburg, FL"
 slug: furniture-reupholstery
 type: service
