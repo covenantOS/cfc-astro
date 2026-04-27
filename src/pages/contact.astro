@@ -41,7 +41,7 @@ import { SITE, AREAS } from '~/lib/site';
       <div class="bg-cream-50 border border-line rounded-sm p-8 md:p-10 shadow-soft">
         <h3 class="font-display text-2xl text-ink-800 mb-6">What type of space are we designing?</h3>
         <div class="grid grid-cols-2 gap-4 mb-8">
-          <button type="button" class="group text-left p-5 border border-line rounded-sm bg-white hover:border-brand-500 transition" data-space="residential">
+          <button type="button" class="group text-left p-5 border border-brand-500 rounded-sm bg-brand-50 hover:border-brand-500 transition" data-space="residential">
             <div class="w-10 h-10 rounded-sm bg-brand-50 text-brand-700 flex items-center justify-center mb-3">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>
             </div>
@@ -103,12 +103,14 @@ import { SITE, AREAS } from '~/lib/site';
 </BaseLayout>
 
 <script>
-  document.querySelectorAll<HTMLButtonElement>('button[data-space]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll<HTMLButtonElement>('button[data-space]').forEach((b) => b.classList.remove('border-brand-500', 'bg-brand-50'));
+  document.querySelectorAll('button[data-space]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('button[data-space]').forEach(function(b) {
+        b.classList.remove('border-brand-500', 'bg-brand-50');
+      });
       btn.classList.add('border-brand-500', 'bg-brand-50');
-      const input = document.getElementById('space') as HTMLInputElement | null;
-      if (input) input.value = btn.dataset.space ?? 'residential';
+      var input = document.getElementById('space');
+      if (input) input.value = btn.dataset.space || 'residential';
     });
   });
 </script>
