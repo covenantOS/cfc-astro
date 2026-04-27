@@ -76,7 +76,9 @@ const GOOGLE_MAPS_API_KEY =
             <input name="phone" required type="tel" placeholder="Phone *" autocomplete="tel" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
           </div>
           <input name="email" required type="email" placeholder="Email *" autocomplete="email" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
-          <input id="street-input" name="street" placeholder="Street address" autocomplete="street-address" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+          <div id="street-mount" class="space-y-0">
+            <input id="street-input" name="street" placeholder="Street address" autocomplete="street-address" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
+          </div>
           <input id="city-input" name="area" placeholder="City" autocomplete="address-level2" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500" />
           <textarea name="message" rows="4" placeholder="Tell us about your project..." autocomplete="off" class="w-full border border-line bg-white px-4 py-3 rounded-sm focus:outline-none focus:border-brand-500"></textarea>
           <button type="submit" class="btn-primary btn-lg w-full">Request Consultation</button>
@@ -131,6 +133,29 @@ const GOOGLE_MAPS_API_KEY =
   .space-option[aria-pressed='true'] .space-check {
     opacity: 1;
   }
+
+  /* Match Google's PlaceAutocompleteElement to the rest of the form */
+  gmp-place-autocomplete {
+    width: 100%;
+    --gmpx-color-surface: #ffffff;
+    --gmpx-color-on-surface: #1a1a1a;
+    --gmpx-color-primary: #bca050;
+    --gmpx-font-family-base: inherit;
+    --gmpx-font-size-base: 1rem;
+  }
+  gmp-place-autocomplete::part(input) {
+    width: 100%;
+    border: 1px solid var(--color-line, #e5e0d3);
+    background: #ffffff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.125rem;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  gmp-place-autocomplete::part(input):focus {
+    outline: none;
+    border-color: #bca050;
+  }
 </style>
 
 <script>
@@ -147,61 +172,76 @@ const GOOGLE_MAPS_API_KEY =
 </script>
 
 <script is:inline define:vars={{ GOOGLE_MAPS_API_KEY }}>
-  // Google Places Autocomplete on street-address input.
-  // Loader pattern from https://developers.google.com/maps/documentation/javascript/load-maps-js-api
+  // Places Autocomplete using PlaceAutocompleteElement (Places API New).
+  // Docs: https://developers.google.com/maps/documentation/javascript/place-autocomplete-new
   (function () {
     if (!GOOGLE_MAPS_API_KEY) return;
 
-    function initPlacesAutocomplete() {
-      var streetInput = document.getElementById('street-input');
-      var cityInput = document.getElementById('city-input');
-      if (!streetInput || !window.google || !window.google.maps || !window.google.maps.places) return;
-
-      try {
-        var ac = new window.google.maps.places.Autocomplete(streetInput, {
-          types: ['address'],
-          componentRestrictions: { country: ['us'] },
-          fields: ['address_components', 'formatted_address'],
-        });
-
-        ac.addListener('place_changed', function () {
-          var place = ac.getPlace();
-          if (!place || !place.address_components) return;
-
-          var streetNumber = '';
-          var route = '';
-          var city = '';
-          place.address_components.forEach(function (c) {
-            if (c.types.indexOf('street_number') !== -1) streetNumber = c.long_name;
-            else if (c.types.indexOf('route') !== -1) route = c.long_name;
-            else if (c.types.indexOf('locality') !== -1) city = c.long_name;
-            else if (!city && c.types.indexOf('postal_town') !== -1) city = c.long_name;
-            else if (!city && c.types.indexOf('sublocality') !== -1) city = c.long_name;
-          });
-
-          var streetLine = (streetNumber + ' ' + route).trim();
-          if (streetLine) streetInput.value = streetLine;
-          if (city && cityInput && !cityInput.value) cityInput.value = city;
-        });
-      } catch (err) {
-        // If Places init throws, leave the field as a plain text input.
-        console.warn('Places autocomplete unavailable:', err);
-      }
-    }
-
-    // If Google's loader fails (bad key, billing off, network, etc.) the field
-    // stays a normal text input — user can always type their address by hand.
+    // If Google's loader fails (bad key, referrer block, billing off, etc.)
+    // the plain street input stays in place so users can still type by hand.
     window.gm_authFailure = function () {
       console.warn('Google Maps authFailure — falling back to plain input');
     };
 
-    // Standard async loader. Calls initPlacesAutocomplete once Maps + Places load.
-    window.__cfcInitPlaces = initPlacesAutocomplete;
+    async function initPlaces() {
+      var mount = document.getElementById('street-mount');
+      var fallbackInput = document.getElementById('street-input');
+      var cityInput = document.getElementById('city-input');
+      if (!mount || !window.google || !window.google.maps) return;
+
+      try {
+        var places = await window.google.maps.importLibrary('places');
+        var PlaceAutocompleteElement = places.PlaceAutocompleteElement;
+        if (!PlaceAutocompleteElement) return;
+
+        var ac = new PlaceAutocompleteElement({
+          includedRegionCodes: ['us'],
+          types: ['address'],
+        });
+        // Carry over name + placeholder so the form payload still includes "street"
+        ac.name = 'street';
+        ac.id = 'street-input';
+        ac.setAttribute('placeholder', 'Street address');
+
+        // Replace the plain input with the live web component.
+        if (fallbackInput) fallbackInput.remove();
+        mount.appendChild(ac);
+
+        ac.addEventListener('gmp-select', async function (ev) {
+          try {
+            var place = ev.placePrediction.toPlace();
+            await place.fetchFields({ fields: ['addressComponents', 'formattedAddress'] });
+
+            var streetNumber = '';
+            var route = '';
+            var city = '';
+            (place.addressComponents || []).forEach(function (c) {
+              var types = c.types || [];
+              if (types.indexOf('street_number') !== -1) streetNumber = c.longText || c.shortText;
+              else if (types.indexOf('route') !== -1) route = c.longText || c.shortText;
+              else if (types.indexOf('locality') !== -1) city = c.longText || c.shortText;
+              else if (!city && types.indexOf('postal_town') !== -1) city = c.longText || c.shortText;
+              else if (!city && types.indexOf('sublocality') !== -1) city = c.longText || c.shortText;
+            });
+
+            var streetLine = (streetNumber + ' ' + route).trim() || place.formattedAddress || '';
+            if (streetLine) ac.value = streetLine;
+            if (city && cityInput && !cityInput.value) cityInput.value = city;
+          } catch (err) {
+            console.warn('Place fetch failed:', err);
+          }
+        });
+      } catch (err) {
+        console.warn('Places autocomplete unavailable:', err);
+      }
+    }
+
+    window.__cfcInitPlaces = initPlaces;
     var s = document.createElement('script');
     s.src =
       'https://maps.googleapis.com/maps/api/js?key=' +
       encodeURIComponent(GOOGLE_MAPS_API_KEY) +
-      '&libraries=places&loading=async&callback=__cfcInitPlaces';
+      '&libraries=places&v=weekly&loading=async&callback=__cfcInitPlaces';
     s.async = true;
     s.defer = true;
     document.head.appendChild(s);
