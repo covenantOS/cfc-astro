@@ -48,12 +48,13 @@
   --shadow-card: 0 6px 18px -6px rgb(34 34 34 / 0.12);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
   font-family: var(--font-body);
   color: var(--color-ink);
   background: #fff;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 /* Gold link accent — base style for inline textual links in body copy.
