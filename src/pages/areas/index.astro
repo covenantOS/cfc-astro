@@ -2,7 +2,7 @@
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import AreasMap from '~/components/AreasMap.astro';
-import { AREAS } from '~/lib/site';
+import AreaTiles from '~/components/AreaTiles.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
 ---
 
@@ -23,46 +23,21 @@ import FinalCTA from '~/components/FinalCTA.astro';
   />
 
   <section class="py-20 md:py-28 bg-white">
-    <div class="container-site">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <p class="eyebrow" style="letter-spacing: 0.3em;">All Neighborhoods</p>
-        <h2 class="font-display text-4xl md:text-5xl text-ink-800 mb-6">14 Neighborhoods We Serve</h2>
-        <p class="text-ink-500 leading-relaxed mb-4">From the historic streets of Old Northeast to the waterfront estates of Snell Isle, Tierra Verde, and St. Pete Beach, we bring the studio to you. Every neighborhood has a slightly different architectural vocabulary — the bungalows of the Historic Old Northeast call for different window treatments than the modernist high-rises of Downtown St. Pete, and we tailor our recommendations accordingly.</p>
-        <p class="text-ink-500 leading-relaxed mb-4">All consultations are complimentary. We travel to you with a full fabric library, hardware samples, and finish options so you can evaluate every decision in your actual light, against your actual walls, on your actual furniture.</p>
-        <p class="text-ink-500 leading-relaxed">Our workroom is based in St. Petersburg. Every piece we install — drapery panels, cornices, cushions, headboards — is cut and sewn in-house, not drop-shipped from a national factory. That vertical integration is what lets us control quality, finish detail, and delivery timeline. It’s also what makes the difference between "window treatments" and "bespoke window treatments."</p>
-      </div>
-
-      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {AREAS.map((a) => (
-          <a
-            href={`/areas/${a.slug}/`}
-            class="group block bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition"
-          >
-            <div class="aspect-[16/10] overflow-hidden bg-ink-50">
-              <img
-                src={`/images/areas/${a.slug}.webp`}
-                alt={`Custom window treatments and upholstery in ${a.title}, FL — Custom Fabric Creations`}
-                title={`${a.title} window treatments & upholstery — Custom Fabric Creations, St. Petersburg, FL`}
-                class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500"
-                loading="lazy"
-                decoding="async"
-                onerror="this.style.display='none'"
-              />
-            </div>
-            <div class="p-6">
-              <h3 class="font-display text-2xl text-ink-800 group-hover:text-brand-700 transition mb-2">{a.title}</h3>
-              <span class="inline-flex items-center text-sm font-semibold text-brand-600 tracking-wide">
-                Explore
-                <svg class="ml-2 w-4 h-4 transition group-hover:translate-x-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 10h10M11 5l5 5-5 5"/>
-                </svg>
-              </span>
-            </div>
-          </a>
-        ))}
-      </div>
+    <div class="container-narrow text-center">
+      <p class="eyebrow" style="letter-spacing: 0.3em;">All Neighborhoods</p>
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-ink-800 mb-6">14 Neighborhoods We Serve</h2>
+      <p class="text-ink-500 leading-relaxed mb-4">From the historic streets of Old Northeast to the waterfront estates of Snell Isle, Tierra Verde, and St. Pete Beach, we bring the studio to you. Every neighborhood has a slightly different architectural vocabulary — the bungalows of the Historic Old Northeast call for different window treatments than the modernist high-rises of Downtown St. Pete, and we tailor our recommendations accordingly.</p>
+      <p class="text-ink-500 leading-relaxed mb-4">All consultations are complimentary. We travel to you with a full fabric library, hardware samples, and finish options so you can evaluate every decision in your actual light, against your actual walls, on your actual furniture.</p>
+      <p class="text-ink-500 leading-relaxed">Our workroom is based in St. Petersburg. Every piece we install — drapery panels, cornices, cushions, headboards — is cut and sewn in-house, not drop-shipped from a national factory. That vertical integration is what lets us control quality, finish detail, and delivery timeline. It's also what makes the difference between "window treatments" and "bespoke window treatments."</p>
     </div>
   </section>
+
+  <AreaTiles
+    background="cream"
+    eyebrow="Browse by neighborhood"
+    heading="Tap a neighborhood for local examples"
+    subtitle="Each page shows the architectural style we work in most often there, recent project notes, and a direct booking link."
+  />
 
   <AreasMap heading="In-Home Service Across the Coast" subtitle="We travel to every neighborhood we list. Complimentary consultations included." />
 

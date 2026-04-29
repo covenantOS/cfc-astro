@@ -15,8 +15,12 @@ const {
   ctaHref = '/areas/',
 } = Astro.props;
 
-const leftAreas = AREAS.slice(0, Math.ceil(AREAS.length / 2));
-const rightAreas = AREAS.slice(Math.ceil(AREAS.length / 2));
+// Curated marquee neighborhoods — keeps the right panel tight on mobile.
+// The full 14-area list lives in the homepage neighborhood strip and on /areas/.
+const FEATURED_SLUGS = ['st-petersburg', 'downtown-st-pete', 'snell-isle', 'st-pete-beach', 'clearwater', 'largo'];
+const featured = FEATURED_SLUGS
+  .map((slug) => AREAS.find((a) => a.slug === slug))
+  .filter((a): a is (typeof AREAS)[number] => Boolean(a));
 ---
 
 <section class="relative">
@@ -43,9 +47,10 @@ const rightAreas = AREAS.slice(Math.ceil(AREAS.length / 2));
       </div>
 
       <div class="bg-brand-500 text-white p-10 md:p-12">
-        <h3 class="font-display text-3xl md:text-4xl mb-8 leading-tight text-white">Serving the St. Pete coast</h3>
-        <div class="grid grid-cols-2 gap-x-6 gap-y-3.5">
-          {[...leftAreas, ...rightAreas].map((a) => (
+        <h3 class="font-display text-3xl md:text-4xl mb-2 leading-tight text-white">Serving the St. Pete coast</h3>
+        <p class="text-white/80 text-sm mb-7">Marquee neighborhoods we work in most often.</p>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-3.5 mb-7">
+          {featured.map((a) => (
             <a
               href={`/areas/${a.slug}/`}
               class="text-white hover:text-white/70 transition duration-200 ease-out text-lg font-medium border-b border-white/0 hover:border-white/40 pb-1"
@@ -54,6 +59,10 @@ const rightAreas = AREAS.slice(Math.ceil(AREAS.length / 2));
             </a>
           ))}
         </div>
+        <a href="/areas/" class="inline-flex items-center gap-2 text-white font-semibold border-b border-white/40 hover:border-white pb-1 transition">
+          See all {AREAS.length} neighborhoods
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10h10M11 5l5 5-5 5"/></svg>
+        </a>
       </div>
     </div>
   </div>

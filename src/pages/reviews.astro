@@ -149,7 +149,7 @@ const reviewsSchema = REVIEWS.map((r) => ({
 
       <div class="space-y-6">
         {REVIEWS.map((r) => (
-          <article class="bg-cream-50 border border-line rounded-sm p-6 md:p-8">
+          <article class="bg-cream-50 rounded-lg shadow-card p-6 md:p-8">
             <header class="flex items-center gap-4 mb-4">
               <div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style={`background-color: ${r.avatarColor};`}>
                 {r.initials}

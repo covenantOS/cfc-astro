@@ -42,7 +42,7 @@ const {
 } = Astro.props;
 ---
 
-<section class="py-20 md:py-28 bg-[#faf9f5]">
+<section class="py-20 md:py-28 bg-cream-50">
   <div class="container-narrow">
     <div class="text-center mb-14">
       <div class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-brand-500/60 bg-white text-brand-600 mb-7" aria-hidden="true">
@@ -58,7 +58,7 @@ const {
 
     <div class="space-y-4">
       {items.map((item) => (
-        <details class="group bg-white border border-line rounded-sm overflow-hidden hover:border-brand-300 transition-colors">
+        <details class="group bg-white rounded-lg shadow-card overflow-hidden hover:border-brand-300 transition-colors">
           <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none select-none">
             <h3 class="font-display text-lg md:text-xl text-ink-800">{item.q}</h3>
             <span class="shrink-0 w-9 h-9 rounded-full border border-brand-500/50 bg-white text-brand-600 group-open:bg-brand-500 group-open:text-white group-open:border-brand-500 flex items-center justify-center transition-colors duration-200">

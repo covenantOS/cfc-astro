@@ -35,7 +35,7 @@ const derivedAlt = imageAlt ?? `${title} — Custom Fabric Creations, St. Peters
       )}
     </div>
     {image && (
-      <div class:list={['aspect-[4/5] overflow-hidden rounded-sm', imagePosition === 'right' ? 'md:order-2' : 'md:order-1']}>
+      <div class:list={['aspect-[4/5] overflow-hidden rounded-lg', imagePosition === 'right' ? 'md:order-2' : 'md:order-1']}>
         <img src={image} alt={derivedAlt} title={derivedAlt} class="w-full h-full object-cover" loading="lazy" />
       </div>
     )}

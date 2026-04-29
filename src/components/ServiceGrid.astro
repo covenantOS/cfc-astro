@@ -61,7 +61,7 @@ const SERVICE_CARD_LABELS: Record<string, string> = {
 };
 ---
 
-<section class="py-20 md:py-28 bg-[#f7f6f2]">
+<section class="py-20 md:py-28 bg-white">
   <div class="container-site">
     <div class="text-center max-w-3xl mx-auto mb-14">
       {eyebrow && <p class="eyebrow" style="letter-spacing: 0.3em;">{eyebrow}</p>}
@@ -76,7 +76,7 @@ const SERVICE_CARD_LABELS: Record<string, string> = {
         return (
           <a
             href={`/services/${s.slug}/`}
-            class="group block bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition"
+            class="group block bg-white rounded-lg shadow-card overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition duration-300"
           >
             <div class="aspect-[4/3] overflow-hidden bg-ink-50">
               <img

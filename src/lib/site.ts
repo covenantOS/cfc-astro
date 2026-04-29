@@ -81,20 +81,20 @@ export const SERVICES = [
 ] as const;
 
 export const AREAS = [
-  { slug: 'st-petersburg', title: 'St. Petersburg' },
-  { slug: 'downtown-st-pete', title: 'Downtown St. Pete' },
-  { slug: 'old-northeast', title: 'Historic Old Northeast' },
-  { slug: 'snell-isle', title: 'Snell Isle' },
-  { slug: 'shore-acres', title: 'Shore Acres' },
-  { slug: 'west-st-pete', title: 'West St. Pete' },
-  { slug: 'tierra-verde', title: 'Tierra Verde' },
-  { slug: 'st-pete-beach', title: 'St. Pete Beach' },
-  { slug: 'treasure-island', title: 'Treasure Island' },
-  { slug: 'clearwater', title: 'Clearwater' },
-  { slug: 'sand-key', title: 'Sand Key' },
-  { slug: 'belleair-shore', title: 'Belleair Shore' },
-  { slug: 'seminole', title: 'Seminole' },
-  { slug: 'largo', title: 'Largo' },
+  { slug: 'st-petersburg', title: 'St. Petersburg', descriptor: 'Our home base' },
+  { slug: 'downtown-st-pete', title: 'Downtown St. Pete', descriptor: 'High-rises & lofts' },
+  { slug: 'old-northeast', title: 'Historic Old Northeast', descriptor: 'Bungalows & craftsman' },
+  { slug: 'snell-isle', title: 'Snell Isle', descriptor: 'Waterfront estates' },
+  { slug: 'shore-acres', title: 'Shore Acres', descriptor: 'NE St. Pete' },
+  { slug: 'west-st-pete', title: 'West St. Pete', descriptor: 'Mid-century homes' },
+  { slug: 'tierra-verde', title: 'Tierra Verde', descriptor: 'Gulf-front estates' },
+  { slug: 'st-pete-beach', title: 'St. Pete Beach', descriptor: 'Coastal condos' },
+  { slug: 'treasure-island', title: 'Treasure Island', descriptor: 'Beach community' },
+  { slug: 'clearwater', title: 'Clearwater', descriptor: 'Pinellas County' },
+  { slug: 'sand-key', title: 'Sand Key', descriptor: 'Barrier island' },
+  { slug: 'belleair-shore', title: 'Belleair Shore', descriptor: 'Coastal village' },
+  { slug: 'seminole', title: 'Seminole', descriptor: 'Mid-Pinellas' },
+  { slug: 'largo', title: 'Largo', descriptor: 'Central Pinellas' },
 ] as const;
 
 export const BRANDS = [

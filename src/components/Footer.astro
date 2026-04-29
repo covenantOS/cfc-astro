@@ -12,16 +12,30 @@ const year = new Date().getFullYear();
       <p class="text-sm text-white/75 leading-relaxed mb-6">
         We’d love to help you design the space of your dreams. Whether you’re looking for interior or exterior shades with motorization options, custom drapes and top treatments or re-upholstery.
       </p>
-      <a href="/contact/" class="btn-primary mb-6 inline-flex">Schedule Consultation</a>
-      <div class="space-y-2 text-sm">
-        <div>
-          <p class="text-white/60 text-xs uppercase tracking-widest mb-1">Call us</p>
-          <a href={SITE.phoneHref} class="block text-brand-400 font-semibold hover:text-brand-300 text-base">{SITE.phone}</a>
+      <a href="/contact/" class="btn-primary mb-7 inline-flex">Schedule Consultation</a>
+      <div class="space-y-5 text-sm">
+        <div class="flex items-start gap-3">
+          <span class="icon-badge-sm bg-white/10">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </span>
+          <div>
+            <p class="text-white/60 text-xs uppercase tracking-widest mb-1">Call us</p>
+            <a href={SITE.phoneHref} class="block text-brand-400 font-bold hover:text-brand-300 text-base">{SITE.phone}</a>
+          </div>
         </div>
-        <div>
-          <p class="text-white/60 text-xs uppercase tracking-widest mt-4 mb-1">Hours</p>
-          <p class="text-white/80">Monday–Friday, 7am–5pm</p>
-          <p class="text-white/80">Saturday–Sunday, 8am–5pm</p>
+        <div class="flex items-start gap-3">
+          <span class="icon-badge-sm bg-white/10">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </span>
+          <div>
+            <p class="text-white/60 text-xs uppercase tracking-widest mb-1">Hours</p>
+            <p class="text-white/80">Monday–Friday, 7am–5pm</p>
+            <p class="text-white/80">Saturday–Sunday, 8am–5pm</p>
+          </div>
         </div>
       </div>
     </div>

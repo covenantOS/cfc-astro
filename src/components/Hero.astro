@@ -5,6 +5,9 @@ import HeroBend from './HeroBend.astro';
 interface Props {
   eyebrow?: string;
   title: string;
+  /** Optional gold-accent tail appended after `title`. Used to do the two-tone
+   *  Westchase-style headline (white start, gold finish). Renders inline. */
+  titleAccent?: string;
   subtitle?: string;
   image?: string;
   video?: string;
@@ -26,6 +29,7 @@ interface Props {
 const {
   eyebrow,
   title,
+  titleAccent,
   subtitle,
   image,
   video,
@@ -131,7 +135,11 @@ const derivedTitle = imageTitle ?? derivedAlt;
       size === 'tall' ? 'text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem]' : 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl',
       variant === 'image' ? 'text-white' : 'text-ink-800',
     ]}>
-      {title}
+      {title}{titleAccent && (
+        <>
+          {' '}<span class="text-brand-400">{titleAccent}</span>
+        </>
+      )}
     </h1>
 
     {subtitle && (

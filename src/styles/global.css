@@ -17,10 +17,10 @@
   --color-brand-800: #625030;
   --color-brand-900: #4a3c24;
 
-  --color-cream-50:  #fefcf3;
-  --color-cream-100: #fcf7e3;  /* secondary — ivory */
-  --color-cream-200: #f8efc9;
-  --color-cream-300: #f0e3a2;
+  --color-cream-50:  #f6f3ea;  /* canonical "cream" section bg — alternates with white */
+  --color-cream-100: #f6f3ea;  /* alias of cream-50; legacy refs resolve to same tone */
+  --color-cream-200: #ebe5d3;
+  --color-cream-300: #e3dbc1;
 
   --color-ink-50:   #f5f5f5;
   --color-ink-100:  #e5e5e5;
@@ -43,18 +43,26 @@
   --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
   --font-body:    "Helvetica Neue", "Helvetica", Arial, ui-sans-serif, sans-serif;
 
-  --radius-lg: 10px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
   --shadow-soft: 0 20px 40px -16px rgb(34 34 34 / 0.18);
-  --shadow-card: 0 6px 18px -6px rgb(34 34 34 / 0.12);
+  --shadow-card: 0 6px 18px -6px rgb(34 34 34 / 0.10);
+  --shadow-card-hover: 0 14px 32px -12px rgb(34 34 34 / 0.18);
+  --shadow-btn: 0 2px 8px -2px rgb(34 34 34 / 0.16);
+  --shadow-btn-hover: 0 6px 18px -4px rgb(34 34 34 / 0.24);
 }
 
-html { scroll-behavior: smooth; overflow-x: clip; }
+/* Bump root font-size from 16px → 17px so every rem-based Tailwind utility
+   scales up ~6%. Body text reads bigger and more inviting; spacing tracks
+   proportionally without per-component changes. */
+html { scroll-behavior: smooth; overflow-x: clip; font-size: 17px; }
 body {
   font-family: var(--font-body);
   color: var(--color-ink);
   background: #fff;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
+  line-height: 1.6;
 }
 
 /* Form controls must shrink to fit their container on narrow viewports.
@@ -108,28 +116,24 @@ details[open] > summary ~ * {
 @layer base {
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     color: var(--color-ink-800);
     font-weight: 700;
   }
   h1 { line-height: 1.08; }
   h2 { line-height: 1.15; }
-  h3 { line-height: 1.25; font-weight: 500; }
+  h3 { line-height: 1.25; font-weight: 600; }
+  h4 { line-height: 1.3; font-weight: 600; }
+  p, li { color: var(--color-ink-600); }
 }
 
 .container-site { @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8; }
 .container-narrow { @apply mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8; }
 
-/* Soft linen/paper texture — subtle, on-brand for a fabric studio */
-.bg-cream {
-  background-color: var(--color-cream-100);
-}
-.bg-linen {
-  background-color: #fcf7e3;
-  background-image:
-    radial-gradient(1200px 360px at 50% 0%, rgba(188,160,80,0.08), transparent 65%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23e8dfc6' stroke-width='.6' opacity='.55'%3E%3Cpath d='M0 0 L160 160'/%3E%3Cpath d='M0 40 L120 160'/%3E%3Cpath d='M40 0 L160 120'/%3E%3Cpath d='M0 80 L80 160'/%3E%3Cpath d='M80 0 L160 80'/%3E%3C/g%3E%3C/svg%3E");
-}
+/* Two background tones only — strict alternation between sections.
+   White sections get cream cards; cream sections get white cards. */
+.bg-cream { background-color: var(--color-cream-50); }
+.bg-linen { background-color: var(--color-cream-50); }
 
 /* Prose — body copy styling for page builder content */
 .prose-cfc p { @apply text-ink-600 leading-relaxed text-[1.0625rem]; }
@@ -148,20 +152,73 @@ details[open] > summary ~ * {
   object-fit: cover;
 }
 
-/* Buttons — luxury refined: solid gold primary, ghost-outline secondary */
-.btn-primary {
-  @apply inline-flex items-center justify-center gap-2 rounded-sm bg-brand-500 hover:bg-brand-600 text-white font-semibold px-7 py-3.5 tracking-wide uppercase text-sm shadow-sm transition;
+/* Buttons — luxury refined: solid gold primary, ghost-outline secondary.
+   Hover lifts + brightens slightly; active gives a subtle press squish. */
+.btn-primary,
+.btn-outline,
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 font-semibold px-7 py-3.5 tracking-wide uppercase text-sm;
+  border-radius: var(--radius-md);
   letter-spacing: 0.08em;
+  transition: transform 140ms ease-out, box-shadow 180ms ease-out, background-color 180ms ease-out, color 180ms ease-out, border-color 180ms ease-out, filter 180ms ease-out;
+  will-change: transform;
+}
+.btn-primary {
+  @apply bg-brand-500 text-white;
+  box-shadow: var(--shadow-btn);
+}
+.btn-primary:hover {
+  @apply bg-brand-600;
+  box-shadow: var(--shadow-btn-hover);
+  transform: translateY(-1px);
+  filter: brightness(1.04);
 }
 .btn-outline {
-  @apply inline-flex items-center justify-center gap-2 rounded-sm border border-white/80 bg-transparent hover:bg-white hover:text-ink-800 text-white font-semibold px-7 py-3.5 tracking-wide uppercase text-sm transition;
-  letter-spacing: 0.08em;
+  @apply border border-white/80 bg-transparent text-white;
+}
+.btn-outline:hover {
+  @apply bg-white text-ink-800;
+  box-shadow: var(--shadow-btn-hover);
+  transform: translateY(-1px);
 }
 .btn-ghost {
-  @apply inline-flex items-center justify-center gap-2 rounded-sm border border-brand-500 text-brand-700 hover:bg-brand-50 font-semibold px-7 py-3.5 tracking-wide uppercase text-sm transition;
-  letter-spacing: 0.08em;
+  @apply border border-brand-500 text-brand-700;
+}
+.btn-ghost:hover {
+  @apply bg-brand-50;
+  box-shadow: var(--shadow-btn);
+  transform: translateY(-1px);
+}
+.btn-primary:active,
+.btn-outline:active,
+.btn-ghost:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: 80ms;
 }
 .btn-lg { @apply px-8 py-4 text-sm; }
+
+/* Surface card — the canonical "raised card" treatment. Soft layered shadow,
+   no border. Hover gently lifts and deepens the shadow. Reuse for review,
+   service, area, info, and form cards. */
+.surface-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 200ms ease-out, box-shadow 220ms ease-out;
+}
+.surface-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Icon badge — circular dark fill + gold icon. The Westchase signature
+   pattern; use anywhere a phone/clock/email/pin icon appears. */
+.icon-badge {
+  @apply inline-flex items-center justify-center w-12 h-12 rounded-full bg-ink-900 text-brand-400 shrink-0;
+}
+.icon-badge-sm {
+  @apply inline-flex items-center justify-center w-9 h-9 rounded-full bg-ink-900 text-brand-400 shrink-0;
+}
 
 /* CTA button row — stacks vertically with equal widths on mobile so paired
    buttons (e.g. "Schedule Consultation" + "Call …") read as a balanced pair,
