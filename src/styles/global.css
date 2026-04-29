@@ -57,6 +57,11 @@ body {
   overflow-x: clip;
 }
 
+/* Form controls must shrink to fit their container on narrow viewports.
+   <input>'s default `size` attribute creates an intrinsic min-width that
+   can push grid/flex parents past the viewport on mobile. */
+input, textarea, select { max-width: 100%; min-width: 0; }
+
 /* Gold link accent — base style for inline textual links in body copy.
    No default underline. Instead: gold brand color, medium weight, and a gold
    hover line that slides in. Buttons, nav, and styled anchors override locally. */
