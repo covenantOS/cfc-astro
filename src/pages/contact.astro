@@ -19,100 +19,89 @@ const GOOGLE_MAPS_API_KEY =
 >
   <Hero
     eyebrow="Client Support and Scheduling"
-    title="Schedule Your Design Consultation"
+    title="Schedule Your Design"
+    titleAccent="Consultation"
     subtitle="Tell us about your space. We'll bring the showroom to you — fabrics, finishes, and hardware, all in your home, in your natural light."
     image="/images/hero/homepage.webp"
     breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact/' }]}
+    primaryCta={{ label: `Call ${SITE.phone}`, href: SITE.phoneHref }}
     goldLine
-  />
+  >
+    <div slot="aside" class="bg-white rounded-lg shadow-card p-5 sm:p-7 md:p-8 max-w-md mx-auto lg:mx-0 lg:ml-auto">
+      <h3 class="font-display text-xl sm:text-2xl text-ink-800 mb-1">Get Your Free Estimate</h3>
+      <p class="text-ink-500 text-sm mb-5">A real person follows up within one business day.</p>
 
-  <section class="py-12 sm:py-16 md:py-24 bg-white">
-    <div class="container-site max-w-6xl mx-auto grid gap-8 lg:gap-10 lg:grid-cols-2 items-start">
-      <div class="min-w-0">
-        <p class="eyebrow" style="letter-spacing: 0.3em;">Client Support and Scheduling</p>
-        <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-ink-800 leading-tight mb-6">Schedule Your Design Consultation</h2>
-        <ul class="space-y-2 text-ink-600 text-lg mb-8 leading-relaxed">
-          <li>- Request a consultation or call us directly.</li>
-          <li>- We bring our material library to your living space.</li>
-          <li>- Our team handles the complete final installation.</li>
-        </ul>
-        <a href={SITE.phoneHref} class="btn-primary">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-          </svg>
-          Call {SITE.phone}
-        </a>
-
-        <ul class="mt-8 space-y-4 text-sm">
-          <li class="flex items-start gap-3">
-            <span class="icon-badge-sm">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            </span>
-            <div>
-              <p class="text-ink-500 text-xs uppercase tracking-widest mb-0.5">Phone</p>
-              <a href={SITE.phoneHref} class="text-ink-800 font-bold hover:text-brand-700 transition">{SITE.phone}</a>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="icon-badge-sm">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </span>
-            <div>
-              <p class="text-ink-500 text-xs uppercase tracking-widest mb-0.5">Hours</p>
-              <p class="text-ink-700">Mon–Sat 9am–5pm</p>
-            </div>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="icon-badge-sm">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </span>
-            <div>
-              <p class="text-ink-500 text-xs uppercase tracking-widest mb-0.5">Service area</p>
-              <p class="text-ink-700">St. Petersburg & Pinellas County</p>
-            </div>
-          </li>
-        </ul>
+      <div class="grid grid-cols-2 gap-3 mb-5">
+        <button type="button" class="space-option group relative text-left p-3 rounded-lg bg-cream-50 transition" data-space="residential" aria-pressed="true">
+          <span class="space-check absolute top-2.5 right-2.5 w-4 h-4 rounded-full bg-brand-500 text-white flex items-center justify-center opacity-0 transition">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+          </span>
+          <div class="w-9 h-9 rounded-full bg-ink-900 text-brand-400 flex items-center justify-center mb-2">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>
+          </div>
+          <p class="font-bold text-ink-800 text-sm leading-tight">Residential</p>
+          <p class="text-xs text-ink-500 mt-0.5">Home or condo</p>
+        </button>
+        <button type="button" class="space-option group relative text-left p-3 rounded-lg bg-cream-50 transition" data-space="commercial" aria-pressed="false">
+          <span class="space-check absolute top-2.5 right-2.5 w-4 h-4 rounded-full bg-brand-500 text-white flex items-center justify-center opacity-0 transition">
+            <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
+          </span>
+          <div class="w-9 h-9 rounded-full bg-ink-900 text-brand-400 flex items-center justify-center mb-2">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 12h16M12 4v16"/></svg>
+          </div>
+          <p class="font-bold text-ink-800 text-sm leading-tight">Commercial</p>
+          <p class="text-xs text-ink-500 mt-0.5">Office or retail</p>
+        </button>
       </div>
 
-      <div class="min-w-0 bg-cream-50 rounded-lg shadow-card p-5 sm:p-8 md:p-10">
-        <h3 class="font-display text-xl sm:text-2xl text-ink-800 mb-6">What type of space are we designing?</h3>
-        <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
-          <button type="button" class="space-option group relative text-left p-4 sm:p-5 rounded-lg bg-white transition" data-space="residential" aria-pressed="true">
-            <span class="space-check absolute top-3 right-3 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center opacity-0 transition">
-              <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
-            </span>
-            <div class="w-10 h-10 rounded-full bg-ink-900 text-brand-400 flex items-center justify-center mb-3">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10h14V10"/></svg>
-            </div>
-            <p class="font-semibold text-ink-800 mb-1">Residential</p>
-            <p class="text-xs text-ink-500">Home, condo, or townhouse</p>
-          </button>
-          <button type="button" class="space-option group relative text-left p-4 sm:p-5 rounded-lg bg-white transition" data-space="commercial" aria-pressed="false">
-            <span class="space-check absolute top-3 right-3 w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center opacity-0 transition">
-              <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg>
-            </span>
-            <div class="w-10 h-10 rounded-full bg-ink-900 text-brand-400 flex items-center justify-center mb-3">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 12h16M12 4v16"/></svg>
-            </div>
-            <p class="font-semibold text-ink-800 mb-1">Commercial</p>
-            <p class="text-xs text-ink-500">Office, retail, or hospitality</p>
-          </button>
+      <form method="POST" action="/api/contact/" class="space-y-3" autocomplete="on">
+        <input type="hidden" id="space" name="space" value="residential"/>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <input name="name" required placeholder="Your name *" autocomplete="name" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
+          <input name="phone" required type="tel" placeholder="Phone *" autocomplete="tel" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
         </div>
+        <input name="email" required type="email" placeholder="Email *" autocomplete="email" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
+        <div id="street-mount" class="space-y-0">
+          <input id="street-input" name="street" placeholder="Street address" autocomplete="street-address" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
+        </div>
+        <input id="city-input" name="area" placeholder="City" autocomplete="address-level2" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
+        <textarea name="message" rows="3" placeholder="Tell us about your project..." autocomplete="off" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500"></textarea>
+        <button type="submit" class="btn-primary btn-lg w-full">Request Consultation</button>
+      </form>
+    </div>
+  </Hero>
 
-        <form method="POST" action="/api/contact/" class="space-y-4" autocomplete="on">
-          <input type="hidden" id="space" name="space" value="residential"/>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <input name="name" required placeholder="Your name *" autocomplete="name" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
-            <input name="phone" required type="tel" placeholder="Phone *" autocomplete="tel" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
-          </div>
-          <input name="email" required type="email" placeholder="Email *" autocomplete="email" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
-          <div id="street-mount" class="space-y-0">
-            <input id="street-input" name="street" placeholder="Street address" autocomplete="street-address" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
-          </div>
-          <input id="city-input" name="area" placeholder="City" autocomplete="address-level2" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500" />
-          <textarea name="message" rows="4" placeholder="Tell us about your project..." autocomplete="off" class="w-full border border-line bg-white px-4 py-3 rounded-md focus:outline-none focus:border-brand-500"></textarea>
-          <button type="submit" class="btn-primary btn-lg w-full">Request Consultation</button>
-        </form>
+  <!-- Compact info strip — replaces the duplicate "Schedule Your Consultation"
+       section so the hero now carries that message. Phone, hours, and service
+       area sit as a clean 3-up row that reads cleanly on mobile too. -->
+  <section class="py-10 md:py-14 bg-white">
+    <div class="container-site max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+      <a href={SITE.phoneHref} class="flex items-center gap-4 p-4 rounded-lg hover:bg-cream-50 transition">
+        <span class="icon-badge shrink-0">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </span>
+        <div>
+          <p class="text-ink-500 text-xs uppercase tracking-widest mb-0.5">Phone</p>
+          <p class="text-ink-800 font-bold">{SITE.phone}</p>
+        </div>
+      </a>
+      <div class="flex items-center gap-4 p-4">
+        <span class="icon-badge shrink-0">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </span>
+        <div>
+          <p class="text-ink-500 text-xs uppercase tracking-widest mb-0.5">Hours</p>
+          <p class="text-ink-800 font-bold">Mon–Sat 7am–7pm</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 p-4">
+        <span class="icon-badge shrink-0">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <div>
+          <p class="text-ink-500 text-xs uppercase tracking-widest mb-0.5">Service area</p>
+          <p class="text-ink-800 font-bold">St. Pete & Pinellas</p>
+        </div>
       </div>
     </div>
   </section>

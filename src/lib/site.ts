@@ -15,7 +15,7 @@ export const SITE = {
     region: 'FL',
     country: 'US',
   },
-  hours: 'Monday–Saturday, 9:00am–5:00pm',
+  hours: 'Monday–Saturday, 7:00am–7:00pm',
   established: 2000,
 } as const;
 

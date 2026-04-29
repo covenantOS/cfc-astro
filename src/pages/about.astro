@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
-import AboutSection from '~/components/AboutSection.astro';
 import MeetTheOwner from '~/components/MeetTheOwner.astro';
 import CoreValues from '~/components/CoreValues.astro';
 import ImageCTA from '~/components/ImageCTA.astro';
@@ -30,9 +29,7 @@ const ABOUT_FAQS = [
 
 const EXPERTISE_CARDS = [
   { title: 'Over 25 Years of Experience', body: 'Established 2000. Two and a half decades of custom window treatments and upholstery across Pinellas County.' },
-  { title: 'Flawless 5-Star Google Rating', body: 'Hundreds of verified Google reviews, every one earned project by project.' },
-  { title: 'Hundreds of Completed Projects', body: 'From historic Old Northeast bungalows to Snell Isle waterfront homes, our portfolio covers the full range of St. Pete interiors.' },
-  { title: 'Fully Insured Installation Team', body: 'Our own in-house installers — never subcontracted — treat your property with complete respect.' },
+  { title: 'Fully Insured In-House Team', body: 'Our own installers — never subcontracted — handle every project from measurement to final fit.' },
   { title: 'Authorized Elite Brand Dealer', body: 'Direct dealer partnerships with Hunter Douglas, Norman, Graber, Kravet, and Stout give you access to the industry\u2019s top materials and warranties.' },
 ];
 ---
@@ -53,29 +50,7 @@ const EXPERTISE_CARDS = [
     goldLine
   />
 
-  <!-- "Over 25 Years of Bespoke Interior Design" block (matches About Us Section.png) -->
-  <AboutSection
-    eyebrow="Our Story"
-    heading="Over 25 Years of Bespoke Interior Design"
-    body="We opened our doors in 2000 with a clear mission to provide St. Petersburg homeowners with uncompromising quality in custom window treatments and upholstery. Operating from our dedicated local workroom, we bypass mass production to focus entirely on precision tailoring. By bringing our curated designer showroom directly to your living space we ensure every fabric selection perfectly complements your natural lighting and exact architectural style."
-    pills={['25+ Years Exp.', 'Local Workroom', 'Fully Insured']}
-    image="/images/services/custom-bedding-pillows/hero.webp"
-    imageBadge={{ title: 'Established 2000', subtitle: 'Serving the St. Pete coast' }}
-    cta={{ label: 'Learn More About Us', href: '/about/#meet-owner' }}
-  />
-
-  <!-- Craftsmanship / Precision Tailoring section (replacing old-WP "Craftsmanship" block) -->
-  <section class="py-20 md:py-24 bg-cream-50">
-    <div class="container-site max-w-5xl mx-auto text-center">
-      <p class="eyebrow" style="letter-spacing: 0.3em;">Craftsmanship</p>
-      <h2 class="font-display text-4xl md:text-5xl text-ink-800 leading-tight mb-6">Precision Tailoring and Technical Expertise</h2>
-      <p class="text-ink-500 text-lg leading-relaxed max-w-3xl mx-auto">
-        Bespoke window treatments, premium plantation shutters, and master upholstery built in our St. Pete workroom. Every piece is measured on-site, tailored by hand, and installed by our own team — never a subcontractor.
-      </p>
-    </div>
-  </section>
-
-  <!-- Meet The Owner (Terry Popick) -->
+  <!-- Meet The Owner (Terry Popick) — single portrait, no duplicate AboutSection above. -->
   <section id="meet-owner"></section>
   <MeetTheOwner
     image="/images/services/custom-draperies-curtains/top.webp"
@@ -88,7 +63,7 @@ const EXPERTISE_CARDS = [
         <p class="eyebrow" style="letter-spacing: 0.3em;">Why Choose Custom Fabric Creations</p>
         <h2 class="font-display text-4xl md:text-5xl text-ink-800">Proven Industry Expertise</h2>
       </div>
-      <ul class="grid gap-5 md:grid-cols-2">
+      <ul class="grid gap-5 md:grid-cols-3">
         {EXPERTISE_CARDS.map((c) => (
           <li class="flex gap-4 bg-cream-50 p-6 rounded-lg shadow-card">
             <span class="shrink-0 w-9 h-9 rounded-full bg-brand-500 text-white flex items-center justify-center">

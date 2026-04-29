@@ -1,5 +1,5 @@
 ---
-import { AREAS } from '~/lib/site';
+import { AREAS, SITE } from '~/lib/site';
 
 interface Props {
   heading?: string;
@@ -44,5 +44,14 @@ const tileBg = background === 'cream' ? 'bg-white' : 'bg-cream-50';
         </a>
       ))}
     </div>
+
+    <p class="text-center mt-8 text-sm text-ink-500">
+      Don't see your ZIP code?
+      <a href={SITE.phoneHref} class="ml-1 inline-flex items-center gap-1 font-bold text-brand-700 hover:text-brand-600 transition">
+        Call {SITE.phone}
+        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10h10M11 5l5 5-5 5"/></svg>
+      </a>
+      <span class="block sm:inline sm:ml-1">— we still serve all of Tampa Bay.</span>
+    </p>
   </div>
 </section>
