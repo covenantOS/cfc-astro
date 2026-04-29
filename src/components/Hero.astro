@@ -44,7 +44,7 @@ const {
   goldLine = false,
 } = Astro.props;
 
-const padding = size === 'tall' ? 'py-28 md:py-40 lg:py-48' : 'py-20 md:py-28 lg:py-36';
+const padding = size === 'tall' ? 'py-16 sm:py-24 md:py-40 lg:py-48' : 'py-12 sm:py-20 md:py-28 lg:py-36';
 
 // Build a keyword-rich alt + title if caller didn't supply one.
 // Every Custom Fabric Creations hero image gets a descriptive, brand-tagged alt.
@@ -136,13 +136,13 @@ const derivedTitle = imageTitle ?? derivedAlt;
 
     {subtitle && (
       <p class:list={[
-        'mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed',
+        'mt-4 sm:mt-6 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed',
         variant === 'image' ? 'text-white/90' : 'text-ink-600',
       ]} set:html={subtitle}></p>
     )}
 
     {bullets.length > 0 && (
-      <ul class="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
+      <ul class="mt-5 sm:mt-8 flex flex-wrap justify-center gap-x-6 sm:gap-x-8 gap-y-2 sm:gap-y-3 text-sm">
         {bullets.map((b) => (
           <li class:list={['flex items-center gap-2', variant === 'image' ? 'text-white' : 'text-ink-600']}>
             <svg class="w-4 h-4 text-brand-400" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -155,7 +155,7 @@ const derivedTitle = imageTitle ?? derivedAlt;
     )}
 
     {(primaryCta || secondaryCta) && (
-      <div class="mt-10 cta-group">
+      <div class="mt-6 sm:mt-10 cta-group">
         {primaryCta && <a href={primaryCta.href} class="btn-primary btn-lg">{primaryCta.label}</a>}
         {secondaryCta && (
           <a
@@ -167,7 +167,7 @@ const derivedTitle = imageTitle ?? derivedAlt;
     )}
 
     {trustBar && (
-      <div class="mt-12 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm">
+      <div class="mt-8 sm:mt-12 flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-10 gap-y-3 sm:gap-y-4 text-sm">
         {[
           { icon: 'shield', label: 'Fully Insured' },
           { icon: 'award', label: 'Master Craftsmanship' },
