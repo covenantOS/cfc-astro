@@ -155,7 +155,7 @@ const derivedTitle = imageTitle ?? derivedAlt;
     )}
 
     {(primaryCta || secondaryCta) && (
-      <div class="mt-10 flex flex-wrap gap-4 justify-center">
+      <div class="mt-10 cta-group">
         {primaryCta && <a href={primaryCta.href} class="btn-primary btn-lg">{primaryCta.label}</a>}
         {secondaryCta && (
           <a
