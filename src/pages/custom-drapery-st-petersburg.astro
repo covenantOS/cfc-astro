@@ -24,7 +24,7 @@ const UPDATED = '2026-05-11';
 const AUTHOR = {
   name: 'Terry Popick',
   role: 'Owner & Lead Designer',
-  bio: '25 years designing and installing custom drapery across Pinellas County. Authorized workroom for Kravet, Stout, Lee Jofa, Brunschwig & Fils, and GP & J Baker. Custom Fabric Creations studio at 3026 Central Ave Suite 551, St. Petersburg, FL 33712.',
+  bio: '25 years designing and installing custom drapery across Pinellas County. Custom Fabric Creations is locally based in St. Petersburg, FL — an authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout, with access to the broader Kravet-distributed designer fabric library.',
 };
 
 const FAQS = [
@@ -42,11 +42,11 @@ const FAQS = [
   },
   {
     q: 'What fabric brands does Custom Fabric Creations carry?',
-    a: 'We are an authorized workroom for Kravet, Stout, Lee Jofa, Brunschwig & Fils, GP & J Baker, and Crypton performance fabrics. Trade pricing passes through to you directly, instead of stopping at a designer\'s markup. The full library covers velvets, embroidered silks, linens, indoor-outdoor performance fabrics, jacquards, and decorative trims. We bring the library to your home; you select fabrics against your actual walls and lighting.',
+    a: 'We are an authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout. Through our Kravet relationship we also access Lee Jofa, Brunschwig & Fils, GP & J Baker, and Crypton performance fabrics. We bring fabric samples to your home so you select fabrics against your actual walls and lighting before committing.',
   },
   {
     q: 'Do you motorize drapery, and is it worth it?',
-    a: 'Yes. We install Lutron, Hunter Douglas PowerView, and Somfy motorized track systems. Motorization is worth it for: tall windows (over 8 feet), heavy fabric panels, sliding glass doors, anyone integrating with a smart-home system, and aging-in-place clients who want hands-free operation. Cost adds roughly $300 to $800 per opening for the motor and track, plus installation and programming. Battery and hardwired options available.',
+    a: 'Yes. We install Hunter Douglas PowerView motorization and discuss other motorized systems at consultation. Motorization is worth it for tall windows (over 8 feet), heavy fabric panels, sliding glass doors, smart-home integrations, and aging-in-place clients who want hands-free operation. Ask for current pricing and motor options when you book your consultation.',
   },
   {
     q: 'What\'s the difference between drapery and curtains?',
@@ -54,11 +54,11 @@ const FAQS = [
   },
   {
     q: 'Will custom drapery hold up to Florida sun and humidity in Pinellas County?',
-    a: 'Yes, when the right fabric is specified. UV-resistant linings (we use Hanes Pearl or Roc-Lon Sundown for sun-exposed windows), performance fabrics rated for UV (Crypton, Sunbrella indoor-outdoor lines), and proper lining/interlining all extend the life of drapery in Florida. For salt-air zones — Snell Isle, Tierra Verde, Sand Key, the barrier islands — we add a moisture-resistant interlining and recommend synthetic-blend or treated natural fibers. Drapery from our St. Pete workroom in Florida-appropriate fabric typically lasts 10 to 15 years.',
+    a: 'Yes, when the right fabric is specified. UV-rated linings, performance fabrics rated for UV (Crypton, Sunbrella indoor-outdoor lines), and proper lining/interlining all extend the life of drapery in Florida. For salt-air zones — Snell Isle, Tierra Verde, Sand Key, the barrier islands — we recommend moisture-resistant interlining and synthetic-blend or treated natural fibers appropriate for coastal conditions.',
   },
   {
     q: 'Do you offer financing for custom drapery projects?',
-    a: 'Yes. We offer 0% financing for 12 or 18 months on qualifying projects through Synchrony Home Design. Most whole-house drapery projects ($8,000-$30,000) qualify. Ask at the consultation; the application takes about five minutes.',
+    a: 'Financing options may be available depending on the project — ask at your consultation and we will walk you through current options.',
   },
   {
     q: 'Can you match existing drapery, or recreate panels from a fabric I already own?',
@@ -66,7 +66,7 @@ const FAQS = [
   },
   {
     q: 'Where is Custom Fabric Creations based, and which neighborhoods do you serve?',
-    a: 'Our workroom is at 3026 Central Ave Suite 551, St. Petersburg, FL 33712, in West St. Pete. We design, fabricate, and install across all 14 Pinellas County neighborhoods — Downtown St. Pete, Historic Old Northeast, Snell Isle, Shore Acres, Tierra Verde, St. Pete Beach, Treasure Island, Clearwater, Sand Key, Belleair Shore, Seminole, Largo, and West St. Pete — plus the broader Tampa Bay area including Tampa, Brandon, Riverview, Apollo Beach, Tarpon Springs, and Palm Harbor.',
+    a: 'Custom Fabric Creations is locally based in St. Petersburg, FL. We design, fabricate, and install across all 14 Pinellas County neighborhoods — Downtown St. Pete, Historic Old Northeast, Snell Isle, Shore Acres, Tierra Verde, St. Pete Beach, Treasure Island, Clearwater, Sand Key, Belleair Shore, Seminole, Largo, and West St. Pete — plus the broader Tampa Bay area including Tampa, Brandon, Riverview, Apollo Beach, Tarpon Springs, and Palm Harbor.',
   },
   {
     q: 'Why is a local workroom better than ordering custom drapery online?',
@@ -96,9 +96,9 @@ const PROJECTS = [
   {
     neighborhood: 'Downtown St. Pete',
     style: 'High-rise condo, floor-to-ceiling glass',
-    treatment: 'Motorized ripplefold track in linen-blend Kravet sheers, integrated with the unit\'s Lutron system.',
+    treatment: 'Motorized ripplefold track in linen-blend Kravet sheers, integrated with the unit\'s smart-home system.',
     image: '/images/gallery/panel-tracks-gallery.webp',
-    alt: 'Motorized ripplefold drapery in a Downtown St. Petersburg high-rise condo — Kravet linen-blend sheers on a Lutron-integrated track, by Custom Fabric Creations',
+    alt: 'Motorized ripplefold drapery in a Downtown St. Petersburg high-rise condo — Kravet linen-blend sheers on a smart-home-integrated track, by Custom Fabric Creations',
   },
   {
     neighborhood: 'Tierra Verde',
@@ -127,7 +127,7 @@ const PRICING = [
   { kind: 'Sheer panels (linen / cotton blend)',           range: '$400 – $700',   fabric: 'mid-range Kravet, lined' },
   { kind: 'Blackout drapery panels (cotton / poly blend)', range: '$550 – $900',   fabric: 'Stout or Kravet, blackout lined' },
   { kind: 'Designer drapery (silk / embroidered)',         range: '$900 – $1,500+', fabric: 'Brunschwig & Fils, Lee Jofa, GP & J Baker' },
-  { kind: 'Motorized drapery (per opening)',               range: '+$300 – $800',  fabric: 'add to any panel — Lutron, Hunter Douglas, Somfy' },
+  { kind: 'Motorized drapery (per opening)',               range: '+$300 – $800',  fabric: 'add to any panel — Hunter Douglas PowerView + other systems' },
   { kind: 'Custom valance or cornice',                     range: '$350 – $850',   fabric: 'paired with drapery, same fabric or contrast' },
   { kind: 'Ripplefold track system (per opening)',         range: '$450 – $1,200', fabric: 'concealed track, modern minimalist style' },
 ];
@@ -147,7 +147,7 @@ const howToSchema = {
   supply: ['Designer fabric memos', 'Drapery hardware samples', 'Lining and interlining swatches'],
   tool:   ['Laser measure', 'Industrial workroom sewing machines', 'Steam press'],
   step: [
-    { '@type': 'HowToStep', position: 1, name: 'Free in-home consultation', text: 'Our designer brings 60-100 fabric memos and the full hardware library to your home. We walk every window, mark sizes, identify constraints, and recommend treatments and fabrics against your actual walls and light. Typically 90 minutes. No deposit required.' },
+    { '@type': 'HowToStep', position: 1, name: 'Free in-home consultation', text: 'Our designer brings a curated fabric library and hardware samples to your home. We walk every window, mark sizes, identify constraints, and recommend treatments and fabrics against your actual walls and light. Typically 90 minutes. No deposit required.' },
     { '@type': 'HowToStep', position: 2, name: 'Fabric selection and approval', text: 'We drop fabric memos for final review against your existing furniture and walls. You confirm fabric, lining, header style, hardware, and hem details. We finalize the written quote.' },
     { '@type': 'HowToStep', position: 3, name: 'Final measurement', text: 'Once hardware is approved and fabric is ordered, we return for a precise final measure to 1/16 inch. Stack-back, return depth, mounting height, and floor break are all captured.' },
     { '@type': 'HowToStep', position: 4, name: 'Workroom fabrication', text: 'Your panels are cut, sewn, and finished in our St. Petersburg workroom. Headers, linings, and hems are hand-finished by drapery specialists. Two to three weeks once fabric arrives.' },
@@ -209,7 +209,7 @@ const serviceSchema = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sheer drapery panels' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Blackout drapery panels' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Designer drapery in silk and embroidered fabric' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Motorized drapery (Lutron, Hunter Douglas PowerView, Somfy)' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Motorized drapery (Hunter Douglas PowerView and other systems)' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ripplefold track drapery' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cornices, valances, and top treatments' } },
     ],
@@ -434,8 +434,8 @@ const serviceSchema = {
             <div class="flex-1">
               <p class="text-[0.65rem] tracking-[0.25em] uppercase text-brand-700 font-bold mb-1">Factor 1</p>
               <h3 class="font-display text-xl md:text-2xl text-ink-800 mb-3 leading-tight">The Florida sun degrades cheap fabric</h3>
-              <p class="text-ink-600 leading-relaxed text-[0.95rem] mb-4">St. Petersburg averages <strong>361 sunny days/year</strong> — among the highest UV indices in the continental US. Ready-made drapery uses unrated linings that fade and crack along the leading edge within 18-36 months.</p>
-              <p class="text-ink-500 text-sm leading-relaxed">Our coastal projects use UV-rated linings (Hanes Pearl, Roc-Lon Sundown) and treated fabrics built for sustained sun exposure. Lifespan in Florida: <strong>10-15 years</strong>.</p>
+              <p class="text-ink-600 leading-relaxed text-[0.95rem] mb-4">St. Petersburg sits in the "Sunshine City" — among the highest UV indices in the continental US. Ready-made drapery typically uses unrated linings that fade and crack along the leading edge over time.</p>
+              <p class="text-ink-500 text-sm leading-relaxed">Our coastal projects specify UV-rated linings and fabrics appropriate for sustained Florida sun exposure. Ask at the consultation for product specifics on your room.</p>
             </div>
           </div>
         </article>
@@ -546,13 +546,13 @@ const serviceSchema = {
         <!-- 4 — Motorized -->
         <article class="group bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition flex flex-col">
           <div class="aspect-[4/3] overflow-hidden bg-ink-50">
-            <img src="/images/gallery/panel-tracks-gallery.webp" alt="Motorized drapery on a concealed track in a Downtown St. Pete high-rise condo — integrated with Lutron smart-home system" title="Motorized drapery — Custom Fabric Creations, St. Petersburg, FL" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
+            <img src="/images/gallery/panel-tracks-gallery.webp" alt="Motorized drapery on a concealed track in a Downtown St. Pete high-rise condo — smart-home-integrated" title="Motorized drapery — Custom Fabric Creations, St. Petersburg, FL" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
           </div>
           <div class="p-6 flex-1 flex flex-col">
             <p class="text-[0.65rem] tracking-[0.22em] uppercase text-brand-700 font-bold mb-1">04 — Smart home</p>
             <h3 class="font-display text-xl text-ink-800 mb-2">Motorized drapery</h3>
             <p class="text-ink-600 text-sm leading-relaxed flex-1">Wall switch, remote, app, or voice control. Best for tall windows, sliders, aging-in-place clients, and smart-home integrations. We install + program on-site.</p>
-            <p class="text-xs text-ink-500 mt-4 pt-3 border-t border-line italic">Lutron · Hunter Douglas PowerView · Somfy</p>
+            <p class="text-xs text-ink-500 mt-4 pt-3 border-t border-line italic">Hunter Douglas PowerView + other systems by request</p>
           </div>
         </article>
 
@@ -606,9 +606,9 @@ const serviceSchema = {
   <!-- FABRIC LIBRARY — Authority signal -->
   <section class="bg-cream-50 py-16 md:py-20 border-y border-line">
     <div class="container-narrow">
-      <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Authorized Workroom</p>
+      <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Authorized Dealer</p>
       <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-5 leading-tight">The fabric library, in your living room</h2>
-      <p class="text-ink-600 text-lg leading-relaxed mb-8">We are an authorized workroom for the major designer-fabric houses. That status matters two ways: trade pricing passes through to you (no designer markup), and we have access to the full pattern libraries — not the limited "available at retail" subset. We bring 60-100 fabric memos to every in-home consultation so you compare fabrics in your actual lighting before you commit.</p>
+      <p class="text-ink-600 text-lg leading-relaxed mb-8">We are an authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout. Through our Kravet relationship we also access Lee Jofa, Brunschwig &amp; Fils, GP &amp; J Baker, and Crypton performance fabrics. We bring a curated fabric library to your in-home consultation so you can compare fabrics in your actual lighting before committing.</p>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
         <div class="bg-white border border-line p-6 rounded-sm">
           <h3 class="font-display text-xl text-ink-800 mb-2">Kravet</h3>
@@ -666,55 +666,37 @@ const serviceSchema = {
         </table>
       </div>
 
-      <p class="text-ink-500 text-sm mt-6 italic">Whole-house drapery projects in Pinellas typically land between $8,000 and $30,000, depending on number of windows, fabric tier, motorization, and specialty hardware. We offer 0% financing for 12 or 18 months through Synchrony Home Design on qualifying projects.</p>
+      <p class="text-ink-500 text-sm mt-6 italic">Whole-house drapery projects typically scale with number of windows, fabric tier, motorization, and specialty hardware. Financing options may be available — ask at consultation.</p>
     </div>
   </section>
 
-  <!-- WARRANTY & GUARANTEE — Trust signal -->
+  <!-- WARRANTY & GUARANTEE — Honest, contact-for-details language -->
   <section class="bg-white py-16 md:py-20">
     <div class="container-narrow">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Backed In Writing</p>
-        <h2 class="font-display text-3xl md:text-5xl text-ink-800 mb-5 leading-tight">Our warranty &amp; workmanship guarantee</h2>
-        <p class="text-ink-600 text-lg leading-relaxed">Two warranties cover every custom drapery project from our St. Pete workroom — the manufacturer's fabric and hardware warranty, plus our own lifetime workmanship guarantee on every panel we sew.</p>
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Warranties &amp; Guarantees</p>
+        <h2 class="font-display text-3xl md:text-5xl text-ink-800 mb-5 leading-tight">Backed by the brands &mdash; and by us</h2>
+        <p class="text-ink-600 text-lg leading-relaxed">Every project we deliver comes with the manufacturer's own product warranty plus our installation backing. Specific terms vary by manufacturer, product, and project &mdash; we walk you through the exact applicable warranties on your written quote.</p>
       </div>
 
-      <div class="grid gap-5 md:grid-cols-3 max-w-5xl mx-auto">
-        <div class="bg-cream-50 border border-line rounded-sm p-7 text-center">
-          <div class="w-14 h-14 mx-auto rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center mb-4">
-            <svg class="w-7 h-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <div class="bg-cream-50 border border-line rounded-sm p-8 md:p-10 max-w-3xl mx-auto">
+        <div class="flex items-start gap-5">
+          <div class="shrink-0 w-12 h-12 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center">
+            <svg class="w-6 h-6 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
               <path d="M12 2L4 6v6c0 5.5 3.5 10 8 11 4.5-1 8-5.5 8-11V6l-8-4z"/>
             </svg>
           </div>
-          <p class="text-[0.65rem] tracking-[0.25em] uppercase text-brand-700 font-bold mb-2">Manufacturer</p>
-          <h3 class="font-display text-lg text-ink-800 mb-2 leading-tight">Fabric &amp; hardware warranty</h3>
-          <p class="text-ink-600 text-sm leading-relaxed">Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils, and our motorization partners (Lutron, Hunter Douglas, Somfy) each back their fabric and hardware with manufacturer warranties — typically <strong>1-5 years on fabric defects</strong> and <strong>5-10 years on motorization hardware</strong>. We register every project so you don't have to.</p>
-        </div>
-
-        <div class="bg-cream-50 border border-line rounded-sm p-7 text-center">
-          <div class="w-14 h-14 mx-auto rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center mb-4">
-            <svg class="w-7 h-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M9 12l2 2 4-4M21 12c0 5-3 8-9 8s-9-3-9-8 3-8 9-8 9 3 9 8z"/>
-            </svg>
+          <div>
+            <h3 class="font-display text-xl text-ink-800 mb-3 leading-tight">For warranty &amp; workmanship details, please contact us</h3>
+            <p class="text-ink-600 leading-relaxed mb-4">Manufacturer warranties for fabric, hardware, and motorization vary by product line. Workmanship and installation terms vary by project type. We don't post one-size-fits-all warranty language because the right answer depends on what we're making for you.</p>
+            <p class="text-ink-600 leading-relaxed mb-5">Reach out and we'll walk you through what applies to your specific drapery, fabric, and hardware selection &mdash; before you sign anything.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href={SITE.phoneHref} class="btn-primary">Call {SITE.phone}</a>
+              <a href="/contact/" class="btn-ghost">Request a Quote</a>
+            </div>
           </div>
-          <p class="text-[0.65rem] tracking-[0.25em] uppercase text-brand-700 font-bold mb-2">CFC Workroom</p>
-          <h3 class="font-display text-lg text-ink-800 mb-2 leading-tight">Lifetime workmanship guarantee</h3>
-          <p class="text-ink-600 text-sm leading-relaxed">Every panel we sew is guaranteed for its lifetime against workroom defects — failed seams, slipped headers, sagging linings. If our workmanship fails, we fix it free. <strong>No expiration, no fine print.</strong> The promise applies to every panel that left our St. Petersburg workroom since 2000.</p>
-        </div>
-
-        <div class="bg-cream-50 border border-line rounded-sm p-7 text-center">
-          <div class="w-14 h-14 mx-auto rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center mb-4">
-            <svg class="w-7 h-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <path d="M3 12h18M3 6h18M3 18h18"/>
-            </svg>
-          </div>
-          <p class="text-[0.65rem] tracking-[0.25em] uppercase text-brand-700 font-bold mb-2">Installation</p>
-          <h3 class="font-display text-lg text-ink-800 mb-2 leading-tight">One-year install warranty</h3>
-          <p class="text-ink-600 text-sm leading-relaxed">Anything related to the installation — bracket loosening, hardware alignment, panel break-in adjustments, motor pairing — we come back and fix it within the first year at no charge. Fully insured, fully licensed.</p>
         </div>
       </div>
-
-      <p class="text-center text-ink-500 text-sm mt-10 italic max-w-2xl mx-auto">All three warranties are documented on your written quote before the project starts. No surprises after install day.</p>
     </div>
   </section>
 
@@ -805,7 +787,7 @@ const serviceSchema = {
     <div class="container-narrow">
       <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">14 Neighborhoods</p>
       <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-5 leading-tight">Custom drapery across Pinellas County and Tampa Bay</h2>
-      <p class="text-ink-600 text-lg leading-relaxed mb-8">Our workroom is at <strong>3026 Central Ave Suite 551, St. Petersburg, FL 33712</strong>, in West St. Pete. From the workroom we measure, fabricate, and install across the whole bay. Drive time inside Pinellas is rarely more than 30 minutes; we cover Tampa proper inside 45.</p>
+      <p class="text-ink-600 text-lg leading-relaxed mb-8">Custom Fabric Creations is locally based in <strong>St. Petersburg, FL</strong>. We measure, fabricate, and install across the whole bay. Drive time inside Pinellas is rarely more than 30 minutes; we cover Tampa proper inside 45.</p>
 
       <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
         {AREAS.map((a) => (
@@ -891,7 +873,7 @@ const serviceSchema = {
             I opened Custom Fabric Creations in 2000 because the drapery you could get in St. Petersburg in the late '90s came in two flavors: cheap and disposable, or designer-only and impossible to access without going through an interior designer. I wanted to give homeowners direct access to designer fabrics, sewn by people who care, installed by the same crew that made them.
           </p>
           <p class="text-ink-600 leading-relaxed text-[1.05rem] mb-4">
-            25 years later, we are an authorized workroom for Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils, and GP &amp; J Baker. Our studio is at 3026 Central Ave Suite 551 in West St. Pete. Every project that leaves our workroom is measured, sewn, and installed by people whose names I know.
+            25 years later, we are an authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout &mdash; with access to the broader Kravet-distributed designer fabric library (Lee Jofa, Brunschwig &amp; Fils, GP &amp; J Baker). Every project we deliver is measured, sewn, and installed by people whose names I know.
           </p>
           <p class="text-ink-600 leading-relaxed text-[1.05rem]">
             If you are thinking about custom drapery for your home, call me at <a href={SITE.phoneHref} class="font-semibold text-brand-700 hover:text-brand-600">{SITE.phone}</a> or <a href="/contact/" class="font-semibold text-brand-700 hover:text-brand-600">request an in-home consultation</a>. The first visit is on us — fabric library, hardware samples, design ideas, all in your living room.
