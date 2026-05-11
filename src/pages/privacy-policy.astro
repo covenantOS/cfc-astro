@@ -1,0 +1,102 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import { SITE } from '~/lib/site';
+
+const lastUpdated = 'May 11, 2026';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description={`Privacy Policy for ${SITE.name}. Learn how we collect, use, and protect your personal information.`}
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Privacy Policy', url: '/privacy-policy/' }]}
+>
+  <Hero
+    eyebrow="Legal"
+    title="Privacy Policy"
+    subtitle={`How ${SITE.name} collects, uses, and protects your information.`}
+    image="/images/hero/homepage.webp"
+    breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Privacy Policy', url: '/privacy-policy/' }]}
+    goldLine
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-site max-w-3xl mx-auto">
+      <p class="text-sm text-ink-500 mb-10">Last updated: {lastUpdated}</p>
+
+      <div class="prose-legal space-y-8 text-ink-700 leading-relaxed">
+        <p>
+          {SITE.name} LLC (“{SITE.shortName}”, “we”, “us”, or “our”) respects your privacy.
+          This Privacy Policy explains what information we collect when you visit
+          <a href={SITE.url} class="text-brand-600 hover:text-brand-500"> {SITE.url}</a>,
+          request a consultation, or otherwise interact with our business, and how we use and protect that information.
+        </p>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Information We Collect</h2>
+          <p>We collect information you provide directly to us, such as your name, phone number, email address, project address, and any details you share about your home or project when you:</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1">
+            <li>Submit a contact or consultation request form</li>
+            <li>Call, text, or email our studio</li>
+            <li>Schedule an in-home consultation</li>
+            <li>Sign up to receive updates from us</li>
+          </ul>
+          <p class="mt-3">We may also automatically collect limited technical information when you visit our website, including your IP address, browser type, device type, pages viewed, and referring URL. This information is collected through cookies and similar technologies, including Google Analytics and Google Tag Manager.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">How We Use Your Information</h2>
+          <p>We use the information we collect to:</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1">
+            <li>Respond to your inquiries and schedule consultations</li>
+            <li>Provide quotes, design recommendations, and project updates</li>
+            <li>Fulfill orders for window treatments, drapery, and upholstery</li>
+            <li>Improve our website, services, and customer experience</li>
+            <li>Comply with legal obligations</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">How We Share Your Information</h2>
+          <p>We do not sell your personal information. We share information only as needed to operate our business — for example, with our authorized brand partners, installers, payment processors, and technology providers (such as our website host and analytics provider), or when required by law.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Cookies & Tracking</h2>
+          <p>Our site uses cookies and similar technologies to remember your preferences, understand site usage, and measure the performance of our marketing. You can disable cookies in your browser settings, though some parts of the site may not function as intended.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Data Security</h2>
+          <p>We use reasonable administrative, technical, and physical safeguards to protect the information you share with us. No method of transmission over the internet is fully secure, so we cannot guarantee absolute security.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Your Choices</h2>
+          <p>You may request that we update, correct, or delete the personal information we hold about you by contacting us at the details below. You can also opt out of marketing communications at any time.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Children's Privacy</h2>
+          <p>Our website and services are intended for adults. We do not knowingly collect personal information from children under 13.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. The “Last updated” date at the top of this page reflects the most recent revision.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Contact Us</h2>
+          <p>If you have questions about this Privacy Policy or how we handle your information, please contact us:</p>
+          <ul class="mt-3 space-y-1">
+            <li><strong>{SITE.name} LLC</strong></li>
+            <li>{SITE.address.locality}, {SITE.address.region}</li>
+            <li>Phone: <a href={SITE.phoneHref} class="text-brand-600 hover:text-brand-500">{SITE.phone}</a></li>
+            <li>Email: <a href={`mailto:${SITE.email}`} class="text-brand-600 hover:text-brand-500">{SITE.email}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
