@@ -29,3 +29,19 @@
 /comments/feed/  /      301
 /wp-admin/*  /contact/  301
 /wp-login.php /contact/ 301
+
+# Legacy WP page slugs → current service/page URLs (GSC unindexed-pages cleanup, 2026-05)
+/home                       /                                              301
+/appointments               /contact/                                      301
+/custom-products            /services/                                     301
+/custom-window-treatments   /services/commercial-window-treatments/        301
+/commercial                 /services/commercial-window-treatments/        301
+/shutters                   /services/plantation-shutters/                 301
+/blinds                     /services/custom-blinds/                       301
+/shades                     /services/window-shades/                       301
+/blinds-shades              /services/window-shades/                       301
+/blackout-shades            /services/window-shades/                       301
+/exterior-options           /services/outdoor-window-shades/               301
+/drapery-hardware           /services/drapery-hardware/                    301
+/bedding                    /services/custom-bedding-pillows/              301
+/re-upholstery              /services/furniture-reupholstery/              301
