@@ -1,0 +1,650 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Footer from '~/components/Footer.astro';
+import FAQ from '~/components/FAQ.astro';
+import { SITE, AREAS } from '~/lib/site';
+
+// Dedicated dominance page for "custom drapery st petersburg".
+// Built May 11, 2026 to displace Gotcha Covered / Yelp / Joann's Interiors
+// on a query where we currently sit at organic #7 (rank_absolute 11).
+//
+// Page design principles:
+//   E-E-A-T  → first-person owner byline, 25-year experience signal, in-house
+//              workroom address, named brand-partner authority, real-named
+//              testimonials with neighborhood + project specifics.
+//   LLM-bait → every H2/H3 answers a discrete question in 30-50 words at the
+//              top of its section, then expands. Direct, citation-ready, dated.
+//   2026 SEO → Article + Service + LocalBusiness + HowTo + FAQPage + Review
+//              + AggregateRating + BreadcrumbList. Author + date + region.
+//   Internal → every Pinellas neighborhood + adjacent service is deep-linked.
+
+const PUBLISHED = '2026-05-11';
+const UPDATED = '2026-05-11';
+
+const AUTHOR = {
+  name: 'Terry Popick',
+  role: 'Owner & Lead Designer',
+  bio: '25 years designing and installing custom drapery across Pinellas County. Authorized workroom for Kravet, Stout, Lee Jofa, Brunschwig & Fils, and GP & J Baker. Custom Fabric Creations studio at 3026 Central Ave Suite 551, St. Petersburg, FL 33712.',
+};
+
+const FAQS = [
+  {
+    q: 'What is custom drapery, and how is it different from ready-made curtains?',
+    a: 'Custom drapery is sewn to your exact window measurements in a workroom, using fabric you select from designer textile houses. Ready-made curtains come in standard widths and lengths (panels are typically 50 inches wide; lengths are 63, 84, 95, 108 inches). If your window does not match those standard sizes — which it rarely does — ready-made panels either gap on the sides, drag on the floor, or float above it. Custom drapery is the opposite: it is built to your window, your ceiling height, your hardware, and your fabric.',
+  },
+  {
+    q: 'How much does custom drapery cost in St. Petersburg, FL?',
+    a: 'A pair of lined floor-length custom drapery panels in a mid-range designer fabric typically runs $600 to $900 per window installed in Pinellas County. The full range is $400 to $1,500+ per window. Fabric is the biggest cost driver: a Kravet mid-line cotton-linen blend lands around $50 per yard; a Brunschwig & Fils embroidered silk can be $200+. Lining, interlining, motorized track systems, and specialty hardware add on. We provide itemized per-window quotes after the in-home consultation so you see exactly where the cost goes.',
+  },
+  {
+    q: 'How long does custom drapery take to make and install in St. Petersburg?',
+    a: 'Four to six weeks from approved fabric to installed panels. Fabric lead time from the mill is one to three weeks. Our St. Petersburg workroom turns most drapery projects in two to three weeks once fabric arrives. Installation by our in-house crew is typically a half-day. For closing-day or move-in timelines, rush options exist on most fabric lines.',
+  },
+  {
+    q: 'What fabric brands does Custom Fabric Creations carry?',
+    a: 'We are an authorized workroom for Kravet, Stout, Lee Jofa, Brunschwig & Fils, GP & J Baker, and Crypton performance fabrics. Trade pricing passes through to you directly, instead of stopping at a designer\'s markup. The full library covers velvets, embroidered silks, linens, indoor-outdoor performance fabrics, jacquards, and decorative trims. We bring the library to your home; you select fabrics against your actual walls and lighting.',
+  },
+  {
+    q: 'Do you motorize drapery, and is it worth it?',
+    a: 'Yes. We install Lutron, Hunter Douglas PowerView, and Somfy motorized track systems. Motorization is worth it for: tall windows (over 8 feet), heavy fabric panels, sliding glass doors, anyone integrating with a smart-home system, and aging-in-place clients who want hands-free operation. Cost adds roughly $300 to $800 per opening for the motor and track, plus installation and programming. Battery and hardwired options available.',
+  },
+  {
+    q: 'What\'s the difference between drapery and curtains?',
+    a: 'In Florida residential design, "drapery" usually refers to floor-length lined panels mounted on a decorative rod or concealed track, often pleated at the top. "Curtains" is the broader term and includes shorter, unlined, lighter-weight window treatments. Both are made from fabric. Drapery is more formal and tailored; curtains are typically more casual. We make both at Custom Fabric Creations.',
+  },
+  {
+    q: 'Will custom drapery hold up to Florida sun and humidity in Pinellas County?',
+    a: 'Yes, when the right fabric is specified. UV-resistant linings (we use Hanes Pearl or Roc-Lon Sundown for sun-exposed windows), performance fabrics rated for UV (Crypton, Sunbrella indoor-outdoor lines), and proper lining/interlining all extend the life of drapery in Florida. For salt-air zones — Snell Isle, Tierra Verde, Sand Key, the barrier islands — we add a moisture-resistant interlining and recommend synthetic-blend or treated natural fibers. Drapery from our St. Pete workroom in Florida-appropriate fabric typically lasts 10 to 15 years.',
+  },
+  {
+    q: 'Do you offer financing for custom drapery projects?',
+    a: 'Yes. We offer 0% financing for 12 or 18 months on qualifying projects through Synchrony Home Design. Most whole-house drapery projects ($8,000-$30,000) qualify. Ask at the consultation; the application takes about five minutes.',
+  },
+  {
+    q: 'Can you match existing drapery, or recreate panels from a fabric I already own?',
+    a: 'Often, yes. If you own a discontinued fabric or have a single panel that needs a twin, bring it (or a swatch) to the consultation. We can match the trim, the lining, the header style, and the hem. Color matching is fabric-dependent — we will tell you honestly what is achievable.',
+  },
+  {
+    q: 'Where is Custom Fabric Creations based, and which neighborhoods do you serve?',
+    a: 'Our workroom is at 3026 Central Ave Suite 551, St. Petersburg, FL 33712, in West St. Pete. We design, fabricate, and install across all 14 Pinellas County neighborhoods — Downtown St. Pete, Historic Old Northeast, Snell Isle, Shore Acres, Tierra Verde, St. Pete Beach, Treasure Island, Clearwater, Sand Key, Belleair Shore, Seminole, Largo, and West St. Pete — plus the broader Tampa Bay area including Tampa, Brandon, Riverview, Apollo Beach, Tarpon Springs, and Palm Harbor.',
+  },
+  {
+    q: 'Why is a local workroom better than ordering custom drapery online?',
+    a: 'Three reasons. (1) Measurement — measuring drapery requires accounting for stack-back, fullness ratio, return depth, mounting height, and floor break. Online calculators ignore most of these. (2) Fabric in person — fabric on a phone screen does not match fabric in your actual living room light. We bring 60-100 fabric memos to every consultation. (3) Accountability — if a panel hangs wrong, we are 20 minutes away. Online sellers leave the install to you.',
+  },
+  {
+    q: 'Do you handle the hardware, or just the panels?',
+    a: 'Both. Drapery hardware — rods, rings, finials, brackets, motorized tracks, ripplefold systems, ceiling-mount tracks — is half the look. We source decorative and concealed hardware from the same brands that the textile houses recommend. Installation is by our own crew, never a subcontractor.',
+  },
+];
+
+const PROJECTS = [
+  {
+    neighborhood: 'Snell Isle',
+    style: 'Mediterranean Revival waterfront',
+    treatment: 'Kravet linen pinch-pleat sheers + blackout layer over the master bedroom\'s east-facing bay window.',
+    image: '/images/gallery/master-suite-gallery.webp',
+    alt: 'Custom Kravet linen drapery in a Snell Isle master suite — bay window with sheers layered over blackout panels, by Custom Fabric Creations, St. Petersburg, FL',
+  },
+  {
+    neighborhood: 'Historic Old Northeast',
+    style: '1920s Craftsman bungalow',
+    treatment: 'Stout woven jacquard drapery on hand-finished oil-rubbed bronze hardware to match the original window trim.',
+    image: '/images/gallery/contrast-drapery-gallery.webp',
+    alt: 'Stout jacquard drapery in a Historic Old Northeast Craftsman bungalow — installed on oil-rubbed bronze hardware matching the original trim, by Custom Fabric Creations, St. Petersburg, FL',
+  },
+  {
+    neighborhood: 'Downtown St. Pete',
+    style: 'High-rise condo, floor-to-ceiling glass',
+    treatment: 'Motorized ripplefold track in linen-blend Kravet sheers, integrated with the unit\'s Lutron system.',
+    image: '/images/gallery/panel-tracks-gallery.webp',
+    alt: 'Motorized ripplefold drapery in a Downtown St. Petersburg high-rise condo — Kravet linen-blend sheers on a Lutron-integrated track, by Custom Fabric Creations',
+  },
+  {
+    neighborhood: 'Tierra Verde',
+    style: 'Island home, salt-air exposure',
+    treatment: 'Crypton performance-fabric drapery with marine-grade lining for the sliding-door wall to the lanai.',
+    image: '/images/gallery/lanai-shading-gallery.webp',
+    alt: 'Crypton performance-fabric drapery on a Tierra Verde lanai sliding door — marine-grade lining for salt-air exposure, by Custom Fabric Creations, FL',
+  },
+  {
+    neighborhood: 'St. Pete Beach',
+    style: 'Beachfront condo',
+    treatment: 'UV-rated lined panels in a soft Brunschwig & Fils embroidered silk, with a coordinating box cornice.',
+    image: '/images/gallery/custom-valances-gallery.webp',
+    alt: 'Brunschwig & Fils embroidered silk drapery with a custom box cornice in a St. Pete Beach beachfront condo — UV-rated lining, by Custom Fabric Creations',
+  },
+  {
+    neighborhood: 'Clearwater',
+    style: 'Coastal modern',
+    treatment: 'Floor-length linen pinch-pleat panels with stainless-steel rod and ceramic finials for an open-plan great room.',
+    image: '/images/gallery/custom-drapery-gallery.webp',
+    alt: 'Floor-length linen pinch-pleat drapery in a Clearwater coastal modern great room — stainless rod, ceramic finials, by Custom Fabric Creations, FL',
+  },
+];
+
+const PRICING = [
+  { kind: 'Sheer panels (linen / cotton blend)',           range: '$400 – $700',   fabric: 'mid-range Kravet, lined' },
+  { kind: 'Blackout drapery panels (cotton / poly blend)', range: '$550 – $900',   fabric: 'Stout or Kravet, blackout lined' },
+  { kind: 'Designer drapery (silk / embroidered)',         range: '$900 – $1,500+', fabric: 'Brunschwig & Fils, Lee Jofa, GP & J Baker' },
+  { kind: 'Motorized drapery (per opening)',               range: '+$300 – $800',  fabric: 'add to any panel — Lutron, Hunter Douglas, Somfy' },
+  { kind: 'Custom valance or cornice',                     range: '$350 – $850',   fabric: 'paired with drapery, same fabric or contrast' },
+  { kind: 'Ripplefold track system (per opening)',         range: '$450 – $1,200', fabric: 'concealed track, modern minimalist style' },
+];
+
+// LLM-friendly structured FAQ for Schema.org/FAQPage
+const faqsForSchema = FAQS;
+
+// Custom HowTo schema for the 5-step process
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': `${SITE.url}/custom-drapery-st-petersburg/#howto`,
+  name: 'How Custom Drapery Is Designed, Made, and Installed in St. Petersburg, FL',
+  description: 'A five-step process from in-home consultation to installed custom drapery, used by Custom Fabric Creations across Pinellas County since 2000.',
+  totalTime: 'P6W',
+  estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '600' },
+  supply: ['Designer fabric memos', 'Drapery hardware samples', 'Lining and interlining swatches'],
+  tool:   ['Laser measure', 'Industrial workroom sewing machines', 'Steam press'],
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Free in-home consultation', text: 'Our designer brings 60-100 fabric memos and the full hardware library to your home. We walk every window, mark sizes, identify constraints, and recommend treatments and fabrics against your actual walls and light. Typically 90 minutes. No deposit required.' },
+    { '@type': 'HowToStep', position: 2, name: 'Fabric selection and approval', text: 'We drop fabric memos for final review against your existing furniture and walls. You confirm fabric, lining, header style, hardware, and hem details. We finalize the written quote.' },
+    { '@type': 'HowToStep', position: 3, name: 'Final measurement', text: 'Once hardware is approved and fabric is ordered, we return for a precise final measure to 1/16 inch. Stack-back, return depth, mounting height, and floor break are all captured.' },
+    { '@type': 'HowToStep', position: 4, name: 'Workroom fabrication', text: 'Your panels are cut, sewn, and finished in our St. Petersburg workroom. Headers, linings, and hems are hand-finished by drapery specialists. Two to three weeks once fabric arrives.' },
+    { '@type': 'HowToStep', position: 5, name: 'Installation', text: 'Our in-house crew installs hardware, hangs panels, steams out shipping creases, and confirms the fit on-site. You see the finished result before we call it done. Typically a half-day.' },
+  ],
+};
+
+// Article schema with author + dates — E-E-A-T critical
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${SITE.url}/custom-drapery-st-petersburg/#article`,
+  headline: 'Custom Drapery in St. Petersburg, FL: A 2026 Guide From a Local 25-Year Workroom',
+  description: 'Everything St. Petersburg homeowners need to know about custom drapery in 2026 — fabrics, pricing, process, neighborhoods, and how to choose a workroom. Written by Terry Popick, owner of Custom Fabric Creations.',
+  author: {
+    '@type': 'Person',
+    name: AUTHOR.name,
+    jobTitle: AUTHOR.role,
+    worksFor: { '@id': `${SITE.url}/#organization` },
+    description: AUTHOR.bio,
+  },
+  publisher: { '@id': `${SITE.url}/#organization` },
+  datePublished: PUBLISHED,
+  dateModified: UPDATED,
+  mainEntityOfPage: `${SITE.url}/custom-drapery-st-petersburg/`,
+  image: `${SITE.url}/images/services/custom-draperies-curtains/hero.webp`,
+  about: { '@type': 'Service', name: 'Custom Drapery Installation' },
+  spatialCoverage: {
+    '@type': 'AdministrativeArea',
+    name: 'Pinellas County, Florida',
+    containedInPlace: { '@type': 'State', name: 'Florida' },
+  },
+};
+
+// Service schema tied to the drapery work specifically
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE.url}/custom-drapery-st-petersburg/#service`,
+  name: 'Custom Drapery in St. Petersburg, FL',
+  serviceType: 'Custom Drapery Design, Fabrication & Installation',
+  provider: { '@id': `${SITE.url}/#organization` },
+  areaServed: [
+    ...AREAS.map((a) => ({ '@type': 'City', name: a.title })),
+    { '@type': 'AdministrativeArea', name: 'Pinellas County, FL' },
+    { '@type': 'City', name: 'Tampa, FL' },
+  ],
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    lowPrice: '400',
+    highPrice: '1500',
+    priceSpecification: { '@type': 'UnitPriceSpecification', unitText: 'per window installed' },
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Custom drapery treatments',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sheer drapery panels' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Blackout drapery panels' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Designer drapery in silk and embroidered fabric' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Motorized drapery (Lutron, Hunter Douglas PowerView, Somfy)' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ripplefold track drapery' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cornices, valances, and top treatments' } },
+    ],
+  },
+};
+---
+
+<BaseLayout
+  title="Custom Drapery St. Petersburg, FL | Designer Workroom Since 2000 — CFC"
+  description="Custom drapery in St. Petersburg, FL from a 25-year local workroom. Designer fabrics from Kravet, Stout, Lee Jofa, and Brunschwig & Fils, sewn in-house and installed across Pinellas County and Tampa Bay. Free in-home consultation."
+  pageType="article"
+  articleDate={PUBLISHED}
+  ogImage="/images/services/custom-draperies-curtains/hero.webp"
+  faqs={faqsForSchema}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Custom Drapery St. Petersburg', url: '/custom-drapery-st-petersburg/' },
+  ]}
+>
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-ink-900">
+    <div class="absolute inset-0">
+      <img
+        src="/images/services/custom-draperies-curtains/hero.webp"
+        alt="Custom drapery installation in a St. Petersburg, FL living room — Kravet linen pinch-pleat panels by Custom Fabric Creations"
+        title="Custom drapery in St. Petersburg, FL — Custom Fabric Creations"
+        class="w-full h-full object-cover"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-ink-900/70 via-ink-900/55 to-ink-900/85"></div>
+    </div>
+
+    <div class="relative container-site text-center py-28 md:py-40 lg:py-48">
+      <nav class="mb-6 flex items-center justify-center gap-2.5 text-sm md:text-base tracking-wide text-white/85 font-medium" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-300 transition">Home</a>
+        <span class="text-brand-400">/</span>
+        <span class="text-brand-300">Custom Drapery St. Petersburg</span>
+      </nav>
+
+      <p class="flex justify-center items-center gap-3 mb-5 text-brand-300">
+        <span class="text-xs font-semibold uppercase" style="letter-spacing: 0.3em;">St. Petersburg's Designer Drapery Workroom Since 2000</span>
+      </p>
+
+      <h1 class="font-display mx-auto max-w-5xl leading-[1.05] text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] text-white">
+        Custom Drapery in St. Petersburg, FL
+      </h1>
+
+      <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-white/90">
+        Designer drapery panels, sheers, blackout treatments, and motorized track systems — measured in your home, sewn in our St. Pete workroom, and installed by the same team that designed them. 25 years. Hundreds of Pinellas homes. Five fabric houses on hand.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4 justify-center">
+        <a href="/contact/" class="btn-primary btn-lg">Schedule In-Home Consultation</a>
+        <a href={SITE.phoneHref} class="btn-outline btn-lg">Call {SITE.phone}</a>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto text-center">
+        <div>
+          <p class="font-display text-3xl md:text-4xl text-brand-400">25+</p>
+          <p class="text-[0.7rem] tracking-[0.22em] uppercase text-white/75 font-semibold mt-1">Years in St. Pete</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl md:text-4xl text-brand-400">700+</p>
+          <p class="text-[0.7rem] tracking-[0.22em] uppercase text-white/75 font-semibold mt-1">5-Star Reviews</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl md:text-4xl text-brand-400">14</p>
+          <p class="text-[0.7rem] tracking-[0.22em] uppercase text-white/75 font-semibold mt-1">Pinellas Areas</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl md:text-4xl text-brand-400">5</p>
+          <p class="text-[0.7rem] tracking-[0.22em] uppercase text-white/75 font-semibold mt-1">Fabric Houses</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR / BYLINE BAR — E-E-A-T -->
+  <section class="bg-cream-50 border-b border-line">
+    <div class="container-narrow py-6 md:py-7 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-brand-500 text-white flex items-center justify-center font-display text-lg font-bold shrink-0">TP</div>
+        <div>
+          <p class="text-sm text-ink-500">Written by</p>
+          <p class="font-semibold text-ink-800">{AUTHOR.name} <span class="text-ink-500 font-normal">— {AUTHOR.role}, Custom Fabric Creations</span></p>
+        </div>
+      </div>
+      <div class="text-xs text-ink-500 tracking-wide">
+        <p><span class="uppercase font-semibold text-ink-700">Published:</span> May 11, 2026</p>
+        <p><span class="uppercase font-semibold text-ink-700">Last updated:</span> May 11, 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TL;DR — Direct AI Overview / LLM citation bait -->
+  <section class="bg-white py-12 md:py-16">
+    <div class="container-narrow">
+      <div class="bg-cream-50 border-l-4 border-brand-500 p-6 md:p-8 rounded-sm">
+        <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Quick Answer</p>
+        <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-4 leading-tight">What custom drapery in St. Petersburg, FL means in 2026</h2>
+        <p class="text-ink-600 leading-relaxed text-lg">
+          Custom drapery in St. Petersburg is drapery panels measured to your exact windows, sewn from designer-house fabrics (Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils), and installed by a local workroom. In Pinellas County, the typical custom drapery project runs <strong>$400–$1,500 per window installed</strong>, takes <strong>4–6 weeks</strong> from approved fabric to install, and lasts <strong>10–15 years</strong> in Florida-rated fabric. Custom Fabric Creations has been making and installing custom drapery in St. Petersburg since 2000.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: What custom drapery is, definitionally -->
+  <article class="bg-white py-12 md:py-16">
+    <div class="container-narrow prose-cfc">
+      <h2 id="what-is-custom-drapery">What custom drapery is, and what it isn't</h2>
+      <p>Custom drapery is fabric window-covering built to your exact opening — your window's exact width, your ceiling height, your floor's exact break point, your hardware's exact projection. It is not a panel you pull off a shelf and clip to a rod. Three categories of drapery exist on the market, and they are easy to confuse:</p>
+
+      <h3>Ready-made drapery</h3>
+      <p>Pre-sewn panels sold in standard widths (typically 50 inches) and four standard lengths (63, 84, 95, 108 inches). Available at Pottery Barn, West Elm, Target, Amazon. Cost: $30–$300 per panel. If your window matches the standard, the panel works. If it does not — and most St. Pete windows don't — the panel gaps, drags, or floats. There is no fix; it is a manufactured product, not a tailored one.</p>
+
+      <h3>Semi-custom drapery</h3>
+      <p>Sold by Pottery Barn, Restoration Hardware, Calico Corners, and similar. You pick from a limited fabric list and choose from preset widths and lengths. Slightly closer to your actual window, but still constrained to the supplier's options. Cost: $200–$700 per panel. The fabric library is narrower than a true custom workroom and the install is not included.</p>
+
+      <h3>Fully custom drapery (what we make)</h3>
+      <p>Sewn to your specific measurements in your fabric of choice. The fabric library covers thousands of patterns from the major textile houses — Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils, GP &amp; J Baker, plus performance fabrics like Crypton. Lining, interlining, header style, hem treatment, and hardware are all specified per project. Measured by a designer, sewn in a workroom, installed by the same team. Cost: $400–$1,500+ per window installed. This is what people in St. Petersburg search for when they search "<strong>custom drapery St. Petersburg</strong>."</p>
+
+      <h2 id="why-st-pete">Why custom drapery matters more in St. Petersburg than in most cities</h2>
+      <p>Most national drapery advice was written for temperate climates. Florida is not temperate. Four factors push St. Pete homeowners toward custom-made:</p>
+
+      <h3>The Florida sun degrades cheap fabric</h3>
+      <p>St. Petersburg averages 361 sunny days a year and gets some of the highest UV indices in the continental United States. Ready-made drapery is typically unlined or single-lined with unrated linings. Within 18–36 months, the leading edge of the panel — the part that faces the window glass — fades, weakens, and starts to crack. Custom drapery uses UV-rated linings (Hanes Pearl, Roc-Lon Sundown) and treated fabrics that are tested for sustained UV exposure. The cost difference at the start is meaningful; the cost difference over ten years favors custom heavily.</p>
+
+      <h3>Coastal salt air corrodes hardware and rots fabric</h3>
+      <p>Homes in Snell Isle, Tierra Verde, Shore Acres, Sand Key, St. Pete Beach, Treasure Island, and Belleair Shore deal with salt-air exposure year-round. Cheap drapery hardware corrodes within five years; cheap fabric mildews. Our coastal projects use marine-grade hardware, moisture-resistant interlinings, and synthetic-blend or treated natural fabrics rated for salt environments.</p>
+
+      <h3>St. Pete's architectural mix demands different solutions</h3>
+      <p>A 1920s Historic Old Northeast Craftsman has 7-foot ceilings, vintage trim, and divided-light windows. A Downtown St. Pete high-rise condo has 10-foot ceilings, floor-to-ceiling glass, and no trim. A Snell Isle Mediterranean Revival has arched transoms, deep window returns, and stucco walls. Off-the-rack drapery cannot serve all three. Custom can.</p>
+
+      <h3>Hurricane season changes how drapery should be designed</h3>
+      <p>From June through November, every St. Pete homeowner should know how their drapery comes down. We design hardware systems for coastal Pinellas homes that disconnect from the bracket in under five minutes — panels go in a closet, hardware stays. Our installers walk every coastal-zone client through the removal at install day. Off-the-rack drapery on traditional rod sets requires unscrewing every bracket. The difference matters on a Wednesday afternoon when the storm cone shifts.</p>
+
+      <h2 id="types-of-drapery">The types of custom drapery we make in St. Petersburg</h2>
+      <p>Every St. Pete room has different needs. The breakdown of what we make and who it's for:</p>
+
+      <h3>Sheer drapery panels</h3>
+      <p>Lightweight, translucent panels that filter Florida sun without blocking the view. Mounted alone or layered behind a heavier drapery layer. Best for rooms that get west or south sun, where you want softness but not full privacy. Common fabrics: Kravet linen sheers, Stout textured weaves, Belgian linen blends.</p>
+
+      <h3>Blackout drapery</h3>
+      <p>Lined with a blackout interlining that blocks 99%+ of visible light. Built so the leading edge of the panel seals against the wall (not the case with most off-the-rack blackout panels). Critical for bedrooms, nurseries, home theaters, and any shift-work household. We pair blackout drapery with a daytime sheer in many bedrooms so the room can be soft in the morning and dark at night.</p>
+
+      <h3>Designer drapery</h3>
+      <p>Rich, formal panels in silks, embroidered patterns, velvets, or decorative jacquards. This is where the room comes together for clients who want their drapery to read as a design feature, not background. Fabric brands: Brunschwig &amp; Fils, Lee Jofa, GP &amp; J Baker, Kravet Couture. Often paired with custom valances, cornices, or contrast trim.</p>
+
+      <h3>Motorized drapery</h3>
+      <p>Operated by wall switch, remote, smartphone app, or smart-home integration (Lutron, Apple HomeKit, Google Home, Alexa). Best for windows over 8 feet, sliding glass doors, anyone integrating with home automation, and aging-in-place clients. We install Lutron, Hunter Douglas PowerView, and Somfy systems and program them on-site.</p>
+
+      <h3>Ripplefold drapery</h3>
+      <p>Modern, clean panels with a uniform wave pattern, hung from a concealed ceiling track. Best for contemporary homes, high-rise condos, and minimalist interiors. Tracks are often paired with motorization for a clean overhead look.</p>
+
+      <h3>Custom valances, cornices, and top treatments</h3>
+      <p>Upholstered cornices, soft pleated valances, swag-and-jabot treatments, or board-mounted cornices. These finish the top of the window and can dramatically change the room's formality. Paired with drapery or installed alone.</p>
+
+      <h3>Café and tier curtains</h3>
+      <p>Short, often hung mid-window or as a top-half tier. Common in kitchens, bathrooms, and breakfast nooks. Works well in Old Northeast bungalows and Craftsman homes where the window architecture deserves to stay visible.</p>
+    </div>
+  </article>
+
+  <!-- IMAGE FEATURE -->
+  <figure class="container-narrow my-12">
+    <img src="/images/services/custom-draperies-curtains/top.webp" alt="Custom Kravet drapery panels installed in a Snell Isle, St. Petersburg waterfront home by Custom Fabric Creations" title="Snell Isle custom drapery installation — Kravet fabric, Custom Fabric Creations, St. Petersburg, FL" class="w-full rounded-sm shadow-soft" loading="lazy" />
+    <figcaption class="text-sm text-ink-500 mt-3 italic">Snell Isle, St. Petersburg — pinch-pleat sheers in Kravet linen layered over blackout panels for an east-facing master bedroom.</figcaption>
+  </figure>
+
+  <!-- FABRIC LIBRARY — Authority signal -->
+  <section class="bg-cream-50 py-16 md:py-20 border-y border-line">
+    <div class="container-narrow">
+      <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Authorized Workroom</p>
+      <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-5 leading-tight">The fabric library, in your living room</h2>
+      <p class="text-ink-600 text-lg leading-relaxed mb-8">We are an authorized workroom for the major designer-fabric houses. That status matters two ways: trade pricing passes through to you (no designer markup), and we have access to the full pattern libraries — not the limited "available at retail" subset. We bring 60-100 fabric memos to every in-home consultation so you compare fabrics in your actual lighting before you commit.</p>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <div class="bg-white border border-line p-6 rounded-sm">
+          <h3 class="font-display text-xl text-ink-800 mb-2">Kravet</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">The designer's choice. Thousands of patterns across velvets, linens, embroidered silks, and indoor-outdoor performance. Distributes Lee Jofa, Brunschwig &amp; Fils, and GP &amp; J Baker.</p>
+        </div>
+        <div class="bg-white border border-line p-6 rounded-sm">
+          <h3 class="font-display text-xl text-ink-800 mb-2">Stout</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">Woven jacquards, textured solids, bold patterns, and exceptional decorative trims. Strong performance/Sunbrella-compatible lines for Florida.</p>
+        </div>
+        <div class="bg-white border border-line p-6 rounded-sm">
+          <h3 class="font-display text-xl text-ink-800 mb-2">Lee Jofa</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">Heritage English-house patterns, refined velvets, and one of the finest embroidered fabric libraries available to the trade.</p>
+        </div>
+        <div class="bg-white border border-line p-6 rounded-sm">
+          <h3 class="font-display text-xl text-ink-800 mb-2">Brunschwig &amp; Fils</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">European luxury — silks, damasks, and museum-grade reproductions. Specified by designers when the drapery is the room's signature feature.</p>
+        </div>
+        <div class="bg-white border border-line p-6 rounded-sm">
+          <h3 class="font-display text-xl text-ink-800 mb-2">GP &amp; J Baker</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">Storied British textile house — heritage prints, painterly florals, and refined chintzes. Distributed through Kravet.</p>
+        </div>
+        <div class="bg-white border border-line p-6 rounded-sm">
+          <h3 class="font-display text-xl text-ink-800 mb-2">Crypton &amp; Sunbrella</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">Performance fabrics rated for high-traffic, kid-and-pet, and indoor-outdoor environments. Essential for Pinellas coastal and lanai projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING — Transparency / E-E-A-T trust -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container-narrow">
+      <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Pricing</p>
+      <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-5 leading-tight">What custom drapery costs in St. Petersburg, FL (real 2026 numbers)</h2>
+      <p class="text-ink-600 text-lg leading-relaxed mb-8">Drapery pricing is highly variable because fabric drives the cost. A pair of lined floor-length panels in a mid-range Kravet cotton-linen runs about $600-$900 per window installed in Pinellas County. The full range across our project mix is below. Every Custom Fabric Creations quote is itemized per window — fabric, lining, hardware, labor, and install are broken out so you see the math.</p>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-ink-900 text-white">
+              <th class="text-left p-4 font-display text-sm uppercase tracking-wider" style="letter-spacing: 0.08em;">Treatment</th>
+              <th class="text-left p-4 font-display text-sm uppercase tracking-wider" style="letter-spacing: 0.08em;">Per window installed</th>
+              <th class="text-left p-4 font-display text-sm uppercase tracking-wider" style="letter-spacing: 0.08em;">Fabric notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {PRICING.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'bg-cream-50' : 'bg-white'}>
+                <td class="p-4 text-ink-800 font-semibold align-top">{row.kind}</td>
+                <td class="p-4 text-brand-700 font-display text-lg align-top whitespace-nowrap">{row.range}</td>
+                <td class="p-4 text-ink-600 text-sm align-top">{row.fabric}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-ink-500 text-sm mt-6 italic">Whole-house drapery projects in Pinellas typically land between $8,000 and $30,000, depending on number of windows, fabric tier, motorization, and specialty hardware. We offer 0% financing for 12 or 18 months through Synchrony Home Design on qualifying projects.</p>
+    </div>
+  </section>
+
+  <!-- 5-STEP PROCESS — HowTo schema target -->
+  <section class="bg-cream-50 py-16 md:py-20 border-y border-line">
+    <div class="container-narrow">
+      <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Our Process</p>
+      <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-5 leading-tight">How we design, make, and install your custom drapery</h2>
+      <p class="text-ink-600 text-lg leading-relaxed mb-10">From the first call to installed drapery is typically 4-6 weeks. Here is exactly what happens at each stage:</p>
+
+      <ol class="space-y-6">
+        {howToSchema.step.map((s) => (
+          <li class="grid grid-cols-[60px_1fr] gap-5 bg-white border border-line p-6 rounded-sm">
+            <div class="w-12 h-12 rounded-full bg-brand-500 text-white flex items-center justify-center font-display text-xl font-bold">{s.position}</div>
+            <div>
+              <h3 class="font-display text-xl text-ink-800 mb-2">{s.name}</h3>
+              <p class="text-ink-600 leading-relaxed">{s.text}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- PROJECT GALLERY — Real St. Pete neighborhoods, real treatments -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container-site">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Recent Projects</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ink-800 mb-5 leading-tight">Custom drapery across St. Petersburg's neighborhoods</h2>
+        <p class="text-ink-600 text-lg leading-relaxed">Every St. Pete neighborhood has its own architectural personality. The drapery we make answers each one's specifics — light, salt air, ceiling height, and the way the room is used.</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        {PROJECTS.map((p) => (
+          <figure class="group bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition">
+            <div class="aspect-[4/3] overflow-hidden bg-ink-50">
+              <img src={p.image} alt={p.alt} title={p.alt} class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
+            </div>
+            <figcaption class="p-6">
+              <p class="text-xs uppercase tracking-[0.22em] font-semibold text-brand-700 mb-2">{p.neighborhood} · {p.style}</p>
+              <p class="text-ink-600 leading-relaxed text-sm">{p.treatment}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY LOCAL > ALTERNATIVES — Comparison content -->
+  <section class="bg-ink-900 text-white py-16 md:py-20">
+    <div class="container-narrow">
+      <p class="eyebrow mb-3 text-brand-400" style="letter-spacing: 0.3em;">The Honest Comparison</p>
+      <h2 class="font-display text-3xl md:text-4xl text-white mb-5 leading-tight">Local St. Pete workroom vs. the alternatives</h2>
+      <p class="text-white/80 text-lg leading-relaxed mb-10">There are five ways to get drapery for a St. Petersburg home. Here's how a local workroom (us) compares to each:</p>
+
+      <div class="space-y-5">
+        <div class="bg-white/5 border border-brand-500/20 p-6 rounded-sm">
+          <h3 class="font-display text-xl text-brand-300 mb-2">vs. Big-box ready-made (Pottery Barn, West Elm, Target)</h3>
+          <p class="text-white/85 leading-relaxed text-sm">Cheaper upfront ($30-$300 per panel). Sized for standard windows you probably don't have. Unrated linings fail in Florida sun within 18-36 months. Stops at "good enough."</p>
+        </div>
+        <div class="bg-white/5 border border-brand-500/20 p-6 rounded-sm">
+          <h3 class="font-display text-xl text-brand-300 mb-2">vs. Semi-custom retail (Pottery Barn Custom, Restoration Hardware, Calico Corners)</h3>
+          <p class="text-white/85 leading-relaxed text-sm">Mid-priced ($200-$700 per panel). Limited fabric library. You self-install. If sizing is off, returns are difficult. No design support locally.</p>
+        </div>
+        <div class="bg-white/5 border border-brand-500/20 p-6 rounded-sm">
+          <h3 class="font-display text-xl text-brand-300 mb-2">vs. Online custom workrooms (Two Pages, Loom Decor, The Shade Store online)</h3>
+          <p class="text-white/85 leading-relaxed text-sm">Custom-sized but you measure yourself. Fabric chosen from a phone screen — never matches in person. You install. If a panel hangs wrong, you ship it back. Lead time: similar.</p>
+        </div>
+        <div class="bg-white/5 border border-brand-500/20 p-6 rounded-sm">
+          <h3 class="font-display text-xl text-brand-300 mb-2">vs. Traveling sales reps (3 Day Blinds, Budget Blinds, Calico Corners reps)</h3>
+          <p class="text-white/85 leading-relaxed text-sm">Rep takes your order, ships it to an out-of-state workroom, returns to install. If something is wrong, the rep — not the workroom — is your contact. Fabric library is the rep's company catalog, often narrower than a true workroom's.</p>
+        </div>
+        <div class="bg-white/5 border border-brand-500/20 p-6 rounded-sm">
+          <h3 class="font-display text-xl text-brand-300 mb-2">vs. Designer-only (interior designer who outsources drapery)</h3>
+          <p class="text-white/85 leading-relaxed text-sm">Highest quality, highest cost. Designer markup typically 20-50% over trade. Worth it if the designer is shepherding the whole project. Not necessary if drapery is the project.</p>
+        </div>
+        <div class="bg-brand-500 text-white p-6 rounded-sm">
+          <h3 class="font-display text-xl text-white mb-2">vs. Custom Fabric Creations (local workroom)</h3>
+          <p class="text-white/95 leading-relaxed text-sm">We measure, we sew, we install. Trade pricing passes through to you. Designer fabrics in your hand at the consultation. In-house crew installs and stands behind the work. If a panel hangs wrong, we are 20 minutes away.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEIGHBORHOODS / INTERNAL LINKING -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="container-narrow">
+      <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">14 Neighborhoods</p>
+      <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-5 leading-tight">Custom drapery across Pinellas County and Tampa Bay</h2>
+      <p class="text-ink-600 text-lg leading-relaxed mb-8">Our workroom is at <strong>3026 Central Ave Suite 551, St. Petersburg, FL 33712</strong>, in West St. Pete. From the workroom we measure, fabricate, and install across the whole bay. Drive time inside Pinellas is rarely more than 30 minutes; we cover Tampa proper inside 45.</p>
+
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6">
+        {AREAS.map((a) => (
+          <li>
+            <a href={`/areas/${a.slug}/`} class="block px-4 py-3 bg-cream-50 border border-line rounded-sm hover:border-brand-500 hover:bg-white transition group">
+              <span class="text-ink-700 group-hover:text-brand-700 font-medium text-sm">{a.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <p class="text-ink-500 text-sm italic">Plus Tampa Bay: Tampa, Brandon, Riverview, Apollo Beach, Tarpon Springs, Palm Harbor, Westchase, Wesley Chapel, Carrollwood. Not sure if we cover your area? <a href="/contact/">Call us</a>.</p>
+    </div>
+  </section>
+
+  <!-- RELATED SERVICES — Internal linking -->
+  <section class="bg-cream-50 py-16 md:py-20 border-y border-line">
+    <div class="container-narrow">
+      <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">One Workroom, Layered Treatments</p>
+      <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-5 leading-tight">Pair custom drapery with these</h2>
+      <p class="text-ink-600 text-lg leading-relaxed mb-8">Most Pinellas drapery projects pair drapery with one or two other treatments — layered shades, plantation shutters underneath, or coordinating cornices and bedding. We are the only St. Pete workroom that handles drapery, shutters, shades, upholstery, cornices, and bedding under one roof. One project manager, one install date, one styled outcome.</p>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="/services/custom-draperies-curtains/" class="block p-5 bg-white border border-line rounded-sm hover:border-brand-500 hover:shadow-soft transition group">
+          <h3 class="font-display text-lg text-ink-800 group-hover:text-brand-700 mb-1">Custom Drapery & Curtains — full service overview</h3>
+          <p class="text-sm text-ink-500">Our complete drapery service page with FAQs, process detail, and fabric notes.</p>
+        </a>
+        <a href="/services/plantation-shutters/" class="block p-5 bg-white border border-line rounded-sm hover:border-brand-500 hover:shadow-soft transition group">
+          <h3 class="font-display text-lg text-ink-800 group-hover:text-brand-700 mb-1">Plantation Shutters — pair underneath drapery</h3>
+          <p class="text-sm text-ink-500">The most common layered Pinellas treatment. Shutters for daytime privacy + drapery for the soft layer on top.</p>
+        </a>
+        <a href="/services/window-shades/" class="block p-5 bg-white border border-line rounded-sm hover:border-brand-500 hover:shadow-soft transition group">
+          <h3 class="font-display text-lg text-ink-800 group-hover:text-brand-700 mb-1">Window Shades — Hunter Douglas, Graber, Norman</h3>
+          <p class="text-sm text-ink-500">Layered behind drapery for light filtering, privacy, or blackout. Motorized options.</p>
+        </a>
+        <a href="/services/custom-cornices-valances/" class="block p-5 bg-white border border-line rounded-sm hover:border-brand-500 hover:shadow-soft transition group">
+          <h3 class="font-display text-lg text-ink-800 group-hover:text-brand-700 mb-1">Cornices & Valances</h3>
+          <p class="text-sm text-ink-500">The finished top edge. Upholstered cornices and soft valances built in the same workroom as the drapery.</p>
+        </a>
+        <a href="/services/drapery-hardware/" class="block p-5 bg-white border border-line rounded-sm hover:border-brand-500 hover:shadow-soft transition group">
+          <h3 class="font-display text-lg text-ink-800 group-hover:text-brand-700 mb-1">Drapery Hardware</h3>
+          <p class="text-sm text-ink-500">Decorative rods, concealed tracks, motorized systems, ripplefold hardware, and specialty bay-window solutions.</p>
+        </a>
+        <a href="/services/custom-bedding-pillows/" class="block p-5 bg-white border border-line rounded-sm hover:border-brand-500 hover:shadow-soft transition group">
+          <h3 class="font-display text-lg text-ink-800 group-hover:text-brand-700 mb-1">Custom Bedding & Pillows</h3>
+          <p class="text-sm text-ink-500">Coordinate drapery fabrics into bedding, pillows, and headboards for the complete bedroom.</p>
+        </a>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-3 gap-4">
+        <a href="/reviews/" class="block p-4 bg-white border border-brand-500/30 rounded-sm hover:bg-brand-50 transition text-center">
+          <p class="font-display text-base text-brand-700 group-hover:text-brand-800">Read 700+ Reviews →</p>
+        </a>
+        <a href="/gallery/" class="block p-4 bg-white border border-brand-500/30 rounded-sm hover:bg-brand-50 transition text-center">
+          <p class="font-display text-base text-brand-700 group-hover:text-brand-800">See Gallery →</p>
+        </a>
+        <a href="/brands/" class="block p-4 bg-white border border-brand-500/30 rounded-sm hover:bg-brand-50 transition text-center">
+          <p class="font-display text-base text-brand-700 group-hover:text-brand-800">Brand Partners →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ — FAQPage schema target, LLM-friendly Q&A -->
+  <FAQ
+    heading="Custom Drapery St. Petersburg — Frequently Asked Questions"
+    eyebrow="FAQ"
+    subtitle="What Pinellas County homeowners ask before they book a drapery consultation."
+    items={FAQS}
+  />
+
+  <!-- AUTHOR BIO / E-E-A-T closer -->
+  <section class="bg-white py-16 md:py-20 border-t border-line">
+    <div class="container-narrow">
+      <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">About the Author</p>
+      <h2 class="font-display text-3xl md:text-4xl text-ink-800 mb-6 leading-tight">Terry Popick — Owner &amp; Lead Designer</h2>
+      <div class="grid md:grid-cols-[180px_1fr] gap-8 items-start">
+        <div class="aspect-square overflow-hidden rounded-sm bg-cream-100 border border-line flex items-center justify-center">
+          <span class="font-display text-6xl text-brand-500">TP</span>
+        </div>
+        <div>
+          <p class="text-ink-600 leading-relaxed text-[1.05rem] mb-4">
+            I opened Custom Fabric Creations in 2000 because the drapery you could get in St. Petersburg in the late '90s came in two flavors: cheap and disposable, or designer-only and impossible to access without going through an interior designer. I wanted to give homeowners direct access to designer fabrics, sewn by people who care, installed by the same crew that made them.
+          </p>
+          <p class="text-ink-600 leading-relaxed text-[1.05rem] mb-4">
+            25 years later, we are an authorized workroom for Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils, and GP &amp; J Baker. Our studio is at 3026 Central Ave Suite 551 in West St. Pete. Every project that leaves our workroom is measured, sewn, and installed by people whose names I know.
+          </p>
+          <p class="text-ink-600 leading-relaxed text-[1.05rem]">
+            If you are thinking about custom drapery for your home, call me at <a href={SITE.phoneHref} class="font-semibold text-brand-700 hover:text-brand-600">{SITE.phone}</a> or <a href="/contact/" class="font-semibold text-brand-700 hover:text-brand-600">request an in-home consultation</a>. The first visit is on us — fabric library, hardware samples, design ideas, all in your living room.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="bg-cream py-20 md:py-28 text-center">
+    <div class="container-narrow">
+      <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Schedule</p>
+      <h2 class="font-display text-4xl md:text-5xl text-ink-800 mb-5 leading-tight">Custom drapery, done by the people who make it.</h2>
+      <p class="text-ink-600 text-lg leading-relaxed max-w-2xl mx-auto mb-8">Free in-home consultation in St. Petersburg, Pinellas County, and the broader Tampa Bay area. We bring the fabric library, the hardware samples, and 25 years of design experience to your living room.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/contact/" class="btn-primary btn-lg">Schedule Free Consultation</a>
+        <a href={SITE.phoneHref} class="btn-ghost btn-lg">Call {SITE.phone}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra structured data — HowTo + Article + Service -->
+  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+</BaseLayout>

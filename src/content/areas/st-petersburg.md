@@ -7,6 +7,8 @@ type: area
 ---
 Custom plantation shutters, Roman shades, motorized blinds, solar shades, and high-end drapery for St. Petersburg homes — specified for Tampa Bay salt air, Florida humidity, and the city's wide range of architectural styles, backed by over two decades of local installation experience across Pinellas County.
 
+**Looking for custom drapery specifically?** See [Custom Drapery in St. Petersburg, FL — The 2026 Guide](/custom-drapery-st-petersburg/) — pricing, our 5-step workroom process, the designer fabric library (Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils), and recent neighborhood projects.
+
 ## Why St. Petersburg Homeowners Keep Coming Back to a Local Blinds Shop
 
 St. Petersburg isn't a one-size-fits-all kind of town. From the historic bungalows near Crescent Lake to the luxury waterfront condos along Beach Drive, every street has its own character and its own window challenges.

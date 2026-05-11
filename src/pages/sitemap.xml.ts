@@ -22,6 +22,8 @@ const staticPages: Entry[] = [
   // Near-me landing pages (low-KD, high-volume targets)
   { path: '/plantation-shutters-near-me/', changefreq: 'weekly',  priority: '0.9' },
   { path: '/drapery-near-me/',             changefreq: 'weekly',  priority: '0.9' },
+  // Dedicated dominance landing for "custom drapery st petersburg" — currently #7 organic.
+  { path: '/custom-drapery-st-petersburg/', changefreq: 'weekly', priority: '0.95' },
   // Plantation-shutters guide cluster
   { path: '/plantation-shutters-cost-st-petersburg/',         changefreq: 'monthly', priority: '0.7' },
   { path: '/plantation-shutters-installation-st-petersburg/', changefreq: 'monthly', priority: '0.7' },
