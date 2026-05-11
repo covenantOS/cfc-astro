@@ -294,7 +294,7 @@ const serviceSchema = {
       <div class="flex items-center gap-4">
         <div class="w-14 h-14 rounded-full bg-brand-500 text-white flex items-center justify-center font-display text-lg font-bold shrink-0">TP</div>
         <div>
-          <p class="text-sm text-ink-500">Written by</p>
+          <p class="text-sm text-ink-500">Reviewed by</p>
           <p class="font-semibold text-ink-800">{AUTHOR.name} <span class="text-ink-500 font-normal">— {AUTHOR.role}, Custom Fabric Creations</span></p>
         </div>
       </div>
@@ -318,67 +318,290 @@ const serviceSchema = {
     </div>
   </section>
 
-  <!-- SECTION 1: What custom drapery is, definitionally -->
-  <article class="bg-white py-12 md:py-16">
-    <div class="container-narrow prose-cfc">
-      <h2 id="what-is-custom-drapery">What custom drapery is, and what it isn't</h2>
-      <p>Custom drapery is fabric window-covering built to your exact opening — your window's exact width, your ceiling height, your floor's exact break point, your hardware's exact projection. It is not a panel you pull off a shelf and clip to a rod. Three categories of drapery exist on the market, and they are easy to confuse:</p>
+  <!-- SECTION 1: THREE TIERS — visual comparison cards -->
+  <section id="what-is-custom-drapery" class="bg-white py-16 md:py-24">
+    <div class="container-site">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">The Three Tiers</p>
+        <h2 class="font-display text-3xl md:text-5xl text-ink-800 mb-5 leading-tight">Three kinds of drapery you can buy.<br/><span class="text-brand-700">Only one is actually custom.</span></h2>
+        <p class="text-ink-600 text-lg leading-relaxed">If your window does not match a manufactured standard — and most St. Pete windows don't — only one of these three options will fit. Here is how they compare.</p>
+      </div>
 
-      <h3>Ready-made drapery</h3>
-      <p>Pre-sewn panels sold in standard widths (typically 50 inches) and four standard lengths (63, 84, 95, 108 inches). Available at Pottery Barn, West Elm, Target, Amazon. Cost: $30–$300 per panel. If your window matches the standard, the panel works. If it does not — and most St. Pete windows don't — the panel gaps, drags, or floats. There is no fix; it is a manufactured product, not a tailored one.</p>
+      <div class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+        <!-- TIER 1: Ready-made -->
+        <div class="bg-cream-50 border border-line rounded-sm overflow-hidden flex flex-col">
+          <div class="bg-ink-700 text-white px-6 py-4">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-white/70 font-semibold mb-1">Tier 1</p>
+            <h3 class="font-display text-2xl text-white">Ready-made</h3>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="mb-5">
+              <p class="text-[0.65rem] tracking-[0.18em] uppercase text-ink-500 font-semibold mb-1">Per panel</p>
+              <p class="font-display text-3xl text-ink-800">$30 – $300</p>
+            </div>
+            <ul class="space-y-3 text-sm text-ink-700 leading-relaxed mb-6 flex-1">
+              <li class="flex items-start gap-2"><span class="text-ink-400 shrink-0 mt-0.5">●</span><span>Fixed widths (usually 50") and 4 fixed lengths (63, 84, 95, 108")</span></li>
+              <li class="flex items-start gap-2"><span class="text-ink-400 shrink-0 mt-0.5">●</span><span>Pre-sewn, off-the-shelf — fits what fits, gaps the rest</span></li>
+              <li class="flex items-start gap-2"><span class="text-ink-400 shrink-0 mt-0.5">●</span><span>Unrated linings — fade in Florida sun within 18-36 months</span></li>
+              <li class="flex items-start gap-2"><span class="text-ink-400 shrink-0 mt-0.5">●</span><span>You install</span></li>
+            </ul>
+            <p class="text-xs text-ink-500 pt-4 border-t border-line">Pottery Barn, West Elm, Target, Amazon</p>
+          </div>
+        </div>
 
-      <h3>Semi-custom drapery</h3>
-      <p>Sold by Pottery Barn, Restoration Hardware, Calico Corners, and similar. You pick from a limited fabric list and choose from preset widths and lengths. Slightly closer to your actual window, but still constrained to the supplier's options. Cost: $200–$700 per panel. The fabric library is narrower than a true custom workroom and the install is not included.</p>
+        <!-- TIER 2: Semi-custom -->
+        <div class="bg-cream-50 border border-line rounded-sm overflow-hidden flex flex-col">
+          <div class="bg-ink-800 text-white px-6 py-4">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-white/70 font-semibold mb-1">Tier 2</p>
+            <h3 class="font-display text-2xl text-white">Semi-custom</h3>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="mb-5">
+              <p class="text-[0.65rem] tracking-[0.18em] uppercase text-ink-500 font-semibold mb-1">Per panel</p>
+              <p class="font-display text-3xl text-ink-800">$200 – $700</p>
+            </div>
+            <ul class="space-y-3 text-sm text-ink-700 leading-relaxed mb-6 flex-1">
+              <li class="flex items-start gap-2"><span class="text-ink-400 shrink-0 mt-0.5">●</span><span>Choose from preset widths + lengths — closer to your window, not exact</span></li>
+              <li class="flex items-start gap-2"><span class="text-ink-400 shrink-0 mt-0.5">●</span><span>Limited supplier-curated fabric list</span></li>
+              <li class="flex items-start gap-2"><span class="text-ink-400 shrink-0 mt-0.5">●</span><span>Install usually not included</span></li>
+              <li class="flex items-start gap-2"><span class="text-ink-400 shrink-0 mt-0.5">●</span><span>Returns are difficult once cut</span></li>
+            </ul>
+            <p class="text-xs text-ink-500 pt-4 border-t border-line">Pottery Barn Custom, Restoration Hardware, Calico Corners</p>
+          </div>
+        </div>
 
-      <h3>Fully custom drapery (what we make)</h3>
-      <p>Sewn to your specific measurements in your fabric of choice. The fabric library covers thousands of patterns from the major textile houses — Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils, GP &amp; J Baker, plus performance fabrics like Crypton. Lining, interlining, header style, hem treatment, and hardware are all specified per project. Measured by a designer, sewn in a workroom, installed by the same team. Cost: $400–$1,500+ per window installed. This is what people in St. Petersburg search for when they search "<strong>custom drapery St. Petersburg</strong>."</p>
+        <!-- TIER 3: Fully custom (us) -->
+        <div class="bg-white border-2 border-brand-500 rounded-sm overflow-hidden flex flex-col shadow-soft relative">
+          <div class="absolute top-4 right-4 bg-brand-500 text-white px-3 py-1 rounded-full text-[0.65rem] uppercase tracking-[0.15em] font-bold">You are here</div>
+          <div class="bg-brand-500 text-white px-6 py-4">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-white/80 font-semibold mb-1">Tier 3 — what CFC makes</p>
+            <h3 class="font-display text-2xl text-white">Fully custom</h3>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="mb-5">
+              <p class="text-[0.65rem] tracking-[0.18em] uppercase text-brand-700 font-semibold mb-1">Per window installed</p>
+              <p class="font-display text-3xl text-ink-800">$400 – $1,500+</p>
+            </div>
+            <ul class="space-y-3 text-sm text-ink-700 leading-relaxed mb-6 flex-1">
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 10l3 3 7-7"/></svg><span>Sewn to your exact window — width, length, ceiling height, floor break</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 10l3 3 7-7"/></svg><span>Thousands of designer fabrics — Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 10l3 3 7-7"/></svg><span>UV-rated linings + Florida-spec interlining</span></li>
+              <li class="flex items-start gap-2"><svg class="w-4 h-4 text-brand-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 10l3 3 7-7"/></svg><span>Measured, sewn, &amp; installed by the same in-house team</span></li>
+            </ul>
+            <p class="text-xs text-brand-700 pt-4 border-t border-line font-semibold">Custom Fabric Creations, St. Petersburg, FL</p>
+          </div>
+        </div>
+      </div>
 
-      <h2 id="why-st-pete">Why custom drapery matters more in St. Petersburg than in most cities</h2>
-      <p>Most national drapery advice was written for temperate climates. Florida is not temperate. Four factors push St. Pete homeowners toward custom-made:</p>
-
-      <h3>The Florida sun degrades cheap fabric</h3>
-      <p>St. Petersburg averages 361 sunny days a year and gets some of the highest UV indices in the continental United States. Ready-made drapery is typically unlined or single-lined with unrated linings. Within 18–36 months, the leading edge of the panel — the part that faces the window glass — fades, weakens, and starts to crack. Custom drapery uses UV-rated linings (Hanes Pearl, Roc-Lon Sundown) and treated fabrics that are tested for sustained UV exposure. The cost difference at the start is meaningful; the cost difference over ten years favors custom heavily.</p>
-
-      <h3>Coastal salt air corrodes hardware and rots fabric</h3>
-      <p>Homes in Snell Isle, Tierra Verde, Shore Acres, Sand Key, St. Pete Beach, Treasure Island, and Belleair Shore deal with salt-air exposure year-round. Cheap drapery hardware corrodes within five years; cheap fabric mildews. Our coastal projects use marine-grade hardware, moisture-resistant interlinings, and synthetic-blend or treated natural fabrics rated for salt environments.</p>
-
-      <h3>St. Pete's architectural mix demands different solutions</h3>
-      <p>A 1920s Historic Old Northeast Craftsman has 7-foot ceilings, vintage trim, and divided-light windows. A Downtown St. Pete high-rise condo has 10-foot ceilings, floor-to-ceiling glass, and no trim. A Snell Isle Mediterranean Revival has arched transoms, deep window returns, and stucco walls. Off-the-rack drapery cannot serve all three. Custom can.</p>
-
-      <h3>Hurricane season changes how drapery should be designed</h3>
-      <p>From June through November, every St. Pete homeowner should know how their drapery comes down. We design hardware systems for coastal Pinellas homes that disconnect from the bracket in under five minutes — panels go in a closet, hardware stays. Our installers walk every coastal-zone client through the removal at install day. Off-the-rack drapery on traditional rod sets requires unscrewing every bracket. The difference matters on a Wednesday afternoon when the storm cone shifts.</p>
-
-      <h2 id="types-of-drapery">The types of custom drapery we make in St. Petersburg</h2>
-      <p>Every St. Pete room has different needs. The breakdown of what we make and who it's for:</p>
-
-      <h3>Sheer drapery panels</h3>
-      <p>Lightweight, translucent panels that filter Florida sun without blocking the view. Mounted alone or layered behind a heavier drapery layer. Best for rooms that get west or south sun, where you want softness but not full privacy. Common fabrics: Kravet linen sheers, Stout textured weaves, Belgian linen blends.</p>
-
-      <h3>Blackout drapery</h3>
-      <p>Lined with a blackout interlining that blocks 99%+ of visible light. Built so the leading edge of the panel seals against the wall (not the case with most off-the-rack blackout panels). Critical for bedrooms, nurseries, home theaters, and any shift-work household. We pair blackout drapery with a daytime sheer in many bedrooms so the room can be soft in the morning and dark at night.</p>
-
-      <h3>Designer drapery</h3>
-      <p>Rich, formal panels in silks, embroidered patterns, velvets, or decorative jacquards. This is where the room comes together for clients who want their drapery to read as a design feature, not background. Fabric brands: Brunschwig &amp; Fils, Lee Jofa, GP &amp; J Baker, Kravet Couture. Often paired with custom valances, cornices, or contrast trim.</p>
-
-      <h3>Motorized drapery</h3>
-      <p>Operated by wall switch, remote, smartphone app, or smart-home integration (Lutron, Apple HomeKit, Google Home, Alexa). Best for windows over 8 feet, sliding glass doors, anyone integrating with home automation, and aging-in-place clients. We install Lutron, Hunter Douglas PowerView, and Somfy systems and program them on-site.</p>
-
-      <h3>Ripplefold drapery</h3>
-      <p>Modern, clean panels with a uniform wave pattern, hung from a concealed ceiling track. Best for contemporary homes, high-rise condos, and minimalist interiors. Tracks are often paired with motorization for a clean overhead look.</p>
-
-      <h3>Custom valances, cornices, and top treatments</h3>
-      <p>Upholstered cornices, soft pleated valances, swag-and-jabot treatments, or board-mounted cornices. These finish the top of the window and can dramatically change the room's formality. Paired with drapery or installed alone.</p>
-
-      <h3>Café and tier curtains</h3>
-      <p>Short, often hung mid-window or as a top-half tier. Common in kitchens, bathrooms, and breakfast nooks. Works well in Old Northeast bungalows and Craftsman homes where the window architecture deserves to stay visible.</p>
+      <p class="text-center text-ink-500 text-sm mt-10 max-w-2xl mx-auto italic">When St. Pete homeowners search "custom drapery St. Petersburg," they are looking for Tier 3. The other two are categorically different products.</p>
     </div>
-  </article>
+  </section>
 
-  <!-- IMAGE FEATURE -->
-  <figure class="container-narrow my-12">
-    <img src="/images/services/custom-draperies-curtains/top.webp" alt="Custom Kravet drapery panels installed in a Snell Isle, St. Petersburg waterfront home by Custom Fabric Creations" title="Snell Isle custom drapery installation — Kravet fabric, Custom Fabric Creations, St. Petersburg, FL" class="w-full rounded-sm shadow-soft" loading="lazy" />
-    <figcaption class="text-sm text-ink-500 mt-3 italic">Snell Isle, St. Petersburg — pinch-pleat sheers in Kravet linen layered over blackout panels for an east-facing master bedroom.</figcaption>
-  </figure>
+  <!-- EDITORIAL IMAGE BREAK -->
+  <section class="relative bg-ink-900 overflow-hidden">
+    <div class="grid md:grid-cols-2 items-center">
+      <div class="relative aspect-[4/3] md:aspect-auto md:h-[520px]">
+        <img src="/images/services/custom-draperies-curtains/top.webp" alt="Custom Kravet drapery panels installed in a Snell Isle, St. Petersburg waterfront home by Custom Fabric Creations" title="Snell Isle custom drapery — Kravet fabric, Custom Fabric Creations, St. Petersburg, FL" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div class="p-10 md:p-14 lg:p-20 text-white">
+        <p class="text-brand-400 text-[0.7rem] tracking-[0.3em] uppercase font-semibold mb-4">Snell Isle, St. Petersburg</p>
+        <blockquote class="font-display text-2xl md:text-3xl leading-tight text-white mb-6 italic">
+          "Terry and her team have done drapery for every window in our Snell Isle home over the last decade. Every panel still hangs perfectly. The Kravet fabric in the master suite is on year 8 and looks like the day it was installed."
+        </blockquote>
+        <p class="text-white/70 text-sm">— Patty P., verified Google review</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: WHY ST. PETE — 4 FEATURE BLOCKS -->
+  <section id="why-st-pete" class="bg-cream-50 py-16 md:py-24 border-y border-line">
+    <div class="container-site">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">Florida-Specific</p>
+        <h2 class="font-display text-3xl md:text-5xl text-ink-800 mb-5 leading-tight">Why custom drapery matters more in St. Petersburg</h2>
+        <p class="text-ink-600 text-lg leading-relaxed">Most national drapery advice was written for temperate climates. Florida is not temperate. Four factors push every St. Pete homeowner toward custom-made.</p>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2 max-w-6xl mx-auto">
+        <!-- 1. Sun -->
+        <article class="bg-white border border-line rounded-sm p-7 md:p-9 hover:shadow-soft transition">
+          <div class="flex items-start gap-5">
+            <div class="shrink-0 w-14 h-14 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center">
+              <svg class="w-7 h-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-[0.65rem] tracking-[0.25em] uppercase text-brand-700 font-bold mb-1">Factor 1</p>
+              <h3 class="font-display text-xl md:text-2xl text-ink-800 mb-3 leading-tight">The Florida sun degrades cheap fabric</h3>
+              <p class="text-ink-600 leading-relaxed text-[0.95rem] mb-4">St. Petersburg averages <strong>361 sunny days/year</strong> — among the highest UV indices in the continental US. Ready-made drapery uses unrated linings that fade and crack along the leading edge within 18-36 months.</p>
+              <p class="text-ink-500 text-sm leading-relaxed">Our coastal projects use UV-rated linings (Hanes Pearl, Roc-Lon Sundown) and treated fabrics built for sustained sun exposure. Lifespan in Florida: <strong>10-15 years</strong>.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Salt air -->
+        <article class="bg-white border border-line rounded-sm p-7 md:p-9 hover:shadow-soft transition">
+          <div class="flex items-start gap-5">
+            <div class="shrink-0 w-14 h-14 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center">
+              <svg class="w-7 h-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M2 12h.01M5 12h.01M8 12h.01M11 12h.01M14 12h.01M17 12h.01M20 12h.01M23 12h.01M3 17c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2M3 7c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-[0.65rem] tracking-[0.25em] uppercase text-brand-700 font-bold mb-1">Factor 2</p>
+              <h3 class="font-display text-xl md:text-2xl text-ink-800 mb-3 leading-tight">Coastal salt air corrodes hardware</h3>
+              <p class="text-ink-600 leading-relaxed text-[0.95rem] mb-4">Homes in <strong>Snell Isle, Tierra Verde, Shore Acres, Sand Key, St. Pete Beach, Treasure Island, and Belleair Shore</strong> deal with year-round salt exposure. Cheap drapery hardware corrodes within five years; cheap fabric mildews.</p>
+              <p class="text-ink-500 text-sm leading-relaxed">Coastal-zone CFC projects spec marine-grade hardware, moisture-resistant interlinings, and synthetic-blend or treated natural fabrics rated for salt environments.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Architecture -->
+        <article class="bg-white border border-line rounded-sm p-7 md:p-9 hover:shadow-soft transition">
+          <div class="flex items-start gap-5">
+            <div class="shrink-0 w-14 h-14 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center">
+              <svg class="w-7 h-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1v1H9zM14 9h1v1h-1zM9 13h1v1H9zM14 13h1v1h-1zM10 21v-4h4v4"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-[0.65rem] tracking-[0.25em] uppercase text-brand-700 font-bold mb-1">Factor 3</p>
+              <h3 class="font-display text-xl md:text-2xl text-ink-800 mb-3 leading-tight">St. Pete's architecture demands different solutions</h3>
+              <p class="text-ink-600 leading-relaxed text-[0.95rem] mb-4">A 1920s Historic Old Northeast Craftsman: 7-ft ceilings, divided-light windows. A Downtown high-rise: 10-ft ceilings, floor-to-ceiling glass. A Snell Isle Mediterranean Revival: arched transoms, deep returns, stucco walls.</p>
+              <p class="text-ink-500 text-sm leading-relaxed">Off-the-rack drapery cannot serve all three. Custom can — measured to each architectural era, mounted to each wall type.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Hurricane -->
+        <article class="bg-white border border-line rounded-sm p-7 md:p-9 hover:shadow-soft transition">
+          <div class="flex items-start gap-5">
+            <div class="shrink-0 w-14 h-14 rounded-full bg-brand-50 border border-brand-200 flex items-center justify-center">
+              <svg class="w-7 h-7 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 12c0 5-4 8-9 8s-9-3-9-8 4-8 9-8c3 0 5 1 7 3M12 12a3 3 0 100-6 3 3 0 000 6z"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <p class="text-[0.65rem] tracking-[0.25em] uppercase text-brand-700 font-bold mb-1">Factor 4</p>
+              <h3 class="font-display text-xl md:text-2xl text-ink-800 mb-3 leading-tight">Hurricane season changes how drapery is built</h3>
+              <p class="text-ink-600 leading-relaxed text-[0.95rem] mb-4">From <strong>June through November</strong>, every St. Pete homeowner should know how their drapery comes down. We design coastal-zone hardware that disconnects from the bracket in under 5 minutes — panels in a closet, hardware stays.</p>
+              <p class="text-ink-500 text-sm leading-relaxed">Off-the-rack drapery on traditional rod sets requires unscrewing every bracket. The difference matters when the storm cone shifts on a Wednesday afternoon.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: TYPES OF DRAPERY — VISUAL GRID WITH IMAGE THUMBNAILS -->
+  <section id="types-of-drapery" class="bg-white py-16 md:py-24">
+    <div class="container-site">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <p class="eyebrow mb-3" style="letter-spacing: 0.3em;">7 Treatments</p>
+        <h2 class="font-display text-3xl md:text-5xl text-ink-800 mb-5 leading-tight">The drapery we make in our St. Pete workroom</h2>
+        <p class="text-ink-600 text-lg leading-relaxed">Every St. Pete room has different needs — light, privacy, view, smart-home integration. These are the seven treatments we build most often.</p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <!-- 1 — Sheer panels -->
+        <article class="group bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-50">
+            <img src="/images/gallery/master-suite-gallery.webp" alt="Custom sheer drapery panels filtering Florida sun in a St. Petersburg master suite" title="Sheer drapery panels — Custom Fabric Creations, St. Petersburg, FL" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-brand-700 font-bold mb-1">01 — Light filtering</p>
+            <h3 class="font-display text-xl text-ink-800 mb-2">Sheer drapery panels</h3>
+            <p class="text-ink-600 text-sm leading-relaxed flex-1">Translucent panels that filter Florida sun without blocking the view. Mounted alone or layered behind heavier drapery. Best for west/south-facing rooms.</p>
+            <p class="text-xs text-ink-500 mt-4 pt-3 border-t border-line italic">Fabrics: Kravet linen sheers, Stout textured weaves, Belgian linen blends</p>
+          </div>
+        </article>
+
+        <!-- 2 — Blackout -->
+        <article class="group bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-50">
+            <img src="/images/services/custom-draperies-curtains/bottom.webp" alt="Blackout drapery panels with lined interlining for a St. Petersburg master bedroom" title="Blackout drapery — Custom Fabric Creations, St. Petersburg, FL" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-brand-700 font-bold mb-1">02 — Light blocking</p>
+            <h3 class="font-display text-xl text-ink-800 mb-2">Blackout drapery</h3>
+            <p class="text-ink-600 text-sm leading-relaxed flex-1">99%+ light-blocking interlining, sealed to the wall on the leading edge. Critical for bedrooms, nurseries, home theaters, and shift-work households.</p>
+            <p class="text-xs text-ink-500 mt-4 pt-3 border-t border-line italic">Often paired with a daytime sheer layer — soft mornings, dark nights</p>
+          </div>
+        </article>
+
+        <!-- 3 — Designer -->
+        <article class="group bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-50">
+            <img src="/images/gallery/custom-drapery-gallery.webp" alt="Designer drapery in Brunschwig & Fils embroidered silk — formal panels installed by Custom Fabric Creations, St. Petersburg" title="Designer drapery — Custom Fabric Creations, St. Petersburg, FL" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-brand-700 font-bold mb-1">03 — The signature piece</p>
+            <h3 class="font-display text-xl text-ink-800 mb-2">Designer drapery</h3>
+            <p class="text-ink-600 text-sm leading-relaxed flex-1">Silks, velvets, embroidered patterns, decorative jacquards. For clients who want drapery to read as the design feature of the room, not background.</p>
+            <p class="text-xs text-ink-500 mt-4 pt-3 border-t border-line italic">Brunschwig &amp; Fils · Lee Jofa · GP &amp; J Baker · Kravet Couture</p>
+          </div>
+        </article>
+
+        <!-- 4 — Motorized -->
+        <article class="group bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-50">
+            <img src="/images/gallery/panel-tracks-gallery.webp" alt="Motorized drapery on a concealed track in a Downtown St. Pete high-rise condo — integrated with Lutron smart-home system" title="Motorized drapery — Custom Fabric Creations, St. Petersburg, FL" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-brand-700 font-bold mb-1">04 — Smart home</p>
+            <h3 class="font-display text-xl text-ink-800 mb-2">Motorized drapery</h3>
+            <p class="text-ink-600 text-sm leading-relaxed flex-1">Wall switch, remote, app, or voice control. Best for tall windows, sliders, aging-in-place clients, and smart-home integrations. We install + program on-site.</p>
+            <p class="text-xs text-ink-500 mt-4 pt-3 border-t border-line italic">Lutron · Hunter Douglas PowerView · Somfy</p>
+          </div>
+        </article>
+
+        <!-- 5 — Ripplefold -->
+        <article class="group bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-50">
+            <img src="/images/gallery/contrast-drapery-gallery.webp" alt="Ripplefold drapery on a concealed ceiling track — modern minimalist style installed by Custom Fabric Creations" title="Ripplefold drapery — Custom Fabric Creations, St. Petersburg, FL" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-brand-700 font-bold mb-1">05 — Modern minimalist</p>
+            <h3 class="font-display text-xl text-ink-800 mb-2">Ripplefold drapery</h3>
+            <p class="text-ink-600 text-sm leading-relaxed flex-1">Clean uniform-wave panels from a concealed ceiling track. Best for contemporary homes, high-rise condos, and minimalist interiors. Pairs with motorization.</p>
+            <p class="text-xs text-ink-500 mt-4 pt-3 border-t border-line italic">No visible rod, no tieback — quiet design</p>
+          </div>
+        </article>
+
+        <!-- 6 — Cornices / valances -->
+        <article class="group bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-50">
+            <img src="/images/gallery/custom-valances-gallery.webp" alt="Upholstered custom cornice with coordinating drapery — installed by Custom Fabric Creations, St. Petersburg, FL" title="Custom cornice + drapery — Custom Fabric Creations, St. Petersburg, FL" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-brand-700 font-bold mb-1">06 — Top treatments</p>
+            <h3 class="font-display text-xl text-ink-800 mb-2">Cornices &amp; valances</h3>
+            <p class="text-ink-600 text-sm leading-relaxed flex-1">Upholstered cornices, soft pleated valances, swag-and-jabot, board-mounted treatments. Finishes the top of the window and shifts the room's formality.</p>
+            <p class="text-xs text-ink-500 mt-4 pt-3 border-t border-line italic">Paired with drapery — or installed alone</p>
+          </div>
+        </article>
+
+        <!-- 7 — Café / tier -->
+        <article class="group bg-white border border-line rounded-sm overflow-hidden hover:shadow-soft transition flex flex-col sm:col-span-2 lg:col-span-1">
+          <div class="aspect-[4/3] overflow-hidden bg-ink-50">
+            <img src="/images/gallery/lanai-shading-gallery.webp" alt="Café-style tier curtains installed in a Historic Old Northeast bungalow kitchen by Custom Fabric Creations" title="Café tier curtains — Custom Fabric Creations, St. Petersburg, FL" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-500" loading="lazy" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <p class="text-[0.65rem] tracking-[0.22em] uppercase text-brand-700 font-bold mb-1">07 — Half-window</p>
+            <h3 class="font-display text-xl text-ink-800 mb-2">Café &amp; tier curtains</h3>
+            <p class="text-ink-600 text-sm leading-relaxed flex-1">Shorter panels hung mid-window or as a top-half tier. Common in kitchens, bathrooms, and breakfast nooks where the window architecture should stay visible.</p>
+            <p class="text-xs text-ink-500 mt-4 pt-3 border-t border-line italic">Old Northeast bungalows · Craftsman homes</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-14">
+        <a href="/contact/" class="btn-primary btn-lg">Book a Free In-Home Consultation</a>
+        <p class="text-ink-500 text-sm mt-4">Not sure which treatment fits your room? That's exactly what the consultation is for.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- FABRIC LIBRARY — Authority signal -->
   <section class="bg-cream-50 py-16 md:py-20 border-y border-line">
