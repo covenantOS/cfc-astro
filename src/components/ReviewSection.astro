@@ -16,7 +16,6 @@ interface Props {
   heading?: string;
   subheading?: string;
   rating?: number;
-  count?: string;
   googleHref?: string;
   featured?: Review;
   reviews?: Review[];
@@ -26,10 +25,9 @@ interface Props {
 const GOOGLE_HREF = 'https://www.google.com/search?q=custom+fabric+creations+st+petersburg';
 
 const {
-  heading = 'Trusted by Hundreds Around the St. Pete Coast',
+  heading = 'Trusted by St. Pete Homeowners',
   subheading = 'Licensed, Insured & Locally Owned · Serving Pinellas County since 2000',
   rating = 5.0,
-  count = '700',
   googleHref = GOOGLE_HREF,
   badges = [
     'Licensed & Insured',
@@ -162,8 +160,8 @@ const {
         <p class="text-xs text-ink-500 uppercase tracking-widest">Average Rating</p>
       </div>
       <div class="text-center">
-        <p class="font-display text-3xl text-brand-600 tabular-nums">{count}</p>
-        <p class="text-xs text-ink-500 uppercase tracking-widest">Google Reviews</p>
+        <p class="font-display text-3xl text-brand-600">5-Star</p>
+        <p class="text-xs text-ink-500 uppercase tracking-widest">Google Rated</p>
       </div>
       <div class="text-center">
         <p class="font-display text-3xl text-ink-800">25+</p>
@@ -184,7 +182,7 @@ const {
         class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-7 py-3.5 rounded shadow-sm transition tracking-wide uppercase text-sm"
         style="letter-spacing: 0.06em;"
       >
-        Read All {count} Reviews on Google
+        Read Our Reviews on Google
         <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M7 17L17 7M8 7h9v9"/>
         </svg>
