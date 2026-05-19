@@ -2,14 +2,12 @@
 interface Props {
   variant?: 'pill-dark' | 'pill-light' | 'card';
   rating?: number;
-  count?: string;
   href?: string;
 }
 
 const {
   variant = 'pill-dark',
-  rating = 4.9,
-  count = '700',
+  rating = 5.0,
   href = 'https://www.google.com/search?q=custom+fabric+creations+st+petersburg',
 } = Astro.props;
 ---
@@ -37,7 +35,7 @@ const {
         ))}
       </div>
       <span class="text-white text-sm font-bold">{rating.toFixed(1)}</span>
-      <span class="text-white/80 text-sm">· {count} Google Reviews</span>
+      <span class="text-white/80 text-sm">· Google Reviews</span>
     </div>
   </a>
 )}
@@ -64,7 +62,7 @@ const {
         ))}
       </div>
       <span class="text-ink-800 text-sm font-bold">{rating.toFixed(1)}</span>
-      <span class="text-ink-500 text-sm">· {count} reviews</span>
+      <span class="text-ink-500 text-sm">· Google Reviews</span>
     </div>
   </a>
 )}
@@ -93,7 +91,7 @@ const {
           ))}
         </div>
         <span class="text-ink-800 font-bold">{rating.toFixed(1)}</span>
-        <span class="text-ink-500 text-sm">· {count} reviews</span>
+        <span class="text-ink-500 text-sm">· Google Reviews</span>
       </div>
     </div>
   </a>

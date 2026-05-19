@@ -74,15 +74,6 @@ const localBusiness = {
       closes: '17:00',
     },
   ],
-  // Aggregate rating — surfaced from hundreds of verified Google reviews of CFC.
-  // Re-verify the count on a recurring basis; this drives star rich-results.
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '700',
-    bestRating: '5',
-    worstRating: '1',
-  },
   areaServed: [
     ...AREAS.map((a) => ({ '@type': 'City', name: a.title })),
     {
