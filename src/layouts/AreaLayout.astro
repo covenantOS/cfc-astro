@@ -5,7 +5,7 @@ import ServiceSidebar from '~/components/ServiceSidebar.astro';
 import GlobalContactMap from '~/components/GlobalContactMap.astro';
 import ServiceGrid from '~/components/ServiceGrid.astro';
 import FAQ from '~/components/FAQ.astro';
-import { SITE } from '~/lib/site';
+import { getLocationForArea } from '~/lib/site';
 
 interface Props {
   title: string;
@@ -34,6 +34,9 @@ const breadcrumbs = [
   { name: 'Areas', url: '/areas/' },
   { name: areaTitle, url: `/areas/${areaSlug}/` },
 ];
+
+// West St. Pete area uses its own tracking number; everything else uses Central.
+const location = getLocationForArea(areaSlug);
 ---
 
 <BaseLayout
@@ -50,7 +53,7 @@ const breadcrumbs = [
     title={heroTitle ?? `Custom Window Treatments & Upholstery in ${areaTitle}`}
     subtitle={heroSubtitle ?? description}
     image={heroImage ?? `/images/areas/${areaSlug}.webp`}
-    primaryCta={{ label: SITE.phone, href: SITE.phoneHref }}
+    primaryCta={{ label: location.phone, href: location.phoneHref }}
     secondaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
     breadcrumbs={breadcrumbs}
     goldLine
@@ -58,7 +61,7 @@ const breadcrumbs = [
 
   <section class="py-16 md:py-20 bg-cream-50">
     <div class="container-site grid gap-10 lg:grid-cols-[380px_1fr] lg:gap-16 items-start">
-      <ServiceSidebar kind="area" currentSlug={areaSlug} />
+      <ServiceSidebar kind="area" currentSlug={areaSlug} phone={location.phone} phoneHref={location.phoneHref} />
       <article class="prose-cfc content-card min-w-0">
         <slot />
       </article>
@@ -72,8 +75,8 @@ const breadcrumbs = [
   />
 
   {faqs && faqs.length > 0 && (
-    <FAQ items={faqs} heading={`${areaTitle} — Frequently Asked Questions`} eyebrow="Common Questions" subtitle={`Answers about our services in ${areaTitle}.`} />
+    <FAQ items={faqs} heading={`${areaTitle}: Frequently Asked Questions`} eyebrow="Common Questions" subtitle={`Answers about our services in ${areaTitle}.`} />
   )}
 
-  <GlobalContactMap areaLabel={`Serving ${areaTitle} & the St. Pete coast`} />
+  <GlobalContactMap areaLabel={`Serving ${areaTitle} & the St. Pete coast`} phone={location.phone} phoneHref={location.phoneHref} />
 </BaseLayout>

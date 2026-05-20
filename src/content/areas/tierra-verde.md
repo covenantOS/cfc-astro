@@ -122,7 +122,7 @@ Window covering specialists in a community like Tierra Verde aren't interchangea
 
 ## Your Local Window Treatment Store in Tierra Verde — Ready to Help
 
-Call (727) 240-4512 or visit customfabriccreations.net to request a free in-home consultation. We come to your Tierra Verde home, measure every window, show you actual product samples in your actual lighting, and give you a straightforward price for exactly what you need.
+Call (727) 914-5410 or visit customfabriccreations.net to request a free in-home consultation. We come to your Tierra Verde home, measure every window, show you actual product samples in your actual lighting, and give you a straightforward price for exactly what you need.
 
 No sales pressure. No artificial urgency. No products specified based on what we have in stock rather than what actually works in your specific situation.
 

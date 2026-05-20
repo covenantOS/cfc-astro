@@ -1,14 +1,23 @@
 ---
-import { SITE, SERVICES, AREAS } from '~/lib/site';
+import { SITE, SERVICES, AREAS, getLocationForPath } from '~/lib/site';
 const year = new Date().getFullYear();
+const location = getLocationForPath(Astro.url.pathname);
 ---
 
 <footer class="bg-ink-900 text-white">
   <div class="container-site py-16 md:py-20 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
     <div>
-      <div class="font-display italic text-3xl text-brand-400 mb-5 leading-tight">
-        Custom Fabric Creations
-      </div>
+      <a href="/" class="inline-flex items-center mb-5" aria-label={SITE.name}>
+        <img
+          src="/images/logo.webp"
+          alt={`${SITE.name} logo`}
+          class="h-16 w-auto object-contain"
+          width="300"
+          height="78"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
       <p class="text-sm text-white/75 leading-relaxed mb-6">
         We’d love to help you design the space of your dreams. Whether you’re looking for interior or exterior shades with motorization options, custom drapes and top treatments or re-upholstery.
       </p>
@@ -22,7 +31,7 @@ const year = new Date().getFullYear();
           </span>
           <div>
             <p class="text-white/60 text-xs uppercase tracking-widest mb-1">Call us</p>
-            <a href={SITE.phoneHref} class="block text-brand-400 font-bold hover:text-brand-300 text-base">{SITE.phone}</a>
+            <a href={location.phoneHref} class="block text-brand-400 font-bold hover:text-brand-300 text-base">{location.phone}</a>
           </div>
         </div>
         <div class="flex items-start gap-3">

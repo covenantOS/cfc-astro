@@ -106,6 +106,6 @@ For waterfront Shore Acres living rooms with large windows and substantial glass
 
 We've been working in Shore Acres for over two decades. We've seen which products fail in these conditions and which ones don't. We've handled everything from single-window replacements in older homes to complete window treatment packages for new waterfront construction. We know the neighborhood, we know the exposure conditions, and we know which products and mounting approaches work in each specific situation.
 
-Call (727) 240-4512 or visit customfabriccreations.net to request a free in-home consultation. We come to your Shore Acres home, measure every window, show you actual product samples in your actual lighting, and give you an honest price for exactly what you need. No sales pressure. No upsells to products that don't make sense for your specific situation.
+Call (727) 914-5410 or visit customfabriccreations.net to request a free in-home consultation. We come to your Shore Acres home, measure every window, show you actual product samples in your actual lighting, and give you an honest price for exactly what you need. No sales pressure. No upsells to products that don't make sense for your specific situation.
 
 We serve: Shore Acres, St. Petersburg, St. Pete Beach, Gulfport, Kenneth City, and all surrounding Pinellas County communities.

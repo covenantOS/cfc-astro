@@ -159,11 +159,11 @@ Pinellas County: Mid & North: Clearwater, Seminole, Largo, Palm Harbor, Tarpon S
 
 Hillsborough, Pasco & Sarasota counties: Tampa, Brandon, Riverview, Apollo Beach, Wesley Chapel, Lutz, Odessa, Sarasota, Bradenton.
 
-Not sure if we cover your neighborhood? Call us at (727) 240-4512, for projects of four or more windows we travel across most of the Tampa Bay and Gulf Coast region.
+Not sure if we cover your neighborhood? Call us at (727) 914-5410, for projects of four or more windows we travel across most of the Tampa Bay and Gulf Coast region.
 
 ## Ready to see what custom plantation shutters can do for your St. Pete home?
 
-Call (727) 240-4512 or request your free in-home consultation.
+Call (727) 914-5410 or request your free in-home consultation.
 
 We're available by appointment evenings and weekends included.
 

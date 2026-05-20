@@ -75,6 +75,6 @@ Not in one of these areas? Call us anyway if we can help, we will.
 
 ## Have a piece in mind? Let's talk.
 
-Call (727) 240-4512 or request your free in-home consultation. We serve Tampa Bay, St. Petersburg, Clearwater, and surrounding counties.
+Call (727) 914-5410 or request your free in-home consultation. We serve Tampa Bay, St. Petersburg, Clearwater, and surrounding counties.
 
 Available by appointment evenings and weekends included.

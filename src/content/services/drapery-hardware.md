@@ -96,6 +96,6 @@ Weight requirements — Heavy lined drapery or layered treatments require hardwa
 
 ## Need drapery hardware that actually works?
 
-Call (727) 240-4512 or request your free consultation.
+Call (727) 914-5410 or request your free consultation.
 
 We're available by appointment evenings and weekends included.

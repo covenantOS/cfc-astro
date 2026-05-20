@@ -574,7 +574,7 @@ Every product we install for commercial clients meets or exceeds relevant buildi
         heading: 'Specifying for Architects and GCs',
         body: `We work with architects, general contractors, and design-build firms across the St. Pete area. We provide CSI-format spec sheets, compete with national bids on pricing, and hold CGL insurance appropriate for commercial jobsites.
 
-If you’re spec’ing window treatments on a new commercial build — hotel, restaurant, office, medical, multi-family — we’d love the chance to bid. Call (727) 240-4512 or email info@customfabriccreations.net.`,
+If you’re spec’ing window treatments on a new commercial build — hotel, restaurant, office, medical, multi-family — we’d love the chance to bid. Call (727) 914-5410 or email info@customfabriccreations.net.`,
       },
       {
         heading: 'Multi-Phase and Repeat Projects',

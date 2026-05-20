@@ -73,6 +73,6 @@ Not in one of these areas? Call us anyway — if we can help, we'll tell you.
 
 ## Ready to make your home feel more like you?
 
-Call (727) 240-4512 or request your free in-home design consultation.
+Call (727) 914-5410 or request your free in-home design consultation.
 
 We're available by appointment including evenings and weekends.

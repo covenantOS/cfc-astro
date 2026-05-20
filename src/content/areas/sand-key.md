@@ -110,7 +110,7 @@ Hardware specification is another element that distinguishes custom drapery from
 
 ## Your Local Window Treatment Store in Sand Key — Ready to Help
 
-Call (727) 240-4512 or visit customfabriccreations.net to request a free in-home consultation. We come to your Sand Key home, measure every window, show you actual product samples in your actual lighting conditions, and give you a straightforward price for exactly what you need.
+Call (727) 914-5410 or visit customfabriccreations.net to request a free in-home consultation. We come to your Sand Key home, measure every window, show you actual product samples in your actual lighting conditions, and give you a straightforward price for exactly what you need.
 
 No sales pressure. No artificial urgency. Just honest work from a company that has been solving window treatment problems on this barrier island for over two decades.
 

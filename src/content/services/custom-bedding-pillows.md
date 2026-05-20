@@ -78,6 +78,6 @@ Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 
 ## Have a bedding problem? Let's solve it.
 
-Call (727) 240-4512 or request your free in-home consultation.
+Call (727) 914-5410 or request your free in-home consultation.
 
 We're available by appointment evenings and weekends included.

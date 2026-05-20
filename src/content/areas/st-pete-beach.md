@@ -124,6 +124,6 @@ The fabric and material selections on St. Pete Beach have a practical dimension 
 
 ## Your St. Pete Beach Window Treatment Store Ready to Help
 
-Call (727) 240-4512 or visit customfabriccreations.net to request a free in-home consultation. We come to your St. Pete Beach home, measure every window, show you actual product samples in your actual lighting conditions, and give you an honest price for exactly what you need, nothing more.
+Call (727) 914-5410 or visit customfabriccreations.net to request a free in-home consultation. We come to your St. Pete Beach home, measure every window, show you actual product samples in your actual lighting conditions, and give you an honest price for exactly what you need, nothing more.
 
 We serve St. Pete Beach, Pass-a-Grille, Treasure Island, Madeira Beach, and all surrounding Pinellas County beach communities.

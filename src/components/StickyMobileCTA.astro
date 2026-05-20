@@ -1,11 +1,12 @@
 ---
-import { SITE } from '~/lib/site';
+import { getLocationForPath } from '~/lib/site';
+const location = getLocationForPath(Astro.url.pathname);
 ---
 
 <div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.10)]">
   <div class="grid grid-cols-2">
     <a
-      href={SITE.phoneHref}
+      href={location.phoneHref}
       class="flex items-center justify-center gap-2.5 py-4 text-ink-800 font-bold border-r border-ink-100"
     >
       <span class="icon-badge-sm">

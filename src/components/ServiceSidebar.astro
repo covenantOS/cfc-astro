@@ -1,12 +1,25 @@
 ---
 import { SITE, AREAS } from '~/lib/site';
+import { getFeaturedReview } from '~/data/reviews';
+
+const sidebarReview = getFeaturedReview();
+const sidebarReviewBody = sidebarReview.body.length > 160
+  ? sidebarReview.body.slice(0, 157).trimEnd() + '...'
+  : sidebarReview.body;
 
 interface Props {
   kind?: 'service' | 'area';
   currentSlug?: string;
+  phone?: string;
+  phoneHref?: string;
 }
 
-const { kind = 'service', currentSlug } = Astro.props;
+const {
+  kind = 'service',
+  currentSlug,
+  phone = SITE.phone,
+  phoneHref = SITE.phoneHref,
+} = Astro.props;
 
 const SERVICE_GROUPS = [
   {
@@ -57,11 +70,11 @@ const WHY_CHOOSE_US = [
     <div class="absolute top-0 left-0 right-0 h-1 bg-brand-500"></div>
     <h3 class="text-2xl text-white font-display mb-1.5">Get Your Free Estimate</h3>
     <p class="text-white/70 text-sm mb-6">Call us today or schedule your consultation.</p>
-    <a href={SITE.phoneHref} class="flex items-center justify-center gap-2.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold py-4 rounded-sm mb-3 text-base md:text-lg tracking-wide">
+    <a href={phoneHref} class="flex items-center justify-center gap-2.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold py-4 rounded-sm mb-3 text-base md:text-lg tracking-wide">
       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
       </svg>
-      {SITE.phone}
+      {phone}
     </a>
     <a href="/contact/" class="block text-center bg-white/5 border border-white/40 hover:bg-white/15 text-white font-semibold py-3.5 rounded-sm text-sm tracking-wide uppercase" style="letter-spacing: 0.08em;">
       Schedule Consultation
@@ -160,14 +173,30 @@ const WHY_CHOOSE_US = [
             </svg>
           ))}
         </div>
-        <p class="font-bold text-ink-800 text-sm leading-tight">5.0 · Google Reviews</p>
+        <p class="font-bold text-ink-800 text-sm leading-tight">5.0 on Google</p>
       </div>
     </div>
     <div class="flex items-start gap-3">
-      <div class="w-8 h-8 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs font-bold shrink-0">JR</div>
+      {sidebarReview.avatar ? (
+        <img
+          src={sidebarReview.avatar}
+          alt=""
+          class="w-8 h-8 rounded-full object-cover shrink-0"
+          width="32"
+          height="32"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <div
+          class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0"
+          style={`background-color: ${sidebarReview.avatarColor};`}
+          aria-hidden="true"
+        >{sidebarReview.initials}</div>
+      )}
       <div>
-        <p class="text-xs text-ink-600 italic leading-relaxed">"The absolute best company I've ever worked with! Professional, honest, and reliable."</p>
-        <p class="text-xs text-ink-400 mt-1">Jennifer R. · St. Pete</p>
+        <p class="text-xs text-ink-600 italic leading-relaxed">"{sidebarReviewBody}"</p>
+        <p class="text-xs text-ink-400 mt-1">{sidebarReview.name}</p>
       </div>
     </div>
   </a>

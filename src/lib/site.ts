@@ -1,14 +1,51 @@
+// Two tracking numbers, one per main location. Both forward to the original
+// office line (727-240-4512) which is NEVER displayed on the site, per
+// Twilio routing setup. Central is the default for every page except the
+// West St. Pete area page.
+export const LOCATIONS = {
+  central: {
+    id: 'central',
+    name: 'Central St. Pete (Main)',
+    areaSlug: 'st-petersburg',
+    phone: '(727) 914-5410',
+    phoneHref: 'tel:+17279145410',
+  },
+  westStPete: {
+    id: 'west-st-pete',
+    name: 'West St. Pete',
+    areaSlug: 'west-st-pete',
+    phone: '(727) 498-2108',
+    phoneHref: 'tel:+17274982108',
+  },
+} as const;
+
+export type LocationId = keyof typeof LOCATIONS;
+export const DEFAULT_LOCATION = LOCATIONS.central;
+
+export function getLocationForArea(areaSlug: string) {
+  if (areaSlug === LOCATIONS.westStPete.areaSlug) return LOCATIONS.westStPete;
+  return LOCATIONS.central;
+}
+
+// Pathname-based lookup for global components (Header, Footer, StickyMobileCTA)
+// that do not receive an areaSlug prop. Only the West St. Pete area page
+// overrides; everything else uses Central.
+export function getLocationForPath(pathname: string) {
+  if (pathname.startsWith('/areas/west-st-pete')) return LOCATIONS.westStPete;
+  return LOCATIONS.central;
+}
+
 export const SITE = {
   name: 'Custom Fabric Creations',
   shortName: 'CFC',
-  // Canonical production host. www is canonical (per GSC: 100% of search traffic
-  // historically lives at www). Apex 301-redirects to www at the Cloudflare edge.
   url: 'https://www.customfabriccreations.net',
   tagline: 'Bespoke Window Treatments & Custom Upholstery',
   description:
     'St. Petersburg’s premier studio for custom window treatments, drapery, plantation shutters, shades, and bespoke upholstery. Established 2000. Free in-home consultations.',
-  phone: '(727) 240-4512',
-  phoneHref: 'tel:+17272404512',
+  // Default phone (Central). Pages that need the West St. Pete number import
+  // getLocationForArea() or LOCATIONS.westStPete directly.
+  phone: DEFAULT_LOCATION.phone,
+  phoneHref: DEFAULT_LOCATION.phoneHref,
   email: 'info@customfabriccreations.net',
   address: {
     locality: 'St. Petersburg',
@@ -19,7 +56,7 @@ export const SITE = {
   established: 2000,
 } as const;
 
-export const NAV: ReadonlyArray<{ label: string; href: string; children?: ReadonlyArray<{ label: string; href: string }> }> = [
+export const NAV: ReadonlyArray<{ label: string; href: string; children?: ReadonlyArray<{ label: string; href: string; featured?: boolean; divider?: boolean }> }> = [
   { label: 'Home', href: '/' },
   {
     label: 'Services',
@@ -43,20 +80,11 @@ export const NAV: ReadonlyArray<{ label: string; href: string; children?: Readon
     label: 'Areas',
     href: '/areas/',
     children: [
-      { label: 'St. Petersburg', href: '/areas/st-petersburg/' },
-      { label: 'Downtown St. Pete', href: '/areas/downtown-st-pete/' },
-      { label: 'Historic Old Northeast', href: '/areas/old-northeast/' },
-      { label: 'Snell Isle', href: '/areas/snell-isle/' },
-      { label: 'Shore Acres', href: '/areas/shore-acres/' },
-      { label: 'West St. Pete', href: '/areas/west-st-pete/' },
-      { label: 'Tierra Verde', href: '/areas/tierra-verde/' },
-      { label: 'St. Pete Beach', href: '/areas/st-pete-beach/' },
-      { label: 'Treasure Island', href: '/areas/treasure-island/' },
-      { label: 'Clearwater', href: '/areas/clearwater/' },
-      { label: 'Sand Key', href: '/areas/sand-key/' },
-      { label: 'Belleair Shore', href: '/areas/belleair-shore/' },
-      { label: 'Seminole', href: '/areas/seminole/' },
-      { label: 'Largo', href: '/areas/largo/' },
+      // Two main locations promoted at the top. `featured: true` marks them
+      // for visual emphasis in the dropdown; All Areas link sits below a divider.
+      { label: 'St. Petersburg (Central)', href: '/areas/st-petersburg/', featured: true },
+      { label: 'West St. Pete', href: '/areas/west-st-pete/', featured: true },
+      { label: 'All Areas', href: '/areas/', divider: true },
     ],
   },
   { label: 'Brands', href: '/brands/' },

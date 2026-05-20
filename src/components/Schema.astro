@@ -1,5 +1,5 @@
 ---
-import { SITE, AREAS, SERVICES } from '~/lib/site';
+import { SITE, AREAS, SERVICES, LOCATIONS, getLocationForArea } from '~/lib/site';
 
 type BreadcrumbItem = { name: string; url: string };
 
@@ -48,7 +48,7 @@ const localBusiness = {
   name: SITE.name,
   alternateName: SITE.shortName,
   url: SITE.url,
-  telephone: '+1-727-240-4512',
+  telephone: `+1-${LOCATIONS.central.phone.replace(/[^\d]/g, '')}`,
   email: SITE.email,
   priceRange: '$$$',
   foundingDate: '2000',
@@ -74,6 +74,9 @@ const localBusiness = {
       closes: '17:00',
     },
   ],
+  // aggregateRating intentionally omitted: no verified review count shown
+  // anywhere on the site (client decision 2026-05-20). Re-add when a real
+  // GBP count is confirmed.
   areaServed: [
     ...AREAS.map((a) => ({ '@type': 'City', name: a.title })),
     {
@@ -175,16 +178,19 @@ if (pageType === 'service' && serviceSlug && serviceTitle) {
 }
 
 if (pageType === 'area' && areaTitle) {
-  // Area pages get their own LocalBusiness-flavored node representing the branch
+  // Pick the routing number for this area (West St. Pete uses the
+  // West St. Pete tracking number; everything else uses Central).
+  const areaSlugForLookup = Astro.props.areaSlug ?? '';
+  const branchLocation = getLocationForArea(areaSlugForLookup);
   graph.push({
     '@type': 'LocalBusiness',
     '@id': `${canonicalUrl}#localbusiness`,
-    name: `${SITE.name} — ${areaTitle}`,
+    name: `${SITE.name}, ${areaTitle}`,
     description,
     url: canonicalUrl,
     parentOrganization: { '@id': orgId },
     areaServed: { '@type': 'City', name: areaTitle },
-    telephone: '+1-727-240-4512',
+    telephone: `+1-${branchLocation.phone.replace(/[^\d]/g, '')}`,
     priceRange: '$$$',
     address: {
       '@type': 'PostalAddress',

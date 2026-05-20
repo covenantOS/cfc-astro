@@ -70,7 +70,7 @@ Not sure if we cover your area? Call us. If we don't service your location direc
 
 ## Ready to see what custom drapes can do for your home?
 
-Call us at (727) 240-4512 or request your free in-home consultation.
+Call us at (727) 914-5410 or request your free in-home consultation.
 
 We're available by appointment including evenings and weekends.
-(727) 240-4512
+(727) 914-5410

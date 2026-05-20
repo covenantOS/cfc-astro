@@ -1,25 +1,22 @@
 ---
-// Prominent Google reviews section — pulls styling cues from the trusted-reviews layout
-// Matches the Google-native look: colored G logo, Google branding, verified indicator.
+// Google reviews section, Titan-style layout.
+// - Trust pill at top: Google G + 5.0 + 5 stars + qualitative copy (no count).
+// - Featured review card: large, single review at a time, JS-driven carousel.
+// - Carousel dot indicators below.
+// - 4-card row of smaller reviews below the carousel.
+// - Stats bar at bottom: Rating, Years, In-House Workroom.
+// - "Reviews sourced from Google" footer with mini G logo.
+//
+// Per client decision 2026-05-20: NO review count anywhere in this section.
+// Suzanne Rice excluded upstream (no body) in src/data/reviews.ts.
 
-interface Review {
-  name: string;
-  initials?: string;
-  avatarColor?: string;
-  date: string;
-  rating: number;
-  body: string;
-  neighborhood?: string;
-}
+import { REVIEWS, getFeaturedReview, getReviewsByRecency } from '~/data/reviews';
 
 interface Props {
   heading?: string;
   subheading?: string;
-  rating?: number;
+  trustCopy?: string;
   googleHref?: string;
-  featured?: Review;
-  reviews?: Review[];
-  badges?: string[];
 }
 
 const GOOGLE_HREF = 'https://www.google.com/search?q=custom+fabric+creations+st+petersburg';
@@ -27,153 +24,196 @@ const GOOGLE_HREF = 'https://www.google.com/search?q=custom+fabric+creations+st+
 const {
   heading = 'Trusted by St. Pete Homeowners',
   subheading = 'Licensed, Insured & Locally Owned · Serving Pinellas County since 2000',
-  rating = 5.0,
+  trustCopy = 'Verified 5-star Google reviews',
   googleHref = GOOGLE_HREF,
-  badges = [
-    'Licensed & Insured',
-    '25+ Years in St. Pete',
-    'Family Owned',
-  ],
-  featured = {
-    name: 'Patty Profeto',
-    initials: 'PP',
-    avatarColor: 'rgb(217, 119, 54)',
-    date: 'Verified review',
-    rating: 5,
-    body: "I have been working with Terry and her team for years. Very talented decorator with beautiful and unique designs. The quality of her products is superior. I love working with her on my projects because she listens to what I want to do and goes far past my expectations. Just a true delight to work with. The best part — she always stayed in my budget for every project.",
-  },
-  reviews = [
-    {
-      name: 'Beth McCarthy',
-      initials: 'BM',
-      avatarColor: 'rgb(82, 140, 158)',
-      date: '2 weeks ago',
-      rating: 5,
-      body: 'Terry and team did an amazing job reupholstering my 10-1/2 foot bench. The quality of work, communication, and speed were A++. Thank you!',
-    },
-    {
-      name: 'Amy Monroe',
-      initials: 'AM',
-      avatarColor: 'rgb(234, 179, 8)',
-      date: '1 month ago',
-      rating: 5,
-      body: "Terry was a blast and very professional. I had her and her team make custom curtains for my mom's outdoor sitting area. She came over and helped us go through fabric choices. In the end my mom is very pleased. I would recommend them.",
-    },
-    {
-      name: 'Jennifer R.',
-      initials: 'JR',
-      avatarColor: 'rgb(120, 78, 163)',
-      date: '1 month ago',
-      rating: 5,
-      body: "The absolute best company I've ever worked with! Professional, honest, and reliable.",
-      neighborhood: 'Snell Isle',
-    },
-  ],
 } = Astro.props;
+
+const featured = getFeaturedReview();
+// Carousel pool: every review including the featured one, sorted most-recent
+// first so the rotation reads as fresh.
+const carouselReviews = getReviewsByRecency();
+// 4-card row: the 4 most recent reviews that are NOT the currently-featured
+// review (to avoid the same review showing twice on first paint).
+const grid = getReviewsByRecency().filter((r) => r.id !== featured.id).slice(0, 4);
 ---
 
-<section class="py-20 md:py-28 bg-white">
+<section class="py-20 md:py-28 bg-cream-50">
   <div class="container-site">
-    <!-- Section header — Westchase pattern: eyebrow, big bold heading,
-         then a single oversized Google G + rating + stars line. -->
-    <div class="text-center max-w-2xl mx-auto mb-12">
+
+    <!-- Section heading -->
+    <div class="text-center max-w-2xl mx-auto mb-10">
       <p class="eyebrow" style="letter-spacing: 0.3em;">Reviews</p>
       <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-ink-800 mb-5 leading-tight">{heading}</h2>
-      <div class="inline-flex items-center justify-center gap-3 mb-3" aria-label={`${rating.toFixed(1)} stars on Google`}>
-        <svg class="w-9 h-9" viewBox="0 0 48 48" aria-hidden="true">
+      <p class="text-ink-500 text-sm md:text-base">{subheading}</p>
+    </div>
+
+    <!-- Trust pill (Titan-style floating card): G logo + 5.0 + 5 stars + copy.
+         No numeric review count per client decision. -->
+    <div class="flex justify-center mb-10">
+      <div class="inline-flex items-center gap-4 bg-white rounded-lg shadow-card px-6 py-3.5">
+        <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" aria-hidden="true">
           <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.1-2.3-.4-3.5z"/>
           <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.1 18.9 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
           <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.2 0-9.7-3.3-11.3-8l-6.5 5C9.4 39.6 16.1 44 24 44z"/>
           <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.2 5.6l6.2 5.2C41.4 35.5 44 30.2 44 24c0-1.3-.1-2.3-.4-3.5z"/>
         </svg>
-        <span class="font-display text-3xl text-ink-800 font-bold tabular-nums">{rating.toFixed(1)}</span>
-        <div class="flex items-center gap-0.5 text-[#FBBC04]" aria-hidden="true">
-          {[1,2,3,4,5].map(() => (
-            <svg class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-          ))}
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-display text-2xl text-ink-800 font-bold tabular-nums leading-none">5.0</span>
+            <div class="flex items-center gap-0.5 text-[#FBBC04]" aria-label="5 out of 5 stars">
+              {[1,2,3,4,5].map(() => (
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              ))}
+            </div>
+          </div>
+          <p class="text-xs text-ink-500 mt-0.5">{trustCopy}</p>
         </div>
       </div>
-      <p class="text-ink-500 text-sm md:text-base">{subheading}</p>
     </div>
 
-    <!-- Trust badges — slimmer pill row -->
-    <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
-      {badges.map((b) => (
-        <span class="inline-flex items-center gap-1.5 bg-cream-50 text-ink-600 text-xs md:text-sm px-4 py-2 rounded-full">
-          <svg class="w-3.5 h-3.5 text-brand-500" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          {b}
-        </span>
-      ))}
-    </div>
-
-    <!-- Featured review card -->
-    <div class="max-w-3xl mx-auto mb-8 bg-cream-50 rounded-lg shadow-card p-8 md:p-10">
-      <div class="flex items-center justify-center gap-0.5 text-[#FBBC04] mb-5" aria-hidden="true">
-        {Array.from({ length: featured.rating }).map(() => (
-          <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-          </svg>
+    <!-- Featured-review carousel.
+         Each slide is rendered as a full review card. JS rotates by toggling
+         a `data-active="true"` attribute on one slide at a time. Dots below
+         click to jump. Pauses on hover. Pure DOM, no framework. -->
+    <div class="max-w-3xl mx-auto mb-6" data-review-carousel>
+      <div class="relative">
+        {carouselReviews.map((r, i) => (
+          <article
+            class="review-slide bg-white rounded-lg shadow-card p-8 md:p-10"
+            data-slide-index={i}
+            data-active={i === 0 ? 'true' : 'false'}
+          >
+            <header class="flex items-center justify-between mb-5">
+              <div class="flex items-center gap-3">
+                {r.avatar ? (
+                  <img
+                    src={r.avatar}
+                    alt=""
+                    class="w-12 h-12 rounded-full object-cover shrink-0"
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <div
+                    class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0"
+                    style={`background-color: ${r.avatarColor};`}
+                    aria-hidden="true"
+                  >{r.initials}</div>
+                )}
+                <div>
+                  <p class="font-bold text-ink-800 text-base leading-tight">{r.name}</p>
+                  <div class="flex items-center gap-2 mt-1">
+                    <div class="flex items-center gap-0.5 text-[#FBBC04]" aria-label={`${r.rating} out of 5 stars`}>
+                      {Array.from({ length: r.rating }).map(() => (
+                        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                      ))}
+                    </div>
+                    <span class="text-ink-400 text-xs">·</span>
+                    <span class="text-ink-400 text-xs">{r.dateLabel}</span>
+                  </div>
+                </div>
+              </div>
+              <svg class="w-6 h-6 shrink-0" viewBox="0 0 48 48" aria-label="Google review">
+                <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.1-2.3-.4-3.5z"/>
+                <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.1 18.9 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+                <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.2 0-9.7-3.3-11.3-8l-6.5 5C9.4 39.6 16.1 44 24 44z"/>
+                <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.2 5.6l6.2 5.2C41.4 35.5 44 30.2 44 24c0-1.3-.1-2.3-.4-3.5z"/>
+              </svg>
+            </header>
+            <p class="text-ink-700 leading-relaxed text-base md:text-lg">{r.body}</p>
+          </article>
         ))}
       </div>
-      <blockquote class="text-ink-700 text-center italic leading-relaxed text-base md:text-lg mb-6">
-        <span class="text-brand-500 text-3xl leading-none align-top mr-1">“</span>
-        {featured.body}
-        <span class="text-brand-500 text-3xl leading-none align-bottom ml-1">”</span>
-      </blockquote>
-      <p class="text-center text-ink-800 font-bold">— {featured.name}</p>
+
+      <!-- Carousel dots -->
+      <div class="flex items-center justify-center gap-2 mt-6" data-review-dots>
+        {carouselReviews.map((_, i) => (
+          <button
+            type="button"
+            class="review-dot w-2.5 h-2.5 rounded-full transition"
+            data-dot-index={i}
+            aria-label={`Show review ${i + 1}`}
+          ></button>
+        ))}
+      </div>
     </div>
 
-    <!-- Review cards row — clean, shadow-led, no border. -->
-    <div class="grid gap-6 md:grid-cols-3 mb-10">
-      {reviews.map((r) => (
-        <div class="bg-cream-50 rounded-lg shadow-card p-6 md:p-7 transition duration-300 hover:shadow-card-hover hover:-translate-y-1 flex flex-col">
-          <div class="flex items-center gap-0.5 text-[#FBBC04] mb-4" aria-hidden="true">
-            {Array.from({ length: r.rating }).map(() => (
-              <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
-          </div>
-          <p class="text-ink-700 italic leading-relaxed mb-5 flex-1">"{r.body}"</p>
-          <div class="flex items-center gap-3 pt-4 border-t border-ink-100/70">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm bg-ink-900 shrink-0">
-              {r.initials ?? r.name.split(' ').map(w => w[0]).join('').slice(0,2)}
+    <!-- 4-card row beneath the carousel: smaller cards, truncated body.
+         Hidden under md to keep the mobile carousel tight; on md+ they show
+         as a quick scan of additional reviews. -->
+    <div class="hidden md:grid gap-5 md:grid-cols-2 lg:grid-cols-4 mb-12">
+      {grid.map((r) => (
+        <article class="bg-white rounded-lg shadow-card p-5 transition hover:shadow-card-hover hover:-translate-y-0.5">
+          <header class="flex items-start justify-between gap-3 mb-3">
+            <div class="flex items-center gap-2.5 min-w-0">
+              {r.avatar ? (
+                <img
+                  src={r.avatar}
+                  alt=""
+                  class="w-9 h-9 rounded-full object-cover shrink-0"
+                  width="36"
+                  height="36"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <div
+                  class="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-[0.7rem] shrink-0"
+                  style={`background-color: ${r.avatarColor};`}
+                  aria-hidden="true"
+                >{r.initials}</div>
+              )}
+              <div class="min-w-0">
+                <p class="font-bold text-ink-800 text-sm leading-tight truncate">{r.name}</p>
+                <div class="flex items-center gap-1.5 mt-0.5">
+                  <div class="flex items-center gap-0.5 text-[#FBBC04]" aria-label={`${r.rating} out of 5 stars`}>
+                    {Array.from({ length: r.rating }).map(() => (
+                      <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <span class="text-ink-400 text-[0.7rem]">{r.dateLabel}</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <p class="font-bold text-ink-800 text-sm leading-tight">{r.name}</p>
-              <p class="text-ink-400 text-xs mt-0.5">{r.date}</p>
-            </div>
-          </div>
-          {r.neighborhood && <p class="text-ink-400 text-xs mt-3">{r.neighborhood}</p>}
-        </div>
+            <svg class="w-4 h-4 shrink-0 mt-0.5" viewBox="0 0 48 48" aria-label="Google review">
+              <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.1-2.3-.4-3.5z"/>
+              <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.1 18.9 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
+              <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.2 0-9.7-3.3-11.3-8l-6.5 5C9.4 39.6 16.1 44 24 44z"/>
+              <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.2 5.6l6.2 5.2C41.4 35.5 44 30.2 44 24c0-1.3-.1-2.3-.4-3.5z"/>
+            </svg>
+          </header>
+          <p class="text-ink-700 text-sm leading-relaxed line-clamp-5">{r.body}</p>
+        </article>
       ))}
     </div>
 
-    <!-- Stats row -->
-    <div class="flex flex-wrap items-end justify-center gap-x-12 gap-y-6 py-6 mb-8">
-      <div class="text-center">
-        <p class="font-display text-3xl text-ink-800">{rating.toFixed(1)}</p>
-        <p class="text-xs text-ink-500 uppercase tracking-widest">Average Rating</p>
-      </div>
-      <div class="text-center">
-        <p class="font-display text-3xl text-brand-600">5-Star</p>
-        <p class="text-xs text-ink-500 uppercase tracking-widest">Google Rated</p>
-      </div>
-      <div class="text-center">
-        <p class="font-display text-3xl text-ink-800">25+</p>
-        <p class="text-xs text-ink-500 uppercase tracking-widest">Years in St. Pete</p>
-      </div>
-      <div class="text-center">
-        <p class="font-display text-3xl text-ink-800">In-House</p>
-        <p class="text-xs text-ink-500 uppercase tracking-widest">Workroom</p>
+    <!-- Stats bar -->
+    <div class="border-t border-line pt-10 mb-10">
+      <div class="flex flex-wrap items-end justify-center gap-x-16 gap-y-6">
+        <div class="text-center">
+          <p class="font-display text-3xl md:text-4xl text-ink-800 leading-none tabular-nums">5.0</p>
+          <p class="text-xs text-ink-500 uppercase tracking-widest mt-2">Google Rating</p>
+        </div>
+        <div class="text-center">
+          <p class="font-display text-3xl md:text-4xl text-brand-600 leading-none tabular-nums">25+</p>
+          <p class="text-xs text-ink-500 uppercase tracking-widest mt-2">Years in St. Pete</p>
+        </div>
+        <div class="text-center">
+          <p class="font-display text-3xl md:text-4xl text-ink-800 leading-none">In-House</p>
+          <p class="text-xs text-ink-500 uppercase tracking-widest mt-2">Workroom Since 2000</p>
+        </div>
       </div>
     </div>
 
-    <!-- CTA to Google -->
+    <!-- CTA + Google source attribution -->
     <div class="text-center">
       <a
         href={googleHref}
@@ -199,3 +239,57 @@ const {
     </div>
   </div>
 </section>
+
+<style>
+  /* Stack carousel slides; only data-active="true" is visible.
+     Display is toggled via JS, so non-active slides do not occupy space. */
+  .review-slide { display: none; }
+  .review-slide[data-active="true"] { display: block; }
+
+  .review-dot { background-color: #d8cfb6; }
+  .review-dot[data-active="true"] { background-color: var(--color-brand-500, #c19c3a); transform: scale(1.4); }
+
+  .line-clamp-5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+
+<script>
+  // Lightweight carousel: rotate every 7s, pause on hover, dots jump to slide.
+  // One carousel per page; if multiple are added later, scope to each root.
+  const root = document.querySelector<HTMLElement>('[data-review-carousel]');
+  if (root) {
+    const slides = Array.from(root.querySelectorAll<HTMLElement>('.review-slide'));
+    const dots = Array.from(root.querySelectorAll<HTMLButtonElement>('.review-dot'));
+    let idx = 0;
+    let timer: ReturnType<typeof setInterval> | null = null;
+    const INTERVAL_MS = 7000;
+
+    function paint(next: number) {
+      slides.forEach((s, i) => s.setAttribute('data-active', i === next ? 'true' : 'false'));
+      dots.forEach((d, i) => d.setAttribute('data-active', i === next ? 'true' : 'false'));
+      idx = next;
+    }
+
+    function start() {
+      stop();
+      timer = setInterval(() => paint((idx + 1) % slides.length), INTERVAL_MS);
+    }
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    dots.forEach((d, i) => {
+      d.addEventListener('click', () => { paint(i); start(); });
+    });
+
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+
+    paint(0);
+    if (slides.length > 1) start();
+  }
+</script>
