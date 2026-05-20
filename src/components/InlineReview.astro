@@ -35,8 +35,8 @@ const review: Review | undefined =
       <!-- Header strip: label on the left, star rating on the right. Uses
            the CFC ink palette for the strip color (warmer than Titan's
            blue but the same structural pattern). -->
-      <header class="bg-ink-800 text-white px-5 md:px-7 py-3.5 flex items-center justify-between gap-3">
-        <p class="font-display text-base md:text-lg leading-tight">{label}</p>
+      <header class="bg-coffee-900 px-5 md:px-7 py-3.5 flex items-center justify-between gap-3">
+        <p class="font-display text-base md:text-lg leading-tight" style="color: #ffffff;">{label}</p>
         <div class="flex items-center gap-0.5 text-[#FBBC04] shrink-0" aria-label={`${review.rating} out of 5 stars`}>
           {Array.from({ length: review.rating }).map(() => (
             <svg class="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 20 20" fill="currentColor">

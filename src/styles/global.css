@@ -29,9 +29,24 @@
   --color-ink-400:  #6b6b6b;
   --color-ink-500:  #4a4a4a;
   --color-ink-600:  #3a3a3a;
-  --color-ink-700:  #333333;  /* neutral — charcoal body text */
+  --color-ink-700:  #333333;  /* neutral, charcoal body text */
   --color-ink-800:  #222222;
   --color-ink-900:  #121212;
+
+  /* Warm dark-brown palette for body content components that need a dark
+     surface (review header strips, ByNumbersBanner, dark callouts). The
+     near-black `ink-900` is reserved for the global Header and Footer
+     per client decision 2026-05-20. */
+  --color-coffee-50:  #f6f1ec;
+  --color-coffee-100: #e8dccd;
+  --color-coffee-200: #c8b298;
+  --color-coffee-300: #a48865;
+  --color-coffee-400: #7a6242;
+  --color-coffee-500: #5f4a30;
+  --color-coffee-600: #4d3c27;
+  --color-coffee-700: #3f3120;
+  --color-coffee-800: #33281a;
+  --color-coffee-900: #2a2014;
 
   --color-ink:      #333333;
   --color-ink-soft: #4a4a4a;
@@ -150,6 +165,44 @@ details[open] > summary ~ * {
   @apply w-full h-auto rounded-sm my-10 shadow-soft;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+}
+
+/* `.not-prose` opt-out: when a component inside .prose-cfc carries the
+   `not-prose` class, its descendants should NOT inherit the prose color,
+   italic, list, or border styles. Tailwind's @typography plugin handles
+   this automatically, but CFC uses hand-written .prose-cfc selectors, so
+   we replicate the opt-out manually with higher-specificity overrides. */
+.prose-cfc .not-prose p,
+.prose-cfc .not-prose blockquote,
+.prose-cfc .not-prose ul,
+.prose-cfc .not-prose ol,
+.prose-cfc .not-prose strong {
+  color: inherit;
+}
+.prose-cfc .not-prose blockquote {
+  border-left: 0;
+  padding-left: 0;
+  font-style: normal;
+  margin: 0;
+  font-family: inherit;
+}
+.prose-cfc .not-prose ul,
+.prose-cfc .not-prose ol {
+  list-style: none;
+  padding-left: 0;
+}
+.prose-cfc .not-prose a {
+  text-decoration: inherit;
+  color: inherit;
+}
+.prose-cfc .not-prose img {
+  aspect-ratio: auto;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+  object-fit: cover;
+  width: auto;
+  height: auto;
 }
 
 /* Buttons — luxury refined: solid gold primary, ghost-outline secondary.

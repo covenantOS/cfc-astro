@@ -1,25 +1,11 @@
 ---
-// "By the numbers" strip. Verified-source stats only.
+// "By the numbers" stats grid. Cream surface, gold accent rule, tightened
+// hierarchy so the heading sits with the eyebrow, then the stats sit in
+// a row with subtle vertical dividers between them.
 //
-// Every external statistic must include a sourceUrl pointing to a primary
-// or authoritative secondary source (NOAA, US Census, DOE, ENERGY STAR,
-// peer-reviewed studies, established industry orgs). Internal stats (CFC
-// years, projects, etc.) use the `internal: true` flag and skip the URL.
-//
-// The sourceUrl is rendered as a small footnote underneath each stat so
-// readers and Daniel can audit the claim at any time. This is the contract
-// that prevents the "by the numbers" section from drifting into invented
-// marketing numbers over time.
-//
-// Usage:
-//   <StatsBand
-//     eyebrow="By the numbers"
-//     heading="Why plantation shutters work in Florida"
-//     stats={[
-//       { value: '361', unit: 'days', label: 'of sunshine per year in St. Petersburg', sourceUrl: 'https://www.weather.gov/...', sourceLabel: 'NOAA' },
-//       { value: '25+', unit: 'years', label: 'installing in Pinellas County', internal: true },
-//     ]}
-//   />
+// Every external statistic must include `sourceUrl` (rendered as a small
+// dotted-underline citation). Internal stats set `internal: true` and
+// render "Our records" instead. This is a hard rule: see project-cfc-decisions.
 
 interface Stat {
   value: string;
@@ -35,7 +21,6 @@ interface Props {
   heading?: string;
   subheading?: string;
   stats: Stat[];
-  variant?: 'light' | 'dark';
 }
 
 const {
@@ -43,54 +28,68 @@ const {
   heading,
   subheading,
   stats,
-  variant = 'light',
 } = Astro.props;
 
-const isDark = variant === 'dark';
+const gridCols = stats.length === 4
+  ? 'sm:grid-cols-2 lg:grid-cols-4'
+  : stats.length === 3
+  ? 'sm:grid-cols-3'
+  : stats.length === 2
+  ? 'sm:grid-cols-2'
+  : 'grid-cols-1';
 ---
 
-<section class={`my-12 md:my-14 not-prose ${isDark ? 'bg-ink-900 text-white' : 'bg-cream-50'} rounded-lg overflow-hidden shadow-card`}>
-  <div class="h-1 bg-brand-500"></div>
-  <div class="p-7 md:p-10">
+<section class="my-10 md:my-12 not-prose">
+  <div
+    class="rounded-lg shadow-card overflow-hidden"
+    style="background-color: var(--color-cream-50);"
+  >
+    <div class="h-1" style="background-color: var(--color-brand-500);"></div>
+    <div class="p-6 md:p-8">
 
-    {(eyebrow || heading || subheading) && (
-      <div class="text-center max-w-2xl mx-auto mb-8">
-        {eyebrow && (
-          <p
-            class={`eyebrow mb-2 ${isDark ? 'text-brand-400' : 'text-brand-700'}`}
-            style="letter-spacing: 0.25em;"
-          >{eyebrow}</p>
-        )}
-        {heading && (
-          <h3 class={`font-display text-2xl md:text-3xl leading-tight mb-2 ${isDark ? 'text-white' : 'text-ink-800'}`}>{heading}</h3>
-        )}
-        {subheading && (
-          <p class={`text-sm md:text-base ${isDark ? 'text-white/70' : 'text-ink-500'}`}>{subheading}</p>
-        )}
-      </div>
-    )}
-
-    <div class={`grid gap-6 md:gap-8 ${stats.length === 3 ? 'md:grid-cols-3' : stats.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-2'}`}>
-      {stats.map((s) => (
-        <div class="text-center">
-          <p class={`font-display text-4xl md:text-5xl leading-none tabular-nums ${isDark ? 'text-brand-400' : 'text-brand-600'}`}>
-            {s.value}{s.unit && <span class="text-2xl md:text-3xl ml-1">{s.unit}</span>}
-          </p>
-          <p class={`mt-3 text-sm md:text-base leading-snug ${isDark ? 'text-white/80' : 'text-ink-700'}`}>{s.label}</p>
-          {s.sourceUrl ? (
-            <p class="mt-2 text-[0.7rem] uppercase tracking-wider opacity-60">
-              <a
-                href={s.sourceUrl}
-                target="_blank"
-                rel="noopener nofollow"
-                class={`underline decoration-dotted underline-offset-2 ${isDark ? 'text-white/70 hover:text-white' : 'text-ink-500 hover:text-ink-700'}`}
-              >Source: {s.sourceLabel ?? 'cited'}</a>
-            </p>
-          ) : s.internal ? (
-            <p class={`mt-2 text-[0.7rem] uppercase tracking-wider opacity-60 ${isDark ? 'text-white/60' : 'text-ink-400'}`}>Our records</p>
-          ) : null}
+      {(eyebrow || heading || subheading) && (
+        <div class="text-center max-w-2xl mx-auto mb-6 md:mb-8">
+          {eyebrow && (
+            <p
+              class="font-display text-xs uppercase mb-2"
+              style="letter-spacing: 0.25em; color: var(--color-brand-700);"
+            >{eyebrow}</p>
+          )}
+          {heading && (
+            <h3 class="font-display text-xl md:text-2xl leading-snug" style="color: var(--color-ink-800);">{heading}</h3>
+          )}
+          {subheading && (
+            <p class="text-sm md:text-base mt-2" style="color: var(--color-ink-500);">{subheading}</p>
+          )}
         </div>
-      ))}
+      )}
+
+      <div class={`grid gap-6 ${gridCols} sm:divide-x sm:divide-brand-500/20`}>
+        {stats.map((s) => (
+          <div class="text-center px-2 md:px-4">
+            <p class="font-display leading-none tabular-nums" style="color: var(--color-brand-700);">
+              <span class="text-3xl md:text-4xl font-bold">{s.value}</span>
+              {s.unit && (
+                <span class="text-base md:text-lg ml-1" style="color: var(--color-brand-600);">{s.unit}</span>
+              )}
+            </p>
+            <p class="mt-3 text-sm leading-snug" style="color: var(--color-ink-700);">{s.label}</p>
+            {s.sourceUrl ? (
+              <p class="mt-2 text-[0.65rem] uppercase tracking-wider">
+                <a
+                  href={s.sourceUrl}
+                  target="_blank"
+                  rel="noopener nofollow"
+                  class="decoration-dotted underline-offset-2"
+                  style="color: var(--color-ink-400); text-decoration: underline; text-decoration-style: dotted;"
+                >Source: {s.sourceLabel ?? 'cited'}</a>
+              </p>
+            ) : s.internal ? (
+              <p class="mt-2 text-[0.65rem] uppercase tracking-wider" style="color: var(--color-ink-300);">Our records</p>
+            ) : null}
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>

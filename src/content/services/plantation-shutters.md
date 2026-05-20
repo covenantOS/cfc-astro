@@ -43,25 +43,20 @@ High-quality faux wood plantation shutters are the most reliable answer for the 
 
 ## Types of Plantation Shutters We Install in St. Petersburg
 
-Faux wood plantation shutters : The most practical choice for most Florida homes. Faux wood is moisture-resistant, UV-stable, and doesn't swell or warp in humid conditions. It's also more affordable than real wood. We recommend faux wood as the default for St. Pete windows unless there's a specific reason to choose real wood.
-
-Real wood plantation shutters : Available for homeowners who prefer the warmth and natural texture of real wood. Real wood shutters are lighter than faux wood and can be stained or painted with more flexibility. The trade-off is that they require more care in humid environments we discuss this honestly at the consultation.
-
-Custom sizing. Florida homes vary in window size more than homes in many other regions, old Florida construction, concrete block homes, and newer builds all have different window specifications. We measure every window individually and build to exact specifications not standard catalog sizes.
-
-Motorized louver control. Some plantation shutter systems can be motorized, allowing you to adjust the louvers via wall switch or remote. This is particularly useful for high windows, large window walls, or windows that are awkward to reach.
+- **Faux wood plantation shutters.** The most practical choice for most Florida homes. Moisture-resistant, UV-stable, will not swell or warp. Our default recommendation for St. Pete windows.
+- **Real wood plantation shutters.** For homeowners who want the warmth and natural texture of real wood. Lighter than faux wood and easier to stain or paint. We are honest at the consultation about which rooms suit it and which do not.
+- **Custom sizing.** Old Florida construction, concrete-block homes, and newer builds all have different window specs. Every window is measured individually and built to exact dimensions, not catalog standards.
+- **Motorized louver control.** Tilt motors for high windows, wide window walls, or any opening that is awkward to reach. Operate from a wall switch, remote, phone, or voice.
 
 ## Materials & Construction: What You're Actually Buying
 
-Three material tiers. Here's the honest version:
+Three material tiers, the honest version:
 
-Faux Wood / Composite (Tech / Hybrid) Best for: bathrooms, kitchens, laundry rooms, beachfront condos, any window within a mile of the Gulf. Solid polymer or ABS over an engineered composite core. Mortise-and-tenon joinery on premium lines. Louver sizes: 2.5″, 3.5″, 4.5″. Factory-applied UV-stable coating with up to 40 standard colors. Limited lifetime warranty against warping, cracking, fading. Mid-tier pricing, best dollar-per-year-of-service in Florida.
+- **Faux Wood / Composite.** Best for: bathrooms, kitchens, laundry, beachfront condos, any window within a mile of the Gulf. Solid polymer or ABS over an engineered composite core with mortise-and-tenon joinery on premium lines. Louver sizes 2.5″, 3.5″, 4.5″. UV-stable coating, 40+ standard colors, limited lifetime warranty against warping, cracking, fading. Best dollar-per-year-of-service in Florida.
+- **Real Wood (Basswood & Poplar).** Best for: formal living rooms, stained-wood interiors, historic Old Northeast and Snell Isle homes where wood tone matters. Kiln-dried basswood or poplar with mortise-and-tenon construction. 50+ custom stains, 200+ paint colors, color-matched to existing trim. Specify real wood only if the room stays climate-controlled.
+- **Hybrid / Premier (wood core + polymer exterior).** Best for: clients who want the look of real wood with composite's humidity resistance. Hardwood frame with a polymer-wrapped louver face, 3.5″ louvers most common, stainable or paintable.
 
-Real Wood (Basswood & Poplar) Best for: formal living rooms, main-living windows, stained-wood interiors, historic Old Northeast and Snell Isle homes where wood tone matters. Kiln-dried basswood or poplar with mortise-and-tenon construction. 50+ custom stains, 200+ paint colors, color-matched to existing trim or furniture. Manufacturer limited lifetime warranty. Premium tier, specify real wood only if the room stays climate-controlled.
-
-Hybrid / Premier (Wood core + polymer exterior) Best for: clients who want the look of real wood with composite's humidity resistance. Hardwood frame with a polymer-wrapped louver face. 3.5″ louvers most common. Stainable or paintable; accepts custom color match. Premium tier, the "best of both" option.
-
-Quick decision rule: Bathroom, kitchen, laundry, or within a mile of saltwater → faux wood. Climate-controlled and the room's aesthetic calls for stained wood → basswood. Wood grain without the maintenance → hybrid.
+**Quick decision rule:** Bathroom, kitchen, laundry, or within a mile of saltwater → faux wood. Climate-controlled room where stained wood matters → basswood. Wood grain without the maintenance → hybrid.
 
 
 
@@ -72,31 +67,23 @@ Quick decision rule: Bathroom, kitchen, laundry, or within a mile of saltwater �
 
 Every window in St. Pete is different. Sunburst transom over a Coquina-stone bungalow. Trapezoidal gable in a Tierra Verde canal home. French doors opening to a Snell Isle courtyard. Sliding glass onto a Treasure Island lanai. We build for all of them.
 
-Arches, sunbursts, eyebrows & angled windows. Custom-cut frames for true radial arches, half-rounds, eyebrows, octagons, trapezoids, and hexagons. Louvers are cut to the exact radius, no "close enough" framing.
-
-French door shutters. Low-profile frames clear the door hardware. Tilt rods positioned so the lever handle doesn't bind. Optional cut-outs for lever handles on antique French doors.
-
-Sliding glass door bypass shutters. Full-height panels on a bypass or bi-fold track. Hidden control rods so you see clean louver faces from inside and out. Standard on Gulf-facing lanais across St. Pete Beach and Sand Key.
-
-Closet, pass-through & pantry shutters. Same premium plantation look in smaller applications, walk-in closets, butler's pantries, and passage doors where you want airflow without losing privacy.
-
-Motorized & smart shutters. Tilt motors from Somfy and Hunter Douglas PowerView®. Control via wall switch, remote, iOS/Android app, or voice via Alexa and Google Assistant. Program scenes, open at sunrise, close at sunset, full blackout for the guest-room afternoon.
+- **Arches, sunbursts, eyebrows, angled windows.** Custom-cut frames for true radial arches, half-rounds, eyebrows, octagons, trapezoids, and hexagons. Louvers cut to the exact radius, no "close enough" framing.
+- **French door shutters.** Low-profile frames clear the door hardware. Tilt rods positioned so the lever handle does not bind. Optional cut-outs for lever handles on antique French doors.
+- **Sliding glass door bypass shutters.** Full-height panels on a bypass or bi-fold track. Hidden control rods so you see clean louver faces from inside and out. Standard on Gulf-facing lanais across St. Pete Beach and Sand Key.
+- **Closet, pass-through, pantry shutters.** Same premium plantation look in smaller applications: walk-in closets, butler's pantries, and passage doors where you want airflow without losing privacy.
+- **Motorized and smart shutters.** Tilt motors from Somfy and Hunter Douglas PowerView. Control via wall switch, remote, iOS or Android app, or voice via Alexa and Google Assistant. Program scenes: open at sunrise, close at sunset, full blackout for the guest-room afternoon.
 
 ## Authorized Dealer for the Top 5 Plantation Shutter Brands
 
 Big-box retailers source from whoever's cheapest that quarter. We partner directly with the manufacturers who earned their reputation:
 
-Hunter Douglas : NewStyle® hybrid shutters, Palm Beach™ polysatin, Heritance® hardwood. Full PowerView® motorization.
+- **Hunter Douglas.** NewStyle hybrid shutters, Palm Beach polysatin, Heritance hardwood. Full PowerView motorization.
+- **Norman.** Woodlore (faux wood), Normandy (basswood), Sussex (hardwood hybrid). Known for lifetime warranty and tight finish quality.
+- **Graber.** CustomView and Traditions shutter lines. Strong custom-color program.
+- **Kravet.** Designer-grade finish options, typically paired with custom drapery.
+- **Stout Textiles.** Coordinating fabrics for valances and side panels paired with shutters.
 
-Norman : Woodlore® (faux wood), Normandy® (basswood), Sussex™ (hardwood hybrid). Known for lifetime warranty and tight finish quality.
-
-Graber : CustomView® and Traditions® shutter lines. Strong custom-color program.
-
-Kravet : Designer-grade finish options, typically paired with custom drapery.
-
-Stout Textiles : Coordinating fabrics for valances and side panels paired with shutters.
-
-What "authorized" means for you: full manufacturer warranty honored, access to every color and option on the spec sheet, certified measurement and installation, direct factory recourse if anything isn't right.
+**What "authorized" means for you:** full manufacturer warranty honored, access to every color and option on the spec sheet, certified measurement and installation, direct factory recourse if anything is not right.
 
 
 
@@ -105,29 +92,24 @@ What "authorized" means for you: full manufacturer warranty honored, access to e
 
 ## Our In-House Workroom: Since 2000
 
-This is the piece no other St. Pete competitor can match: we've run our own fabric and fabrication workroom on-site since 2000. Custom cornices, valances, drapery, bedding, and shutter finishing all happen under the same roof as our design studio.
+The piece no other St. Pete competitor can match: we have run our own fabric and fabrication workroom on-site since 2000. Custom cornices, valances, drapery, bedding, and shutter finishing all happen under the same roof as the design studio.
 
 What that means for your plantation shutter order:
 
-Color-coordinated companion pieces. Shutters on the bottom of a window with a custom valance or cornice above, built to match exactly, not approximately. One vendor, one finish match, one warranty.
+- **Color-coordinated companion pieces.** Shutters on the bottom of a window with a custom valance or cornice above, built to match exactly, not approximately. One vendor, one finish match, one warranty.
+- **Faster lead times.** Finish touch-ups, cut-to-fit adjustments, and rush installations do not wait on a distant factory.
+- **Accountability.** If anything needs correction post-install, it goes back to our workroom, not shipped to a sub-contracted manufacturer four states away.
+- **Design continuity.** Plantation shutters this year, custom drapery next year. Your designer already has your window measurements, trim color, and lighting notes on file.
 
-Faster lead times. Finish touch-ups, cut-to-fit adjustments, and rush installations don't wait on a distant factory.
+One family business, one workroom, one phone number, since 2000.
 
-Accountability. If anything needs correction post-install, it goes back to our workroom, not shipped to a sub-contracted manufacturer four states away.
+## Custom Shutters vs. Retail Shutters: The Actual Difference
 
-Design continuity. Plantation shutters this year, custom drapery next year, your designer already has your window measurements, trim color, and lighting notes on file.
+The plantation shutter market runs from big-box retail to fully custom-manufactured. The differences matter:
 
-Since 2000, nearly two decades, one family business, one workroom, one phone number.
-
-## Custom Shutters vs. Retail Shutters What's the Actual Difference
-
-The plantation shutter market includes a wide range of quality from big-box retail options to custom-manufactured products. The differences matter:
-
-Fit. Retail shutters come in standard sizes with cut-down framing to approximate your window. Custom shutters are built to your exact measurements. The fit difference is visible gaps, misaligned panels, and uneven gaps are common problems with retail shutters that don't get mentioned until after installation.
-
-Material quality. Not all faux wood is the same. The density of the core, the quality of the UV coating, and the hardware used in the louver mechanism all vary significantly by manufacturer. We work with brands that have demonstrated performance in Florida conditions not just the cheapest option that meets a spec sheet.
-
-Installation. We install every shutter we sell. That means the shutter is fitted, leveled, and secured properly not left to the homeowner or a general handyman to figure out.
+- **Fit.** Retail shutters come in standard sizes with cut-down framing to approximate your window. Custom shutters are built to your exact measurements. Visible gaps, misaligned panels, and uneven margins are common retail problems that show up only after install.
+- **Material quality.** Not all faux wood is the same. Core density, UV coating, and louver-mechanism hardware vary significantly by manufacturer. We work with brands that have demonstrated performance in Florida conditions, not the cheapest option that meets a spec sheet.
+- **Installation.** We install every shutter we sell. Fitted, leveled, secured properly. Not left for the homeowner or a general handyman to figure out.
 
 
 
@@ -161,15 +143,12 @@ We're available by appointment evenings and weekends included.
 
 ## Plantation Shutters for French Doors, Sliders & Pass-Throughs
 
-Not every opening in your home is a standard window. French doors, sliding glass doors, and kitchen pass-throughs call for specialty shutter mounting, and it is one of the installs we build most often in St. Petersburg.
+Not every opening is a standard window. French doors, sliding glass doors, and kitchen pass-throughs call for specialty mounting, and these are some of the installs we build most often in St. Pete.
 
-French doors. We use a flush-mount frame that clears your lever handle without the oversized rectangular cutout block most dealers default to. The result: more louver coverage, a cleaner profile, and no gap around the handle.
-
-Sliding glass doors. Bypass shutters run on top-mounted tracking and stack against the adjacent wall when open, so nothing interferes with floor thresholds, rugs, or sliding screen-door clearance. Standard 4½-inch louvers with hidden control rods.
-
-Pass-throughs and café windows. Half-height café-style shutters on kitchen pass-throughs let you keep airflow and sightlines between rooms while still getting the built-in look. Common in Snell Isle bungalows and Old Northeast remodels.
-
-Bay and bow windows. Mullion-free corner details mean your shutters wrap the curve without visual breaks. Hinge geometry is calculated per window so louvers align across all panels.
+- **French doors.** Flush-mount frame that clears your lever handle without the oversized rectangular cutout most dealers default to. The result: more louver coverage, a cleaner profile, no gap around the handle.
+- **Sliding glass doors.** Bypass shutters on top-mounted tracking, stacking against the adjacent wall when open so nothing interferes with floor thresholds, rugs, or screen-door clearance. Standard 4½″ louvers with hidden control rods.
+- **Pass-throughs and café windows.** Half-height café-style shutters keep airflow and sightlines between rooms while still getting the built-in look. Common in Snell Isle bungalows and Old Northeast remodels.
+- **Bay and bow windows.** Mullion-free corner details so your shutters wrap the curve without visual breaks. Hinge geometry calculated per window so louvers align across all panels.
 
 ## How We Build Your Shutters: Our 4-Step Process
 
@@ -185,10 +164,7 @@ Bay and bow windows. Mullion-free corner details mean your shutters wrap the cur
 
 Most shutter companies in St. Petersburg are resellers. They take your measurements, place the order with an out-of-state factory, and drive back when the truck shows up. We are structured differently.
 
-In-house workroom and upholstery studio. CFC operates a full fabrication and upholstery workroom on-site. When your shutters need a tweak after install, a louver adjustment, a finish touch-up, a panel re-hung after a remodel, we handle it here, often same day. No shipping the panel to a factory three states away.
-
-Installers who do only this. Our install crew averages 12+ years hanging shutters in Florida homes, not general contractors moonlighting on shutters between other jobs. They know how St. Petersburg's older Craftsman trim profiles behave, how concrete-block walls take anchors, and how to hang specialty shapes without callbacks.
-
-Whole-window-treatment coverage under one roof. Because we also build custom drapery, cornices, Roman shades, and upholstery, we are the only St. Pete shop that can layer drapery over your new shutters in a single project instead of coordinating between two vendors. That matters for Snell Isle and Old Northeast formal rooms where the shutter-plus-drapery layered look is standard.
-
-Local, family-run, insured, and on your side. We carry full liability and workman's comp, we pull permits when required, and the person who quoted your job is often the person who walks the install with you at the end.
+- **In-house workroom and upholstery studio.** Full fabrication and upholstery workroom on-site. Louver adjustments, finish touch-ups, panels re-hung after a remodel: we handle it here, often same day. Nothing ships back to a factory three states away.
+- **Installers who do only this.** Our install crew averages 12+ years hanging shutters in Florida homes. They know how older Craftsman trim profiles behave, how concrete-block walls take anchors, and how to hang specialty shapes without callbacks.
+- **Whole-window-treatment coverage under one roof.** We also build custom drapery, cornices, Roman shades, and upholstery, so we can layer drapery over your new shutters in a single project instead of coordinating between two vendors. That matters for Snell Isle and Old Northeast formal rooms where the shutter-plus-drapery look is standard.
+- **Local, family-run, insured.** Full liability and workman's comp. We pull permits when required. The person who quoted your job is often the person who walks the install with you at the end.
