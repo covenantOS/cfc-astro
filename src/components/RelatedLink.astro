@@ -1,0 +1,33 @@
+---
+// Cross-link callout: a short, dashed-border box with a brief sentence
+// and a linked anchor pointing readers to a related page. Used to weave
+// the site together (good for internal linking + SEO + dwell time)
+// without breaking content flow into a heavy panel.
+//
+// Usage:
+//   <RelatedLink
+//     body="Wondering how shutters compare to plantation-style blinds for the same window? Our blinds page has the side-by-side."
+//     href="/services/custom-blinds/"
+//     linkText="See custom blinds"
+//   />
+
+interface Props {
+  body: string;
+  href: string;
+  linkText: string;
+}
+
+const { body, href, linkText } = Astro.props;
+---
+
+<aside class="my-8 md:my-10 not-prose">
+  <div class="border-2 border-dashed border-brand-500/50 bg-cream-50/60 rounded-lg p-5 md:p-6">
+    <p class="text-ink-700 leading-relaxed">
+      {body}{' '}
+      <a
+        href={href}
+        class="text-brand-700 font-bold hover:text-brand-600 underline underline-offset-2 decoration-brand-500/60"
+      >{linkText}</a>.
+    </p>
+  </div>
+</aside>

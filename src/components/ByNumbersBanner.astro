@@ -1,0 +1,31 @@
+---
+// "By the numbers" one-liner banner. Dark ink-900 bg with a gold top
+// accent rule, gold uppercase eyebrow, single bold one-sentence stat
+// summary. Companion to StatsBand.astro: StatsBand is the multi-stat grid
+// with per-stat sources, this is the punchy single-line statement.
+//
+// Use for end-of-section closers where a single distilled claim hits
+// harder than a grid. Daniel's directive: stats must be verified. If the
+// claim summarizes multiple sourced numbers, link to the relevant page
+// or include sources in adjacent StatsBand earlier on the page.
+
+interface Props {
+  eyebrow?: string;
+  statement: string;
+}
+
+const {
+  eyebrow = 'By the numbers',
+  statement,
+} = Astro.props;
+---
+
+<aside class="my-12 md:my-14 not-prose">
+  <div class="bg-ink-900 text-white rounded-lg shadow-card overflow-hidden">
+    <div class="h-1 bg-brand-500"></div>
+    <div class="p-7 md:p-10">
+      <p class="eyebrow text-brand-400 mb-3 m-0" style="letter-spacing: 0.25em;">{eyebrow}</p>
+      <p class="font-display text-2xl md:text-3xl leading-snug text-white">{statement}</p>
+    </div>
+  </div>
+</aside>

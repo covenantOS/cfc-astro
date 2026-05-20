@@ -1,0 +1,48 @@
+---
+// Scannable feature list: 2-column grid of bullet items, each with a gold
+// dot, a bold label, and a short description. Replaces walls of prose
+// with quick-read benefit/feature lists. Inspired by the Titan reference
+// layout adapted to the CFC palette.
+//
+// Single-column on mobile; 2-column from md upward. For longer lists
+// (more than 6 items), the grid wraps cleanly.
+//
+// Usage:
+//   <FeatureList
+//     items={[
+//       { label: 'Moisture resistance', body: 'Faux wood does not swell in Florida humidity.' },
+//       { label: 'UV stability', body: 'Quality cores resist the Gulf-side sun without yellowing.' },
+//       { label: 'Hurricane-rated', body: 'An extra layer of window protection through storm season.' },
+//       { label: 'Light control', body: 'Adjustable louvers redirect heat without losing the view.' },
+//     ]}
+//   />
+
+interface FeatureItem {
+  label: string;
+  body: string;
+}
+
+interface Props {
+  items: FeatureItem[];
+  columns?: 1 | 2 | 3;
+}
+
+const { items, columns = 2 } = Astro.props;
+
+const gridClass =
+  columns === 3 ? 'md:grid-cols-3' :
+  columns === 1 ? 'grid-cols-1' :
+  'md:grid-cols-2';
+---
+
+<div class={`my-8 md:my-10 not-prose grid gap-x-10 gap-y-5 ${gridClass}`}>
+  {items.map((item) => (
+    <div class="flex items-start gap-3">
+      <span class="mt-2 w-2 h-2 rounded-full bg-brand-500 shrink-0" aria-hidden="true"></span>
+      <p class="text-ink-700 leading-relaxed">
+        <strong class="font-bold text-ink-900">{item.label}:</strong>
+        <span class="ml-1">{item.body}</span>
+      </p>
+    </div>
+  ))}
+</div>

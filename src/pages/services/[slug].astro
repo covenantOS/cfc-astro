@@ -4,6 +4,9 @@ import ServiceLayout from '~/layouts/ServiceLayout.astro';
 import OwnerTip from '~/components/OwnerTip.astro';
 import StatsBand from '~/components/StatsBand.astro';
 import InlineReview from '~/components/InlineReview.astro';
+import FeatureList from '~/components/FeatureList.astro';
+import RelatedLink from '~/components/RelatedLink.astro';
+import ByNumbersBanner from '~/components/ByNumbersBanner.astro';
 import { SERVICES } from '~/lib/site';
 import { getServiceExtras } from '~/data/service-extras';
 
@@ -29,9 +32,9 @@ const description = data?.description ?? `${serviceTitle} services in St. Peters
 const heroTitle = data?.h1 ?? `${serviceTitle} in St. Petersburg, FL`;
 const faqs = data?.faqs ?? [];
 
-// Per-service add-ons: owner tip, stats band, inline review. Only services
-// configured in src/data/service-extras.ts render these (rolling out one
-// service at a time so Daniel can react before broad rollout).
+// Per-service content add-ons. Only services configured in
+// src/data/service-extras.ts render these (rolling out one service at a
+// time before broad rollout).
 const extras = getServiceExtras(service.slug);
 ---
 
@@ -64,9 +67,28 @@ const extras = getServiceExtras(service.slug);
     />
   )}
 
+  {extras?.featureList && (
+    <FeatureList items={extras.featureList.items} columns={extras.featureList.columns} />
+  )}
+
   {Content ? <Content /> : <p>Content coming soon.</p>}
+
+  {extras?.relatedLink && (
+    <RelatedLink
+      body={extras.relatedLink.body}
+      href={extras.relatedLink.href}
+      linkText={extras.relatedLink.linkText}
+    />
+  )}
 
   {extras?.reviewTag && (
     <InlineReview tag={extras.reviewTag} label={extras.reviewLabel} />
+  )}
+
+  {extras?.closingBanner && (
+    <ByNumbersBanner
+      eyebrow={extras.closingBanner.eyebrow}
+      statement={extras.closingBanner.statement}
+    />
   )}
 </ServiceLayout>

@@ -1,11 +1,17 @@
-// Per-service configuration for the new content components:
-//   - OwnerTip:    Terry-signed tip (40-70 words, her voice)
-//   - StatsBand:   "By the numbers" verified-source stats
-//   - InlineReview: contextual Google review pulled by tag
+// Per-service configuration for the content components.
 //
-// Only services with an entry here render the components. Everything else
-// renders the markdown content unchanged. We are rolling these out one
-// service at a time so Daniel can react to the format before broad rollout.
+// Components, in render order on the service page:
+//   1. StatsBand        (multi-stat grid with verified sources)
+//   2. OwnerTip         (Terry-signed warm-voice tip)
+//   3. FeatureList      (2-column bold:description bullets)
+//   4. <markdown body>
+//   5. RelatedLink      (dashed-border cross-link callout)
+//   6. InlineReview     (contextual Google review by tag)
+//   7. ByNumbersBanner  (dark one-liner closing statement)
+//
+// Only services with an entry render the components; everything else
+// renders the markdown unchanged. Rolling out one service at a time so
+// Daniel can react to the format before broad rollout.
 //
 // Voice rules for `tip.body`: see project-cfc-voice-sheet memory. Warm,
 // plainspoken, customer-agency framing, no em dashes, no marketing verbs.
@@ -39,29 +45,46 @@ export interface ServiceStatsBlock {
   stats: ServiceStat[];
 }
 
-export interface ServiceExtras {
-  tip?: ServiceTip;
-  stats?: ServiceStatsBlock;
-  reviewTag?: ReviewTag;
-  reviewLabel?: string;
+export interface ServiceFeatureItem {
+  label: string;
+  body: string;
 }
 
-// Maps service slug to its extras. Order in this map drives the placement
-// order of the components on the page (see [slug].astro).
+export interface ServiceFeatureList {
+  items: ServiceFeatureItem[];
+  columns?: 1 | 2 | 3;
+}
+
+export interface ServiceRelatedLink {
+  body: string;
+  href: string;
+  linkText: string;
+}
+
+export interface ServiceClosingBanner {
+  eyebrow?: string;
+  statement: string;
+}
+
+export interface ServiceExtras {
+  stats?: ServiceStatsBlock;
+  tip?: ServiceTip;
+  featureList?: ServiceFeatureList;
+  relatedLink?: ServiceRelatedLink;
+  reviewTag?: ReviewTag;
+  reviewLabel?: string;
+  closingBanner?: ServiceClosingBanner;
+}
+
 export const SERVICE_EXTRAS: Record<string, ServiceExtras> = {
   'plantation-shutters': {
-    tip: {
-      // Tip A (locked 2026-05-20 by Daniel as voice anchor).
-      body: 'If the room has a shower, a stove, or a window facing the Gulf, go with faux wood. Real wood is beautiful, but I have been called back to too many St. Pete bathrooms where the basswood swelled by the second summer. Save the real wood for a formal dining room or a front sitting room where the AC stays steady and the salt air does not reach. That is where it earns its keep.',
-    },
     stats: {
       eyebrow: 'By the numbers',
       heading: 'Why plantation shutters belong in a St. Pete home',
       stats: [
         {
-          // Atlantic hurricane season runs June 1 through November 30, six
-          // months of the year. Authoritative source: NOAA National
-          // Hurricane Center.
+          // Atlantic hurricane season runs June 1 through November 30.
+          // Authoritative source: NOAA National Hurricane Center.
           value: '6',
           unit: 'months',
           label: 'of Atlantic hurricane season every year in Florida',
@@ -83,8 +106,33 @@ export const SERVICE_EXTRAS: Record<string, ServiceExtras> = {
         },
       ],
     },
+    tip: {
+      // Tip A: locked by Daniel as the voice anchor on 2026-05-20.
+      body: 'If the room has a shower, a stove, or a window facing the Gulf, go with faux wood. Real wood is beautiful, but I have been called back to too many St. Pete bathrooms where the basswood swelled by the second summer. Save the real wood for a formal dining room or a front sitting room where the AC stays steady and the salt air does not reach. That is where it earns its keep.',
+    },
+    featureList: {
+      // Scannable summary of the "why faux wood works in Florida" section
+      // that already exists in the markdown. The list complements the
+      // prose; we will trim the matching paragraphs in a future content
+      // pass once the layout is approved.
+      items: [
+        { label: 'Moisture resistance', body: 'Quality faux wood does not absorb humidity the way real wood does, so louvers stay aligned through Tampa Bay summers.' },
+        { label: 'UV stability', body: 'Premium cores resist Gulf-side sun without yellowing or becoming brittle.' },
+        { label: 'Storm-season durability', body: 'A built shutter adds an extra layer of window protection through wind-driven rain.' },
+        { label: 'Precise light control', body: 'Adjustable louvers redirect light and heat without giving up the view.' },
+      ],
+      columns: 2,
+    },
+    relatedLink: {
+      body: 'Trying to decide between shutters and a softer treatment over the same window? Our drapery and curtains page covers when each treatment wins, and when to layer both.',
+      href: '/services/custom-draperies-curtains/',
+      linkText: 'See custom drapery options',
+    },
     reviewTag: 'plantation-shutters',
     reviewLabel: 'What St. Pete homeowners say',
+    closingBanner: {
+      statement: '25+ years installing across Pinellas. Authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout. Built for Florida humidity, Gulf sun, and hurricane season.',
+    },
   },
 };
 
