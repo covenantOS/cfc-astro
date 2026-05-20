@@ -77,6 +77,108 @@ export interface ServiceExtras {
 }
 
 export const SERVICE_EXTRAS: Record<string, ServiceExtras> = {
+
+  'custom-draperies-curtains': {
+    stats: {
+      eyebrow: 'By the numbers',
+      heading: 'What custom drapery does for a St. Pete home',
+      stats: [
+        {
+          // US Department of Energy: medium-color draperies with white
+          // plastic backings can reduce heat gains by 33%.
+          value: '33%',
+          label: 'reduction in window heat gain from properly lined drapery, per the Department of Energy',
+          sourceUrl: 'https://www.energy.gov/energysaver/energy-efficient-window-coverings',
+          sourceLabel: 'US DOE',
+        },
+        {
+          value: '25+',
+          unit: 'years',
+          label: 'fabricating custom drapery in our own St. Pete workroom',
+          internal: true,
+        },
+        {
+          value: 'In-house',
+          label: 'cutting, sewing, lining, and installation, no outsourced workroom',
+          internal: true,
+        },
+      ],
+    },
+    tip: {
+      // Tip B: locked by Daniel as the voice anchor on 2026-05-20.
+      body: 'Before I bring out the fabric library, I always ask clients to show me one thing in the room they already love. A pillow, a rug, a piece of art. We build the drape from that, not the other way around. It is a small step, but it is the difference between drapes that feel like part of the room and drapes that just hang in the window.',
+    },
+    featureList: {
+      items: [
+        { label: 'Florida-rated fabrics', body: 'UV-resistant weaves for west-facing rooms, mildew-resistant linings for screened porches, blackout for bedrooms.' },
+        { label: 'Custom lengths and stack-back', body: 'Built to your floor-to-rod measurement and your window framing, not a catalog standard.' },
+        { label: 'Hardware that fits the home', body: 'Concealed tracks, decorative rods, and finials matched to your architecture from Craftsman bungalow to modern condo.' },
+        { label: 'Layered with hard treatments', body: 'Drapery installed over shutters or shades when the room calls for both warmth and light control.' },
+      ],
+      columns: 2,
+    },
+    relatedLink: {
+      body: 'If your room needs both softness and precise light control, drapery over plantation shutters is the layered look we build most. Our plantation shutters page walks through how the two combine.',
+      href: '/services/plantation-shutters/',
+      linkText: 'See plantation shutters',
+    },
+    reviewTag: 'custom-draperies-curtains',
+    reviewLabel: 'What St. Pete homeowners say',
+    closingBanner: {
+      statement: 'Custom drapery built in our own St. Pete workroom. UV-rated fabrics. Hardware matched to the home. Hung by the installer who measured it.',
+    },
+  },
+
+  'window-shades': {
+    stats: {
+      eyebrow: 'By the numbers',
+      heading: 'Why shades matter on a Florida window',
+      stats: [
+        {
+          // US Department of Energy: cellular (honeycomb) shades can
+          // reduce unwanted solar heat through windows by up to 80%.
+          value: 'Up to 80%',
+          label: 'reduction in unwanted solar heat from cellular shades, per the Department of Energy',
+          sourceUrl: 'https://www.energy.gov/energysaver/energy-efficient-window-coverings',
+          sourceLabel: 'US DOE',
+        },
+        {
+          value: '25+',
+          unit: 'years',
+          label: 'installing shades across Pinellas County',
+          internal: true,
+        },
+        {
+          value: 'Somfy',
+          label: 'authorized motorization for hard-to-reach and oversized windows',
+          internal: true,
+        },
+      ],
+    },
+    tip: {
+      body: 'The shade you choose mostly depends on what the room is for. Bedrooms and media rooms need blackout, no shortcuts. Living and dining rooms usually want a Roman shade in fabric, something warm. Any west-facing window in St. Pete benefits from a solar shade that cuts the heat without losing the view. When in doubt, we layer two.',
+    },
+    featureList: {
+      items: [
+        { label: 'Solar shades', body: 'Reduce solar heat gain on west-facing windows and lanais while keeping the view through the fabric.' },
+        { label: 'Cellular (honeycomb) shades', body: 'Trap air to insulate hot or cold windows, useful in bedrooms and on glass facing the Gulf.' },
+        { label: 'Roman shades', body: 'Fabric folds with no chain mechanism, hand-stitched in our workroom, made to match drapery or upholstery.' },
+        { label: 'Motorized shades', body: 'Somfy-powered systems for high windows, sliders, and Nana doors, with quiet operation and battery or wired options.' },
+      ],
+      columns: 2,
+    },
+    relatedLink: {
+      body: 'Looking at shades for an oversized slider or a lanai? Our outdoor window shades page covers the wind-rated exterior options we install for screened patios and pool cages.',
+      href: '/services/outdoor-window-shades/',
+      linkText: 'See outdoor window shades',
+    },
+    reviewTag: 'window-shades',
+    reviewLabel: 'What St. Pete homeowners say',
+    closingBanner: {
+      statement: 'Solar, cellular, Roman, and motorized shades, all measured, fabricated, and installed by the same St. Pete team since 2000.',
+    },
+  },
+
   'plantation-shutters': {
     stats: {
       eyebrow: 'By the numbers',
