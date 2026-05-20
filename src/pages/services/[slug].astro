@@ -1,7 +1,11 @@
 ---
 import { getCollection, render } from 'astro:content';
 import ServiceLayout from '~/layouts/ServiceLayout.astro';
+import OwnerTip from '~/components/OwnerTip.astro';
+import StatsBand from '~/components/StatsBand.astro';
+import InlineReview from '~/components/InlineReview.astro';
 import { SERVICES } from '~/lib/site';
+import { getServiceExtras } from '~/data/service-extras';
 
 export async function getStaticPaths() {
   const entries = await getCollection('services');
@@ -24,6 +28,11 @@ const displayTitle = data?.title ?? `${serviceTitle} in St. Petersburg, FL`;
 const description = data?.description ?? `${serviceTitle} services in St. Petersburg, FL.`;
 const heroTitle = data?.h1 ?? `${serviceTitle} in St. Petersburg, FL`;
 const faqs = data?.faqs ?? [];
+
+// Per-service add-ons: owner tip, stats band, inline review. Only services
+// configured in src/data/service-extras.ts render these (rolling out one
+// service at a time so Daniel can react before broad rollout).
+const extras = getServiceExtras(service.slug);
 ---
 
 <ServiceLayout
@@ -36,5 +45,28 @@ const faqs = data?.faqs ?? [];
   heroImage={`/images/hero/${service.slug}.webp`}
   faqs={faqs}
 >
+  {extras?.stats && (
+    <StatsBand
+      eyebrow={extras.stats.eyebrow}
+      heading={extras.stats.heading}
+      subheading={extras.stats.subheading}
+      stats={extras.stats.stats}
+    />
+  )}
+
+  {extras?.tip && (
+    <OwnerTip
+      body={extras.tip.body}
+      eyebrow={extras.tip.eyebrow}
+      name={extras.tip.name}
+      role={extras.tip.role}
+      portrait={extras.tip.portrait}
+    />
+  )}
+
   {Content ? <Content /> : <p>Content coming soon.</p>}
+
+  {extras?.reviewTag && (
+    <InlineReview tag={extras.reviewTag} label={extras.reviewLabel} />
+  )}
 </ServiceLayout>

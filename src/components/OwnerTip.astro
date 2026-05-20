@@ -1,0 +1,75 @@
+---
+// "A note from Terry": a warm, signed tip block that appears mid-content
+// on service and area pages. Voice anchor: see project-cfc-voice-sheet
+// memory. Tips are written in Terry's actual conversational voice, light
+// on jargon, no em dashes. They are NOT marketing copy.
+//
+// Visual treatment: cream card, gold accent rule, portrait left, quote
+// right. The portrait gracefully falls back to a monogram circle when no
+// image is supplied (Terry photo pending from client).
+//
+// Usage:
+//   <OwnerTip
+//     body="If the room has a shower, a stove, or a window facing the Gulf, go with faux wood..."
+//   />
+//
+// The eyebrow, name, role, and signature line are fixed defaults that
+// can be overridden per-page if needed (rare).
+
+interface Props {
+  body: string;
+  eyebrow?: string;
+  name?: string;
+  role?: string;
+  signatureLine?: string;
+  portrait?: string;
+  monogram?: string;
+}
+
+const {
+  body,
+  eyebrow = 'A note from Terry',
+  name = 'Terry',
+  role = 'Owner & Lead Designer',
+  signatureLine,
+  portrait,
+  monogram = 'T',
+} = Astro.props;
+
+const signature = signatureLine ?? `${name}, ${role}`;
+---
+
+<aside class="my-12 md:my-14 not-prose">
+  <div class="bg-cream-50 rounded-lg shadow-card overflow-hidden">
+    <div class="h-1 bg-brand-500"></div>
+    <div class="p-7 md:p-9 grid gap-6 md:grid-cols-[112px_1fr] md:gap-8 items-start">
+
+      <!-- Portrait or monogram fallback. When the real Terry photo lands, drop
+           it into public/images/team/terry.webp and pass portrait="/images/team/terry.webp" -->
+      {portrait ? (
+        <img
+          src={portrait}
+          alt={`${name}, ${role} of Custom Fabric Creations`}
+          class="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover shrink-0 ring-4 ring-white shadow-soft"
+          width="112"
+          height="112"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <div
+          class="w-24 h-24 md:w-28 md:h-28 rounded-full flex items-center justify-center shrink-0 ring-4 ring-white shadow-soft bg-ink-900 text-brand-400 font-display text-5xl"
+          aria-hidden="true"
+        >{monogram}</div>
+      )}
+
+      <div>
+        <p class="eyebrow text-brand-700 mb-3" style="letter-spacing: 0.25em;">{eyebrow}</p>
+        <blockquote class="text-ink-700 leading-relaxed text-base md:text-lg mb-5">
+          {body}
+        </blockquote>
+        <p class="text-ink-500 text-sm italic">{signature}</p>
+      </div>
+    </div>
+  </div>
+</aside>
