@@ -46,7 +46,11 @@ const {
     <div>
       {eyebrow && <p class="eyebrow" style="letter-spacing: 0.3em;">{eyebrow}</p>}
       <h2 class="font-display text-4xl md:text-5xl text-ink-800 leading-tight mb-6">{heading}</h2>
-      <p class="text-ink-500 leading-relaxed text-lg mb-8">{body}</p>
+      <div class="mb-8 space-y-4">
+        {body.split('\n\n').map((para) => (
+          <p class="text-ink-500 leading-relaxed text-lg">{para}</p>
+        ))}
+      </div>
 
       <div class="flex flex-wrap gap-3 mb-8">
         {pills.map((p) => (

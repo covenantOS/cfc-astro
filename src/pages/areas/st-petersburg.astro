@@ -1,0 +1,8 @@
+---
+import AreaLanding from '~/components/AreaLanding.astro';
+import { getAreaPageConfig } from '~/data/area-pages';
+
+const config = getAreaPageConfig('st-petersburg')!;
+---
+
+<AreaLanding config={config} />

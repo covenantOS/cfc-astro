@@ -1,0 +1,134 @@
+---
+// Full section-based landing page for the two main areas (St. Petersburg
+// Central and West St. Pete). Approved section stack:
+// hero, intro, services grid, owner tip, neighborhoods, by-the-numbers,
+// reviews, FAQ, contact/map. Driven by AreaPageConfig.
+
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import ServiceGrid from '~/components/ServiceGrid.astro';
+import OwnerTip from '~/components/OwnerTip.astro';
+import ByNumbersBanner from '~/components/ByNumbersBanner.astro';
+import ReviewSection from '~/components/ReviewSection.astro';
+import FAQ from '~/components/FAQ.astro';
+import GlobalContactMap from '~/components/GlobalContactMap.astro';
+import { getLocationForArea } from '~/lib/site';
+import type { AreaPageConfig } from '~/data/area-pages';
+
+interface Props {
+  config: AreaPageConfig;
+}
+
+const { config } = Astro.props;
+const location = getLocationForArea(config.slug);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Areas', url: '/areas/' },
+  { name: config.name, url: `/areas/${config.slug}/` },
+];
+
+const seoTitle = `${config.name} Window Treatments, Shutters & Drapery | Custom Fabric Creations`;
+const seoDescription = config.heroSubtitle;
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+  pageType="area"
+  breadcrumbs={breadcrumbs}
+  areaSlug={config.slug}
+  areaTitle={config.name}
+  faqs={config.faqs}
+  ogImage={config.heroImage}
+>
+  <Hero
+    title={config.heroTitle}
+    subtitle={config.heroSubtitle}
+    image={config.heroImage}
+    primaryCta={{ label: location.phone, href: location.phoneHref }}
+    secondaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
+    breadcrumbs={breadcrumbs}
+    goldLine
+  />
+
+  <!-- Intro / why this location -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-site grid gap-10 lg:grid-cols-2 lg:gap-16 items-center max-w-6xl mx-auto">
+      <div>
+        <p class="eyebrow" style="letter-spacing: 0.3em;">{config.introEyebrow}</p>
+        <h2 class="font-display text-3xl md:text-4xl text-ink-800 leading-tight mb-6">{config.introHeading}</h2>
+        {config.introParagraphs.map((p) => (
+          <p class="text-ink-600 leading-relaxed mb-4 text-[1.05rem]">{p}</p>
+        ))}
+        <a href={location.phoneHref} class="btn-primary mt-4 inline-flex">Call {location.phone}</a>
+      </div>
+      <div class="aspect-[4/3] overflow-hidden rounded-lg shadow-card">
+        <img
+          src={config.introImage}
+          alt={`Custom window treatments and upholstery in ${config.name}, FL by Custom Fabric Creations`}
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services available here -->
+  <ServiceGrid
+    eyebrow="What we offer"
+    heading={config.servicesHeading}
+    subtitle={`Every service below is available in ${config.name}, measured, built, and installed by our own team.`}
+    limit={6}
+  />
+
+  <!-- Owner tip -->
+  <section class="py-4 bg-white">
+    <div class="container-site max-w-3xl mx-auto">
+      <OwnerTip body={config.tipBody} />
+    </div>
+  </section>
+
+  <!-- Neighborhoods -->
+  <section class="py-16 md:py-20 bg-cream-50">
+    <div class="container-site max-w-4xl mx-auto text-center">
+      <p class="eyebrow" style="letter-spacing: 0.3em;">Service Area</p>
+      <h2 class="font-display text-3xl md:text-4xl text-ink-800 leading-tight mb-4">{config.neighborhoodsHeading}</h2>
+      <p class="text-ink-600 leading-relaxed mb-8 max-w-2xl mx-auto">{config.neighborhoodsIntro}</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        {config.neighborhoods.map((n) => (
+          <span class="inline-flex items-center gap-2 bg-white border border-coffee-200/70 shadow-card rounded-full px-5 py-2.5 text-sm text-ink-700">
+            <svg class="w-4 h-4 text-brand-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {n.name}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- By the numbers -->
+  <section class="py-4 bg-white">
+    <div class="container-site max-w-4xl mx-auto">
+      <ByNumbersBanner statement={config.statStatement} />
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <ReviewSection />
+
+  <!-- FAQ -->
+  <FAQ
+    items={config.faqs}
+    heading={`${config.name}: Frequently Asked Questions`}
+    eyebrow="Common Questions"
+    subtitle={`Answers about our work in ${config.name}.`}
+  />
+
+  <!-- Contact + map -->
+  <GlobalContactMap
+    areaLabel={`Serving ${config.name} & the St. Pete coast`}
+    phone={location.phone}
+    phoneHref={location.phoneHref}
+  />
+</BaseLayout>

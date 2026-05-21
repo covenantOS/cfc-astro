@@ -51,9 +51,18 @@ const EXPERTISE_CARDS = [
     goldLine
   />
 
-  <!-- First section: studio intro / "Our Story" (restored as its own
-       section per client; previously merged into Meet the Owner). -->
-  <AboutSection cta={undefined} />
+  <!-- First section: "Our Craftsmanship" (exact copy from the old site,
+       restored as its own section per client). -->
+  <AboutSection
+    eyebrow="Our Craftsmanship"
+    heading="Precision Tailoring and Technical Expertise"
+    body={`We established our dedicated workroom to maintain absolute control over the quality of your interior elements. While standard retailers rely on outsourced mass production we meticulously engineer every window treatment and upholstered piece locally. This guarantees perfect dimensions, flawless pattern matching, and absolute structural integrity for your selected designer textiles.\n\nOur capabilities extend far beyond basic sewing. We specialize in complex architectural window challenges and advanced motorized shade integration. From precise initial measurements to the final white-glove setup, our in-house team manages every technical detail to ensure your project is executed flawlessly.`}
+    pills={['25+ Years Exp.', 'Local Workroom', 'Fully Insured']}
+    image="/images/services/services-interior-decor-tampa/top.webp"
+    imageAlt="Custom Fabric Creations dedicated local workroom in St. Petersburg, FL"
+    imageBadge={{ title: 'Dedicated Workroom', subtitle: 'Local Fabrication' }}
+    cta={undefined}
+  />
 
   <!-- Second section: Terry's own words, kept distinct per client request.
        Uses a placeholder image until a photo of Terry / her family is

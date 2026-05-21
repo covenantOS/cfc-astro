@@ -4,8 +4,11 @@ import AreaLayout from '~/layouts/AreaLayout.astro';
 import { AREAS } from '~/lib/site';
 
 export async function getStaticPaths() {
+  // The two main areas (St. Petersburg Central and West St. Pete) have their
+  // own dedicated landing pages, so exclude them here to avoid route collisions.
+  const LANDING_PAGE_SLUGS = ['st-petersburg', 'west-st-pete'];
   const entries = await getCollection('areas');
-  return AREAS.map((area) => {
+  return AREAS.filter((area) => !LANDING_PAGE_SLUGS.includes(area.slug)).map((area) => {
     const entry = entries.find((e) => e.data.slug === area.slug);
     return {
       params: { slug: area.slug },
