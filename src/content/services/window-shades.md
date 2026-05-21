@@ -16,6 +16,8 @@ faqs:
 ---
 Window shades in St. Petersburg? Custom Fabric Creations installs roller shades, roman shades, and solar shades built for Florida's intense sun. Brands like Hunter Douglas and Graber. Free in-home consultation.
 
+The right shade does real work in this climate. Cellular (honeycomb) shades can reduce unwanted solar heat through a window by up to 80% ([US Department of Energy](https://www.energy.gov/energysaver/energy-efficient-window-coverings)), which keeps west-facing rooms livable and your AC from running all afternoon.
+
 ## Types of Window Shades We Offer in St. Petersburg
 
 Roller shades — The cleanest, most minimal window treatment you can install. A single piece of fabric rolls up and down over the window, giving you full control over light and privacy with one pull. Tampa Bay homeowners love them for living rooms and kitchens where a clean sightline matters. We install both standard and motorized roller shades.

@@ -2,7 +2,6 @@
 import { getCollection, render } from 'astro:content';
 import ServiceLayout from '~/layouts/ServiceLayout.astro';
 import OwnerTip from '~/components/OwnerTip.astro';
-import StatsBand from '~/components/StatsBand.astro';
 import InlineReview from '~/components/InlineReview.astro';
 import FeatureList from '~/components/FeatureList.astro';
 import RelatedLink from '~/components/RelatedLink.astro';
@@ -48,15 +47,6 @@ const extras = getServiceExtras(service.slug);
   heroImage={`/images/hero/${service.slug}.webp`}
   faqs={faqs}
 >
-  {extras?.stats && (
-    <StatsBand
-      eyebrow={extras.stats.eyebrow}
-      heading={extras.stats.heading}
-      subheading={extras.stats.subheading}
-      stats={extras.stats.stats}
-    />
-  )}
-
   {extras?.tip && (
     <OwnerTip
       body={extras.tip.body}

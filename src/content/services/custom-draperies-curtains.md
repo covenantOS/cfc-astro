@@ -16,6 +16,8 @@ faqs:
 ---
 Looking for custom draperies in Florida? Custom Fabric Creations designs and installs tailor-made curtains, sheer drapes, blackout curtains, and motorized window treatments. Free in-home consultation. Serving Florida since 2000.
 
+Drapery is not just decoration here. Properly lined panels can cut window heat gain by about 33% ([US Department of Energy](https://www.energy.gov/energysaver/energy-efficient-window-coverings)), which matters on every west-facing room in St. Pete. We build every panel in our own workroom and hang it with the installer who measured it.
+
 **Custom drapery specifically for St. Pete homes?** See our dedicated guide — [Custom Drapery in St. Petersburg, FL: The 2026 Guide](/custom-drapery-st-petersburg/) — with pricing, our 5-step process, neighborhood project gallery, and the full designer fabric library.
 
 ## Types of Custom Draperies and Curtains We Offer in St. Petersburg
