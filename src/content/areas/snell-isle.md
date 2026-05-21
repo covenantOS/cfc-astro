@@ -20,7 +20,7 @@ That's the standard we work to. Not the standard of a big-box store. Not the sta
 
 
 
-![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Snell Isle, FL](/images/areas/snell-isle.webp "Snell Isle window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
+![Custom Fabric Creations, custom window treatments, plantation shutters, and upholstery in Snell Isle, FL](/images/areas/snell-isle.webp "Snell Isle window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## What Professional Blind Installers Actually Do Differently in Snell Isle
 

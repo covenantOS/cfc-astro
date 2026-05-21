@@ -33,15 +33,15 @@ Humidity and salt air. Along the coast in Pinellas and Manatee counties, salt ai
 
 
 
-![Completed Outdoor Window Shades project by Custom Fabric Creations — bespoke outdoor window shades in St. Petersburg, FL](/images/services/outdoor-window-shades/bottom.webp "Outdoor Window Shades | Custom Fabric Creations — St. Petersburg, FL")
+![Completed Outdoor Window Shades project by Custom Fabric Creations, bespoke outdoor window shades in St. Petersburg, FL](/images/services/outdoor-window-shades/bottom.webp "Outdoor Window Shades | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Types of Exterior Window and Patio Treatments We Offer in St. Petersburg
 
-Solar screens — Fabric screens installed on the exterior of windows and patios that block UV rays, reduce heat gain, and maintain visibility and airflow. Solar screens are one of the most effective ways to make a west-facing patio or screen enclosure usable during summer afternoons. They also protect furniture and flooring inside from UV fading.
+Solar screens, Fabric screens installed on the exterior of windows and patios that block UV rays, reduce heat gain, and maintain visibility and airflow. Solar screens are one of the most effective ways to make a west-facing patio or screen enclosure usable during summer afternoons. They also protect furniture and flooring inside from UV fading.
 
-Outdoor curtains — Weather-resistant curtains for patios, porches, and pergolas. Designed to handle sun, rain, and humidity without degrading. Outdoor curtains can be drawn for shade or privacy and tied back when you want full sun. Available with motorized or manual operation.
+Outdoor curtains, Weather-resistant curtains for patios, porches, and pergolas. Designed to handle sun, rain, and humidity without degrading. Outdoor curtains can be drawn for shade or privacy and tied back when you want full sun. Available with motorized or manual operation.
 
-Patio & Exterior shades — Fixed or retractable shade structures for patios and deck areas. These create permanent or semi-permanent shade over a specific area useful for pool decks, outdoor kitchens, and seating areas that get full sun during the hours you most want to use the space.
+Patio & Exterior shades, Fixed or retractable shade structures for patios and deck areas. These create permanent or semi-permanent shade over a specific area useful for pool decks, outdoor kitchens, and seating areas that get full sun during the hours you most want to use the space.
 
 ## Solar Screens The St. Petersburg Solution Most Homeowners Don't Know About
 

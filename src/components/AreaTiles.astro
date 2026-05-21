@@ -5,7 +5,7 @@ interface Props {
   heading?: string;
   eyebrow?: string;
   subtitle?: string;
-  /** Section background — choose so it alternates with surrounding sections.
+  /** Section background, choose so it alternates with surrounding sections.
    *  White section gets cream tiles, cream section gets white tiles. */
   background?: 'white' | 'cream';
 }
@@ -51,7 +51,7 @@ const tileBg = background === 'cream' ? 'bg-white' : 'bg-cream-50';
         Call {SITE.phone}
         <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10h10M11 5l5 5-5 5"/></svg>
       </a>
-      <span class="block sm:inline sm:ml-1">— we still serve all of Tampa Bay.</span>
+      <span class="block sm:inline sm:ml-1">- we still serve all of Tampa Bay.</span>
     </p>
   </div>
 </section>

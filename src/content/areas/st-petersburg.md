@@ -5,9 +5,9 @@ h1: "Custom Window Treatments in St. Petersburg, FL"
 slug: st-petersburg
 type: area
 ---
-Custom plantation shutters, Roman shades, motorized blinds, solar shades, and high-end drapery for St. Petersburg homes — specified for Tampa Bay salt air, Florida humidity, and the city's wide range of architectural styles, backed by over two decades of local installation experience across Pinellas County.
+Custom plantation shutters, Roman shades, motorized blinds, solar shades, and high-end drapery for St. Petersburg homes, specified for Tampa Bay salt air, Florida humidity, and the city's wide range of architectural styles, backed by over two decades of local installation experience across Pinellas County.
 
-**Looking for custom drapery specifically?** See [Custom Drapery in St. Petersburg, FL — The 2026 Guide](/custom-drapery-st-petersburg/) — pricing, our 5-step workroom process, the designer fabric library (Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils), and recent neighborhood projects.
+**Looking for custom drapery specifically?** See [Custom Drapery in St. Petersburg, FL, The 2026 Guide](/custom-drapery-st-petersburg/), pricing, our 5-step workroom process, the designer fabric library (Kravet, Stout, Lee Jofa, Brunschwig &amp; Fils), and recent neighborhood projects.
 
 ## Why St. Petersburg Homeowners Keep Coming Back to a Local Blinds Shop
 
@@ -24,7 +24,7 @@ We've made those mistakes. We've fixed those mistakes. And we've learned from ev
 
 
 
-![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in St. Petersburg, FL](/images/areas/st-petersburg.webp "St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
+![Custom Fabric Creations, custom window treatments, plantation shutters, and upholstery in St. Petersburg, FL](/images/areas/st-petersburg.webp "St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## What a Real Blinds Shop in St. Petersburg Actually Offers
 
@@ -38,7 +38,7 @@ Every product is made to order. Nothing comes out of a box. Nothing is pre-packa
 
 What also sets us apart: we don't disappear after installation. If a component fails, if a measurement needs adjustment, if a fabric choice doesn't look the way you expected in your room's lighting, you call us, not an 800 number that routes to a call center. We come back. We fix it. That's what a local blinds shop actually means in practice, not just in advertising copy.
 
-## Plantation Shutters Built for Florida's Climate — Not for a Different State's Climate
+## Plantation Shutters Built for Florida's Climate, Not for a Different State's Climate
 
 Plantation shutters look stunning in home magazines. The clean lines. The architectural feel. The way they frame a window without overwhelming it.
 
@@ -78,13 +78,13 @@ We also handle commercial accounts throughout St. Pete. If you manage short-term
 
 ## What St. Petersburg Neighbors Are Saying About Our Work
 
-"I went through three sets of 'waterproof' blinds from the hardware store in two years. Every summer they'd warp and the slats wouldn't close. Found Custom Fabric Creations and the plantation shutters they installed have been perfect for three years now. No warping, no fading. Worth every penny." — Homeowner in Old Northeast, St. Petersburg
+"I went through three sets of 'waterproof' blinds from the hardware store in two years. Every summer they'd warp and the slats wouldn't close. Found Custom Fabric Creations and the plantation shutters they installed have been perfect for three years now. No warping, no fading. Worth every penny.", Homeowner in Old Northeast, St. Petersburg
 
-"They did all the window treatments in our vacation rental on St. Pete Beach. The previous owner had those cheap aluminum blinds that bent if you looked at them wrong. We went with their solar shades and Roman shades recommendation and the place looks like a design hotel now. Renters constantly ask about them. That's the review that matters to us." — Property manager, VRBO host near Pass-a-Grille
+"They did all the window treatments in our vacation rental on St. Pete Beach. The previous owner had those cheap aluminum blinds that bent if you looked at them wrong. We went with their solar shades and Roman shades recommendation and the place looks like a design hotel now. Renters constantly ask about them. That's the review that matters to us.", Property manager, VRBO host near Pass-a-Grille
 
-"I have a two-story foyer with a window that's basically a wall of glass. I thought motorized shades were only for new construction with all the wiring done during building. They told me about battery-powered Somfy motors and had the whole thing done in an afternoon. It works perfectly." — Resident in the Golfview neighborhood
+"I have a two-story foyer with a window that's basically a wall of glass. I thought motorized shades were only for new construction with all the wiring done during building. They told me about battery-powered Somfy motors and had the whole thing done in an afternoon. It works perfectly.", Resident in the Golfview neighborhood
 
-## Your Local Window Treatment Store in St. Petersburg — Ready to Help
+## Your Local Window Treatment Store in St. Petersburg, Ready to Help
 
 We're not a franchise. We're not an online retailer with a local Google listing and a fulfillment center somewhere else. We're a shop that has measured, built, and installed window treatments across the entire St. Petersburg area, from Dunedin to St. Pete Beach, from the bay side to the Gulf side, from high-rise condos to historic bungalows.
 

@@ -18,20 +18,20 @@ Looking for interior design in St. Petersburg? Custom Fabric Creations offers cu
 
 ## What We Design and Provide Interior Decor in St. Petersburg
 
-Custom window treatments — Blinds, shades, draperies, curtains, plantation shutters, and motorization. This is the foundation of what we do, and every other decor decision in a room is usually made in relation to the windows first. We help you get the window treatments right, and then build from there.
+Custom window treatments, Blinds, shades, draperies, curtains, plantation shutters, and motorization. This is the foundation of what we do, and every other decor decision in a room is usually made in relation to the windows first. We help you get the window treatments right, and then build from there.
 
-Bedding and custom cushions — Beds that look like they belong in the room you actually sleep in. Custom cushion sizes for window seats, built-in benches, and odd-shaped furniture that ready-made cushions never fit properly. Coordinate fabrics with your window treatments or create a separate palette.
+Bedding and custom cushions, Beds that look like they belong in the room you actually sleep in. Custom cushion sizes for window seats, built-in benches, and odd-shaped furniture that ready-made cushions never fit properly. Coordinate fabrics with your window treatments or create a separate palette.
 
-Decorative pillows and throw pillows — Often underestimated, but the right pillows can shift the entire feeling of a room. We make custom sizes and can coordinate or contrast with your other fabrics.
+Decorative pillows and throw pillows, Often underestimated, but the right pillows can shift the entire feeling of a room. We make custom sizes and can coordinate or contrast with your other fabrics.
 
-Valances and top treatments — The top of the window is one of the most-overlooked details in a room. A well-designed valance or cornice finishes the window treatment and ties the ceiling height to the floor in a way that makes the room feel intentional.
+Valances and top treatments, The top of the window is one of the most-overlooked details in a room. A well-designed valance or cornice finishes the window treatment and ties the ceiling height to the floor in a way that makes the room feel intentional.
 
-Fabric selection service — Not sure what fabric works in a room with two kids and a dog? Not sure what color palette to commit to? We bring samples to your home and walk through options based on your actual lifestyle durability, cleaning, sun exposure, and aesthetic all at once.
-
-
+Fabric selection service, Not sure what fabric works in a room with two kids and a dog? Not sure what color palette to commit to? We bring samples to your home and walk through options based on your actual lifestyle durability, cleaning, sun exposure, and aesthetic all at once.
 
 
-![Featured Interior Design & Decor project by Custom Fabric Creations — bespoke interior design & decor in St. Petersburg, FL](/images/services/services-interior-decor-tampa/top.webp "Interior Design & Decor | Custom Fabric Creations — St. Petersburg, FL")
+
+
+![Featured Interior Design & Decor project by Custom Fabric Creations, bespoke interior design & decor in St. Petersburg, FL](/images/services/services-interior-decor-tampa/top.webp "Interior Design & Decor | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Why St. Petersgurb Homeowners Work With Us Not a Design Firm
 
@@ -48,14 +48,14 @@ One point of contact. Terry and her team work directly with you. No junior desig
 ## Our Process How Interior Design Works With Us
 
 - Request your free in-home consultation. Tell us what you're working on a room, a window, a piece of furniture. We set up a time to come to you, with samples and ideas, no commitment required.
-- On-site assessment and design discussion. We look at the space, discuss your priorities and preferences, and show you options that make sense for your room. We talk through fabric choices, functionality, budget, and timeline. You don't need to have answers before we arrive — that's our job together.
+- On-site assessment and design discussion. We look at the space, discuss your priorities and preferences, and show you options that make sense for your room. We talk through fabric choices, functionality, budget, and timeline. You don't need to have answers before we arrive, that's our job together.
 - Proposal and agreement. We put together a detailed proposal covering exactly what we're providing, the specifications, and the cost. No hidden charges, no surprises.
 - Manufacturing and delivery. Custom pieces are made in our workroom to your specifications. We deliver and install, and confirm everything is exactly right before we leave.
 
 
 
 
-![Completed Interior Design & Decor project by Custom Fabric Creations — bespoke interior design & decor in St. Petersburg, FL](/images/services/services-interior-decor-tampa/bottom.webp "Interior Design & Decor | Custom Fabric Creations — St. Petersburg, FL")
+![Completed Interior Design & Decor project by Custom Fabric Creations, bespoke interior design & decor in St. Petersburg, FL](/images/services/services-interior-decor-tampa/bottom.webp "Interior Design & Decor | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Serving the Greater St. Petersburg Area
 
@@ -69,7 +69,7 @@ Pasco County: Wesley Chapel, Zephyrhills, Land O' Lakes, Trinity
 
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 
-Not in one of these areas? Call us anyway — if we can help, we'll tell you.
+Not in one of these areas? Call us anyway, if we can help, we'll tell you.
 
 ## Ready to make your home feel more like you?
 

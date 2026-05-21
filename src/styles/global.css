@@ -6,7 +6,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom Fabric Creations — bespoke window treatments & upholstery.
+  /* Custom Fabric Creations, bespoke window treatments & upholstery.
      Palette pulled from the live site: warm gold + ivory cream + charcoal.
      Positioned for a refined luxury feel. */
 
@@ -15,13 +15,13 @@
   --color-brand-200: #e7d6a3;
   --color-brand-300: #d8bf73;
   --color-brand-400: #caad55;
-  --color-brand-500: #bca050;  /* primary — brass/gold */
+  --color-brand-500: #bca050;  /* primary, brass/gold */
   --color-brand-600: #a28641;
   --color-brand-700: #826a35;
   --color-brand-800: #625030;
   --color-brand-900: #4a3c24;
 
-  --color-cream-50:  #f6f3ea;  /* canonical "cream" section bg — alternates with white */
+  --color-cream-50:  #f6f3ea;  /* canonical "cream" section bg, alternates with white */
   --color-cream-100: #f6f3ea;  /* alias of cream-50; legacy refs resolve to same tone */
   --color-cream-200: #ebe5d3;
   --color-cream-300: #e3dbc1;
@@ -90,7 +90,7 @@ body {
    can push grid/flex parents past the viewport on mobile. */
 input, textarea, select { max-width: 100%; min-width: 0; }
 
-/* Gold link accent — base style for inline textual links in body copy.
+/* Gold link accent, base style for inline textual links in body copy.
    No default underline. Instead: gold brand color, medium weight, and a gold
    hover line that slides in. Buttons, nav, and styled anchors override locally. */
 a { transition: color 140ms ease, border-color 140ms ease, background-size 220ms ease; }
@@ -149,12 +149,12 @@ details[open] > summary ~ * {
 .container-site { @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8; }
 .container-narrow { @apply mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8; }
 
-/* Two background tones only — strict alternation between sections.
+/* Two background tones only, strict alternation between sections.
    White sections get cream cards; cream sections get white cards. */
 .bg-cream { background-color: var(--color-cream-50); }
 .bg-linen { background-color: var(--color-cream-50); }
 
-/* Prose — body copy styling for page builder content */
+/* Prose, body copy styling for page builder content */
 .prose-cfc p { @apply text-ink-600 leading-relaxed text-[1.0625rem]; }
 .prose-cfc h2 { @apply text-2xl md:text-3xl mt-12 mb-4; }
 .prose-cfc h3 { @apply text-lg md:text-xl mt-8 mb-3; }
@@ -209,7 +209,7 @@ details[open] > summary ~ * {
   height: auto;
 }
 
-/* Buttons — luxury refined: solid gold primary, ghost-outline secondary.
+/* Buttons, luxury refined: solid gold primary, ghost-outline secondary.
    Hover lifts + brightens slightly; active gives a subtle press squish. */
 .btn-primary,
 .btn-outline,
@@ -254,7 +254,7 @@ details[open] > summary ~ * {
 }
 .btn-lg { @apply px-8 py-4 text-sm; }
 
-/* Surface card — the canonical "raised card" treatment. Soft layered shadow,
+/* Surface card, the canonical "raised card" treatment. Soft layered shadow,
    no border. Hover gently lifts and deepens the shadow. Reuse for review,
    service, area, info, and form cards. */
 .surface-card {
@@ -268,7 +268,7 @@ details[open] > summary ~ * {
   box-shadow: var(--shadow-card-hover);
 }
 
-/* Icon badge — circular dark fill + gold icon. The Westchase signature
+/* Icon badge, circular dark fill + gold icon. The Westchase signature
    pattern; use anywhere a phone/clock/email/pin icon appears. */
 .icon-badge {
   @apply inline-flex items-center justify-center w-12 h-12 rounded-full bg-ink-900 text-brand-400 shrink-0;
@@ -277,7 +277,7 @@ details[open] > summary ~ * {
   @apply inline-flex items-center justify-center w-9 h-9 rounded-full bg-ink-900 text-brand-400 shrink-0;
 }
 
-/* CTA button row — stacks vertically with equal widths on mobile so paired
+/* CTA button row, stacks vertically with equal widths on mobile so paired
    buttons (e.g. "Schedule Consultation" + "Call …") read as a balanced pair,
    then flows side-by-side on sm: and up. */
 .cta-group {
@@ -293,7 +293,7 @@ details[open] > summary ~ * {
   @apply sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:shadow;
 }
 
-/* Eyebrow label — small caps above section titles */
+/* Eyebrow label, small caps above section titles */
 .eyebrow {
   @apply inline-block text-xs tracking-[0.25em] uppercase text-brand-600 font-semibold mb-3;
 }

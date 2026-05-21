@@ -3,7 +3,10 @@ import { getLocationForPath } from '~/lib/site';
 const location = getLocationForPath(Astro.url.pathname);
 ---
 
-<div class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.10)]">
+<div
+  id="sticky-mobile-cta"
+  class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.10)] translate-y-full transition-transform duration-300"
+>
   <div class="grid grid-cols-2">
     <a
       href={location.phoneHref}
@@ -25,4 +28,23 @@ const location = getLocationForPath(Astro.url.pathname);
     </a>
   </div>
 </div>
-<div class="md:hidden h-16" aria-hidden="true"></div>
+<script>
+  // Show the sticky call/quote bar only after the user scrolls past the
+  // hero (and its in-hero Call + Schedule buttons). We reveal it once the
+  // user has scrolled roughly one viewport down, and hide it again at the
+  // very top. Slides up/down via the translate-y utility on the bar.
+  const bar = document.getElementById('sticky-mobile-cta');
+  if (bar) {
+    const REVEAL_AT = () => Math.min(window.innerHeight * 0.85, 640);
+    let shown = false;
+    const update = () => {
+      const past = window.scrollY > REVEAL_AT();
+      if (past === shown) return;
+      shown = past;
+      bar.classList.toggle('translate-y-full', !shown);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+  }
+</script>

@@ -21,7 +21,7 @@ const GOOGLE_MAPS_API_KEY =
     eyebrow="Client Support and Scheduling"
     title="Schedule Your Design"
     titleAccent="Consultation"
-    subtitle="Tell us about your space. We'll bring the showroom to you — fabrics, finishes, and hardware, all in your home, in your natural light."
+    subtitle="Tell us about your space. We'll bring the showroom to you, fabrics, finishes, and hardware, all in your home, in your natural light."
     image="/images/hero/homepage.webp"
     breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact/' }]}
     primaryCta={{ label: `Call ${SITE.phone}`, href: SITE.phoneHref }}
@@ -71,7 +71,7 @@ const GOOGLE_MAPS_API_KEY =
     </div>
   </Hero>
 
-  <!-- Compact info strip — replaces the duplicate "Schedule Your Consultation"
+  <!-- Compact info strip, replaces the duplicate "Schedule Your Consultation"
        section so the hero now carries that message. Phone, hours, and service
        area sit as a clean 3-up row that reads cleanly on mobile too. -->
   <section class="py-10 md:py-14 bg-white">
@@ -91,7 +91,7 @@ const GOOGLE_MAPS_API_KEY =
         </span>
         <div>
           <p class="text-ink-500 text-xs uppercase tracking-widest mb-0.5">Hours</p>
-          <p class="text-ink-800 font-bold">Mon–Sat 7am–7pm</p>
+          <p class="text-ink-800 font-bold">Mon-Sat 7am-7pm</p>
         </div>
       </div>
       <div class="flex items-center gap-4 p-4">
@@ -217,7 +217,7 @@ const GOOGLE_MAPS_API_KEY =
     // If Google's loader fails (bad key, referrer block, billing off, etc.)
     // the plain street input stays in place so users can still type by hand.
     window.gm_authFailure = function () {
-      console.warn('Google Maps authFailure — falling back to plain input');
+      console.warn('Google Maps authFailure, falling back to plain input');
     };
 
     async function initPlaces() {

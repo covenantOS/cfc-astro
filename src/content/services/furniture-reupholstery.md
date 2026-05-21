@@ -20,22 +20,22 @@ Furniture reupholstery in St. Petersburg? Custom Fabric Creations recovers furni
 
 Furniture reupholstery isn't one thing. It's a range of services depending on what the piece needs:
 
-Full reupholstery — The piece is structurally sound but the fabric is worn, faded, or no longer right for the room. We strip it down, repair the frame if needed, replace the cushion interiors, and recover in the new fabric of your choice.
+Full reupholstery, The piece is structurally sound but the fabric is worn, faded, or no longer right for the room. We strip it down, repair the frame if needed, replace the cushion interiors, and recover in the new fabric of your choice.
 
-Partial reupholstery — Sometimes you don't need a full recovery. A worn armrest, a sagging seat, a headboard that needs updating. We address what's needed rather than rebuilding the whole piece.
+Partial reupholstery, Sometimes you don't need a full recovery. A worn armrest, a sagging seat, a headboard that needs updating. We address what's needed rather than rebuilding the whole piece.
 
-Frame and structural repair — Before we recover anything, we make sure the piece will hold up. Loose joints, weakened springs, broken rails these get addressed. A reupholstered sofa with a bad frame doesn't last.
+Frame and structural repair, Before we recover anything, we make sure the piece will hold up. Loose joints, weakened springs, broken rails these get addressed. A reupholstered sofa with a bad frame doesn't last.
 
-Cushion replacement — Flat cushions are one of the most common complaints about older furniture. We replace foam and filling to restore comfort without replacing the whole piece.
+Cushion replacement, Flat cushions are one of the most common complaints about older furniture. We replace foam and filling to restore comfort without replacing the whole piece.
 
-Custom upholstery — New furniture built to your specifications, or custom-built sections to fit a specific space. We work with homeowners who want something that doesn't come from a showroom floor.
+Custom upholstery, New furniture built to your specifications, or custom-built sections to fit a specific space. We work with homeowners who want something that doesn't come from a showroom floor.
 
 We work on: sofas, sectionals, loveseats, armchairs, dining chairs, ottomans, headboards, and built-in bench seating.
 
 
 
 
-![Featured Furniture Reupholstery project by Custom Fabric Creations — bespoke furniture reupholstery in St. Petersburg, FL](/images/services/furniture-reupholstery/top.webp "Furniture Reupholstery | Custom Fabric Creations — St. Petersburg, FL")
+![Featured Furniture Reupholstery project by Custom Fabric Creations, bespoke furniture reupholstery in St. Petersburg, FL](/images/services/furniture-reupholstery/top.webp "Furniture Reupholstery | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Custom Upholstery Fabric Selection What Sets Us Apart
 
@@ -57,7 +57,7 @@ If you have a specific fabric in mind, we can often source it. If you want recom
 
 
 
-![Completed Furniture Reupholstery project by Custom Fabric Creations — bespoke furniture reupholstery in St. Petersburg, FL](/images/services/furniture-reupholstery/bottom.webp "Furniture Reupholstery | Custom Fabric Creations — St. Petersburg, FL")
+![Completed Furniture Reupholstery project by Custom Fabric Creations, bespoke furniture reupholstery in St. Petersburg, FL](/images/services/furniture-reupholstery/bottom.webp "Furniture Reupholstery | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Serving the Greater St. Petersburg Area
 

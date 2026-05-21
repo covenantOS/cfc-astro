@@ -10,7 +10,7 @@ faqs:
   - q: "Can you motorize existing blinds or shades?"
     a: "We primarily work with new custom treatments, but certain retrofit motorization options exist depending on the brand and window type. Let's talk through your situation directly."
   - q: "Are blackout blinds truly blackout, or just \"dim\"?"
-    a: "When properly measured and installed — with side channels and a precise fit — true blackout blinds block virtually all light. That's what we design for. \"Dim\" blinds are usually the result of a poor fit, not a material limitation."
+    a: "When properly measured and installed, with side channels and a precise fit, true blackout blinds block virtually all light. That's what we design for. \"Dim\" blinds are usually the result of a poor fit, not a material limitation."
   - q: "Do you offer warranties on your installations?"
     a: "Yes. Manufacturer warranties vary by product. On our installation work, we address any fit or function issues that arise within the first year at no charge."
 ---
@@ -22,7 +22,7 @@ Most retail blinds come in a set of predetermined widths and lengths. What that 
 
 Custom blinds eliminate those compromises entirely.
 
-Precise fit, every time. We measure each window individually. The result is a clean, tailored appearance — the kind that makes a room feel finished rather than accessorized.
+Precise fit, every time. We measure each window individually. The result is a clean, tailored appearance, the kind that makes a room feel finished rather than accessorized.
 
 Better light control. Tampa Bay homeowners know: the Florida sun doesn't negotiate. Custom blackout blinds, cellular shades, and room-darkening treatments are measured to seal the window properly not just cover it.
 
@@ -32,11 +32,11 @@ A single point of responsibility. We measure, we install, we stand behind it. If
 
 ## Our Process: From Consultation to Installation
 
-- Book your free in-home consultation. Call or fill out our contact form. We'll set up a time that works — evenings and weekends are available. No showroom visit required — we bring the samples to you.
+- Book your free in-home consultation. Call or fill out our contact form. We'll set up a time that works, evenings and weekends are available. No showroom visit required, we bring the samples to you.
 - We measure every window, together. Your designer measures each window on-site, notes the architecture and light angles, and documents what's there. These numbers go directly to the workroom.
-- We present options tailored to your home. Based on the measurements and your priorities — privacy, light control, style, budget — we present a shortlist of treatments that actually fit. Not every option on the wall. The ones that make sense for you.
+- We present options tailored to your home. Based on the measurements and your priorities, privacy, light control, style, budget, we present a shortlist of treatments that actually fit. Not every option on the wall. The ones that make sense for you.
 - Custom manufacturing. Your blinds or shades are built to the exact measurements from your home. No approximations, no rounding up.
-- Professional installation. We install. We confirm the fit. We show you how everything works — including any motorization features. You don't sign off until you're satisfied.
+- Professional installation. We install. We confirm the fit. We show you how everything works, including any motorization features. You don't sign off until you're satisfied.
 - Follow-up support. Questions after installation? A shade that needs adjustment a few months in? We come back. That's part of what we do.
 
 ## Serving the Greater St. Petersburg Area
@@ -49,11 +49,11 @@ Pinellas County: St. Petersburg, Clearwater, Tarpon Springs, Palm Harbor
 
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 
-Not sure if we cover your area? Call us. If we're not the right fit for your location, we'll tell you — and likely point you to someone who is.
+Not sure if we cover your area? Call us. If we're not the right fit for your location, we'll tell you, and likely point you to someone who is.
 
 ## Ready to see what custom can do for your windows?
 
-- Call us at (352) 624-0162 or request your free in-home consultation below. We're available by appointment — including evenings and weekends.
+- Call us at (352) 624-0162 or request your free in-home consultation below. We're available by appointment, including evenings and weekends.
 
 ## Serving the Greater St. Petersburg Area
 

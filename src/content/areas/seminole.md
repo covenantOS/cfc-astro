@@ -18,7 +18,7 @@ That kind of customer attracts a specific kind of window treatment store. One th
 
 
 
-![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Seminole, FL](/images/areas/seminole.webp "Seminole window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
+![Custom Fabric Creations, custom window treatments, plantation shutters, and upholstery in Seminole, FL](/images/areas/seminole.webp "Seminole window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Roman Shades The Custom Window Treatment That Seminole Homeowners Keep Choosing
 
@@ -108,11 +108,11 @@ For Seminole homes, the drapery conversation typically includes honest discussio
 
 ## What Seminole Neighbors Say About Our Work
 
-"We moved to Seminole from Ohio three years ago and didn't know anything about window treatments in Florida humidity. The first set of blinds we bought degraded faster than anything I'd ever seen. Custom Fabric Creations explained why that happens and what to look for. We've had their treatments in for two years now and they still look and work like new. The difference between buying from someone who actually understands the climate versus just selling products is substantial." — Homeowner in Seminole, moved from Midwest
+"We moved to Seminole from Ohio three years ago and didn't know anything about window treatments in Florida humidity. The first set of blinds we bought degraded faster than anything I'd ever seen. Custom Fabric Creations explained why that happens and what to look for. We've had their treatments in for two years now and they still look and work like new. The difference between buying from someone who actually understands the climate versus just selling products is substantial.", Homeowner in Seminole, moved from Midwest
 
-"I run my home office in a room with west-facing windows and screen glare was a constant problem on video calls. Blackout shades with the solar mesh outer layer solved it completely, I can have the shade down for a meeting without looking like I'm in a cave, and the room stays cooler in the afternoon." — Work-from-home professional in Seminole
+"I run my home office in a room with west-facing windows and screen glare was a constant problem on video calls. Blackout shades with the solar mesh outer layer solved it completely, I can have the shade down for a meeting without looking like I'm in a cave, and the room stays cooler in the afternoon.", Work-from-home professional in Seminole
 
-"We reupholstered our living room sofa and two accent chairs here. They were honest about the frame not being worth the reupholstery cost and suggested we put that money toward new furniture instead. I appreciated that, not every business would tell me that." — Homeowner near the Seminole Town Center area
+"We reupholstered our living room sofa and two accent chairs here. They were honest about the frame not being worth the reupholstery cost and suggested we put that money toward new furniture instead. I appreciated that, not every business would tell me that.", Homeowner near the Seminole Town Center area
 
 ## Your Seminole FL Window Treatment Store Ready to Help
 

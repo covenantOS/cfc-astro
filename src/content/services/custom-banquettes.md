@@ -10,7 +10,7 @@ faqs:
   - q: "Can you motorize existing blinds or shades?"
     a: "We primarily work with new custom treatments, but certain retrofit motorization options exist depending on the brand and window type. Let's talk through your situation directly."
   - q: "Are blackout blinds truly blackout, or just \"dim\"?"
-    a: "When properly measured and installed — with side channels and a precise fit — true blackout blinds block virtually all light. That's what we design for. \"Dim\" blinds are usually the result of a poor fit, not a material limitation."
+    a: "When properly measured and installed, with side channels and a precise fit, true blackout blinds block virtually all light. That's what we design for. \"Dim\" blinds are usually the result of a poor fit, not a material limitation."
   - q: "Do you offer warranties on your installations?"
     a: "Yes. Manufacturer warranties vary by product. On our installation work, we address any fit or function issues that arise within the first year at no charge."
 ---
@@ -29,7 +29,7 @@ Commercial Banquettes Highly durable professional grade upholstered seating engi
 
 
 
-![Completed Custom Banquettes project by Custom Fabric Creations — bespoke custom banquettes in St. Petersburg, FL](/images/services/custom-banquettes/bottom.webp "Custom Banquettes | Custom Fabric Creations — St. Petersburg, FL")
+![Completed Custom Banquettes project by Custom Fabric Creations, bespoke custom banquettes in St. Petersburg, FL](/images/services/custom-banquettes/bottom.webp "Custom Banquettes | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Our Fabrication Process From Measurement to Installation
 

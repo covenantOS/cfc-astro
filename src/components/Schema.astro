@@ -41,7 +41,7 @@ const websiteId = `${SITE.url}/#website`;
 const logoUrl = `${SITE.url}/favicon.svg`;
 const imageUrl = image ? new URL(image, SITE.url).toString() : `${SITE.url}/images/og-default.jpg`;
 
-// Core LocalBusiness node — emitted on every page
+// Core LocalBusiness node, emitted on every page
 const localBusiness = {
   '@type': 'LocalBusiness',
   '@id': orgId,

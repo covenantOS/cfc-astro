@@ -5,7 +5,7 @@ h1: "Custom Window Treatments in Largo, FL"
 slug: largo
 type: area
 ---
-Custom plantation shutters, motorized window shades, drapery, and furniture re-upholstery for Largo, FL homeowners — specified for Pinellas County's climate, installed across the full range of Largo's housing stock, and backed by over two decades of local experience.
+Custom plantation shutters, motorized window shades, drapery, and furniture re-upholstery for Largo, FL homeowners, specified for Pinellas County's climate, installed across the full range of Largo's housing stock, and backed by over two decades of local experience.
 
 ## Why Largo, FL Deserves a Window Treatment Store With Real Answers
 
@@ -18,7 +18,7 @@ We've been that company for Largo residents. We've handled window treatments in 
 
 
 
-![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Largo, FL](/images/areas/largo.webp "Largo window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
+![Custom Fabric Creations, custom window treatments, plantation shutters, and upholstery in Largo, FL](/images/areas/largo.webp "Largo window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Plantation Shutters The Window Treatment Largo Homeowners Keep Coming Back To
 
@@ -108,11 +108,11 @@ That community knowledge is what lets us give practical advice that is specific 
 
 ## What Largo Neighbors Say About Our Work
 
-"We bought a home in a newer development in east Largo and the builder-grade blinds were already failing within the first year. Custom Fabric Creations replaced them with custom plantation shutters throughout the main floor and it's been three years with no issues. The difference in quality is obvious." — Homeowner in East Largo development
+"We bought a home in a newer development in east Largo and the builder-grade blinds were already failing within the first year. Custom Fabric Creations replaced them with custom plantation shutters throughout the main floor and it's been three years with no issues. The difference in quality is obvious.", Homeowner in East Largo development
 
-"I've been working with them for fifteen years across two houses in Largo. They've handled everything from single room treatments to whole-house installations. The consistency of the work and the follow-through is why I keep going back. When something needed adjustment three years after installation, they came out and fixed it without making a big deal about it." — Long-term customer, Largo homeowner
+"I've been working with them for fifteen years across two houses in Largo. They've handled everything from single room treatments to whole-house installations. The consistency of the work and the follow-through is why I keep going back. When something needed adjustment three years after installation, they came out and fixed it without making a big deal about it.", Long-term customer, Largo homeowner
 
-"We had custom drapery made for our living room and the process was more involved than I expected but in a good way. They brought samples, we picked fabric, they came back to install, and the result was exactly what we wanted. It's clear that this is what they do, not just one of many things they sell." — Resident near Lake Pasadena, Largo
+"We had custom drapery made for our living room and the process was more involved than I expected but in a good way. They brought samples, we picked fabric, they came back to install, and the result was exactly what we wanted. It's clear that this is what they do, not just one of many things they sell.", Resident near Lake Pasadena, Largo
 
 ## Your Window Treatment Store in Largo Ready to Help
 

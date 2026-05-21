@@ -18,17 +18,17 @@ Looking for custom draperies in Florida? Custom Fabric Creations designs and ins
 
 Drapery is not just decoration here. Properly lined panels can cut window heat gain by about 33% ([US Department of Energy](https://www.energy.gov/energysaver/energy-efficient-window-coverings)), which matters on every west-facing room in St. Pete. We build every panel in our own workroom and hang it with the installer who measured it.
 
-**Custom drapery specifically for St. Pete homes?** See our dedicated guide — [Custom Drapery in St. Petersburg, FL: The 2026 Guide](/custom-drapery-st-petersburg/) — with pricing, our 5-step process, neighborhood project gallery, and the full designer fabric library.
+**Custom drapery specifically for St. Pete homes?** See our dedicated guide, [Custom Drapery in St. Petersburg, FL: The 2026 Guide](/custom-drapery-st-petersburg/), with pricing, our 5-step process, neighborhood project gallery, and the full designer fabric library.
 
 ## Types of Custom Draperies and Curtains We Offer in St. Petersburg
 
 Every room has different needs. Here's a breakdown of what we make and who it's for:
 
-Sheer curtains — Florida homes get plenty of sun, and sheer panels are one of the best ways to manage it without living in the dark. Sheers diffuse light softly across the room while maintaining a sense of openness. They pair well with heavier drapes you can draw closed when you want full privacy or darkness.
+Sheer curtains, Florida homes get plenty of sun, and sheer panels are one of the best ways to manage it without living in the dark. Sheers diffuse light softly across the room while maintaining a sense of openness. They pair well with heavier drapes you can draw closed when you want full privacy or darkness.
 
-Blackout curtains — Built with a lined interlining that blocks virtually all light when closed. Popular for bedrooms, home theaters, and nursery spaces. The key word is "custom" off-the-rack blackout curtains often have gaps on the sides because they're cut to an average window. Ours are measured to seal properly.
+Blackout curtains, Built with a lined interlining that blocks virtually all light when closed. Popular for bedrooms, home theaters, and nursery spaces. The key word is "custom" off-the-rack blackout curtains often have gaps on the sides because they're cut to an average window. Ours are measured to seal properly.
 
-Luxury and designer curtains — Rich fabrics, custom headings, detailed hardware. This is where the room comes together. We work with a wide range of materials and can source based on your aesthetic from clean modern panels to more traditional treatments with contrast borders and decorative rods.
+Luxury and designer curtains, Rich fabrics, custom headings, detailed hardware. This is where the room comes together. We work with a wide range of materials and can source based on your aesthetic from clean modern panels to more traditional treatments with contrast borders and decorative rods.
 
 Motorized curtains Controlled by wall switch, remote, or smartphone. A practical choice for high windows, sliding doors, or anyone who wants the convenience of scheduling when the drapes open and close. We install and configure the motorization system so it works smoothly from day one.
 
@@ -39,7 +39,7 @@ Custom valances and top treatments Sometimes the window needs something above th
 
 
 
-![Featured Custom Draperies & Curtains project by Custom Fabric Creations — bespoke custom draperies & curtains in St. Petersburg, FL](/images/services/custom-draperies-curtains/top.webp "Custom Draperies & Curtains | Custom Fabric Creations — St. Petersburg, FL")
+![Featured Custom Draperies & Curtains project by Custom Fabric Creations, bespoke custom draperies & curtains in St. Petersburg, FL](/images/services/custom-draperies-curtains/top.webp "Custom Draperies & Curtains | Custom Fabric Creations, St. Petersburg, FL")
 
 ## How We Make Your Custom Drapes From Measurement to Installation
 
@@ -68,7 +68,7 @@ Not sure if we cover your area? Call us. If we don't service your location direc
 
 
 
-![In-progress Custom Draperies & Curtains project by Custom Fabric Creations — bespoke custom draperies & curtains in St. Petersburg, FL](/images/services/custom-draperies-curtains/middle.webp "Custom Draperies & Curtains | Custom Fabric Creations — St. Petersburg, FL")
+![In-progress Custom Draperies & Curtains project by Custom Fabric Creations, bespoke custom draperies & curtains in St. Petersburg, FL](/images/services/custom-draperies-curtains/middle.webp "Custom Draperies & Curtains | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Ready to see what custom drapes can do for your home?
 

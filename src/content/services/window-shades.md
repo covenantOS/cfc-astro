@@ -8,11 +8,11 @@ faqs:
   - q: "Do solar shades actually reduce heat?"
     a: "Yes properly installed solar shades reduce solar heat gain significantly, which lowers the temperature in rooms with high sun exposure and reduces the workload on your AC. The key is proper installation gaps around the shade significantly reduce the effect."
   - q: "What's the difference between roller shades and roman shades?"
-    a: "Roller shades are a single piece of fabric that rolls up and down on a tube. They're clean, minimal, and easy to operate. Roman shades are fabric panels that fold into pleats when raised — they have a softer, more traditional look. Both come in light-filtering, blackout, and solar options."
+    a: "Roller shades are a single piece of fabric that rolls up and down on a tube. They're clean, minimal, and easy to operate. Roman shades are fabric panels that fold into pleats when raised, they have a softer, more traditional look. Both come in light-filtering, blackout, and solar options."
   - q: "Can you motorize existing window shades?"
     a: "We primarily work with new custom shades, but motorization can sometimes be retrofitted depending on the existing setup. Let's discuss your specific situation."
   - q: "How long do custom window shades last in Tampa?"
-    a: "High-quality custom shades from the brands we carry — Hunter Douglas, Alta, Graber, Norman — are built to handle Florida conditions and typically last 8-12 years with proper care. The lifespan depends on sun exposure and whether the shade was properly fitted and installed."
+    a: "High-quality custom shades from the brands we carry, Hunter Douglas, Alta, Graber, Norman, are built to handle Florida conditions and typically last 8-12 years with proper care. The lifespan depends on sun exposure and whether the shade was properly fitted and installed."
 ---
 Window shades in St. Petersburg? Custom Fabric Creations installs roller shades, roman shades, and solar shades built for Florida's intense sun. Brands like Hunter Douglas and Graber. Free in-home consultation.
 
@@ -20,22 +20,22 @@ The right shade does real work in this climate. Cellular (honeycomb) shades can 
 
 ## Types of Window Shades We Offer in St. Petersburg
 
-Roller shades — The cleanest, most minimal window treatment you can install. A single piece of fabric rolls up and down over the window, giving you full control over light and privacy with one pull. Tampa Bay homeowners love them for living rooms and kitchens where a clean sightline matters. We install both standard and motorized roller shades.
+Roller shades, The cleanest, most minimal window treatment you can install. A single piece of fabric rolls up and down over the window, giving you full control over light and privacy with one pull. Tampa Bay homeowners love them for living rooms and kitchens where a clean sightline matters. We install both standard and motorized roller shades.
 
-Roman shades — Fabric shades that fold into neat pleats when raised, creating a softer look than roller shades. Popular in dining rooms and living spaces where you want the texture and warmth of fabric without the formality of drapery. Available in blackout, light-filtering, and sheer options.
+Roman shades, Fabric shades that fold into neat pleats when raised, creating a softer look than roller shades. Popular in dining rooms and living spaces where you want the texture and warmth of fabric without the formality of drapery. Available in blackout, light-filtering, and sheer options.
 
-Solar shades — Designed specifically for what Florida does to a house. Solar shades block UV rays and reduce heat gain while maintaining your view outward which matters when you're paying for one. If you've ever had to choose between closing off your windows and living in a greenhouse, solar shades are the answer most Tampa homeowners wish they'd found sooner.
+Solar shades, Designed specifically for what Florida does to a house. Solar shades block UV rays and reduce heat gain while maintaining your view outward which matters when you're paying for one. If you've ever had to choose between closing off your windows and living in a greenhouse, solar shades are the answer most Tampa homeowners wish they'd found sooner.
 
-Cellular / honeycomb shades — Built with a honeycomb structure that traps air and provides insulation. In Tampa's climate, that means they help keep the interior cooler in summer and reduce the workload on your AC. They also significantly reduce outside noise useful for homes near busy streets.
+Cellular / honeycomb shades, Built with a honeycomb structure that traps air and provides insulation. In Tampa's climate, that means they help keep the interior cooler in summer and reduce the workload on your AC. They also significantly reduce outside noise useful for homes near busy streets.
 
-Blackout shades — For rooms where controlling light is non-negotiable: bedrooms, home theaters, nurseries. Properly fitted blackout shades block virtually all light. The key phrase is "properly fitted" off-the-rack shades typically have gaps on the sides. Ours are measured to seal the window completely.
+Blackout shades, For rooms where controlling light is non-negotiable: bedrooms, home theaters, nurseries. Properly fitted blackout shades block virtually all light. The key phrase is "properly fitted" off-the-rack shades typically have gaps on the sides. Ours are measured to seal the window completely.
 
-Motorized / smart shades — Operated by wall switch, remote, or smartphone app. Practical for high windows, sliding glass doors, and any room where you want to schedule when shades open and close. We install and configure the motorization so it works smoothly from day one.
-
-
+Motorized / smart shades, Operated by wall switch, remote, or smartphone app. Practical for high windows, sliding glass doors, and any room where you want to schedule when shades open and close. We install and configure the motorization so it works smoothly from day one.
 
 
-![Featured Window Shades project by Custom Fabric Creations — bespoke window shades in St. Petersburg, FL](/images/services/window-shades/top.webp "Window Shades | Custom Fabric Creations — St. Petersburg, FL")
+
+
+![Featured Window Shades project by Custom Fabric Creations, bespoke window shades in St. Petersburg, FL](/images/services/window-shades/top.webp "Window Shades | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Why Window Shades in St. Petersburg Need to Be Chosen Carefully
 
@@ -58,7 +58,7 @@ That's the value of working with someone who has 25 years of experience in this 
 
 
 
-![In-progress Window Shades project by Custom Fabric Creations — bespoke window shades in St. Petersburg, FL](/images/services/window-shades/middle.webp "Window Shades | Custom Fabric Creations — St. Petersburg, FL")
+![In-progress Window Shades project by Custom Fabric Creations, bespoke window shades in St. Petersburg, FL](/images/services/window-shades/middle.webp "Window Shades | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Serving the Greater St. Petersburg Area
 
@@ -72,7 +72,7 @@ Pasco County: Wesley Chapel, Zephyrhills, Land O' Lakes, Trinity
 
 Sarasota / Manatee Counties: Sarasota, Venice, Bradenton, Palmetto
 
-Not in one of these areas? Call us — if we can help, we will.
+Not in one of these areas? Call us, if we can help, we will.
 
 ## Ready to stop replacing shades every two years?
 
@@ -83,4 +83,4 @@ We're available
 
 
 
-![Completed Window Shades project by Custom Fabric Creations — bespoke window shades in St. Petersburg, FL](/images/services/window-shades/bottom.webp "Window Shades | Custom Fabric Creations — St. Petersburg, FL")
+![Completed Window Shades project by Custom Fabric Creations, bespoke window shades in St. Petersburg, FL](/images/services/window-shades/bottom.webp "Window Shades | Custom Fabric Creations, St. Petersburg, FL")

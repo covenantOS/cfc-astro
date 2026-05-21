@@ -43,15 +43,15 @@ const grid = getReviewsByRecency().filter((r) => r.id !== featured.id).slice(0, 
     <!-- Section heading -->
     <div class="text-center max-w-2xl mx-auto mb-10">
       <p class="eyebrow" style="letter-spacing: 0.3em;">Reviews</p>
-      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-ink-800 mb-5 leading-tight">{heading}</h2>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ink-800 mb-5 leading-tight">{heading}</h2>
       <p class="text-ink-500 text-sm md:text-base">{subheading}</p>
     </div>
 
     <!-- Trust pill (Titan-style floating card): G logo + 5.0 + 5 stars + copy.
          No numeric review count per client decision. -->
     <div class="flex justify-center mb-10">
-      <div class="inline-flex items-center gap-4 bg-white rounded-lg shadow-card px-6 py-3.5">
-        <svg class="w-10 h-10 shrink-0" viewBox="0 0 48 48" aria-hidden="true">
+      <div class="inline-flex items-center gap-3 md:gap-4 bg-white rounded-lg shadow-card px-4 md:px-6 py-3">
+        <svg class="w-8 h-8 md:w-10 md:h-10 shrink-0" viewBox="0 0 48 48" aria-hidden="true">
           <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20c11 0 20-8 20-20 0-1.3-.1-2.3-.4-3.5z"/>
           <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.1 18.9 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
           <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35 26.7 36 24 36c-5.2 0-9.7-3.3-11.3-8l-6.5 5C9.4 39.6 16.1 44 24 44z"/>
@@ -59,16 +59,16 @@ const grid = getReviewsByRecency().filter((r) => r.id !== featured.id).slice(0, 
         </svg>
         <div class="flex flex-col">
           <div class="flex items-center gap-2">
-            <span class="font-display text-2xl text-ink-800 font-bold tabular-nums leading-none">5.0</span>
+            <span class="font-display text-xl md:text-2xl text-ink-800 font-bold tabular-nums leading-none">5.0</span>
             <div class="flex items-center gap-0.5 text-[#FBBC04]" aria-label="5 out of 5 stars">
               {[1,2,3,4,5].map(() => (
-                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                <svg class="w-3.5 h-3.5 md:w-4 md:h-4" viewBox="0 0 20 20" fill="currentColor">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                 </svg>
               ))}
             </div>
           </div>
-          <p class="text-xs text-ink-500 mt-0.5">{trustCopy}</p>
+          <p class="text-[0.7rem] md:text-xs text-ink-500 mt-0.5 whitespace-nowrap">{trustCopy}</p>
         </div>
       </div>
     </div>

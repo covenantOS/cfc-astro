@@ -20,7 +20,7 @@ Custom Banquettes Maximize your dining space with bespoke built in seating. We d
 
 
 
-![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in West St. Petersburg, FL](/images/areas/west-st-pete.webp "West St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
+![Custom Fabric Creations, custom window treatments, plantation shutters, and upholstery in West St. Petersburg, FL](/images/areas/west-st-pete.webp "West St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Our Flawless Consultation and Installation Process
 

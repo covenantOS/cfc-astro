@@ -20,7 +20,7 @@ You need window treatments that look intentional. That look designed. That look 
 
 
 
-![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Downtown St. Petersburg, FL](/images/areas/downtown-st-pete.webp "Downtown St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
+![Custom Fabric Creations, custom window treatments, plantation shutters, and upholstery in Downtown St. Petersburg, FL](/images/areas/downtown-st-pete.webp "Downtown St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Solar Shades for Heat Control The Most Important Window Treatment in Downtown St. Pete
 
@@ -106,11 +106,11 @@ The same approach that defines our window treatment work applies to furniture up
 
 ## What Downtown St. Pete Residents Say About Our Work
 
-"I moved into a Beach Drive condo two years ago and the unit had those cheap builder-grade mini-blinds in every room. Awful. I had Custom Fabric Creations out and we did solar shades in the living room, blackout roller shades in the bedroom, and woven wood shades in the dining area. Night and day difference. The place actually feels like a luxury condo now." — Resident, Beach Drive high-rise, Downtown St. Pete
+"I moved into a Beach Drive condo two years ago and the unit had those cheap builder-grade mini-blinds in every room. Awful. I had Custom Fabric Creations out and we did solar shades in the living room, blackout roller shades in the bedroom, and woven wood shades in the dining area. Night and day difference. The place actually feels like a luxury condo now.", Resident, Beach Drive high-rise, Downtown St. Pete
 
-"Managing short-term rentals in downtown means window treatments take a beating. Previous cleaners used the wrong chemicals on some of the treatments and I had to replace everything. I had them spec commercial-grade window treatments for all my units, the difference is that these actually survive the turnover cycle." — Property manager, VRBO/Short-term rental portfolio, Downtown St. Pete
+"Managing short-term rentals in downtown means window treatments take a beating. Previous cleaners used the wrong chemicals on some of the treatments and I had to replace everything. I had them spec commercial-grade window treatments for all my units, the difference is that these actually survive the turnover cycle.", Property manager, VRBO/Short-term rental portfolio, Downtown St. Pete
 
-"I have a corner unit with windows on two sides. Solar heat was a genuine problem, my AC was running constantly in the afternoons. Solar shades with the tightest mesh they recommended cut my afternoon temperature noticeably and my electric bill dropped the first month. That part was a happy bonus." — Resident, Signature Drive high-rise, Downtown St. Pete
+"I have a corner unit with windows on two sides. Solar heat was a genuine problem, my AC was running constantly in the afternoons. Solar shades with the tightest mesh they recommended cut my afternoon temperature noticeably and my electric bill dropped the first month. That part was a happy bonus.", Resident, Signature Drive high-rise, Downtown St. Pete
 
 ## Your Downtown St. Pete Blinds Shop Ready to Start
 

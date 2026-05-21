@@ -41,7 +41,7 @@ const {
 } = Astro.props;
 
 // Append " | Custom Fabric Creations" only when it still fits under 60c.
-// Otherwise use the page title as-is — we already include brand signals in copy.
+// Otherwise use the page title as-is, we already include brand signals in copy.
 const BRAND_SUFFIX = ` | ${SITE.name}`;
 const fullTitle = title === SITE.name
   ? `${SITE.name} | St. Pete Window Treatments`
@@ -96,7 +96,7 @@ const ogImageUrl = new URL(ogImage, SITE.url).toString();
 
     <!-- Pre-warm Google Maps origins so the lazy-loaded embed paints fast
          the moment it scrolls into view. Used on contact, service, and
-         area pages — almost every route. -->
+         area pages, almost every route. -->
     <link rel="preconnect" href="https://www.google.com" crossorigin />
     <link rel="preconnect" href="https://maps.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://maps.googleapis.com" />

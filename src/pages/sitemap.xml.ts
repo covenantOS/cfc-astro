@@ -1,4 +1,4 @@
-// Flat sitemap endpoint — emits every indexable URL as a single <urlset>.
+// Flat sitemap endpoint, emits every indexable URL as a single <urlset>.
 // Replaces @astrojs/sitemap so crawlers don't have to follow an index file.
 // The URL list is derived from site.ts (SERVICES, AREAS) plus the static page
 // list below; if you add a new indexable page, add it here too.
@@ -22,7 +22,7 @@ const staticPages: Entry[] = [
   // Near-me landing pages (low-KD, high-volume targets)
   { path: '/plantation-shutters-near-me/', changefreq: 'weekly',  priority: '0.9' },
   { path: '/drapery-near-me/',             changefreq: 'weekly',  priority: '0.9' },
-  // Dedicated dominance landing for "custom drapery st petersburg" — currently #7 organic.
+  // Dedicated dominance landing for "custom drapery st petersburg", currently #7 organic.
   { path: '/custom-drapery-st-petersburg/', changefreq: 'weekly', priority: '0.95' },
   // Plantation-shutters guide cluster
   { path: '/plantation-shutters-cost-st-petersburg/',         changefreq: 'monthly', priority: '0.7' },

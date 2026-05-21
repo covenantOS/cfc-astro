@@ -31,21 +31,21 @@ Non-standard window configurations. Florida's architectural diversity concrete b
 
 
 
-![Featured Drapery Hardware project by Custom Fabric Creations — bespoke drapery hardware in St. Petersburg, FL](/images/services/drapery-hardware/top.webp "Drapery Hardware | Custom Fabric Creations — St. Petersburg, FL")
+![Featured Drapery Hardware project by Custom Fabric Creations, bespoke drapery hardware in St. Petersburg, FL](/images/services/drapery-hardware/top.webp "Drapery Hardware | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Types of Drapery Hardware We Provide in Tampa Bay
 
-Decorative drapery rods — The classic visible rod-and-bracket system. Available in a wide range of materials: steel, iron, wood, and aluminum. We help you select the right rod diameter, bracket projection, and finial style for your drapery weight and your room's aesthetic.
+Decorative drapery rods, The classic visible rod-and-bracket system. Available in a wide range of materials: steel, iron, wood, and aluminum. We help you select the right rod diameter, bracket projection, and finial style for your drapery weight and your room's aesthetic.
 
-Concealed track systems — For spaces where you want the drapery to hang with minimal visual hardware. Track systems mount discreetly and can accommodate heavy panels. Popular in contemporary interiors, multifamily properties, and anywhere a cleaner look is preferred.
+Concealed track systems, For spaces where you want the drapery to hang with minimal visual hardware. Track systems mount discreetly and can accommodate heavy panels. Popular in contemporary interiors, multifamily properties, and anywhere a cleaner look is preferred.
 
-Motorized curtain rod systems — Motorization is increasingly common in Tampa Bay homes particularly for high windows, large sliding doors, and homeowners who want the convenience of scheduling when drapes open and close. We install motorized rod systems with wall switch, remote, and smartphone control options.
+Motorized curtain rod systems, Motorization is increasingly common in Tampa Bay homes particularly for high windows, large sliding doors, and homeowners who want the convenience of scheduling when drapes open and close. We install motorized rod systems with wall switch, remote, and smartphone control options.
 
-Custom bay window and corner hardware — Bay windows and corner windows require mitered rods, corner connectors, and custom bracket configurations that aren't available at home stores. We measure, specify, and install the hardware these configurations actually require.
+Custom bay window and corner hardware, Bay windows and corner windows require mitered rods, corner connectors, and custom bracket configurations that aren't available at home stores. We measure, specify, and install the hardware these configurations actually require.
 
-Heavy-duty drapery hardware — For oversized panels, blackout drapery, and layered treatments that combine sheers with drapery panels. Heavy-duty rods, tracks, and brackets rated for the actual weight not an assumption.
+Heavy-duty drapery hardware, For oversized panels, blackout drapery, and layered treatments that combine sheers with drapery panels. Heavy-duty rods, tracks, and brackets rated for the actual weight not an assumption.
 
-Specialty mounting hardware — For concrete block walls, vaulted ceilings, and non-standard mounting surfaces. We have the hardware and the experience to mount securely in Florida's construction types.
+Specialty mounting hardware, For concrete block walls, vaulted ceilings, and non-standard mounting surfaces. We have the hardware and the experience to mount securely in Florida's construction types.
 
 ## Curtain Rod Installation in St. Petersburg Why It Matters
 
@@ -66,7 +66,7 @@ Ceiling-mounted track failures. Vaulted ceilings and concrete ceilings require d
 
 
 
-![In-progress Drapery Hardware project by Custom Fabric Creations — bespoke drapery hardware in St. Petersburg, FL](/images/services/drapery-hardware/top-middle.webp "Drapery Hardware | Custom Fabric Creations — St. Petersburg, FL")
+![In-progress Drapery Hardware project by Custom Fabric Creations, bespoke drapery hardware in St. Petersburg, FL](/images/services/drapery-hardware/top-middle.webp "Drapery Hardware | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Custom Drapery Hardware When Standard Sizes Don't Work
 
@@ -74,13 +74,13 @@ Standard drapery hardware comes in a limited range of sizes. If your window isn'
 
 Custom hardware solves this:
 
-Oversized windows — Windows wider than standard rod lengths require joined rods with hidden splices, or custom-length extruded tracks. We specify and supply both.
+Oversized windows, Windows wider than standard rod lengths require joined rods with hidden splices, or custom-length extruded tracks. We specify and supply both.
 
-Bay and corner windows — These require mitered rods, corner pieces, and custom bracket positioning that can't be improvised from home store components.
+Bay and corner windows, These require mitered rods, corner pieces, and custom bracket positioning that can't be improvised from home store components.
 
-Non-standard heights — Ceiling heights in Florida homes vary more than in many markets — from 8-foot standard to 10-foot vaulted ceilings to old Florida construction with unusual dimensions. Custom hardware bridges the gap.
+Non-standard heights, Ceiling heights in Florida homes vary more than in many markets, from 8-foot standard to 10-foot vaulted ceilings to old Florida construction with unusual dimensions. Custom hardware bridges the gap.
 
-Weight requirements — Heavy lined drapery or layered treatments require hardware rated for the actual weight. Standard hardware is often under-rated, which is why it fails.
+Weight requirements, Heavy lined drapery or layered treatments require hardware rated for the actual weight. Standard hardware is often under-rated, which is why it fails.
 
 ## Our Process for Drapery Hardware in St. Petersburg
 
@@ -92,7 +92,7 @@ Weight requirements — Heavy lined drapery or layered treatments require hardwa
 
 
 
-![In-progress Drapery Hardware project by Custom Fabric Creations — bespoke drapery hardware in St. Petersburg, FL](/images/services/drapery-hardware/bottom-middle.webp "Drapery Hardware | Custom Fabric Creations — St. Petersburg, FL")
+![In-progress Drapery Hardware project by Custom Fabric Creations, bespoke drapery hardware in St. Petersburg, FL](/images/services/drapery-hardware/bottom-middle.webp "Drapery Hardware | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Need drapery hardware that actually works?
 

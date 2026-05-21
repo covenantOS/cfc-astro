@@ -31,7 +31,7 @@ Custom cushions Window seats, built-in benches, banquette seating, and other cus
 
 
 
-![Completed Custom Bedding & Pillows project by Custom Fabric Creations — bespoke custom bedding & pillows in St. Petersburg, FL](/images/services/custom-bedding-pillows/bottom.webp "Custom Bedding & Pillows | Custom Fabric Creations — St. Petersburg, FL")
+![Completed Custom Bedding & Pillows project by Custom Fabric Creations, bespoke custom bedding & pillows in St. Petersburg, FL](/images/services/custom-bedding-pillows/bottom.webp "Custom Bedding & Pillows | Custom Fabric Creations, St. Petersburg, FL")
 
 ## Why St. Petersburg Homes Are Different for Bedding
 

@@ -5,7 +5,7 @@ h1: "Custom Window Treatments in Historic Old Northeast"
 slug: old-northeast
 type: area
 ---
-Custom plantation shutters, blackout curtains, roller shades, Roman shades, and motorized window treatments for Old Northeast St. Petersburg's historic homes — measured and specified for vintage construction, installed to complement the neighborhood's architectural character.
+Custom plantation shutters, blackout curtains, roller shades, Roman shades, and motorized window treatments for Old Northeast St. Petersburg's historic homes, measured and specified for vintage construction, installed to complement the neighborhood's architectural character.
 
 ## Window Treatment Services We Provide in Old Northeast
 
@@ -20,7 +20,7 @@ A local window treatment store in Old Northeast needs to understand this housing
 
 
 
-![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Historic Old Northeast St. Petersburg, FL](/images/areas/old-northeast.webp "Historic Old Northeast St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
+![Custom Fabric Creations, custom window treatments, plantation shutters, and upholstery in Historic Old Northeast St. Petersburg, FL](/images/areas/old-northeast.webp "Historic Old Northeast St. Petersburg window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## The Real Problem With Standard Blinds in Old Northeast's Historic Homes
 
@@ -52,13 +52,13 @@ Old Northeast has a quieter feel than some of the more commercial parts of St. P
 
 Blackout curtains are one of the most practical investments any Old Northeast homeowner can make, and they're relevant to more rooms than most people initially think.
 
-· Bedrooms — This is the obvious use. If you've ever been woken up at 5:30 a.m. by the summer sun streaming through east-facing windows, you already understand why blackout capability matters. But not all "blackout" products actually block light equally. Our lined blackout curtains are tested to block 95 to 99 percent of incoming light, not the 70 to 80 percent that cheaper products claim. The difference is in the lining, a proper blackout curtain has a light-blocking layer bonded to the back of the fabric, not just a thicker material.
+· Bedrooms, This is the obvious use. If you've ever been woken up at 5:30 a.m. by the summer sun streaming through east-facing windows, you already understand why blackout capability matters. But not all "blackout" products actually block light equally. Our lined blackout curtains are tested to block 95 to 99 percent of incoming light, not the 70 to 80 percent that cheaper products claim. The difference is in the lining, a proper blackout curtain has a light-blocking layer bonded to the back of the fabric, not just a thicker material.
 
-· Media rooms and home offices — A room used for television, movies, or computer screens needs controlled ambient light to look and function properly. Standard curtains or blinds don't cut it. A quality blackout shade or panel eliminates the glare that makes screens hard to see.
+· Media rooms and home offices, A room used for television, movies, or computer screens needs controlled ambient light to look and function properly. Standard curtains or blinds don't cut it. A quality blackout shade or panel eliminates the glare that makes screens hard to see.
 
-· Children's rooms — Summer daylight hours are long in Florida, and kids sleep better in a genuinely dark room regardless of what time the sun comes up. Blackout curtains in a nursery or child's bedroom aren't a luxury, they're basic sleep infrastructure.
+· Children's rooms, Summer daylight hours are long in Florida, and kids sleep better in a genuinely dark room regardless of what time the sun comes up. Blackout curtains in a nursery or child's bedroom aren't a luxury, they're basic sleep infrastructure.
 
-· Street-facing rooms — If your Old Northeast home has windows facing a street, you have headlights at night and early morning light to contend with. Blackout treatments on those windows make a real quality-of-life difference.
+· Street-facing rooms, If your Old Northeast home has windows facing a street, you have headlights at night and early morning light to contend with. Blackout treatments on those windows make a real quality-of-life difference.
 
 ## Roller Shades Installation Clean Lines for Old Northeast Interiors
 
@@ -68,11 +68,11 @@ But roller shades are also a practical workhorse treatment for Old Northeast's m
 
 Our roller shades come in three configurations depending on the application:
 
-· Standard roller shades with chain operation — Simple, reliable, appropriate for most rooms. The continuous loop chain can be positioned on either side of the window and can be customized in length for windows where the standard chain would hang too low. Fabrics range from sheer and translucent to full blackout, depending on the level of light control you need.
+· Standard roller shades with chain operation, Simple, reliable, appropriate for most rooms. The continuous loop chain can be positioned on either side of the window and can be customized in length for windows where the standard chain would hang too low. Fabrics range from sheer and translucent to full blackout, depending on the level of light control you need.
 
-· Motorized roller shades — Appropriate for high windows, large windows, and any room where manual operation is inconvenient. The Somfy motor is concealed inside the roller tube, so the exterior appearance is identical to a manual shade. Operation is by wall switch, remote, or smartphone app. For Old Northeast homes with two-story foyers or clerestory windows, motorized roller shades are genuinely transformative.
+· Motorized roller shades, Appropriate for high windows, large windows, and any room where manual operation is inconvenient. The Somfy motor is concealed inside the roller tube, so the exterior appearance is identical to a manual shade. Operation is by wall switch, remote, or smartphone app. For Old Northeast homes with two-story foyers or clerestory windows, motorized roller shades are genuinely transformative.
 
-· Battery-powered motorized shades — For windows where running low-voltage wiring isn't practical, we offer Somfy's battery-powered motorization. The battery pack is concealed behind the headrail and typically requires charging two to three times per year. This is the solution for large sliders, arched windows, and other configurations where retrofitting motorization would otherwise be impractical.
+· Battery-powered motorized shades, For windows where running low-voltage wiring isn't practical, we offer Somfy's battery-powered motorization. The battery pack is concealed behind the headrail and typically requires charging two to three times per year. This is the solution for large sliders, arched windows, and other configurations where retrofitting motorization would otherwise be impractical.
 
 ## Roman Shades Handcrafted Softness for Old Northeast Living Spaces
 
@@ -82,11 +82,11 @@ A quality Roman shade is not a manufactured product that comes out of a box. It'
 
 The process of selecting a Roman shade for an Old Northeast home typically involves three decisions that matter:
 
-· Fabric weight and type — A heavy linen or woven fabric produces dramatic, architectural folds when raised and provides substantial light-blocking when lowered. A lighter sheer fabric allows diffused light through while maintaining privacy. We bring actual sample books to your home so you can evaluate how different fabrics look in your specific lighting conditions, not just in a showroom.
+· Fabric weight and type, A heavy linen or woven fabric produces dramatic, architectural folds when raised and provides substantial light-blocking when lowered. A lighter sheer fabric allows diffused light through while maintaining privacy. We bring actual sample books to your home so you can evaluate how different fabrics look in your specific lighting conditions, not just in a showroom.
 
-· Operating mechanism — Standard cord-and-ring systems are reliable and cost-effective. But for windows in children's rooms or for homeowners who prefer to eliminate dangling cords, we offer cordless operating systems and motorization options that integrate with home automation platforms.
+· Operating mechanism, Standard cord-and-ring systems are reliable and cost-effective. But for windows in children's rooms or for homeowners who prefer to eliminate dangling cords, we offer cordless operating systems and motorization options that integrate with home automation platforms.
 
-· Mounting approach — Inside-mount Roman shades sit within the window frame and give a built-in appearance. Outside-mount shades hang above the frame and can make a window appear larger by extending above and to the sides. The right choice depends on your window's depth, the look you want, and whether the window frame has decorative casing that should be visible.
+· Mounting approach, Inside-mount Roman shades sit within the window frame and give a built-in appearance. Outside-mount shades hang above the frame and can make a window appear larger by extending above and to the sides. The right choice depends on your window's depth, the look you want, and whether the window frame has decorative casing that should be visible.
 
 ## Motorized Blinds Installation in Old Northeast Modern Function Meets Historic Character
 
@@ -112,11 +112,11 @@ Our drapery process begins with a home consultation. We bring fabric sample book
 
 The best measure of a local window treatment store is what the neighbors say after they've lived with the work for a while.
 
-"We bought our 1926 Craftsman bungalow three years ago and the previous owner had those cheap mini-blinds from a hardware store in every room. They were yellowed, the cords were frayed, and half the slats were bent. We had Custom Fabric Creations out for a consultation and ended up doing plantation shutters throughout the main floor and blackout roller shades in the bedrooms. Two years later, we still get compliments from visitors on how the house looks." — Homeowner on Clara Avenue, Old Northeast
+"We bought our 1926 Craftsman bungalow three years ago and the previous owner had those cheap mini-blinds from a hardware store in every room. They were yellowed, the cords were frayed, and half the slats were bent. We had Custom Fabric Creations out for a consultation and ended up doing plantation shutters throughout the main floor and blackout roller shades in the bedrooms. Two years later, we still get compliments from visitors on how the house looks.", Homeowner on Clara Avenue, Old Northeast
 
-"I run a short-term rental in Old Northeast and window treatments are one of the first things guests notice. The previous rental had cheap blinds everywhere. We upgraded to their solar roller shades in the main living area and blackout shades in both bedrooms. The place books consistently and guests specifically mention the window treatments in their reviews." — Property manager, VRBO host near Crescent Lake
+"I run a short-term rental in Old Northeast and window treatments are one of the first things guests notice. The previous rental had cheap blinds everywhere. We upgraded to their solar roller shades in the main living area and blackout shades in both bedrooms. The place books consistently and guests specifically mention the window treatments in their reviews.", Property manager, VRBO host near Crescent Lake
 
-"We have eight windows in our living room, none of them the same size. I was dreading trying to find treatments that would work. They came out, measured everything, and suggested a combination of Roman shades in a linen fabric for consistency and custom drapery panels at the two larger picture windows for impact. The result was better than I'd imagined." — Homeowner on Nebraska Avenue, Old Northeast
+"We have eight windows in our living room, none of them the same size. I was dreading trying to find treatments that would work. They came out, measured everything, and suggested a combination of Roman shades in a linen fabric for consistency and custom drapery panels at the two larger picture windows for impact. The result was better than I'd imagined.", Homeowner on Nebraska Avenue, Old Northeast
 
 ## Your Local Window Treatment Store in Old Northeast Is Ready
 

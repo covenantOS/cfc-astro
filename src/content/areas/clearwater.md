@@ -22,7 +22,7 @@ A window treatment store that serves Clearwater has to understand both communiti
 
 
 
-![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Clearwater, FL](/images/areas/clearwater.webp "Clearwater window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
+![Custom Fabric Creations, custom window treatments, plantation shutters, and upholstery in Clearwater, FL](/images/areas/clearwater.webp "Clearwater window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Exterior Patio Shades Why Clearwater Patios and Lanais Actually Need Them
 
@@ -112,7 +112,7 @@ That city-wide experience means we can give Clearwater homeowners practical advi
 
 ## What Clearwater Neighbors Say About Our Work
 
-"We're on Clearwater Beach and I've been through three sets of supposedly 'outdoor' treatments on our balcony in five years. The last ones I bought from a specialty retailer online and they still faded and rusted within a year. I had Custom Fabric Creations install their exterior shade system and it's been two years now with no fading and no rust. The difference between buying from someone who actually knows what works at the beach versus guessing online is substantial." — Condo owner, Clearwater Beach
+"We're on Clearwater Beach and I've been through three sets of supposedly 'outdoor' treatments on our balcony in five years. The last ones I bought from a specialty retailer online and they still faded and rusted within a year. I had Custom Fabric Creations install their exterior shade system and it's been two years now with no fading and no rust. The difference between buying from someone who actually knows what works at the beach versus guessing online is substantial.", Condo owner, Clearwater Beach
 
 "We manage a portfolio of short-term rental properties in Clearwater and Clearwater Beach. Window treatments are one of our biggest maintenance items, UV damage, guest wear, salt air on the beach properties. We've switched to their commercial-grade treatments across all units and the replacement cycle has slowed dramatically. The automated scheduling on the motorized shades is also a real property management advantage." Property manager, short-term rental portfolio, Clearwater area
 

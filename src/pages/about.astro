@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
+import AboutSection from '~/components/AboutSection.astro';
 import MeetTheOwner from '~/components/MeetTheOwner.astro';
 import CoreValues from '~/components/CoreValues.astro';
 import ImageCTA from '~/components/ImageCTA.astro';
@@ -11,7 +12,7 @@ import FinalCTA from '~/components/FinalCTA.astro';
 const ABOUT_FAQS = [
   {
     q: 'Can I visit your workroom to see fabrics?',
-    a: 'Our working studio in St. Petersburg is available by appointment. We prefer bringing our curated fabric library to your home so you can evaluate samples in your actual lighting — but if you want to see the workroom, call and we will schedule a visit.',
+    a: 'Our working studio in St. Petersburg is available by appointment. We prefer bringing our curated fabric library to your home so you can evaluate samples in your actual lighting, but if you want to see the workroom, call and we will schedule a visit.',
   },
   {
     q: 'Do you provide a warranty on your window treatments?',
@@ -19,24 +20,24 @@ const ABOUT_FAQS = [
   },
   {
     q: 'Do you provide interior styling advice during the consultation?',
-    a: 'Yes. Your in-home consultation includes design direction for your space — fabric coordination, hardware selection, layering soft treatments with shutters or shades, and how the window treatments relate to the rest of the room. Twenty-five years of design work comes with every appointment.',
+    a: 'Yes. Your in-home consultation includes design direction for your space, fabric coordination, hardware selection, layering soft treatments with shutters or shades, and how the window treatments relate to the rest of the room. Twenty-five years of design work comes with every appointment.',
   },
   {
     q: 'Are you fully insured and locally owned?',
-    a: 'Yes to both. We are a locally owned St. Petersburg studio, fully insured for residential and commercial work, and our installation crew is in-house — never a subcontractor.',
+    a: 'Yes to both. We are a locally owned St. Petersburg studio, fully insured for residential and commercial work, and our installation crew is in-house, never a subcontractor.',
   },
 ];
 
 const EXPERTISE_CARDS = [
   { title: 'Over 25 Years of Experience', body: 'Established 2000. Two and a half decades of custom window treatments and upholstery across Pinellas County.' },
-  { title: 'Fully Insured In-House Team', body: 'Our own installers — never subcontracted — handle every project from measurement to final fit.' },
+  { title: 'Fully Insured In-House Team', body: 'Our own installers, never subcontracted, handle every project from measurement to final fit.' },
   { title: 'Authorized Elite Brand Dealer', body: 'Direct dealer partnerships with Hunter Douglas, Norman, Graber, Kravet, and Stout give you access to the industry\u2019s top materials and warranties.' },
 ];
 ---
 
 <BaseLayout
   title="About Custom Fabric Creations"
-  description="Meet Custom Fabric Creations — St. Petersburg's studio for bespoke window treatments, custom drapery, and master upholstery since 2000. Locally owned, fully insured, and authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout."
+  description="Meet Custom Fabric Creations, St. Petersburg's studio for bespoke window treatments, custom drapery, and master upholstery since 2000. Locally owned, fully insured, and authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout."
   pageType="about"
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'About', url: '/about/' }]}
   faqs={ABOUT_FAQS}
@@ -50,13 +51,19 @@ const EXPERTISE_CARDS = [
     goldLine
   />
 
-  <!-- Meet The Owner (Terry Popick) — single portrait, no duplicate AboutSection above. -->
+  <!-- First section: studio intro / "Our Story" (restored as its own
+       section per client; previously merged into Meet the Owner). -->
+  <AboutSection cta={undefined} />
+
+  <!-- Second section: Terry's own words, kept distinct per client request.
+       Uses a placeholder image until a photo of Terry / her family is
+       provided. -->
   <section id="meet-owner"></section>
   <MeetTheOwner
     image="/images/services/custom-draperies-curtains/top.webp"
   />
 
-  <!-- Proven Industry Expertise — 5 trust signals from old WP site -->
+  <!-- Proven Industry Expertise, 5 trust signals from old WP site -->
   <section class="py-20 md:py-28 bg-white">
     <div class="container-site max-w-5xl mx-auto">
       <div class="text-center mb-12">
@@ -79,7 +86,7 @@ const EXPERTISE_CARDS = [
     </div>
   </section>
 
-  <!-- Our Core Values — 4 cards per mockup -->
+  <!-- Our Core Values, 4 cards per mockup -->
   <CoreValues />
 
   <!-- Flawless Installation Image CTA -->

@@ -20,7 +20,7 @@ We've been working in Shore Acres for over two decades. We know the specific cha
 
 
 
-![Custom Fabric Creations — custom window treatments, plantation shutters, and upholstery in Shore Acres, FL](/images/areas/shore-acres.webp "Shore Acres window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
+![Custom Fabric Creations, custom window treatments, plantation shutters, and upholstery in Shore Acres, FL](/images/areas/shore-acres.webp "Shore Acres window treatments & upholstery by Custom Fabric Creations, St. Petersburg, FL")
 
 ## Motorized Solar Shades The Practical Solution Shore Acres Homeowners Actually Need
 
@@ -96,11 +96,11 @@ For waterfront Shore Acres living rooms with large windows and substantial glass
 
 ## What Shore Acres Neighbors Say About Our Work
 
-"We're on the canal in Shore Acres and I was replacing cheap blinds every summer. Salt air destroys them. I finally had Custom Fabric Creations out and we went with their coastal-grade plantation shutters throughout. This is the third summer and they still look like new. The difference between buying from someone who actually knows what works here versus someone who just sells blinds is real." — Homeowner on Bayou Grande Boulevard NE, Shore Acres
+"We're on the canal in Shore Acres and I was replacing cheap blinds every summer. Salt air destroys them. I finally had Custom Fabric Creations out and we went with their coastal-grade plantation shutters throughout. This is the third summer and they still look like new. The difference between buying from someone who actually knows what works here versus someone who just sells blinds is real.", Homeowner on Bayou Grande Boulevard NE, Shore Acres
 
-"We have a screened pool enclosure and I thought there was no good window treatment option for those conditions. They suggested cordless cellular shades and it's been a game-changer. The space is actually comfortable during the day now instead of being a greenhouse. And they still look good a year later despite the chlorine and the humidity." — Homeowner on Neptune Road NE, Shore Acres
+"We have a screened pool enclosure and I thought there was no good window treatment option for those conditions. They suggested cordless cellular shades and it's been a game-changer. The space is actually comfortable during the day now instead of being a greenhouse. And they still look good a year later despite the chlorine and the humidity.", Homeowner on Neptune Road NE, Shore Acres
 
-"We did the whole first floor, solar shades in the living room, blackout shades in the bedrooms, and motorized Roman shades in the dining room. The automatic scheduling is the part I didn't know I needed. The shades lower themselves before we get home from work. Our house is noticeably cooler and we've already seen it in the electric bill." — Homeowner on Shore Acres Boulevard NE, Shore Acres
+"We did the whole first floor, solar shades in the living room, blackout shades in the bedrooms, and motorized Roman shades in the dining room. The automatic scheduling is the part I didn't know I needed. The shades lower themselves before we get home from work. Our house is noticeably cooler and we've already seen it in the electric bill.", Homeowner on Shore Acres Boulevard NE, Shore Acres
 
 ## Your Local Window Treatment Store in Shore Acres Ready to Help
 

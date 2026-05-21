@@ -7,37 +7,63 @@ import { SITE } from '~/lib/site';
 const BRANDS = [
   {
     name: 'Hunter Douglas',
+    logo: '/images/brands/hunter-douglas.webp',
     tagline: 'The gold standard in window fashions',
-    body: 'Hunter Douglas is the most recognized name in custom window treatments for a reason. We’re an authorized dealer for their full line — Silhouette sheers, Duette cellular shades, Pirouette, Vignette roman shades, PowerView motorization, and NewStyle plantation shutters. Lifetime limited warranty on every product.',
+    body: 'Hunter Douglas is the most recognized name in custom window treatments for a reason. We are an authorized dealer for their full line: Silhouette sheers, Duette cellular shades, Pirouette, Vignette roman shades, PowerView motorization, and NewStyle plantation shutters. Lifetime limited warranty on every product.',
     highlights: ['Silhouette & Vignette shades', 'Duette honeycomb / cellular', 'NewStyle & Heritance shutters', 'PowerView motorization'],
   },
   {
     name: 'Norman',
+    logo: '/images/brands/norman.webp',
     tagline: 'Workhorse plantation shutters for Florida',
-    body: 'Norman’s Woodlore line is our most-installed plantation shutter in St. Pete homes. Florida-tough faux wood that resists humidity, UV, and temperature swings without warping. Their Wavz line covers real basswood for interior rooms. Lifetime warranty, factory-direct pricing, rapid turnaround.',
+    body: 'Norman’s Woodlore line is our most-installed plantation shutter in St. Pete homes. Florida-tough faux wood that resists humidity, UV, and temperature swings without warping. Their Normandy line covers real basswood for interior rooms. Lifetime warranty, factory-direct pricing, rapid turnaround.',
     highlights: ['Woodlore & Woodlore Plus faux wood', 'Normandy real basswood', 'SmartFit motorized shades', 'Lifetime limited warranty'],
   },
   {
     name: 'Graber',
+    logo: null,
     tagline: 'Exceptional shades and blinds',
-    body: 'Graber offers one of the broadest window treatment catalogs in the industry — roller shades, roman shades, cellular, pleated, wood blinds, woven woods, natural shades, and motorized systems. Mid-range pricing, excellent build quality, fast lead times. A favorite for budget-conscious projects that don’t want to compromise on fit.',
+    body: 'Graber offers one of the broadest window treatment catalogs in the industry: roller shades, roman shades, cellular, pleated, wood blinds, woven woods, natural shades, and motorized systems. Mid-range pricing, excellent build quality, fast lead times. A favorite for projects that want value without compromising on fit.',
     highlights: ['Roller, Roman & cellular shades', 'Real wood & faux wood blinds', 'Woven wood natural shades', 'Motorized options across lines'],
   },
   {
     name: 'Kravet',
+    logo: '/images/brands/kravet.webp',
     tagline: 'Designer fabric house',
-    body: 'Kravet is the designer’s choice for custom drapery, upholstery, and bedding fabrics. Thousands of patterns across every category — velvets, linens, embroidered silks, indoor-outdoor performance fabrics, leather, and specialty textiles. We’re an authorized workroom, so you get trade pricing passed through.',
+    body: 'Kravet is the designer’s choice for custom drapery, upholstery, and bedding fabrics. Thousands of patterns across every category: velvets, linens, embroidered silks, indoor-outdoor performance fabrics, leather, and specialty textiles. We are an authorized workroom, so you get trade pricing passed through.',
     highlights: ['Signature fabric collections', 'Lee Jofa, Brunschwig & Fils, GP & J Baker', 'Crypton performance fabrics', 'Indoor-outdoor collections'],
   },
   {
     name: 'Stout',
+    logo: '/images/brands/stout.webp',
     tagline: 'Distinctive textiles and trims',
-    body: 'Stout specializes in distinctive, character-driven fabrics — woven jacquards, textured solids, bold patterns, and exceptional trims. Their indoor-outdoor performance lines are standout. A favorite for clients who want custom drapery that doesn’t look like everyone else’s.',
+    body: 'Stout specializes in distinctive, character-driven fabrics: woven jacquards, textured solids, bold patterns, and exceptional trims. Their indoor-outdoor performance lines are standout. A favorite for clients who want custom drapery that does not look like everyone else’s.',
     highlights: ['Signature patterns and solids', 'Performance & Sunbrella-compatible', 'Decorative trims and tapes', 'Exclusive designer collaborations'],
+  },
+  {
+    name: 'ALTA Window Fashions',
+    logo: '/images/brands/alta-window-fashions.webp',
+    tagline: 'Made-to-order shades, blinds & shutters',
+    body: 'ALTA builds a full made-to-order line of shades, blinds, and shutters with a strong custom-color and fabric program. A reliable mid-to-premium option when a project needs a specific look that the bigger catalogs do not carry.',
+    highlights: ['Roller, cellular & roman shades', 'Wood & faux wood blinds', 'Custom shutters', 'Motorization available'],
+  },
+  {
+    name: 'Elegant Shutters',
+    logo: '/images/brands/elegant-shutters.webp',
+    tagline: 'Specialty shutter craftsmanship',
+    body: 'Elegant Shutters focuses on custom interior shutters, including specialty shapes and finishes. We pull from their line when a window calls for a shutter detail outside the standard rectangular spec.',
+    highlights: ['Custom interior shutters', 'Specialty shapes', 'Range of finishes', 'Built to exact measure'],
+  },
+  {
+    name: 'Horizon Window Fashions',
+    logo: '/images/brands/horizon-window-fashions.webp',
+    tagline: 'Broad shade & blind catalog',
+    body: 'Horizon Window Fashions rounds out our shade and blind options with a deep catalog of fabrics, textures, and operating systems, including cordless and motorized lift options for child-safe homes.',
+    highlights: ['Roller, solar & cellular shades', 'Wood & faux wood blinds', 'Cordless & child-safe lifts', 'Motorized options'],
   },
 ];
 
-// ItemList schema — the 5 brands CFC is an authorized dealer for.
+// ItemList schema, the 5 brands CFC is an authorized dealer for.
 // Emits alongside the global @graph so Google sees the full brand list.
 const brandListSchema = {
   '@context': 'https://schema.org',
@@ -59,19 +85,43 @@ const brandListSchema = {
 ---
 
 <BaseLayout
-  title="Brands We Carry — Hunter Douglas, Norman, Graber, Kravet"
-  description="Custom Fabric Creations is an authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout — the window-fashion and designer-fabric houses trusted by designers in St. Petersburg, FL. Trade pricing and local installation."
+  title="Brands We Carry, Hunter Douglas, Norman, Graber, Kravet"
+  description="Custom Fabric Creations is an authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout, the window-fashion and designer-fabric houses trusted by designers in St. Petersburg, FL. Trade pricing and local installation."
   pageType="brands"
   breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Brands', url: '/brands/' }]}
 >
   <Hero
     eyebrow="Authorized Dealer"
     title="The Brands Designers Trust."
-    subtitle="We partner with the most respected window fashion and textile houses — so you get designer-grade quality, paired with local craftsmanship and hands-on service."
+    subtitle="We partner with the most respected window fashion and textile houses, so you get designer-grade quality, paired with local craftsmanship and hands-on service."
     image="/images/hero/homepage.webp"
     breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Brands', url: '/brands/' }]}
     goldLine
   />
+
+  <!-- Logo grid: every authorized partner at a glance. -->
+  <section class="py-16 md:py-20 bg-cream-50">
+    <div class="container-site">
+      <p class="eyebrow text-center mb-8" style="letter-spacing: 0.3em;">Authorized Partners</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+        {BRANDS.map((b) => (
+          <div class="bg-white rounded-lg border border-coffee-200/70 shadow-card flex items-center justify-center p-6 min-h-[110px]">
+            {b.logo ? (
+              <img
+                src={b.logo}
+                alt={`${b.name} logo`}
+                class="max-h-14 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <span class="font-display text-2xl text-ink-700">{b.name}</span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <section class="py-20 md:py-28 bg-white">
     <div class="container-site max-w-5xl mx-auto">
@@ -79,6 +129,15 @@ const brandListSchema = {
         {BRANDS.map((b, i) => (
           <div class:list={['grid md:grid-cols-[220px_1fr] gap-10 items-start', i !== BRANDS.length - 1 && 'pb-16 border-b border-line']}>
             <div>
+              {b.logo && (
+                <img
+                  src={b.logo}
+                  alt={`${b.name} logo`}
+                  class="max-h-12 w-auto object-contain mb-4"
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
               <p class="eyebrow">{b.tagline}</p>
               <h2 class="font-display text-3xl text-ink-800 mb-0">{b.name}</h2>
             </div>
