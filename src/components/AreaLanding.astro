@@ -1,14 +1,13 @@
 ---
 // Full section-based landing page for the two main areas (St. Petersburg
-// Central and West St. Pete). Approved section stack:
-// hero, intro, services grid, owner tip, neighborhoods, by-the-numbers,
-// reviews, FAQ, contact/map. Driven by AreaPageConfig.
+// Central and West St. Pete). Section stack:
+// hero, intro, services grid, neighborhoods, reviews, FAQ, contact/map.
+// OwnerTip and ByNumbersBanner are intentionally NOT used here: those belong
+// to long-form content+sidebar pages, not section-based landing pages.
 
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import ServiceGrid from '~/components/ServiceGrid.astro';
-import OwnerTip from '~/components/OwnerTip.astro';
-import ByNumbersBanner from '~/components/ByNumbersBanner.astro';
 import ReviewSection from '~/components/ReviewSection.astro';
 import FAQ from '~/components/FAQ.astro';
 import GlobalContactMap from '~/components/GlobalContactMap.astro';
@@ -83,13 +82,6 @@ const seoDescription = config.heroSubtitle;
     limit={6}
   />
 
-  <!-- Owner tip -->
-  <section class="py-4 bg-white">
-    <div class="container-site max-w-3xl mx-auto">
-      <OwnerTip body={config.tipBody} />
-    </div>
-  </section>
-
   <!-- Neighborhoods -->
   <section class="py-16 md:py-20 bg-cream-50">
     <div class="container-site max-w-4xl mx-auto text-center">
@@ -104,13 +96,6 @@ const seoDescription = config.heroSubtitle;
           </span>
         ))}
       </div>
-    </div>
-  </section>
-
-  <!-- By the numbers -->
-  <section class="py-4 bg-white">
-    <div class="container-site max-w-4xl mx-auto">
-      <ByNumbersBanner statement={config.statStatement} />
     </div>
   </section>
 

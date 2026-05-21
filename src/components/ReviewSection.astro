@@ -32,9 +32,10 @@ const featured = getFeaturedReview();
 // Carousel pool: every review including the featured one, sorted most-recent
 // first so the rotation reads as fresh.
 const carouselReviews = getReviewsByRecency();
-// 4-card row: the 4 most recent reviews that are NOT the currently-featured
-// review (to avoid the same review showing twice on first paint).
-const grid = getReviewsByRecency().filter((r) => r.id !== featured.id).slice(0, 4);
+// Scrollable strip below the auto-rotating featured card: every review
+// (most recent first), which the visitor can scroll/swipe through and
+// advance with arrows. The featured one is auto-rotated above on its own.
+const grid = getReviewsByRecency();
 ---
 
 <section class="py-20 md:py-28 bg-cream-50">
@@ -79,25 +80,6 @@ const grid = getReviewsByRecency().filter((r) => r.id !== featured.id).slice(0, 
          click to jump. Pauses on hover. Pure DOM, no framework. -->
     <div class="max-w-3xl mx-auto mb-6" data-review-carousel>
       <div class="relative">
-        <!-- Prev / next arrows. Visible on all sizes; positioned just
-             outside the card on desktop, overlaid at the edges on mobile. -->
-        <button
-          type="button"
-          data-review-prev
-          aria-label="Previous review"
-          class="absolute left-0 lg:-left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-card border border-coffee-200/70 flex items-center justify-center text-ink-700 hover:text-brand-600 hover:border-brand-300 transition"
-        >
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <button
-          type="button"
-          data-review-next
-          aria-label="Next review"
-          class="absolute right-0 lg:-right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-card border border-coffee-200/70 flex items-center justify-center text-ink-700 hover:text-brand-600 hover:border-brand-300 transition"
-        >
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-        </button>
-
         {carouselReviews.map((r, i) => (
           <article
             class="review-slide bg-white rounded-lg shadow-card p-8 md:p-10"
@@ -163,12 +145,28 @@ const grid = getReviewsByRecency().filter((r) => r.id !== featured.id).slice(0, 
       </div>
     </div>
 
-    <!-- 4-card row beneath the carousel: smaller cards, truncated body.
-         Hidden under md to keep the mobile carousel tight; on md+ they show
-         as a quick scan of additional reviews. -->
-    <div class="hidden md:grid gap-5 md:grid-cols-2 lg:grid-cols-4 mb-12">
+    <!-- Scrollable review strip: visitor scrolls/swipes horizontally or uses
+         the arrows to move through every review. -->
+    <div class="relative mb-12" data-review-strip-wrap>
+      <button
+        type="button"
+        data-strip-prev
+        aria-label="Scroll reviews left"
+        class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-card border border-coffee-200/70 items-center justify-center text-ink-700 hover:text-brand-600 hover:border-brand-300 transition"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button
+        type="button"
+        data-strip-next
+        aria-label="Scroll reviews right"
+        class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-card border border-coffee-200/70 items-center justify-center text-ink-700 hover:text-brand-600 hover:border-brand-300 transition"
+      >
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div class="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 review-strip" data-review-strip>
       {grid.map((r) => (
-        <article class="bg-white rounded-lg shadow-card p-5 transition hover:shadow-card-hover hover:-translate-y-0.5">
+        <article class="snap-start shrink-0 w-[280px] sm:w-[320px] bg-white rounded-lg shadow-card p-5 transition hover:shadow-card-hover hover:-translate-y-0.5">
           <header class="flex items-start justify-between gap-3 mb-3">
             <div class="flex items-center gap-2.5 min-w-0">
               {r.avatar ? (
@@ -212,6 +210,7 @@ const grid = getReviewsByRecency().filter((r) => r.id !== featured.id).slice(0, 
           <p class="text-ink-700 text-sm leading-relaxed line-clamp-5">{r.body}</p>
         </article>
       ))}
+      </div>
     </div>
 
     <!-- Stats bar -->
@@ -274,6 +273,11 @@ const grid = getReviewsByRecency().filter((r) => r.id !== featured.id).slice(0, 
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* Thin, unobtrusive scrollbar on the review strip. */
+  .review-strip { scrollbar-width: thin; scrollbar-color: #d8cfb6 transparent; }
+  .review-strip::-webkit-scrollbar { height: 6px; }
+  .review-strip::-webkit-scrollbar-thumb { background: #d8cfb6; border-radius: 3px; }
 </style>
 
 <script>
@@ -301,33 +305,30 @@ const grid = getReviewsByRecency().filter((r) => r.id !== featured.id).slice(0, 
       if (timer) { clearInterval(timer); timer = null; }
     }
 
-    function go(delta: number) {
-      paint((idx + delta + slides.length) % slides.length);
-      start();
-    }
-
+    // The featured card auto-rotates only (no manual arrows). Dots stay
+    // clickable as a subtle affordance.
     dots.forEach((d, i) => {
       d.addEventListener('click', () => { paint(i); start(); });
     });
-
-    root.querySelector<HTMLButtonElement>('[data-review-prev]')?.addEventListener('click', () => go(-1));
-    root.querySelector<HTMLButtonElement>('[data-review-next]')?.addEventListener('click', () => go(1));
-
-    // Touch swipe (mobile): horizontal drag advances/reverses.
-    let startX = 0;
-    let tracking = false;
-    root.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; tracking = true; }, { passive: true });
-    root.addEventListener('touchend', (e) => {
-      if (!tracking) return;
-      tracking = false;
-      const dx = e.changedTouches[0].clientX - startX;
-      if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
-    }, { passive: true });
 
     root.addEventListener('mouseenter', stop);
     root.addEventListener('mouseleave', start);
 
     paint(0);
     if (slides.length > 1) start();
+  }
+
+  // Bottom review strip: arrows scroll the horizontal list; users can also
+  // swipe / trackpad-scroll it directly.
+  const strip = document.querySelector<HTMLElement>('[data-review-strip]');
+  if (strip) {
+    const wrap = strip.closest('[data-review-strip-wrap]');
+    const amount = () => Math.min(strip.clientWidth * 0.9, 340);
+    wrap?.querySelector<HTMLButtonElement>('[data-strip-prev]')?.addEventListener('click', () => {
+      strip.scrollBy({ left: -amount(), behavior: 'smooth' });
+    });
+    wrap?.querySelector<HTMLButtonElement>('[data-strip-next]')?.addEventListener('click', () => {
+      strip.scrollBy({ left: amount(), behavior: 'smooth' });
+    });
   }
 </script>
