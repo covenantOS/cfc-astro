@@ -64,27 +64,27 @@ const WHY_CHOOSE_US = [
 ];
 ---
 
-<aside class="sidebar-sticky space-y-6 self-start">
+<aside class="space-y-6">
   <!-- Get Your Free Estimate card -->
-  <div class="bg-ink-900 text-white p-8 rounded-sm border border-brand-500/30 relative overflow-hidden">
+  <div class="bg-coffee-500 text-white p-8 rounded-lg border border-brand-500/30 relative overflow-hidden">
     <div class="absolute top-0 left-0 right-0 h-1 bg-brand-500"></div>
     <h3 class="text-2xl text-white font-display mb-1.5">Get Your Free Estimate</h3>
-    <p class="text-white/70 text-sm mb-6">Call us today or schedule your consultation.</p>
-    <a href={phoneHref} class="flex items-center justify-center gap-2.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold py-4 rounded-sm mb-3 text-base md:text-lg tracking-wide">
+    <p class="text-white/80 text-sm mb-6">Call us today or schedule your consultation.</p>
+    <a href={phoneHref} class="flex items-center justify-center gap-2.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold py-4 rounded-md mb-3 text-base md:text-lg tracking-wide">
       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
       </svg>
       {phone}
     </a>
-    <a href="/contact/" class="block text-center bg-white/5 border border-white/40 hover:bg-white/15 text-white font-semibold py-3.5 rounded-sm text-sm tracking-wide uppercase" style="letter-spacing: 0.08em;">
+    <a href="/contact/" class="block text-center bg-white/10 border border-white/50 hover:bg-white/20 text-white font-semibold py-3.5 rounded-md text-sm tracking-wide uppercase" style="letter-spacing: 0.08em;">
       Schedule Consultation
     </a>
   </div>
 
   <!-- Services & Products - WCP-inspired: tight padding, full-width links, darker heading, instant hover -->
   <div class="bg-white rounded-lg shadow-card overflow-hidden">
-    <div class="bg-ink-800 border-b border-ink-900 px-4 py-3.5">
-      <h3 class="font-display text-base text-white tracking-wide uppercase" style="letter-spacing: 0.08em;">Services &amp; Products</h3>
+    <div class="bg-coffee-100 border-b border-coffee-200 px-4 py-3.5">
+      <h3 class="font-display text-base text-coffee-800 tracking-wide uppercase" style="letter-spacing: 0.08em;">Services &amp; Products</h3>
     </div>
     <div class="px-4 py-4 space-y-4">
       {SERVICE_GROUPS.map((group) => (
@@ -114,8 +114,8 @@ const WHY_CHOOSE_US = [
 
   <!-- Service Areas -->
   <div class="bg-white rounded-lg shadow-card overflow-hidden">
-    <div class="bg-ink-800 border-b border-ink-900 px-4 py-3.5">
-      <h3 class="font-display text-base text-white tracking-wide uppercase" style="letter-spacing: 0.08em;">Service Areas</h3>
+    <div class="bg-coffee-100 border-b border-coffee-200 px-4 py-3.5">
+      <h3 class="font-display text-base text-coffee-800 tracking-wide uppercase" style="letter-spacing: 0.08em;">Service Areas</h3>
     </div>
     <ul class="px-4 py-3 grid grid-cols-2 gap-x-1">
       {AREAS.map((a) => (
@@ -138,8 +138,8 @@ const WHY_CHOOSE_US = [
 
   <!-- Why Choose Us -->
   <div class="bg-white rounded-lg shadow-card overflow-hidden">
-    <div class="bg-ink-800 border-b border-ink-900 px-4 py-3.5">
-      <h3 class="font-display text-base text-white tracking-wide uppercase" style="letter-spacing: 0.08em;">Why Choose Us</h3>
+    <div class="bg-coffee-100 border-b border-coffee-200 px-4 py-3.5">
+      <h3 class="font-display text-base text-coffee-800 tracking-wide uppercase" style="letter-spacing: 0.08em;">Why Choose Us</h3>
     </div>
     <ul class="px-4 py-5 space-y-4">
       {WHY_CHOOSE_US.map((item) => (
@@ -202,21 +202,18 @@ const WHY_CHOOSE_US = [
   </a>
 </aside>
 
-<style>
-  /* Independent sticky scroll for the sidebar column.
-     Sidebar becomes its own scroll context at lg+ so it can scroll
-     independently from the content column once its max-height is exceeded. */
+<style is:global>
+  /* The sidebar's grid-cell wrapper (in ServiceLayout/AreaLayout) is the
+     sticky, independently-scrolling element now. This styles its scrollbar.
+     Sticky + scroll live on `.sidebar-scroll`; the aside itself is a plain
+     block so it can travel the full content height as you scroll. */
   @media (min-width: 1024px) {
-    .sidebar-sticky {
-      position: sticky;
-      top: 6.5rem;
-      max-height: calc(100vh - 7rem);
-      overflow-y: auto;
+    .sidebar-scroll {
       padding-right: 0.25rem;
       scrollbar-gutter: stable;
     }
-    .sidebar-sticky::-webkit-scrollbar { width: 6px; }
-    .sidebar-sticky::-webkit-scrollbar-thumb { background: #d8cfb6; border-radius: 3px; }
-    .sidebar-sticky::-webkit-scrollbar-thumb:hover { background: #bca050; }
+    .sidebar-scroll::-webkit-scrollbar { width: 6px; }
+    .sidebar-scroll::-webkit-scrollbar-thumb { background: #d8cfb6; border-radius: 3px; }
+    .sidebar-scroll::-webkit-scrollbar-thumb:hover { background: #bca050; }
   }
 </style>

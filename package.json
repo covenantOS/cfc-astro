@@ -17,6 +17,7 @@
     "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "^3.7.2",
     "@fontsource-variable/montserrat": "^5.2.8",
+    "@fontsource/cormorant-garamond": "^5.2.11",
     "@fontsource/playfair-display": "^5.2.8",
     "@tailwindcss/vite": "4.2.2",
     "astro": "6.1.8",

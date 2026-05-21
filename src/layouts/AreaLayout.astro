@@ -59,12 +59,12 @@ const location = getLocationForArea(areaSlug);
     goldLine
   />
 
-  <section class="py-16 md:py-20 bg-cream-50">
+  <section class="py-16 md:py-20 bg-white">
     <div class="container-site grid gap-10 lg:grid-cols-[380px_1fr] lg:gap-16 items-start">
       <article class="prose-cfc content-card min-w-0 lg:col-start-2 lg:row-start-1">
         <slot />
       </article>
-      <div class="lg:col-start-1 lg:row-start-1">
+      <div class="lg:col-start-1 lg:row-start-1 lg:sticky lg:top-28 lg:self-start lg:max-h-[calc(100dvh-7rem)] lg:overflow-y-auto sidebar-scroll">
         <ServiceSidebar kind="area" currentSlug={areaSlug} phone={location.phone} phoneHref={location.phoneHref} />
       </div>
     </div>
