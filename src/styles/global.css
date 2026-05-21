@@ -33,20 +33,21 @@
   --color-ink-800:  #222222;
   --color-ink-900:  #121212;
 
-  /* Warm dark-brown palette for body content components that need a dark
-     surface (review header strips, ByNumbersBanner, dark callouts). The
-     near-black `ink-900` is reserved for the global Header and Footer
-     per client decision 2026-05-20. */
-  --color-coffee-50:  #f6f1ec;
-  --color-coffee-100: #e8dccd;
-  --color-coffee-200: #c8b298;
-  --color-coffee-300: #a48865;
-  --color-coffee-400: #7a6242;
-  --color-coffee-500: #5f4a30;
-  --color-coffee-600: #4d3c27;
-  --color-coffee-700: #3f3120;
-  --color-coffee-800: #33281a;
-  --color-coffee-900: #2a2014;
+  /* Warm brown palette for body content components that need a brown
+     surface (review header strips, ByNumbersBanner, dark callouts).
+     coffee-500 (#7e6b3d) is the canonical card brown chosen by the client
+     on 2026-05-21. The near-black `ink-900` is reserved for the global
+     Header and Footer. */
+  --color-coffee-50:  #f3efe4;
+  --color-coffee-100: #e3d9c0;
+  --color-coffee-200: #cdbd92;
+  --color-coffee-300: #b39f6a;
+  --color-coffee-400: #97824f;
+  --color-coffee-500: #7e6b3d;  /* canonical card brown */
+  --color-coffee-600: #6b5b34;
+  --color-coffee-700: #574a2b;
+  --color-coffee-800: #443a22;
+  --color-coffee-900: #332b19;
 
   --color-ink:      #333333;
   --color-ink-soft: #4a4a4a;
@@ -152,8 +153,8 @@ details[open] > summary ~ * {
 
 /* Prose — body copy styling for page builder content */
 .prose-cfc p { @apply text-ink-600 leading-relaxed text-[1.0625rem]; }
-.prose-cfc h2 { @apply text-3xl md:text-4xl lg:text-5xl mt-14 mb-5; }
-.prose-cfc h3 { @apply text-xl md:text-2xl mt-10 mb-3; }
+.prose-cfc h2 { @apply text-2xl md:text-3xl mt-12 mb-4; }
+.prose-cfc h3 { @apply text-lg md:text-xl mt-8 mb-3; }
 .prose-cfc ul { @apply list-disc pl-5 space-y-2 text-ink-600; }
 .prose-cfc a { @apply text-brand-700 underline underline-offset-4 decoration-brand-300 hover:decoration-brand-600; }
 .prose-cfc strong { @apply text-ink-800 font-semibold; }

@@ -45,37 +45,37 @@ const gridCols = stats.length === 4
     style="background-color: var(--color-cream-50);"
   >
     <div class="h-1" style="background-color: var(--color-brand-500);"></div>
-    <div class="p-6 md:p-8">
+    <div class="p-5 md:p-6">
 
       {(eyebrow || heading || subheading) && (
-        <div class="text-center max-w-2xl mx-auto mb-6 md:mb-8">
+        <div class="text-center max-w-2xl mx-auto mb-5">
           {eyebrow && (
             <p
-              class="font-display text-xs uppercase mb-2"
-              style="letter-spacing: 0.25em; color: var(--color-brand-700);"
+              class="font-display text-[0.7rem] uppercase mb-1.5"
+              style="letter-spacing: 0.22em; color: var(--color-brand-700);"
             >{eyebrow}</p>
           )}
           {heading && (
-            <h3 class="font-display text-xl md:text-2xl leading-snug" style="color: var(--color-ink-800);">{heading}</h3>
+            <h3 class="font-display text-base md:text-lg leading-snug" style="color: var(--color-ink-800);">{heading}</h3>
           )}
           {subheading && (
-            <p class="text-sm md:text-base mt-2" style="color: var(--color-ink-500);">{subheading}</p>
+            <p class="text-sm mt-1.5" style="color: var(--color-ink-500);">{subheading}</p>
           )}
         </div>
       )}
 
-      <div class={`grid gap-6 ${gridCols} sm:divide-x sm:divide-brand-500/20`}>
+      <div class={`grid gap-5 ${gridCols} sm:divide-x sm:divide-brand-500/20`}>
         {stats.map((s) => (
           <div class="text-center px-2 md:px-4">
             <p class="font-display leading-none tabular-nums" style="color: var(--color-brand-700);">
-              <span class="text-3xl md:text-4xl font-bold">{s.value}</span>
+              <span class="text-xl md:text-2xl font-bold">{s.value}</span>
               {s.unit && (
-                <span class="text-base md:text-lg ml-1" style="color: var(--color-brand-600);">{s.unit}</span>
+                <span class="text-sm md:text-base ml-1" style="color: var(--color-brand-600);">{s.unit}</span>
               )}
             </p>
-            <p class="mt-3 text-sm leading-snug" style="color: var(--color-ink-700);">{s.label}</p>
+            <p class="mt-2 text-[0.8rem] leading-snug" style="color: var(--color-ink-700);">{s.label}</p>
             {s.sourceUrl ? (
-              <p class="mt-2 text-[0.65rem] uppercase tracking-wider">
+              <p class="mt-1.5 text-[0.6rem] uppercase tracking-wider">
                 <a
                   href={s.sourceUrl}
                   target="_blank"
@@ -85,7 +85,7 @@ const gridCols = stats.length === 4
                 >Source: {s.sourceLabel ?? 'cited'}</a>
               </p>
             ) : s.internal ? (
-              <p class="mt-2 text-[0.65rem] uppercase tracking-wider" style="color: var(--color-ink-300);">Our records</p>
+              <p class="mt-1.5 text-[0.6rem] uppercase tracking-wider" style="color: var(--color-ink-300);">Our records</p>
             ) : null}
           </div>
         ))}

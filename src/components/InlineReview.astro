@@ -35,7 +35,7 @@ const review: Review | undefined =
       <!-- Header strip: label on the left, star rating on the right. Uses
            the CFC ink palette for the strip color (warmer than Titan's
            blue but the same structural pattern). -->
-      <header class="bg-coffee-900 px-5 md:px-7 py-3.5 flex items-center justify-between gap-3">
+      <header class="bg-coffee-500 px-5 md:px-7 py-3.5 flex items-center justify-between gap-3">
         <p class="font-display text-base md:text-lg leading-tight" style="color: #ffffff;">{label}</p>
         <div class="flex items-center gap-0.5 text-[#FBBC04] shrink-0" aria-label={`${review.rating} out of 5 stars`}>
           {Array.from({ length: review.rating }).map(() => (
@@ -46,13 +46,14 @@ const review: Review | undefined =
         </div>
       </header>
 
-      <!-- Body quote. -->
-      <blockquote class="px-5 md:px-7 pt-5 pb-4 md:pt-6 text-ink-700 leading-relaxed">
+      <!-- Body quote. Uses a div, not <blockquote>, so the prose reset does
+           not strip the horizontal padding. -->
+      <div class="px-5 md:px-7 pt-5 pb-4 md:pt-6 italic leading-relaxed" style="color: var(--color-ink-700);">
         "{review.body}"
-      </blockquote>
+      </div>
 
       <!-- Footer: avatar + name + area/date on the left, Google badge right. -->
-      <footer class="px-5 md:px-7 pb-5 md:pb-6 pt-3 flex items-center justify-between gap-3 border-t border-line mx-5 md:mx-7" style="margin-left: 0; margin-right: 0;">
+      <footer class="mx-5 md:mx-7 pb-5 md:pb-6 pt-3 flex items-center justify-between gap-3 border-t border-line">
         <div class="flex items-center gap-3">
           {review.avatar ? (
             <img
