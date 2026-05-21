@@ -23,6 +23,13 @@ interface Props {
 const { config } = Astro.props;
 const location = getLocationForArea(config.slug);
 
+// The "popular treatments" set, as service slugs, derived from the
+// treatments hrefs. Fed to the services grid so it shows those specific
+// treatments (with images) framed as the area's most-requested.
+const treatmentSlugs = config.treatments.map((t) =>
+  t.href.replace('/services/', '').replace(/\/$/, ''),
+);
+
 const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Areas', url: '/areas/' },
@@ -126,36 +133,15 @@ const seoDescription = config.heroSubtitle;
     </div>
   </section>
 
-  <!-- Services available here -->
+  <!-- Popular treatments, shown as the services grid (with images) framed
+       as the area's most-requested work. Merged with the old generic
+       "what we offer" section to avoid duplication. -->
   <ServiceGrid
-    eyebrow="What we offer"
-    heading={config.servicesHeading}
-    subtitle={`Every service below is available in ${config.name}, measured, built, and installed by our own team.`}
-    limit={6}
+    eyebrow="Most Requested"
+    heading={config.treatmentsHeading}
+    subtitle={config.treatmentsIntro}
+    slugs={treatmentSlugs}
   />
-
-  <!-- Popular treatments (links into service pages) -->
-  <section class="py-16 md:py-20 bg-cream-50">
-    <div class="container-site max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <p class="eyebrow" style="letter-spacing: 0.3em;">Most Requested</p>
-        <h2 class="font-display text-3xl md:text-4xl text-ink-800 leading-tight mb-4">{config.treatmentsHeading}</h2>
-        <p class="text-ink-600 leading-relaxed">{config.treatmentsIntro}</p>
-      </div>
-      <div class="grid gap-5 sm:grid-cols-2">
-        {config.treatments.map((t) => (
-          <a href={t.href} class="group bg-white border border-coffee-200/70 rounded-lg shadow-card p-6 md:p-7 transition hover:shadow-card-hover hover:-translate-y-0.5 block">
-            <h3 class="font-display text-lg md:text-xl text-ink-800 mb-1.5 group-hover:text-brand-700 transition">{t.title}</h3>
-            <p class="text-ink-600 text-sm md:text-[0.95rem] leading-relaxed mb-3">{t.body}</p>
-            <span class="text-brand-700 font-semibold text-sm inline-flex items-center gap-1">
-              Learn more
-              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10h10M11 5l5 5-5 5"/></svg>
-            </span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
 
   <!-- How it works (process) -->
   <section class="py-16 md:py-20 bg-white">
