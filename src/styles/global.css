@@ -1,10 +1,8 @@
 @import "@fontsource-variable/montserrat";
-/* Cormorant Garamond: thin high-contrast luxury serif for display headings.
-   Loading 500/600/700 so headings have enough weight to read as premium,
-   not flimsy. */
-@import "@fontsource/cormorant-garamond/500.css";
-@import "@fontsource/cormorant-garamond/600.css";
-@import "@fontsource/cormorant-garamond/700.css";
+/* Fraunces: modern high-contrast serif with optical sizing. Variable font,
+   used for display headings. Reads contemporary and premium, pairs with
+   the Montserrat body. */
+@import "@fontsource-variable/fraunces";
 @import "tailwindcss";
 
 @theme {
@@ -62,7 +60,7 @@
   --color-surface:  #fcf7e3;
   --color-surface-2:#f8efc9;
 
-  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, ui-serif, serif;
+  --font-display: "Fraunces Variable", "Fraunces", Georgia, ui-serif, serif;
   --font-body:    "Montserrat Variable", "Montserrat", ui-sans-serif, system-ui, sans-serif;
 
   --radius-md: 8px;
@@ -137,9 +135,7 @@ details[open] > summary ~ * {
 @layer base {
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    /* Cormorant is a serif; tight negative tracking that suited the
-       sans-serif Montserrat looks cramped here, so keep it near-normal. */
-    letter-spacing: -0.005em;
+    letter-spacing: -0.015em;
     color: var(--color-ink-800);
     font-weight: 700;
   }
@@ -160,10 +156,8 @@ details[open] > summary ~ * {
 
 /* Prose — body copy styling for page builder content */
 .prose-cfc p { @apply text-ink-600 leading-relaxed text-[1.0625rem]; }
-/* Cormorant has a smaller visual size at a given px than the old sans, so
-   nudge the heading scale up one step to keep presence without bulk. */
-.prose-cfc h2 { @apply text-3xl md:text-4xl mt-12 mb-4; }
-.prose-cfc h3 { @apply text-xl md:text-2xl mt-8 mb-3; }
+.prose-cfc h2 { @apply text-2xl md:text-3xl mt-12 mb-4; }
+.prose-cfc h3 { @apply text-lg md:text-xl mt-8 mb-3; }
 .prose-cfc ul { @apply list-disc pl-5 space-y-2 text-ink-600; }
 .prose-cfc a { @apply text-brand-700 underline underline-offset-4 decoration-brand-300 hover:decoration-brand-600; }
 .prose-cfc strong { @apply text-ink-800 font-semibold; }
