@@ -31,3 +31,6 @@ pnpm-debug.log*
 
 # scraped reference content (large, regenerable)
 scripts/scraped/
+
+# Local Claude Code worktrees and settings
+.claude/

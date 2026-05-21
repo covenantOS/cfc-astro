@@ -113,31 +113,9 @@ export const SERVICE_EXTRAS: Record<string, ServiceExtras> = {
     },
   },
 
-  'plantation-shutters': {
-    tip: {
-      // Tip A: locked by Daniel as the voice anchor on 2026-05-20.
-      body: 'If the room has a shower, a stove, or a window facing the Gulf, go with faux wood. Real wood is beautiful, but I have been called back to too many St. Pete bathrooms where the basswood swelled by the second summer. Save the real wood for a formal dining room or a front sitting room where the AC stays steady and the salt air does not reach. That is where it earns its keep.',
-    },
-    featureList: {
-      items: [
-        { label: 'Moisture resistance', body: 'Quality faux wood does not absorb humidity the way real wood does, so louvers stay aligned through Tampa Bay summers.' },
-        { label: 'UV stability', body: 'Premium cores resist Gulf-side sun without yellowing or becoming brittle.' },
-        { label: 'Storm-season durability', body: 'A built shutter adds an extra layer of window protection through wind-driven rain.' },
-        { label: 'Precise light control', body: 'Adjustable louvers redirect light and heat without giving up the view.' },
-      ],
-      columns: 2,
-    },
-    relatedLink: {
-      body: 'Trying to decide between shutters and a softer treatment over the same window? Our drapery and curtains page covers when each treatment wins, and when to layer both.',
-      href: '/services/custom-draperies-curtains/',
-      linkText: 'See custom drapery options',
-    },
-    reviewTag: 'plantation-shutters',
-    reviewLabel: 'What St. Pete homeowners say',
-    closingBanner: {
-      statement: 'Six months of hurricane season every year. 25+ years installing across Pinellas. Authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout. Built for Florida humidity, Gulf sun, and salt air.',
-    },
-  },
+  // plantation-shutters is now an .mdx file with components interleaved
+  // inline throughout the article, so it is intentionally NOT configured
+  // here. Adding it back would double-render the components.
 };
 
 export function getServiceExtras(slug: string): ServiceExtras | undefined {

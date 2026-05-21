@@ -13,6 +13,7 @@
     "scrape": "node scripts/scrape-wp.mjs"
   },
   "dependencies": {
+    "@astrojs/mdx": "^5.0.6",
     "@astrojs/partytown": "^2.1.7",
     "@astrojs/sitemap": "^3.7.2",
     "@fontsource-variable/montserrat": "^5.2.8",

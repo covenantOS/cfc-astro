@@ -6,7 +6,7 @@ const faqSchema = z.array(
 ).optional();
 
 const services = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/services' }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/services' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -18,7 +18,7 @@ const services = defineCollection({
 });
 
 const areas = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/areas' }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/areas' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
