@@ -81,7 +81,10 @@ body {
   color: var(--color-ink);
   background: #fff;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip;
+  /* No overflow on body: an overflow value here turns body into a scroll
+     container in some browsers, which breaks `position: sticky` on the
+     service/area sidebar. Horizontal overflow is clipped at the html root
+     instead (see above). */
   line-height: 1.6;
 }
 
@@ -282,6 +285,13 @@ details[open] > summary ~ * {
    then flows side-by-side on sm: and up. */
 .cta-group {
   @apply flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 justify-center items-center;
+}
+/* Aside heroes (e.g. Contact) left-align the CTA on desktop. This lives in
+   unlayered CSS on purpose: `.cta-group` is unlayered and would otherwise
+   beat a `lg:justify-start` Tailwind utility (cascade layers), leaving the
+   button stuck centered. */
+@media (min-width: 1024px) {
+  .cta-group.cta-aside { justify-content: flex-start; }
 }
 .cta-group > .btn-primary,
 .cta-group > .btn-outline,
