@@ -193,35 +193,74 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'About'
   const iconOpen = document.getElementById('mobile-nav-icon-open');
   const iconClose = document.getElementById('mobile-nav-icon-close');
 
+  // Tracks the scroll position so we can restore it when the menu closes.
+  // Using the position-fixed pattern (rather than `overflow: hidden`) because
+  // our html/body already set `overflow-x: clip`, and mixing that with an
+  // inline `overflow: hidden` can leave iOS Safari in a stuck-scroll state
+  // after the inline rule is removed.
+  let savedScrollY = 0;
+  let isOpen = false;
+
+  function lockScroll() {
+    savedScrollY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${savedScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+  }
+
+  function unlockScroll() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    // Restore the user's scroll position synchronously (positional scrollTo
+    // skips the smooth-scroll behavior from `html { scroll-behavior: smooth }`).
+    window.scrollTo(0, savedScrollY);
+  }
+
   function setOpen(open: boolean) {
     if (!panel || !toggle) return;
+    if (open === isOpen) return;
+    isOpen = open;
     panel.classList.toggle('hidden', !open);
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     iconOpen?.classList.toggle('hidden', open);
     iconClose?.classList.toggle('hidden', !open);
-    // Lock body scroll while the overlay is open so the page behind does
-    // not scroll when the user pans inside the menu.
-    document.documentElement.style.overflow = open ? 'hidden' : '';
-    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) lockScroll();
+    else unlockScroll();
   }
 
-  toggle?.addEventListener('click', () => {
-    const willOpen = panel?.classList.contains('hidden') ?? false;
-    setOpen(willOpen);
-  });
+  toggle?.addEventListener('click', () => setOpen(!isOpen));
 
   // Close on Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !panel?.classList.contains('hidden')) setOpen(false);
+    if (e.key === 'Escape' && isOpen) setOpen(false);
   });
 
-  // Close after tapping any link so navigation feels smooth on slow connections
+  // Close after tapping any link so navigation feels smooth on slow connections.
+  // We unlock scroll first so iOS Safari doesn't carry the lock into the next
+  // page if navigation is interrupted or slow.
   document.querySelectorAll<HTMLElement>('[data-mobile-nav-link]').forEach((el) => {
     el.addEventListener('click', () => setOpen(false));
   });
 
   // If the user resizes from mobile to desktop with the menu open, reset state
   const mq = window.matchMedia('(min-width: 1024px)');
-  mq.addEventListener('change', (e) => { if (e.matches) setOpen(false); });
+  mq.addEventListener('change', (e) => { if (e.matches && isOpen) setOpen(false); });
+
+  // Belt-and-suspenders: if the page is restored from the bfcache or otherwise
+  // shown again with a stale lock, force-unlock on pageshow.
+  window.addEventListener('pageshow', () => {
+    if (document.body.style.position === 'fixed') {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.width = '';
+    }
+  });
 </script>
