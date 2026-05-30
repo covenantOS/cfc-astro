@@ -18,13 +18,13 @@ const {
 } = Astro.props;
 
 const brands = [
-  { name: 'Norman Shutters', src: '/images/brands/Norman-Shutters.webp' },
-  { name: 'Stout Textiles', src: '/images/brands/Stout.webp' },
-  { name: 'Kravet', src: '/images/brands/Kravet-Fabric.webp' },
-  { name: 'Horizons Window Fashions', src: '/images/brands/Horizon Window Fashions.webp' },
-  { name: 'Hunter Douglas', src: '/images/brands/Hunter Douglas.webp' },
-  { name: 'ALTA Window Fashions', src: '/images/brands/ALTA Window Fashions.webp' },
-  { name: 'Elegant Shutters', src: '/images/brands/Elegant Shutters.webp' },
+  { name: 'Norman Shutters', src: '/images/brands/Norman-Shutters.webp', w: 400, h: 102 },
+  { name: 'Stout Textiles', src: '/images/brands/stout.webp', w: 344, h: 141 },
+  { name: 'Kravet', src: '/images/brands/Kravet-Fabric.webp', w: 400, h: 142 },
+  { name: 'Horizons Window Fashions', src: '/images/brands/Horizon Window Fashions.webp', w: 387, h: 107 },
+  { name: 'Hunter Douglas', src: '/images/brands/Hunter Douglas.webp', w: 400, h: 267 },
+  { name: 'ALTA Window Fashions', src: '/images/brands/ALTA Window Fashions.webp', w: 400, h: 120 },
+  { name: 'Elegant Shutters', src: '/images/brands/Elegant Shutters.webp', w: 400, h: 85 },
 ];
 ---
 
@@ -56,6 +56,8 @@ const brands = [
             src={b.src}
             alt={`${b.name}, authorized dealer brand carried by Custom Fabric Creations, St. Petersburg, FL`}
             title={`${b.name} | Custom Fabric Creations, St. Petersburg, FL`}
+            width={b.w}
+            height={b.h}
             class="h-10 md:h-12 max-w-[160px] w-auto object-contain"
             loading="lazy"
             decoding="async"
