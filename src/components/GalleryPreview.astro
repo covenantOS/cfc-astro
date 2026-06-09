@@ -1,0 +1,49 @@
+---
+// Homepage gallery teaser: a handful of real project images that link out to
+// the full /gallery/ page. Gives the homepage visual proof of work and an
+// internal link to the gallery.
+
+const items = [
+  { img: '/images/gallery/master-suite-gallery.webp', title: 'Master Suite' },
+  { img: '/images/gallery/custom-drapery-gallery.webp', title: 'Patterned Drapery' },
+  { img: '/images/services/plantation-shutters/top.webp', title: 'Plantation Shutters' },
+  { img: '/images/gallery/roller-shades-gallery.webp', title: 'Roller Shades' },
+  { img: '/images/gallery/custom-valances-gallery.webp', title: 'Cornices & Valances' },
+  { img: '/images/gallery/custom-upholstery-gallery.webp', title: 'Custom Upholstery' },
+];
+---
+
+<section class="py-20 md:py-28 bg-cream-50">
+  <div class="container-site">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <p class="eyebrow" style="letter-spacing: 0.3em;">Our Work</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ink-800 leading-tight mb-4">
+        Recent Projects Across St. Pete
+      </h2>
+      <p class="text-ink-500 text-base md:text-lg">
+        A look at custom drapery, shutters, shades, and upholstery from our St. Petersburg workroom.
+      </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((item) => (
+        <a href="/gallery/" class="group relative block aspect-[4/3] overflow-hidden rounded-lg shadow-card">
+          <img
+            src={item.img}
+            alt={`${item.title}, custom project by Custom Fabric Creations in St. Petersburg, FL`}
+            title={item.title}
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-[1.04]"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-ink-900/10 to-transparent"></div>
+          <span class="absolute bottom-4 left-4 text-white font-display text-lg drop-shadow">{item.title}</span>
+        </a>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/gallery/" class="btn-primary btn-lg">View Full Gallery</a>
+    </div>
+  </div>
+</section>

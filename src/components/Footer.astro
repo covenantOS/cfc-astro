@@ -1,11 +1,15 @@
 ---
 import { SITE, SERVICES, AREAS, getLocationForPath } from '~/lib/site';
+import { REVIEWS, getFeaturedReview } from '~/data/reviews';
 const year = new Date().getFullYear();
 const location = getLocationForPath(Astro.url.pathname);
+// Short, named review for the compact trust block under the Areas column.
+const review = REVIEWS.find((r) => r.id === 'joann-johnson') ?? getFeaturedReview();
 ---
 
 <footer class="bg-ink-900 text-white">
   <div class="container-site py-16 md:py-20 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <!-- Brand column: logo, description, primary CTA -->
     <div>
       <a href="/" class="inline-flex items-center mb-5" aria-label={SITE.name}>
         <img
@@ -19,33 +23,29 @@ const location = getLocationForPath(Astro.url.pathname);
         />
       </a>
       <p class="text-sm text-white/75 leading-relaxed mb-6">
-        We’d love to help you design the space of your dreams. Whether you’re looking for interior or exterior shades with motorization options, custom drapes and top treatments or re-upholstery.
+        We&rsquo;d love to help you design the space of your dreams. Whether you&rsquo;re looking for interior or exterior shades with motorization options, custom drapes and top treatments or re-upholstery.
       </p>
-      <a href="/contact/" class="btn-primary mb-7 inline-flex">Schedule Consultation</a>
-      <div class="space-y-5 text-sm">
-        <div class="flex items-start gap-3">
-          <span class="icon-badge-sm bg-white/10">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-            </svg>
+      <a href="/contact/" class="btn-primary inline-flex">Schedule Consultation</a>
+      <p class="text-white/55 text-xs mt-3">Have a question? <a href="/contact/" class="text-brand-400 font-semibold hover:text-brand-300">Get in touch &rarr;</a></p>
+
+      <a href="/gallery/" class="group mt-6 flex items-center gap-3 max-w-xs">
+        <img
+          src="/images/gallery/master-suite-gallery.webp"
+          alt="Recent custom window treatment project by Custom Fabric Creations in St. Petersburg, FL"
+          class="w-16 h-16 rounded object-cover shrink-0 ring-1 ring-white/10 group-hover:ring-brand-400/60 transition"
+          width="64"
+          height="64"
+          loading="lazy"
+          decoding="async"
+        />
+        <span class="min-w-0">
+          <span class="block text-white/55 text-xs">Curious about our work?</span>
+          <span class="inline-flex items-center gap-1 text-brand-400 font-semibold text-sm group-hover:text-brand-300 transition">
+            Take a look at our projects
+            <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 10h10M11 5l5 5-5 5"/></svg>
           </span>
-          <div>
-            <p class="text-white/60 text-xs uppercase tracking-widest mb-1">Call us</p>
-            <a href={location.phoneHref} class="block text-brand-400 font-bold hover:text-brand-300 text-base">{location.phone}</a>
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <span class="icon-badge-sm bg-white/10">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-            </svg>
-          </span>
-          <div>
-            <p class="text-white/60 text-xs uppercase tracking-widest mb-1">Hours</p>
-            <p class="text-white/80">Mon-Sat 7am-7pm</p>
-          </div>
-        </div>
-      </div>
+        </span>
+      </a>
     </div>
 
     <div>
@@ -78,6 +78,7 @@ const location = getLocationForPath(Astro.url.pathname);
       </ul>
     </div>
 
+    <!-- Areas + integrated trust block (rating, review, contact facts) -->
     <div>
       <h2 class="text-brand-400 font-display text-xl mb-5">Areas</h2>
       <ul class="space-y-3 text-sm">
@@ -91,24 +92,71 @@ const location = getLocationForPath(Astro.url.pathname);
           </a>
         </li>
       </ul>
+
+      <div class="mt-8 pt-6 border-t border-white/10">
+        <!-- Google rating + short review -->
+        <div class="flex items-center gap-2 mb-2">
+          <span class="flex items-center gap-0.5 text-[#FBBC04]" role="img" aria-label="5 out of 5 stars">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            ))}
+          </span>
+          <span class="font-bold text-white text-sm">5.0</span>
+          <span class="text-white/55 text-xs">on Google</span>
+        </div>
+        <p class="text-white/75 text-sm italic leading-relaxed footer-review">&ldquo;{review.body}&rdquo;</p>
+        <p class="text-white/45 text-xs mt-1.5">{review.name} &middot; <a href="/reviews/" class="text-brand-400 font-semibold hover:text-brand-300">Read reviews</a></p>
+
+        <!-- Contact + trust facts -->
+        <ul class="mt-5 space-y-3 text-sm">
+          <li class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-brand-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href={location.phoneHref} class="text-brand-400 font-bold hover:text-brand-300">{location.phone}</a>
+          </li>
+          <li class="flex items-center gap-2.5 text-white/80">
+            <svg class="w-4 h-4 text-brand-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Serving St. Petersburg &amp; Tampa Bay
+          </li>
+          <li class="flex items-center gap-2.5 text-white/80">
+            <svg class="w-4 h-4 text-brand-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15 14l1 8-4-2-4 2 1-8"/></svg>
+            Since 2000 &middot; 25+ years
+          </li>
+          <li class="flex items-center gap-2.5 text-white/80">
+            <svg class="w-4 h-4 text-brand-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Mon-Sat 7am-7pm
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
   <div class="border-t border-white/10">
-    <div class="container-site py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
-      <p class="text-white/60">Copyright &copy; {year} · {SITE.name} LLC</p>
-      <div class="flex items-center gap-5 text-white/70">
+    <div class="container-site py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+      <p class="text-white/60 order-2 md:order-1">Copyright &copy; {year} &middot; {SITE.name} LLC</p>
+      <p class="text-white/45 uppercase tracking-[0.2em] order-1 md:order-2 text-center">
+        Authorized dealer:
+        <a href="/brands/" class="text-white/80 font-semibold hover:text-brand-300 normal-case tracking-normal">Hunter Douglas</a> &middot;
+        <a href="/brands/" class="text-white/80 font-semibold hover:text-brand-300 normal-case tracking-normal">Norman</a> &middot;
+        <a href="/brands/" class="text-white/80 font-semibold hover:text-brand-300 normal-case tracking-normal">Kravet</a>
+      </p>
+      <div class="flex items-center gap-5 text-white/70 order-3">
         <a href="/privacy-policy/" class="hover:text-brand-300">Privacy Policy</a>
         <a href="/terms-and-conditions/" class="hover:text-brand-300">Terms &amp; Conditions</a>
         <span class="inline-flex items-center gap-1.5">
           <svg class="w-4 h-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
           Fully Insured
         </span>
-        <span class="inline-flex items-center gap-1.5">
-          <svg class="w-4 h-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-          Locally Owned
-        </span>
       </div>
     </div>
   </div>
 </footer>
+
+<style>
+  /* Keep the footer testimonial to two lines so the column stays compact. */
+  .footer-review {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
