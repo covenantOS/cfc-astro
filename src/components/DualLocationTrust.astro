@@ -1,0 +1,100 @@
+---
+// Dual Google Business Profile trust / EEAT signal.
+// CFC operates two verified Google Business Profiles, both rated 5.0:
+//   1. A Service-Area profile covering all of St. Petersburg + Tampa Bay.
+//   2. A physical studio location in West St. Petersburg.
+// Surfacing both is a strong local-EEAT signal (real entity, real reviews,
+// real address). Counts/rating are passed in so they stay easy to update
+// when the GBP numbers change.
+
+interface Props {
+  heading?: string;
+  serviceAreaReviews?: number;
+  studioReviews?: number;
+  rating?: string;
+  // Google Business Profile URLs. When set, the matching card becomes a
+  // clickable link that opens the profile in a new tab.
+  serviceAreaHref?: string;
+  studioHref?: string;
+}
+
+const {
+  heading = 'Two Google profiles. One St. Pete team you can verify.',
+  serviceAreaReviews = 18,
+  studioReviews = 18,
+  rating = '5.0',
+  serviceAreaHref = 'https://maps.app.goo.gl/9ACmvvFyqYBrWvCW9',
+  studioHref = 'https://maps.app.goo.gl/rd4yj12t6mKwm8Lz8',
+} = Astro.props;
+
+const totalReviews = serviceAreaReviews + studioReviews;
+
+const cards = [
+  {
+    tag: 'Service Area',
+    title: 'Serving All of St. Petersburg',
+    reviews: serviceAreaReviews,
+    href: serviceAreaHref,
+    body: 'Our service-area Google profile covers St. Petersburg, Pinellas County, and the wider Tampa Bay region. We come to you for the in-home consultation.',
+  },
+  {
+    tag: 'Visit Our Studio',
+    title: 'West St. Pete Location',
+    reviews: studioReviews,
+    href: studioHref,
+    body: 'A second verified Google profile for our physical studio in West St. Petersburg, where the workroom, fabric library, and design team are based.',
+  },
+];
+---
+
+<div class="not-prose my-10">
+  <div class="rounded-lg border border-line bg-cream-50 p-6 md:p-8 shadow-card">
+    <div class="text-center max-w-2xl mx-auto mb-7">
+      <p class="eyebrow" style="letter-spacing: 0.25em;">Verified Local Business</p>
+      <h2 class="font-display text-2xl md:text-3xl text-ink-800 leading-tight mt-1">{heading}</h2>
+      <p class="text-ink-600 text-sm md:text-base mt-3">
+        {totalReviews} combined five-star Google reviews across both profiles. Licensed, insured, and running our own St. Pete workroom since 2000.
+      </p>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-2">
+      {cards.map((card) => {
+        const Tag = card.href ? 'a' : 'div';
+        return (
+          <Tag
+            href={card.href}
+            target={card.href ? '_blank' : undefined}
+            rel={card.href ? 'noopener' : undefined}
+            class:list={[
+              'rounded-lg bg-white p-5 md:p-6 shadow-card flex flex-col transition',
+              card.href && 'hover:shadow-card-hover hover:-translate-y-0.5 cursor-pointer',
+            ]}
+          >
+            <span class="inline-flex items-center self-start rounded-full bg-brand-50 text-brand-800 text-[0.68rem] font-semibold uppercase tracking-wider px-2.5 py-1 mb-3">
+              {card.tag}
+            </span>
+            <h3 class="font-display text-lg text-ink-800 leading-tight">{card.title}</h3>
+            <div class="flex items-center gap-2 mt-2 mb-3">
+              <span class="font-bold text-ink-800 tabular-nums">{rating}</span>
+              <span class="flex items-center gap-0.5 text-[#FBBC04]" role="img" aria-label={`${rating} out of 5 stars`}>
+                {[1, 2, 3, 4, 5].map(() => (
+                  <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </span>
+              <span class="text-ink-500 text-sm">· {card.reviews} reviews</span>
+            </div>
+            <p class="text-ink-600 text-sm leading-relaxed">{card.body}</p>
+            {card.href && (
+              <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700">
+                View on Google
+                <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9" /></svg>
+              </span>
+            )}
+          </Tag>
+        );
+      })}
+    </div>
+  </div>
+</div>

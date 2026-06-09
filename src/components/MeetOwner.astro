@@ -1,0 +1,70 @@
+---
+// "Meet the Owner" EEAT section. Puts a real, named person behind the brand
+// (Terry Popick, owner/founder since 2000), which is a strong experience +
+// trust signal for a local service business.
+//
+// NOTE: no portrait of Terry is available yet, so we intentionally do NOT
+// pass off a stock face as her. Instead we use a real workroom/craft image
+// plus a monogram medallion. When a genuine Terry photo is provided, swap
+// the `image` below for it and the layout still works.
+import { SITE } from '~/lib/site';
+
+const image = '/images/gallery/custom-upholstery-gallery.webp';
+const imageAlt = 'Custom upholstery and fabric work from the Custom Fabric Creations workroom in St. Petersburg, FL';
+---
+
+<section class="py-20 md:py-28 bg-white">
+  <div class="container-site grid gap-12 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] items-center">
+    <div class="relative">
+      <div class="aspect-[4/5] overflow-hidden rounded-lg shadow-soft">
+        <img
+          src={image}
+          alt={imageAlt}
+          title={imageAlt}
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="absolute -bottom-4 -right-3 md:-bottom-6 md:-right-6 bg-white px-5 py-4 rounded-sm shadow-card border border-line max-w-[220px]">
+        <p class="text-[0.7rem] uppercase tracking-[0.2em] text-brand-700 font-semibold">Inside our workroom</p>
+        <p class="font-display text-lg text-ink-800 leading-tight mt-1">West St. Petersburg, since 2000</p>
+      </div>
+    </div>
+
+    <div>
+      <p class="eyebrow" style="letter-spacing: 0.3em;">Meet the Owner</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl text-ink-800 leading-tight mb-6">
+        Terry Popick, Owner &amp; Founder
+      </h2>
+
+      <div class="flex items-center gap-4 mb-6">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-brand-700 text-white font-display text-2xl shrink-0" aria-hidden="true">T</div>
+        <div>
+          <p class="font-bold text-ink-800 leading-tight">Terry Popick</p>
+          <p class="text-ink-500 text-sm">Owner &amp; Founder · 25+ years in St. Pete</p>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-ink-600 leading-relaxed text-lg mb-8">
+        <p>
+          I started Custom Fabric Creations in 2000 with one belief: a window treatment should feel like part of the room, not something hung on it. Twenty-five years later, every drapery panel, shutter, and shade still passes through our own St. Pete workroom and is installed by our own team, never a subcontractor.
+        </p>
+        <p>
+          Clients tell me what they love about a room, and we build from there. That is the difference between a treatment that just fills a window and one that finishes a home. It is also why so many of my clients come back, project after project.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-8">
+        {['Family-Run Since 2000', 'In-House Workroom', 'Authorized Dealer', 'Licensed & Insured'].map((p) => (
+          <span class="inline-flex items-center px-4 py-2 bg-brand-50 border border-brand-200 text-brand-800 text-sm font-semibold rounded-sm">{p}</span>
+        ))}
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="/about/" class="btn-primary">Read Our Story</a>
+        <a href={SITE.phoneHref} class="btn-ghost">Call Terry · {SITE.phone}</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -14,6 +14,11 @@ const services = defineCollection({
     slug: z.string(),
     type: z.literal('service').optional(),
     faqs: faqSchema,
+    // Optional hero EEAT / trust enhancements (opt-in per service).
+    heroEyebrow: z.string().optional(),
+    heroBullets: z.array(z.string()).optional(),
+    heroShowRating: z.boolean().optional(),
+    heroTrustBar: z.boolean().optional(),
   }),
 });
 

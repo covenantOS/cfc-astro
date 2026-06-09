@@ -88,30 +88,9 @@ export const SERVICE_EXTRAS: Record<string, ServiceExtras> = {
     },
   },
 
-  'window-shades': {
-    tip: {
-      body: 'The shade you choose mostly depends on what the room is for. Bedrooms and media rooms need blackout, no shortcuts. Living and dining rooms usually want a Roman shade in fabric, something warm. Any west-facing window in St. Pete benefits from a solar shade that cuts the heat without losing the view. When in doubt, we layer two.',
-    },
-    featureList: {
-      items: [
-        { label: 'Solar shades', body: 'Reduce solar heat gain on west-facing windows and lanais while keeping the view through the fabric.' },
-        { label: 'Cellular (honeycomb) shades', body: 'Trap air to insulate hot or cold windows, useful in bedrooms and on glass facing the Gulf.' },
-        { label: 'Roman shades', body: 'Fabric folds with no chain mechanism, hand-stitched in our workroom, made to match drapery or upholstery.' },
-        { label: 'Motorized shades', body: 'Somfy-powered systems for high windows, sliders, and Nana doors, with quiet operation and battery or wired options.' },
-      ],
-      columns: 2,
-    },
-    relatedLink: {
-      body: 'Looking at shades for an oversized slider or a lanai? Our outdoor window shades page covers the wind-rated exterior options we install for screened patios and pool cages.',
-      href: '/services/outdoor-window-shades/',
-      linkText: 'See outdoor window shades',
-    },
-    reviewTag: 'window-shades',
-    reviewLabel: 'What St. Pete homeowners say',
-    closingBanner: {
-      statement: 'Solar, cellular, Roman, and motorized shades, all measured, fabricated, and installed by the same St. Pete team since 2000.',
-    },
-  },
+  // window-shades is now an .mdx file with components interleaved inline
+  // throughout the article (same pattern as plantation-shutters), so it is
+  // intentionally NOT configured here. Adding it back would double-render.
 
   // plantation-shutters is now an .mdx file with components interleaved
   // inline throughout the article, so it is intentionally NOT configured

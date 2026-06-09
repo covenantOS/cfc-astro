@@ -1,0 +1,16 @@
+SEO content + UX: homepage sections, header bar, footer trust, window shades, internal links
+
+Global (publishing to main now):
+- Header: utility top bar (5.0 Google reviews, service area, 25+ years, phone).
+- Footer: integrated trust signals (rating + review, service area, years,
+  brands, "have a question" CTA) + gallery teaser, kept within existing layout.
+- Homepage: new ThreeSteps, MeetOwner, and GalleryPreview sections.
+
+Service-page work (kept on this branch for now):
+- Window Shades rewritten to gold-standard .mdx with hero EEAT, Terry tip,
+  inline review, dual-GBP trust signal, expanded FAQs, internal links.
+- DualLocationTrust component (two clickable Google Business Profiles).
+- Service hero EEAT props (content.config, ServiceLayout, [slug]).
+- Plantation Shutters: redistributed internal links.
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>

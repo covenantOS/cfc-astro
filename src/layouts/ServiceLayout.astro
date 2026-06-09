@@ -15,6 +15,10 @@ interface Props {
   heroImage?: string;
   heroTitle?: string;
   heroSubtitle?: string;
+  heroEyebrow?: string;
+  heroBullets?: string[];
+  heroShowRating?: boolean;
+  heroTrustBar?: boolean;
   faqs?: Array<{ q: string; a: string }>;
 }
 
@@ -26,6 +30,10 @@ const {
   heroImage,
   heroTitle,
   heroSubtitle,
+  heroEyebrow,
+  heroBullets,
+  heroShowRating,
+  heroTrustBar,
   faqs,
 } = Astro.props;
 
@@ -50,6 +58,10 @@ const breadcrumbs = [
     title={heroTitle ?? `${serviceTitle} in St. Petersburg, FL`}
     subtitle={heroSubtitle ?? description}
     image={heroImage ?? `/images/hero/${serviceSlug}.webp`}
+    eyebrow={heroEyebrow}
+    bullets={heroBullets}
+    showRating={heroShowRating}
+    trustBar={heroTrustBar}
     primaryCta={{ label: SITE.phone, href: SITE.phoneHref }}
     secondaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
     breadcrumbs={breadcrumbs}

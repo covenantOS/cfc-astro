@@ -3,7 +3,10 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import BrandStrip from '~/components/BrandStrip.astro';
 import ServiceGrid from '~/components/ServiceGrid.astro';
+import ThreeSteps from '~/components/ThreeSteps.astro';
 import AboutSection from '~/components/AboutSection.astro';
+import MeetOwner from '~/components/MeetOwner.astro';
+import GalleryPreview from '~/components/GalleryPreview.astro';
 import AreasMap from '~/components/AreasMap.astro';
 import AreaTiles from '~/components/AreaTiles.astro';
 import FAQ from '~/components/FAQ.astro';
@@ -66,7 +69,13 @@ const HOMEPAGE_FAQS = [
 
   <ServiceGrid slugs={['custom-draperies-curtains', 'plantation-shutters', 'window-shades', 'furniture-reupholstery']} />
 
+  <ThreeSteps />
+
   <AboutSection />
+
+  <MeetOwner />
+
+  <GalleryPreview />
 
   <AreaTiles background="white" />
 
