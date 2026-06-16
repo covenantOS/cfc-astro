@@ -1,16 +1,11 @@
-SEO content + UX: homepage sections, header bar, footer trust, window shades, internal links
+Add Window Treatments St. Pete hub + Blog index
 
-Global (publishing to main now):
-- Header: utility top bar (5.0 Google reviews, service area, 25+ years, phone).
-- Footer: integrated trust signals (rating + review, service area, years,
-  brands, "have a question" CTA) + gallery teaser, kept within existing layout.
-- Homepage: new ThreeSteps, MeetOwner, and GalleryPreview sections.
-
-Service-page work (kept on this branch for now):
-- Window Shades rewritten to gold-standard .mdx with hero EEAT, Terry tip,
-  inline review, dual-GBP trust signal, expanded FAQs, internal links.
-- DualLocationTrust component (two clickable Google Business Profiles).
-- Service hero EEAT props (content.config, ServiceLayout, [slug]).
-- Plantation Shutters: redistributed internal links.
+- New /window-treatments-st-petersburg/ category hub targeting the umbrella
+  term (custom window treatments / window coverings), with EEAT hero,
+  dual-GBP trust, all-services grid (deep internal linking), reviews,
+  local area links, and keyword-driven FAQs.
+- New /blog/ index listing the four long-form guides/articles (custom drapery
+  guide + plantation shutters cost/installation/regret).
+- Sitemap: added both new pages.
 
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
