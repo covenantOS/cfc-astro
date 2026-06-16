@@ -1,30 +1,28 @@
 ---
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import Hero from '~/components/Hero.astro';
+import ServiceLayout from '~/layouts/ServiceLayout.astro';
 import DualLocationTrust from '~/components/DualLocationTrust.astro';
-import ServiceGrid from '~/components/ServiceGrid.astro';
 import OwnerTip from '~/components/OwnerTip.astro';
-import ReviewSection from '~/components/ReviewSection.astro';
-import FAQ from '~/components/FAQ.astro';
-import FinalCTA from '~/components/FinalCTA.astro';
-import { SITE } from '~/lib/site';
+import InlineReview from '~/components/InlineReview.astro';
+import RelatedLink from '~/components/RelatedLink.astro';
 
-// Category hub for the umbrella term "custom window treatments st petersburg".
-// GSC shows strong impressions for "window treatments st pete / st petersburg"
-// (page 2, ~0 clicks) with no dedicated page. Keyword research: "custom window
-// treatments" 40,500 sv (comp 0.16), "window treatments" 33,100, "window
-// coverings" 33,100, "custom window coverings" 14,800 (comp 0.05). This page
-// targets those locally and deep-links every individual service page.
+// Service-template landing for the umbrella term "window treatments st
+// petersburg". GSC shows strong impressions (page 2, ~0 clicks) with no
+// dedicated page. Keyword research: "custom window treatments" 40,500 sv
+// (comp 0.16), "custom window coverings" 14,800 (comp 0.05), "window
+// treatments"/"window coverings" 33,100. Uses the standard ServiceLayout so
+// it matches every other service page (hero + sidebar + content + FAQ + map).
+// NOTE: this is a .astro page, so body content is HTML (prose-cfc styles it),
+// not Markdown.
 
 const breadcrumbs = [
   { name: 'Home', url: '/' },
   { name: 'Window Treatments', url: '/window-treatments-st-petersburg/' },
 ];
 
-const FAQS = [
+const faqs = [
   {
     q: 'What types of custom window treatments do you offer in St. Petersburg?',
-    a: 'We design and install the full range: custom drapery and curtains, plantation shutters, roller, roman, solar, cellular, and blackout shades, custom blinds, cornices and valances, drapery hardware, and motorized and smart window treatments. Everything is measured, fabricated, and installed by our own St. Pete team.',
+    a: 'The full range: custom drapery and curtains, plantation shutters, roller, roman, solar, cellular, and blackout shades, custom blinds, cornices and valances, drapery hardware, and motorized and smart window treatments. Everything is measured, fabricated, and installed by our own St. Pete team.',
   },
   {
     q: 'How much do custom window treatments cost in St. Petersburg?',
@@ -32,7 +30,7 @@ const FAQS = [
   },
   {
     q: 'What is the difference between window treatments and window coverings?',
-    a: 'The terms are used interchangeably. "Window treatments" and "window coverings" both describe anything that dresses a window, soft treatments like drapery and shades, and hard treatments like shutters and blinds. We make and install both, and often layer them (for example drapery over shutters) for the best look and light control.',
+    a: 'The terms are used interchangeably. Both describe anything that dresses a window, soft treatments like drapery and shades, and hard treatments like shutters and blinds. We make and install both, and often layer them, for example drapery over shutters, for the best look and light control.',
   },
   {
     q: 'Do you offer motorized and smart window treatments?',
@@ -46,107 +44,77 @@ const FAQS = [
     q: 'Why choose a local workroom over a big-box store for window treatments?',
     a: 'We run our own fabric and fabrication workroom in West St. Petersburg and have since 2000. That means exact custom fit, faster fixes, color-matched companion pieces, and one team accountable from measurement to install, not an order shipped to an out-of-state factory and handed to a subcontractor.',
   },
-  {
-    q: 'How long does a custom window treatment project take?',
-    a: 'Most projects are completed within four to eight weeks, depending on the treatment and the fabrics or materials selected. Because every piece is built to your exact measurements, we give you a clear timeline at the consultation before any work begins.',
-  },
 ];
 ---
 
-<BaseLayout
+<ServiceLayout
   title="Custom Window Treatments St. Petersburg & Tampa Bay"
   description="Custom window treatments in St. Petersburg, FL: drapery, plantation shutters, shades, blinds, cornices, and motorized options. In-house workroom since 2000. Free in-home consultation across Pinellas County and Tampa Bay."
-  pageType="collection"
-  ogImage="/images/hero/homepage.webp"
+  serviceSlug="window-treatments"
+  serviceTitle="Window Treatments"
+  heroTitle="Custom Window Treatments in St. Petersburg, FL"
+  heroSubtitle="Drapery, plantation shutters, shades, blinds, and more, designed, fabricated, and installed by our own St. Pete team. We bring the showroom to your living room."
+  heroImage="/images/hero/homepage.webp"
+  heroEyebrow="St. Pete Premier Window Treatment Studio"
+  heroShowRating
+  heroTrustBar
+  heroBullets={['Hunter Douglas Authorized Dealer', 'In-House Workroom Since 2000', 'Free In-Home Consultation']}
   breadcrumbs={breadcrumbs}
-  faqs={FAQS}
+  faqs={faqs}
 >
-  <Hero
-    eyebrow="St. Pete Premier Window Treatment Studio"
-    title="Custom Window Treatments in St. Petersburg, FL"
-    subtitle="Drapery, plantation shutters, shades, blinds, and more, designed, fabricated, and installed by our own St. Pete team. We bring the showroom to your living room."
-    image="/images/hero/homepage.webp"
-    bullets={['Hunter Douglas Authorized Dealer', 'In-House Workroom Since 2000', 'Free In-Home Consultation']}
-    primaryCta={{ label: 'Schedule Consultation', href: '/contact/' }}
-    secondaryCta={{ label: `Call ${SITE.phone}`, href: SITE.phoneHref }}
-    breadcrumbs={breadcrumbs}
-    showRating
-    trustBar
-    goldLine
-  />
+  <p>Looking for custom window treatments in St. Petersburg, FL? Custom Fabric Creations designs, fabricates, and installs the full range of window treatments, drapery, plantation shutters, shades, blinds, cornices, and motorized systems, from our own workroom in West St. Pete. Free in-home consultation across Pinellas County and Tampa Bay.</p>
 
-  <section class="py-16 md:py-20 bg-white">
-    <div class="container-narrow text-center">
-      <p class="eyebrow" style="letter-spacing: 0.3em;">Custom Window Treatments St. Petersburg</p>
-      <h2 class="font-display text-3xl md:text-4xl text-ink-800 leading-tight mb-6">One St. Pete workroom for every window in your home</h2>
-      <p class="text-ink-600 text-lg leading-relaxed">
-        Custom Fabric Creations is St. Petersburg&rsquo;s full-service custom window treatment studio. Since 2000 we have designed, fabricated, and installed drapery, plantation shutters, shades, blinds, cornices, and more from our own workroom in West St. Pete, with free in-home consultations across Pinellas County and Tampa Bay. Whether you want soft drapery, precise light control, or both layered together, we build it to your exact windows and install it ourselves.
-      </p>
-    </div>
-  </section>
+  <DualLocationTrust />
 
-  <section class="pb-4 bg-white">
-    <div class="container-site">
-      <DualLocationTrust />
-    </div>
-  </section>
+  <h2>One St. Pete Workroom for Every Window in Your Home</h2>
+  <p>Most companies specialize in one product and outsource the rest. We make and install all of it under one roof, so you can mix soft and hard treatments, match a Roman shade to your drapery, or layer drapery over shutters, in a single project with one team and one warranty.</p>
 
-  <ServiceGrid
-    eyebrow="Our Window Treatment Services"
-    heading="Every Custom Window Treatment, Under One Roof"
-    subtitle="Soft treatments, hard treatments, and the hardware and upholstery to finish the room. Explore each service, or tell us what you have in mind at the consultation."
-    showAllLink={false}
-  />
+  <h3>Soft Window Treatments</h3>
+  <ul>
+    <li><strong><a href="/services/custom-draperies-curtains/">Custom drapery and curtains</a>.</strong> Floor-length lined panels, sheers, and blackout drapery sewn to your exact windows in designer fabrics from Kravet and Stout.</li>
+    <li><strong><a href="/services/window-shades/">Roller, Roman, solar, and cellular shades</a>.</strong> Clean, modern light control built for Florida sun, with motorization where the opening calls for it.</li>
+    <li><strong><a href="/services/custom-cornices-valances/">Cornices and valances</a>.</strong> Upholstered top treatments that finish the window and tie the room together.</li>
+  </ul>
 
-  <section class="py-20 md:py-28 bg-cream-50">
-    <div class="container-site grid gap-10 md:grid-cols-2 items-start">
-      <div>
-        <p class="eyebrow" style="letter-spacing: 0.3em;">Why St. Pete Homeowners Choose Us</p>
-        <h2 class="font-display text-3xl md:text-4xl text-ink-800 leading-tight mb-6">A local team, not a national dispatcher</h2>
-        <p class="text-ink-600 text-lg leading-relaxed mb-6">
-          Most window treatment companies in St. Petersburg take your measurements, place an order with an out-of-state factory, and send a subcontractor when the truck arrives. We are built differently: our fabric library, fabrication workroom, and install crew all sit under one roof in West St. Pete.
-        </p>
-        <ul class="space-y-3">
-          {[
-            'In-house workroom and upholstery studio since 2000',
-            'Authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout',
-            'Measured and installed by our own named team, never a subcontractor',
-            'Florida-rated fabrics and finishes built for Gulf sun, humidity, and salt air',
-          ].map((point) => (
-            <li class="flex items-start gap-3 text-ink-700">
-              <svg class="w-5 h-5 text-brand-600 shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-              <span>{point}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <OwnerTip body="People ask me where to start when the whole house needs window treatments. I always say start with the room you live in most, usually the living room or the kitchen. We get that one right together, you see how the process feels, and then we roll through the rest of the house at your pace. There is no pressure to do it all at once." />
-      </div>
-    </div>
-  </section>
+  <h3>Hard Window Treatments</h3>
+  <ul>
+    <li><strong><a href="/services/plantation-shutters/">Plantation shutters</a>.</strong> Custom faux wood and basswood shutters built for Gulf sun, humidity, and salt air, fitted to the exact opening.</li>
+    <li><strong><a href="/services/custom-blinds/">Custom blinds</a>.</strong> Wood, faux wood, aluminum, and vertical blinds made to your windows for privacy and durability.</li>
+    <li><strong><a href="/services/outdoor-window-shades/">Outdoor window shades</a>.</strong> Exterior solar screens for lanais and pool cages, rated for wind and weather.</li>
+  </ul>
 
-  <ReviewSection />
+  <h3>Hardware, Upholstery &amp; Finishing</h3>
+  <ul>
+    <li><strong><a href="/services/drapery-hardware/">Drapery hardware</a>.</strong> Decorative rods, concealed tracks, rings, and finials matched to your home.</li>
+    <li><strong><a href="/services/furniture-reupholstery/">Furniture reupholstery</a></strong> and <strong><a href="/services/custom-bedding-pillows/">custom bedding and pillows</a>.</strong> The soft furnishings that complete a room, in fabrics that coordinate with your treatments.</li>
+  </ul>
 
-  <section class="py-16 md:py-20 bg-white">
-    <div class="container-narrow text-center">
-      <p class="eyebrow" style="letter-spacing: 0.3em;">Serving St. Petersburg &amp; Tampa Bay</p>
-      <h2 class="font-display text-3xl md:text-4xl text-ink-800 leading-tight mb-6">Window treatments across Pinellas County</h2>
-      <p class="text-ink-600 text-lg leading-relaxed">
-        We install custom window treatments throughout
-        <a href="/areas/st-petersburg/" class="text-brand-700 font-semibold underline underline-offset-4 hover:text-brand-800">St. Petersburg</a>,
-        <a href="/areas/downtown-st-pete/" class="text-brand-700 font-semibold underline underline-offset-4 hover:text-brand-800">Downtown St. Pete</a>,
-        <a href="/areas/west-st-pete/" class="text-brand-700 font-semibold underline underline-offset-4 hover:text-brand-800">West St. Pete</a>,
-        Snell Isle, Old Northeast, Shore Acres, St. Pete Beach, Treasure Island,
-        <a href="/areas/tierra-verde/" class="text-brand-700 font-semibold underline underline-offset-4 hover:text-brand-800">Tierra Verde</a>,
-        <a href="/areas/clearwater/" class="text-brand-700 font-semibold underline underline-offset-4 hover:text-brand-800">Clearwater</a>,
-        <a href="/areas/seminole/" class="text-brand-700 font-semibold underline underline-offset-4 hover:text-brand-800">Seminole</a>,
-        <a href="/areas/largo/" class="text-brand-700 font-semibold underline underline-offset-4 hover:text-brand-800">Largo</a>, and the wider Tampa Bay area. Not sure if we reach your neighborhood? Call <a href={SITE.phoneHref} class="text-brand-700 font-semibold underline underline-offset-4 hover:text-brand-800">{SITE.phone}</a>.
-      </p>
-    </div>
-  </section>
+  <OwnerTip body="People ask me where to start when the whole house needs treatments. I always say start with the room you live in most, usually the living room or the kitchen. We get that one right together, you see how the process feels, and then we roll through the rest of the house at your pace. There is no pressure to do it all at once." />
 
-  <FAQ items={FAQS} heading="Window Treatments in St. Petersburg, Frequently Asked Questions" eyebrow="Common Questions" subtitle="Answers about our custom window treatment process, pricing, and service area." />
+  <h2>Motorized &amp; Smart Window Treatments</h2>
+  <p>We install motorized shades, shutters, and drapery powered by Somfy and Hunter Douglas PowerView. Operate them from a wall switch, remote, phone app, or voice through Alexa and Google Assistant, and program scenes like shades down in the hot afternoon and up at sunset. Motorization is the practical choice for high windows, wide sliders, and whole-home automation.</p>
 
-  <FinalCTA />
-</BaseLayout>
+  <h2>Why St. Pete Homeowners Choose Us</h2>
+  <p>Most window treatment companies in St. Petersburg take your measurements, order from an out-of-state factory, and send a subcontractor when the truck arrives. We are built differently:</p>
+  <ul>
+    <li>In-house workroom and upholstery studio since 2000.</li>
+    <li>Authorized dealer for Hunter Douglas, Norman, Graber, Kravet, and Stout.</li>
+    <li>Measured and installed by our own named team, never a subcontractor.</li>
+    <li>Florida-rated fabrics and finishes for Gulf sun, humidity, and salt air.</li>
+  </ul>
+
+  <RelatedLink body="Comparing two treatments for the same window? Our custom drapery and plantation shutters pages walk through when each one wins, and when layering both is the right call." href="/services/plantation-shutters/" linkText="Compare drapery vs. shutters" />
+
+  <InlineReview tag="whole-home" label="What St. Pete homeowners say" />
+
+  <h2>How It Works</h2>
+  <ul>
+    <li><strong>Free in-home consultation.</strong> We bring the fabric library and samples to you, evenings and weekends included.</li>
+    <li><strong>Window-by-window plan.</strong> We assess each window's exposure and function and recommend the right treatment, soft, hard, or layered.</li>
+    <li><strong>Exact measurement and a written quote.</strong> Every measurement taken by our team, itemized per window.</li>
+    <li><strong>Custom fabrication and install.</strong> Built to your home's measurements and installed by our own crew, confirmed before we call it done.</li>
+  </ul>
+
+  <h2>Serving St. Petersburg &amp; Tampa Bay</h2>
+  <p>We install custom window treatments throughout <a href="/areas/st-petersburg/">St. Petersburg</a>, <a href="/areas/downtown-st-pete/">Downtown St. Pete</a>, <a href="/areas/west-st-pete/">West St. Pete</a>, Snell Isle, Old Northeast, Shore Acres, St. Pete Beach, <a href="/areas/tierra-verde/">Tierra Verde</a>, <a href="/areas/clearwater/">Clearwater</a>, <a href="/areas/seminole/">Seminole</a>, <a href="/areas/largo/">Largo</a>, and the wider Tampa Bay area. Not sure if we reach your neighborhood? Call (727) 914-5410.</p>
+</ServiceLayout>

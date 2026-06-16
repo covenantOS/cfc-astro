@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
+import AboutSection from '~/components/AboutSection.astro';
+import GalleryPreview from '~/components/GalleryPreview.astro';
+import DualLocationTrust from '~/components/DualLocationTrust.astro';
+import GlobalContactMap from '~/components/GlobalContactMap.astro';
+import ReviewSection from '~/components/ReviewSection.astro';
 import FinalCTA from '~/components/FinalCTA.astro';
 
 // Blog / resources index. Lists the site's long-form guides and articles.
@@ -103,6 +108,24 @@ const POSTS = [
       </div>
     </div>
   </section>
+
+  <AboutSection />
+
+  <GalleryPreview />
+
+  <section class="py-16 md:py-20 bg-cream-50">
+    <div class="container-site">
+      <div class="text-center max-w-2xl mx-auto mb-2">
+        <p class="eyebrow" style="letter-spacing: 0.3em;">Where to Find Us</p>
+        <h2 class="font-display text-3xl md:text-4xl text-ink-800 leading-tight">Two Google profiles, one local team</h2>
+      </div>
+      <DualLocationTrust heading="Serving St. Petersburg, with a studio in West St. Pete" />
+    </div>
+  </section>
+
+  <GlobalContactMap />
+
+  <ReviewSection />
 
   <FinalCTA />
 </BaseLayout>

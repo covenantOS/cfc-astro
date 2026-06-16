@@ -20,6 +20,7 @@ interface Props {
   heroShowRating?: boolean;
   heroTrustBar?: boolean;
   faqs?: Array<{ q: string; a: string }>;
+  breadcrumbs?: Array<{ name: string; url: string }>;
 }
 
 const {
@@ -35,9 +36,10 @@ const {
   heroShowRating,
   heroTrustBar,
   faqs,
+  breadcrumbs: breadcrumbsProp,
 } = Astro.props;
 
-const breadcrumbs = [
+const breadcrumbs = breadcrumbsProp ?? [
   { name: 'Home', url: '/' },
   { name: 'Services', url: '/services/' },
   { name: serviceTitle, url: `/services/${serviceSlug}/` },
