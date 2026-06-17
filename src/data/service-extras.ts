@@ -62,31 +62,9 @@ export interface ServiceExtras {
 
 export const SERVICE_EXTRAS: Record<string, ServiceExtras> = {
 
-  'custom-draperies-curtains': {
-    tip: {
-      // Tip B: locked by Daniel as the voice anchor on 2026-05-20.
-      body: 'Before I bring out the fabric library, I always ask clients to show me one thing in the room they already love. A pillow, a rug, a piece of art. We build the drape from that, not the other way around. It is a small step, but it is the difference between drapes that feel like part of the room and drapes that just hang in the window.',
-    },
-    featureList: {
-      items: [
-        { label: 'Florida-rated fabrics', body: 'UV-resistant weaves for west-facing rooms, mildew-resistant linings for screened porches, blackout for bedrooms.' },
-        { label: 'Custom lengths and stack-back', body: 'Built to your floor-to-rod measurement and your window framing, not a catalog standard.' },
-        { label: 'Hardware that fits the home', body: 'Concealed tracks, decorative rods, and finials matched to your architecture from Craftsman bungalow to modern condo.' },
-        { label: 'Layered with hard treatments', body: 'Drapery installed over shutters or shades when the room calls for both warmth and light control.' },
-      ],
-      columns: 2,
-    },
-    relatedLink: {
-      body: 'If your room needs both softness and precise light control, drapery over plantation shutters is the layered look we build most. Our plantation shutters page walks through how the two combine.',
-      href: '/services/plantation-shutters/',
-      linkText: 'See plantation shutters',
-    },
-    reviewTag: 'custom-draperies-curtains',
-    reviewLabel: 'What St. Pete homeowners say',
-    closingBanner: {
-      statement: 'Custom drapery built in our own St. Pete workroom. UV-rated fabrics. Hardware matched to the home. Hung by the installer who measured it.',
-    },
-  },
+  // custom-draperies-curtains is now an .mdx file with components interleaved
+  // inline throughout the article (same pattern as plantation-shutters), so it
+  // is intentionally NOT configured here. Adding it back would double-render.
 
   // window-shades is now an .mdx file with components interleaved inline
   // throughout the article (same pattern as plantation-shutters), so it is
