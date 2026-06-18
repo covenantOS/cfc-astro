@@ -5,7 +5,7 @@ const { pathname } = Astro.url;
 const isActive = (href: string) => pathname === href || (href !== '/' && pathname.startsWith(href));
 const location = getLocationForPath(pathname);
 
-const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'About', 'Contact'].includes(n.label));
+const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog', 'About', 'Contact'].includes(n.label));
 ---
 
 <!-- Utility top bar: reviews + service area + years + phone -->
