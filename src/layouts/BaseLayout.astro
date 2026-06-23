@@ -61,6 +61,42 @@ const ogImageUrl = new URL(ogImage, SITE.url).toString();
     <meta name="theme-color" content="#333333" />
     <meta name="facebook-domain-verification" content="a40pl8os7cpbgw9yd0aphm760d8t7y" />
 
+    <!-- Partytown service-worker kill-switch.
+         The site previously used @astrojs/partytown, which registered a
+         service worker that proxied dataLayer.push / gtag through a web
+         worker. That worker breaks GTM/GA4 event tracking on the live
+         site, and once registered it sticks around in visitors' browsers
+         even after the integration is removed. This script unregisters any
+         partytown service worker and clears its caches on first load, then
+         reloads once so the page comes up clean. Runs before GTM so GTM
+         loads normally on the main thread on the (post-reload) clean run. -->
+    <script is:inline>
+      (function () {
+        if (!("serviceWorker" in navigator)) return;
+        var ctrl = navigator.serviceWorker.controller;
+        var ptControlled = !!(ctrl && ctrl.scriptURL && ctrl.scriptURL.indexOf("partytown") !== -1);
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          return Promise.all(regs.map(function (r) {
+            var u = (r.active && r.active.scriptURL) || (r.waiting && r.waiting.scriptURL) || "";
+            return u.indexOf("partytown") !== -1 ? r.unregister() : null;
+          }));
+        }).then(function () {
+          if (window.caches && caches.keys) {
+            return caches.keys().then(function (keys) {
+              return Promise.all(keys.map(function (k) {
+                return k.toLowerCase().indexOf("partytown") !== -1 ? caches.delete(k) : null;
+              }));
+            });
+          }
+        }).then(function () {
+          if (ptControlled && !sessionStorage.getItem("pt_sw_cleared")) {
+            sessionStorage.setItem("pt_sw_cleared", "1");
+            location.reload();
+          }
+        }).catch(function () {});
+      })();
+    </script>
+
     <!-- Google Tag Manager -->
     <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
