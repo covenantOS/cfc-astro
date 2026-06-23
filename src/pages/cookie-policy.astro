@@ -1,0 +1,85 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import { SITE } from '~/lib/site';
+
+const lastUpdated = 'June 23, 2026';
+---
+
+<BaseLayout
+  title="Cookie Policy"
+  description={`Cookie Policy for ${SITE.name}. Learn what cookies we use, why we use them, and how you can control them.`}
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Cookie Policy', url: '/cookie-policy/' }]}
+>
+  <Hero
+    eyebrow="Legal"
+    title="Cookie Policy"
+    subtitle={`How ${SITE.name} uses cookies and similar technologies on our website.`}
+    image="/images/hero/homepage.webp"
+    breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Cookie Policy', url: '/cookie-policy/' }]}
+    goldLine
+  />
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container-site max-w-3xl mx-auto">
+      <p class="text-sm text-ink-500 mb-10">Last updated: {lastUpdated}</p>
+
+      <div class="prose-legal space-y-8 text-ink-700 leading-relaxed">
+        <p>
+          This Cookie Policy explains how {SITE.name} LLC (“{SITE.shortName}”, “we”, “us”, or “our”)
+          uses cookies and similar technologies when you visit
+          <a href={SITE.url} class="text-brand-600 hover:text-brand-500"> {SITE.url}</a>.
+          It should be read alongside our
+          <a href="/privacy-policy/" class="text-brand-600 hover:text-brand-500">Privacy Policy</a>,
+          which explains how we handle your personal information.
+        </p>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">What Are Cookies?</h2>
+          <p>Cookies are small text files placed on your device when you visit a website. They are widely used to make websites work, to remember your preferences, and to provide information to the site owners. Similar technologies such as pixels, tags, and local storage perform comparable functions, and we refer to all of them together as “cookies” in this policy.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">How We Use Cookies</h2>
+          <p>We use cookies to keep our website running properly, to understand how visitors use the site, and to measure the performance of our marketing so we can improve the experience for homeowners across St. Petersburg and Tampa Bay.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Types of Cookies We Use</h2>
+          <ul class="list-disc pl-6 mt-3 space-y-2">
+            <li><strong>Essential cookies.</strong> Needed for the website to function, such as page navigation and secure access. The site cannot work properly without them.</li>
+            <li><strong>Analytics cookies.</strong> Help us understand how visitors find and use our site, including pages viewed and referring sources. We use Google Analytics and Google Tag Manager for this.</li>
+            <li><strong>Marketing cookies.</strong> Used to measure the performance of our advertising and, where applicable, to show relevant content. This may include tools such as the Meta (Facebook) pixel.</li>
+            <li><strong>Preference cookies.</strong> Remember choices you make so the site can offer a more personalized experience on return visits.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Third-Party Cookies</h2>
+          <p>Some cookies are set by third-party services that appear on our pages, such as Google (Analytics, Tag Manager, and embedded Maps) and Meta. These providers may use cookies to collect information about your activity across websites. We do not control these third-party cookies, and we recommend reviewing the privacy and cookie policies of those providers for more detail.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Managing and Disabling Cookies</h2>
+          <p>You can control and delete cookies through your browser settings. Most browsers let you refuse cookies, delete existing ones, or alert you when a cookie is set. Please note that if you disable certain cookies, some parts of the website may not function as intended. For guidance, check the help section of your specific browser.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Changes to This Policy</h2>
+          <p>We may update this Cookie Policy from time to time to reflect changes in technology, law, or how we operate. The “Last updated” date at the top of this page reflects the most recent revision.</p>
+        </div>
+
+        <div>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 mb-3">Contact Us</h2>
+          <p>If you have questions about this Cookie Policy or how we use cookies, please contact us:</p>
+          <ul class="mt-3 space-y-1">
+            <li><strong>{SITE.name} LLC</strong></li>
+            <li>{SITE.address.locality}, {SITE.address.region}</li>
+            <li>Phone: <a href={SITE.phoneHref} class="text-brand-600 hover:text-brand-500">{SITE.phone}</a></li>
+            <li>Email: <a href={`mailto:${SITE.email}`} class="text-brand-600 hover:text-brand-500">{SITE.email}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

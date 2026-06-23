@@ -36,8 +36,10 @@ const breadcrumbs = [
   { name: config.name, url: `/areas/${config.slug}/` },
 ];
 
-const seoTitle = `${config.name} Window Treatments, Shutters & Drapery | Custom Fabric Creations`;
-const seoDescription = config.heroSubtitle;
+// Per-page SEO overrides (used by west-st-pete to keep its own targeted
+// title/meta); fall back to the shared template for any area without them.
+const seoTitle = config.seoTitle ?? `${config.name} Window Treatments, Shutters & Drapery | Custom Fabric Creations`;
+const seoDescription = config.metaDescription ?? config.heroSubtitle;
 ---
 
 <BaseLayout
@@ -67,7 +69,7 @@ const seoDescription = config.heroSubtitle;
         <p class="eyebrow" style="letter-spacing: 0.3em;">{config.introEyebrow}</p>
         <h2 class="font-display text-3xl md:text-4xl text-ink-800 leading-tight mb-6">{config.introHeading}</h2>
         {config.introParagraphs.map((p) => (
-          <p class="text-ink-600 leading-relaxed mb-4 text-[1.05rem]">{p}</p>
+          <p class="text-ink-600 leading-relaxed mb-4 text-[1.05rem]" set:html={p}></p>
         ))}
         <a href={location.phoneHref} class="btn-primary mt-4 inline-flex">Call {location.phone}</a>
       </div>
@@ -116,7 +118,7 @@ const seoDescription = config.heroSubtitle;
         <p class="eyebrow" style="letter-spacing: 0.3em;">Local Expertise</p>
         <h2 class="font-display text-3xl md:text-4xl text-ink-800 leading-tight mb-6">{config.challengesHeading}</h2>
         {config.challengesParagraphs.map((p) => (
-          <p class="text-ink-600 leading-relaxed mb-4 text-[1.05rem]">{p}</p>
+          <p class="text-ink-600 leading-relaxed mb-4 text-[1.05rem]" set:html={p}></p>
         ))}
       </div>
       <div class="bg-cream-50 border border-coffee-200/70 rounded-lg p-7 md:p-8 lg:mt-2">
@@ -179,6 +181,34 @@ const seoDescription = config.heroSubtitle;
       </div>
     </div>
   </section>
+
+  <!-- Local elements: directions, NAP, hours, local links (studio page only) -->
+  {config.localElements && (
+    <section class="py-16 md:py-20 bg-white">
+      <div class="container-site grid gap-10 lg:grid-cols-2 lg:gap-16 items-start max-w-6xl mx-auto">
+        <div>
+          <p class="eyebrow" style="letter-spacing: 0.3em;">Find Us</p>
+          <h2 class="font-display text-2xl md:text-3xl text-ink-800 leading-tight mb-6">{config.localElements.heading}</h2>
+          {config.localElements.paragraphs.map((p) => (
+            <p class="text-ink-600 leading-relaxed mb-4" set:html={p}></p>
+          ))}
+        </div>
+        {config.localElements.mapEmbedSrc && (
+          <div class="aspect-[4/3] overflow-hidden rounded-lg shadow-card lg:mt-2">
+            <iframe
+              src={config.localElements.mapEmbedSrc}
+              title={`Map to ${config.name}`}
+              class="w-full h-full"
+              style="border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        )}
+      </div>
+    </section>
+  )}
 
   <!-- Why choose CFC (trust points) -->
   <section class="py-16 md:py-20 bg-white">

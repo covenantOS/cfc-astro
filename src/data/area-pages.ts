@@ -33,6 +33,10 @@ export interface AreaPageConfig {
   slug: string;
   locationKey: 'central' | 'westStPete';
   name: string;
+  // Optional per-page SEO overrides. When omitted, AreaLanding falls back to
+  // the shared title template and the hero subtitle for the meta description.
+  seoTitle?: string;
+  metaDescription?: string;
   heroTitle: string;
   heroSubtitle: string;
   heroImage: string;
@@ -66,6 +70,14 @@ export interface AreaPageConfig {
   why: AreaCard[];
   statStatement: string;
   faqs: AreaFaq[];
+  // Optional local-SEO block (directions, NAP, hours, local links). Only
+  // rendered when present, so it shows on the studio-location page without
+  // appearing on other area pages.
+  localElements?: {
+    heading: string;
+    paragraphs: string[];
+    mapEmbedSrc?: string;
+  };
 }
 
 export const AREA_PAGES: Record<string, AreaPageConfig> = {
@@ -155,14 +167,16 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
     slug: 'west-st-pete',
     locationKey: 'westStPete',
     name: 'West St. Pete',
-    heroTitle: 'Custom Window Treatments in West St. Pete',
+    seoTitle: 'Custom Window Treatments in West St. Pete, St. Petersburg FL',
+    metaDescription: 'Need custom curtains, shades, or window treatments in St. Petersburg, FL? Choose Custom Fabric Creations - West St. Pete. Call us today and refresh your space!',
+    heroTitle: 'Custom Window Treatments in West St. Pete, St. Petersburg FL',
     heroSubtitle: 'Solar shades, drapery, plantation shutters, and reupholstery for West St. Pete homes, built for the wide windows and hard afternoon sun on this side of the city. In-home consultation, made in our own workroom.',
     heroImage: '/images/areas/west-st-pete.webp',
     introEyebrow: 'West St. Pete',
     introHeading: 'Window Treatments Built for the West-Side Sun',
     introParagraphs: [
       'West St. Pete leans mid-century, which usually means wide windows, big sliders, and a lot of west-facing glass. The afternoon sun here is relentless, and it fades furniture and drives up cooling bills faster than most homeowners expect.',
-      'We design around that. The right mix of solar shades, drapery, and shutters keeps these rooms cool and livable without giving up the light or the view, and every piece is built and installed by our own St. Pete team.',
+      'We design around that. The right mix of solar shades, drapery, and shutters keeps these rooms cool and livable without giving up the light or the view, and we can add <a href="/services/outdoor-window-shades/">outdoor shades for the lanai</a> or new <a href="/services/drapery-hardware/">drapery hardware</a> in the same visit. Every piece is built and installed by our own St. Pete team.',
     ],
     introImage: '/images/areas/west-st-pete.webp',
     needsHeading: 'What West St. Pete Homeowners Need From Custom Fabric Creations',
@@ -176,7 +190,7 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
     challengesHeading: 'Window Challenges Specific to West St. Pete',
     challengesParagraphs: [
       'West St. Pete homes catch the worst of the day. The low afternoon sun pours straight through west-facing glass, driving up indoor temperatures, spiking cooling bills, and bleaching everything it touches, from hardwood floors to upholstery to artwork.',
-      'The architecture adds to it. This side of the city leans mid-century, with wide windows, banks of jalousies replaced by modern glass, and big sliding doors built for indoor-outdoor living. Those openings are wonderful for light and views, and brutal without the right treatment to manage the heat.',
+      'The architecture adds to it. This side of the city leans mid-century, with wide windows, banks of jalousies replaced by modern glass, and big sliding doors built for indoor-outdoor living. Those openings are wonderful for light and views, and brutal without the right treatment to manage the heat. We handle homes and <a href="/services/commercial-window-treatments/">West St. Pete commercial spaces</a> alike, and our in-house <a href="/services/services-interior-decor-tampa/">design team</a> helps you choose fabrics that hold up to the sun.',
     ],
     challengesList: [
       'Intense west-facing afternoon sun and heat gain',
@@ -186,7 +200,7 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
       'Keeping the view and the light while cutting the heat',
     ],
     servicesHeading: 'What We Offer in West St. Pete',
-    treatmentsHeading: 'Popular Treatments in West St. Pete Homes',
+    treatmentsHeading: 'Popular Window Treatments in West St. Pete Homes',
     treatmentsIntro: 'The treatments that work hardest on the west side, and what each one does here.',
     treatments: [
       { title: 'Window Shades', href: '/services/window-shades/', body: 'Solar and cellular shades that block heat and glare on west-facing windows while you keep looking out through the fabric.' },
@@ -194,7 +208,7 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
       { title: 'Plantation Shutters', href: '/services/plantation-shutters/', body: 'Adjustable louvers that redirect the afternoon sun without closing the room off, built in humidity-proof faux wood.' },
       { title: 'Furniture Reupholstery', href: '/services/furniture-reupholstery/', body: 'Bring sun-faded seating back to life in durable performance fabrics, coordinated with your new treatments.' },
     ],
-    processHeading: 'How It Works in West St. Pete',
+    processHeading: 'How Our Custom Window Treatment Process Works in West St. Pete',
     processIntro: 'A straightforward process, from the first call to the final walk-through.',
     process: [
       { title: 'Free in-home consultation', body: 'We come to you with samples and look at each window in its real light and exposure, west-facing rooms included.' },
@@ -215,7 +229,7 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
       { name: 'Broadwater' },
       { name: 'Yacht Club Estates' },
     ],
-    whyHeading: 'Why West St. Pete Homeowners Choose Custom Fabric Creations',
+    whyHeading: 'Why West St. Pete Homeowners Choose Custom Fabric Creations for Window Treatments',
     why: [
       { title: 'In-house workroom since 2000', body: 'Design, fabrication, and finishing on-site, so changes and touch-ups are handled locally, not shipped off to a factory.' },
       { title: 'Installers who do only this', body: 'Our own crew handles oversized sliders, panel tracks, and motorized systems that big-box installers struggle with.' },
@@ -231,6 +245,16 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
       { q: 'Can you help with both window treatments and reupholstery?', a: 'Yes. Because we run our own workroom, we can do shades or drapery and reupholster the seating in the same project, with coordinated fabrics, instead of juggling two vendors.' },
       { q: 'Do you offer in-home consultations on the west side?', a: 'Always. We bring samples and measure on-site anywhere in West St. Pete. The consultation is free and there is no obligation.' },
     ],
+    localElements: {
+      heading: 'Recommended Custom Window Treatment Nearby St. Petersburg, FL',
+      paragraphs: [
+        'Custom Fabric Creations - West St. Pete is located at 3026 Central Ave Ste 551, St. Petersburg, FL 33712, inside The UPS Store at Union Central.',
+        'By bus from downtown St. Petersburg, walk to the nearest Central Avenue Trolley stop heading west toward Grand Central Station, ride the trolley westbound to Grand Central Station, then walk a short distance east along Central Avenue to 3026 Central Ave, Ste 551. Approximate travel time is about 20 to 30 minutes.',
+        'By car from downtown St. Petersburg, turn onto Central Avenue heading west and continue for about 3 miles through the Grand Central District toward the 3000 block of Central Avenue. We are near Grand Central Station, inside The UPS Store at Union Central. Approximate travel time is about 8 to 12 minutes.',
+        'We are open Monday to Saturday, 8:00 am to 8:00 pm. For additional questions, call us at <a href="tel:+17274982108" class="text-brand-600 hover:text-brand-500">(727) 498-2108</a>, view our <a href="https://maps.app.goo.gl/nW5bBDCo9JzXZxDAA" target="_blank" rel="noopener" class="text-brand-600 hover:text-brand-500">Google Business Profile and reviews</a>, or learn more about <a href="https://www.stpete.org/" target="_blank" rel="noopener" class="text-brand-600 hover:text-brand-500">St. Petersburg, FL</a>.',
+      ],
+      mapEmbedSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.8516056695953!2d-82.6745832!3d27.770749199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e393f8590999%3A0x64ca3e3655289bc0!2sCustom%20Fabric%20Creations%20-%20West%20St.%20Pete!5e1!3m2!1sen!2s!4v1781594546552!5m2!1sen!2s',
+    },
   },
 };
 

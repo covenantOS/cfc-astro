@@ -49,7 +49,7 @@ const review = REVIEWS.find((r) => r.id === 'joann-johnson') ?? getFeaturedRevie
     </div>
 
     <div>
-      <h2 class="text-brand-400 font-display text-xl mb-5">Website</h2>
+      <p class="text-brand-400 font-display text-xl mb-5">Website</p>
       <ul class="space-y-3 text-sm">
         <li><a href="/" class="text-white/80 hover:text-brand-300">Home</a></li>
         <li><a href="/about/" class="text-white/80 hover:text-brand-300">About</a></li>
@@ -66,7 +66,7 @@ const review = REVIEWS.find((r) => r.id === 'joann-johnson') ?? getFeaturedRevie
     </div>
 
     <div>
-      <h2 class="text-brand-400 font-display text-xl mb-5">Services</h2>
+      <p class="text-brand-400 font-display text-xl mb-5">Services</p>
       <ul class="space-y-3 text-sm">
         {SERVICES.slice(0, 5).map((s) => (
           <li><a href={`/services/${s.slug}/`} class="text-white/80 hover:text-brand-300">{s.title}</a></li>
@@ -82,7 +82,7 @@ const review = REVIEWS.find((r) => r.id === 'joann-johnson') ?? getFeaturedRevie
 
     <!-- Areas + integrated trust block (rating, review, contact facts) -->
     <div>
-      <h2 class="text-brand-400 font-display text-xl mb-5">Areas</h2>
+      <p class="text-brand-400 font-display text-xl mb-5">Areas</p>
       <ul class="space-y-3 text-sm">
         {AREAS.slice(0, 5).map((a) => (
           <li><a href={`/areas/${a.slug}/`} class="text-white/80 hover:text-brand-300">{a.title}</a></li>
@@ -143,6 +143,7 @@ const review = REVIEWS.find((r) => r.id === 'joann-johnson') ?? getFeaturedRevie
       </p>
       <div class="flex items-center gap-5 text-white/70 order-3">
         <a href="/privacy-policy/" class="hover:text-brand-300">Privacy Policy</a>
+        <a href="/cookie-policy/" class="hover:text-brand-300">Cookie Policy</a>
         <a href="/terms-and-conditions/" class="hover:text-brand-300">Terms &amp; Conditions</a>
         <span class="inline-flex items-center gap-1.5">
           <svg class="w-4 h-4 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>

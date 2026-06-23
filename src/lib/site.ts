@@ -9,6 +9,12 @@ export const LOCATIONS = {
     areaSlug: 'st-petersburg',
     phone: '(727) 914-5410',
     phoneHref: 'tel:+17279145410',
+    // Mon-Sat 9-5 (Sunday closed by omission).
+    openingHours: {
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
   },
   westStPete: {
     id: 'west-st-pete',
@@ -16,6 +22,12 @@ export const LOCATIONS = {
     areaSlug: 'west-st-pete',
     phone: '(727) 498-2108',
     phoneHref: 'tel:+17274982108',
+    // West St. Pete GBP: Mon-Sat 8am-8pm, Sunday closed.
+    openingHours: {
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '08:00',
+      closes: '20:00',
+    },
   },
 } as const;
 

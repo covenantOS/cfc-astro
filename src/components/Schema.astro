@@ -192,6 +192,14 @@ if (pageType === 'area' && areaTitle) {
     areaServed: { '@type': 'City', name: areaTitle },
     telephone: `+1-${branchLocation.phone.replace(/[^\d]/g, '')}`,
     priceRange: '$$$',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: branchLocation.openingHours.dayOfWeek,
+        opens: branchLocation.openingHours.opens,
+        closes: branchLocation.openingHours.closes,
+      },
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: areaTitle,
