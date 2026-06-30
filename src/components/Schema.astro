@@ -74,9 +74,17 @@ const localBusiness = {
       closes: '17:00',
     },
   ],
-  // aggregateRating intentionally omitted: no verified review count shown
-  // anywhere on the site (client decision 2026-05-20). Re-add when a real
-  // GBP count is confirmed.
+  // Combined rating across CFC's two verified Google Business Profiles, both
+  // 5.0: the service-area profile (18 reviews) + the West St. Pete studio
+  // (11 reviews) = 29. These counts are shown on-page via DualLocationTrust,
+  // so the markup matches visible content (Google requirement).
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: 29,
+    bestRating: '5',
+    worstRating: '1',
+  },
   areaServed: [
     ...AREAS.map((a) => ({ '@type': 'City', name: a.title })),
     {

@@ -74,7 +74,7 @@ export const NAV: ReadonlyArray<{ label: string; href: string; children?: Readon
     label: 'Services',
     href: '/services/',
     children: [
-      { label: 'Window Treatments (Overview)', href: '/window-treatments-st-petersburg/', featured: true },
+      { label: 'Window Treatments', href: '/window-treatments-st-petersburg/' },
       { label: 'Custom Drapery & Curtains', href: '/services/custom-draperies-curtains/' },
       { label: 'Plantation Shutters', href: '/services/plantation-shutters/' },
       { label: 'Window Shades', href: '/services/window-shades/' },
