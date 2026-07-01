@@ -1,0 +1,46 @@
+---
+// "Recent work" image strip for area pages. Pulls a rotated slice of the
+// shared project-image pool and frames it with the area name for local SEO.
+// Small cards, so the 500px source images stay crisp. Existing location hero
+// images are untouched; this is additive only.
+import { getAreaProjectImages } from '~/data/project-images';
+
+interface Props {
+  areaSlug: string;
+  areaTitle: string;
+  count?: number;
+}
+
+const { areaSlug, areaTitle, count = 3 } = Astro.props;
+const images = getAreaProjectImages(areaSlug, count);
+---
+
+<section class="py-14 md:py-20 bg-cream-50">
+  <div class="container-site max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <p class="eyebrow" style="letter-spacing: 0.3em;">Our Work</p>
+      <h2 class="font-display text-2xl md:text-3xl lg:text-4xl text-ink-800 leading-tight">
+        Recent Projects Near {areaTitle}
+      </h2>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-3">
+      {images.map((it) => (
+        <a href="/gallery/" class="group relative block aspect-[4/3] overflow-hidden rounded-lg shadow-card">
+          <img
+            src={it.img}
+            alt={`${it.title} by Custom Fabric Creations in ${areaTitle}, FL`}
+            title={`${it.title} | Custom Fabric Creations, ${areaTitle}, FL`}
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-[1.04]"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-ink-900/10 to-transparent"></div>
+          <span class="absolute bottom-4 left-4 text-white font-display text-lg drop-shadow">{it.title}</span>
+        </a>
+      ))}
+    </div>
+    <div class="text-center mt-8">
+      <a href="/gallery/" class="btn-primary">View Full Gallery</a>
+    </div>
+  </div>
+</section>

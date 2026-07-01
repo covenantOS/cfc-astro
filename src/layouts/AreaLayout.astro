@@ -4,6 +4,7 @@ import Hero from '~/components/Hero.astro';
 import ServiceSidebar from '~/components/ServiceSidebar.astro';
 import GlobalContactMap from '~/components/GlobalContactMap.astro';
 import ServiceGrid from '~/components/ServiceGrid.astro';
+import AreaWorkStrip from '~/components/AreaWorkStrip.astro';
 import FAQ from '~/components/FAQ.astro';
 import { getLocationForArea } from '~/lib/site';
 
@@ -58,6 +59,8 @@ const location = getLocationForArea(areaSlug);
     breadcrumbs={breadcrumbs}
     goldLine
   />
+
+  <AreaWorkStrip areaSlug={areaSlug} areaTitle={areaTitle} />
 
   <section class="py-16 md:py-20 bg-white">
     <div class="container-site grid gap-10 lg:grid-cols-[380px_1fr] lg:gap-16 items-start">

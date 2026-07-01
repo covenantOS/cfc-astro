@@ -11,6 +11,7 @@ import BaseLayout from '~/layouts/BaseLayout.astro';
 import Hero from '~/components/Hero.astro';
 import ServiceGrid from '~/components/ServiceGrid.astro';
 import ReviewSection from '~/components/ReviewSection.astro';
+import AreaWorkStrip from '~/components/AreaWorkStrip.astro';
 import FAQ from '~/components/FAQ.astro';
 import GlobalContactMap from '~/components/GlobalContactMap.astro';
 import { getLocationForArea } from '~/lib/site';
@@ -61,6 +62,8 @@ const seoDescription = config.metaDescription ?? config.heroSubtitle;
     breadcrumbs={breadcrumbs}
     goldLine
   />
+
+  <AreaWorkStrip areaSlug={config.slug} areaTitle={config.name} />
 
   <!-- Intro / why this location -->
   <section class="py-16 md:py-24 bg-white">
