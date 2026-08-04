@@ -115,6 +115,7 @@ export const SERVICES = [
   { slug: 'custom-cornices-valances', title: 'Cornices & Valances' },
   { slug: 'drapery-hardware', title: 'Drapery Hardware' },
   { slug: 'outdoor-window-shades', title: 'Outdoor Window Shades' },
+  { slug: 'motorized-shades', title: 'Motorized Shades' },
   { slug: 'furniture-reupholstery', title: 'Furniture Reupholstery' },
   { slug: 'custom-bedding-pillows', title: 'Custom Bedding & Pillows' },
   { slug: 'custom-banquettes', title: 'Custom Banquettes' },
