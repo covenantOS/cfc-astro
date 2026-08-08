@@ -1,0 +1,136 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import FAQ from '~/components/FAQ.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+
+const faqs = [
+  { "q": "What is a plantation shutter?", "a": "A plantation shutter is a solid interior window covering built as a rigid panel: a frame around the window, vertical stiles and horizontal rails forming the panel, and wide horizontal louvers that pivot open and closed on a tilt rod. Unlike a blind or a shade, it is a fixed piece of joinery mounted to the window, closer to furniture than to fabric." },
+  { "q": "Why are they called plantation shutters?", "a": "The name comes from the wide-louvered shutters used on large plantation houses in the American South and the Caribbean in the 18th and 19th centuries. Wide louvers moved more air and blocked more overhead sun than the narrow slats common in Europe at the time, which mattered in hot, humid climates. The name stuck to describe the wide-louver style rather than any particular manufacturer." },
+  { "q": "What are plantation shutters made of?", "a": "Three common materials. Basswood is real hardwood, light and stable, and takes paint and stain well. Faux wood is solid PVC or vinyl, waterproof and the usual pick for bathrooms and kitchens. Composite is an engineered core wrapped in a hard finish, sitting between the two on price and weight. In Florida, moisture resistance drives the decision more than anywhere else." },
+  { "q": "What louver size should I choose?", "a": "Louvers usually come in 2.5, 3.5, and 4.5 inch widths. Wider louvers mean fewer of them across the panel, so you get more open sightline and more light when they are tilted open. Narrower louvers give a more traditional look and suit smaller windows. For most modern rooms with a view worth keeping, 3.5 inch is the common middle ground and 4.5 inch is the choice when light matters most." },
+  { "q": "What is the difference between plantation shutters and blinds?", "a": "A blind is a stack of thin slats on cords that raises and lowers, and it lives in the window opening as a separate object. A plantation shutter is a rigid panel hinged to a frame that is fixed to the window; it does not raise, it swings open. Shutters cost more, last far longer, and read as part of the architecture. Blinds are cheaper, faster to install, and easier to replace." },
+  { "q": "Are plantation shutters worth it?", "a": "They make sense if you plan to stay in the home several years, because a good shutter lasts 15 to 20 years and the cost spreads out over that time. They are strong on sun-facing windows, bathrooms, and street-facing rooms where privacy matters. They are a weaker choice for rentals, homes you are selling soon, or rooms where you want the window to feel open and uninterrupted." },
+  { "q": "How much do plantation shutters cost?", "a": "Custom plantation shutters generally run a few hundred to around a thousand dollars per window installed, depending on material, louver size, window shape, and how the panels are configured. Faux wood on a standard window sits at the lower end; basswood on a tall or specialty-shaped opening sits higher. Any real number has to come from a measurement." },
+  { "q": "Do plantation shutters need much maintenance?", "a": "Mostly dusting. Every louver is a flat surface that collects dust, so a microfiber duster or a vacuum brush attachment once a month keeps them looking new. Faux wood can be wiped down with a damp cloth, which is why it is the standard pick for bathrooms and kitchens. There are no cords to replace and no fabric to fade." }
+];
+---
+
+<BaseLayout
+  title="What Is a Plantation Shutter? Parts, Materials & Cost"
+  description="A plantation shutter explained by people who build them: the parts, why the louver size matters, basswood vs faux wood, how they differ from blinds, and what they cost."
+  pageType="article"
+  articleDate="2026-08-08"
+  faqs={faqs}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Guides', url: '/blog/' },
+    { name: 'What Is a Plantation Shutter?', url: '/what-is-a-plantation-shutter/' },
+  ]}
+  ogImage="/images/hero/plantation-shutters.webp"
+>
+  <Hero
+    eyebrow="Guide"
+    title="What Is a Plantation Shutter?"
+    image="/images/hero/plantation-shutters.webp"
+    breadcrumbs={[
+      { name: 'Home', url: '/' },
+      { name: 'Plantation Shutters', url: '/services/plantation-shutters/' },
+      { name: 'Guide', url: '/what-is-a-plantation-shutter/' },
+    ]}
+    goldLine
+  />
+
+  <article class="py-20 md:py-28 bg-white">
+    <div class="container-narrow prose-cfc">
+
+  <p>A plantation shutter is a solid interior window covering built as a rigid panel. There is a frame fixed around the window opening, vertical stiles and horizontal rails forming each panel, and wide horizontal louvers that pivot open and closed. The panels are hinged, so they swing rather than raise.</p>
+
+  <p>That last part is what separates a shutter from everything else on a window. A blind or a shade is an object sitting in the opening that you raise out of the way. A shutter is joinery attached to the house. We build and install <a href="/services/plantation-shutters/">plantation shutters</a> across St. Petersburg, and the way clients talk about them gives it away: nobody says they are "putting up" shutters, they say they are "having them installed," the same way they would talk about cabinets.</p>
+
+  <h2>The parts, and why each one matters</h2>
+
+  <p>Once you know the anatomy, quotes and product pages stop being confusing.</p>
+
+  <ul>
+    <li><strong>Frame.</strong> The outer piece fixed to the window opening or the surrounding wall. It hides the gap between the panel and the wall and gives the shutter its finished, built-in look. Frame style is why two shutters at the same price can look completely different.</li>
+    <li><strong>Stiles.</strong> The vertical members on each side of a panel. They carry the hinges and the louver pivots.</li>
+    <li><strong>Rails.</strong> The horizontal members at the top and bottom, and sometimes a divider rail across the middle. A divider rail lets the top and bottom halves of the shutter operate independently, so you can close the bottom for privacy from the sidewalk and leave the top open for light.</li>
+    <li><strong>Louvers.</strong> The horizontal slats that tilt. Everything about how a shutter performs comes back to these.</li>
+    <li><strong>Tilt rod.</strong> The mechanism that moves the louvers together. A traditional tilt rod runs down the center of the panel. A hidden tilt rod moves the linkage inside the stile, which clears the sightline and is what most people want on a window with a view.</li>
+  </ul>
+
+  <h2>Louver width changes the whole feel</h2>
+
+  <p>Louvers come in three common widths: 2.5, 3.5, and 4.5 inches. The wider the louver, the fewer of them cross the panel, and the more open the window feels when they are tilted up.</p>
+
+  <p>This is the decision people most often get wrong. A 2.5 inch louver reads traditional and works on small or historic windows, but on a wide window it puts a lot of horizontal lines across the glass. A 4.5 inch louver on the same window feels closer to an open sightline. In a room that already feels dim, moving up a louver size does more for the light than changing the paint color.</p>
+
+  <p>Even fully open, a shutter still covers roughly a third of the window opening between the frame, the rails, and the louver edges. That is the tradeoff nobody mentions on the showroom floor, and it is worth knowing before you commit. We wrote about it honestly in our guide to <a href="/plantation-shutters-regret-downsides/">why some homeowners regret plantation shutters</a>.</p>
+
+  <h2>Basswood, faux wood, or composite</h2>
+
+  <p>Three materials cover almost the whole market.</p>
+
+  <p><strong>Basswood</strong> is real hardwood. It is light for its strength, which matters because a tall panel made of something heavy will sag on its hinges over the years. It takes paint and stain cleanly, so it is the pick when you want a specific finish or a stained wood look.</p>
+
+  <p><strong>Faux wood</strong> is solid PVC or vinyl. It is waterproof, it does not warp, and you can wipe it down. In Florida that matters more than it does most places. Bathrooms, kitchens, laundry rooms, and any window that gets left open in August are faux wood territory. The tradeoff is weight, which limits how wide a single panel can span before you need to split it.</p>
+
+  <p><strong>Composite</strong> is an engineered core with a hard exterior finish, landing between the other two on both price and moisture resistance.</p>
+
+  <p>Humidity and salt air do the deciding here more than style does. On the barrier islands and anywhere near the water, we lean faux wood or composite on the exposed side of the house and save basswood for the interior rooms. You can see the brands we work with, including Norman and Graber, on our <a href="/brands/">brands page</a>.</p>
+
+  <h2>How panels are configured</h2>
+
+  <p>The panel layout is the other half of the specification, and it is set by the opening rather than by taste.</p>
+
+  <ul>
+    <li><strong>Hinged panels</strong> swing open like small doors. The standard for most windows.</li>
+    <li><strong>Bi-fold panels</strong> fold against each other, which keeps a wide opening from needing enormous swing clearance.</li>
+    <li><strong>Bypass panels</strong> slide on a track past one another, the usual answer for a sliding glass door or a wide patio slider.</li>
+    <li><strong>Cafe style</strong> covers only the lower half of the window, leaving the top bare for light. Common on street-facing windows in older neighborhoods.</li>
+  </ul>
+
+  <p>Mounting matters too. An inside mount sits within the window opening and shows the trim, which looks cleaner when the opening is square and deep enough. An outside mount sits on the wall around the opening and is the fix for windows that are shallow or out of square, which describes a lot of older <a href="/areas/st-petersburg/">St. Petersburg</a> housing stock. Deciding between them is a measurement question, not a preference, which is covered in our walkthrough of <a href="/plantation-shutters-installation-st-petersburg/">what actually happens during installation</a>.</p>
+
+  <h2>Where the name comes from</h2>
+
+  <p>The style traces back to the wide-louvered shutters used on large houses in the American South and the Caribbean in the 18th and 19th centuries. Wide louvers moved more air and cut more overhead sun than the narrow slats common in Europe, which is exactly what you want in a hot, humid climate. The name now describes the wide-louver style rather than any particular maker or era.</p>
+
+  <h2>Shutters compared to the alternatives</h2>
+
+  <p>A shutter is not always the right answer, and knowing when it is not saves money.</p>
+
+  <p>Against <a href="/services/custom-blinds/">blinds</a>: shutters cost more, last far longer, and become part of the architecture. Blinds are cheaper, quicker, and easy to swap. On a rental or a house you are selling in two years, blinds usually win on math alone.</p>
+
+  <p>Against <a href="/services/window-shades/">shades</a>: a solar or roller shade disappears when raised, which is the argument for shades on a waterfront window where the view is the point. A shutter is always visible. Where the sun is the problem rather than the view, a shade or an exterior screen often does more for less.</p>
+
+  <p>Against <a href="/services/custom-draperies-curtains/">drapery</a>: fabric softens a room in a way a hard panel cannot. Plenty of rooms end up with both, shutters for the light and privacy, drapery for the warmth.</p>
+
+  <p>There is also a middle path people forget: shutters on the rooms that need privacy and sun control, <a href="/services/motorized-shades/">motorized shades</a> on the big sliders where you want the glass to clear completely. Doing one thing everywhere is how quotes get expensive without making the house better.</p>
+
+  <h2>Cost, in the honest version</h2>
+
+  <p>Custom plantation shutters generally run from a few hundred dollars to around a thousand per window installed. Faux wood on a standard rectangular window sits near the bottom. Basswood on a tall window, an arch, or an opening that needs several panels sits near the top.</p>
+
+  <p>The variables are material, louver size, how many panels the opening requires, specialty shapes, and the finish. Any quote given before someone has measured your windows is a guess. We break down local pricing in more detail in our guide to <a href="/plantation-shutters-cost-st-petersburg/">plantation shutter cost in St. Petersburg</a>.</p>
+
+  <h2>Living with them</h2>
+
+  <p>Maintenance is dusting. Every louver is a flat surface, so a microfiber duster or a vacuum brush attachment once a month keeps them looking new. Faux wood takes a damp cloth. There are no cords to fray, no fabric to fade, and no mechanism that wears out, which is a large part of why a well-built shutter is still working after fifteen or twenty years.</p>
+
+  <p>If you want to see how different louver widths and finishes look in real rooms rather than in a catalog, our <a href="/gallery/">project gallery</a> has installations across Pinellas County.</p>
+
+  <p>For a room-by-room read on where shutters make sense in your own home and where something else would serve you better, we do free in-home consultations across St. Pete, Clearwater, and Pinellas County. <a href="/contact/">Schedule a consultation</a> or call (727) 914-5410.</p>
+
+      <div class="mt-12 p-8 bg-cream-50 border-l-4 border-brand-500">
+        <h3 class="font-display text-2xl text-ink-800 mb-3">Questions About Your Project?</h3>
+        <p class="text-ink-600 mb-5">Call <a href="tel:+17279145410">(727) 914-5410</a> or <a href="/contact/">schedule a free in-home consultation</a>.</p>
+      </div>
+    </div>
+  </article>
+
+  {faqs.length > 0 && <FAQ items={faqs} heading="Frequently Asked Questions" eyebrow="FAQ" subtitle="Common questions about plantation shutters." />}
+
+  <FinalCTA />
+</BaseLayout>
