@@ -13,7 +13,7 @@ interface Props {
 const {
   eyebrow = 'Our Story',
   heading = 'Over 25 Years of Bespoke Interior Design',
-  body = 'We opened our doors in 2000 with a clear mission to provide St. Petersburg homeowners with uncompromising quality in custom window treatments and upholstery. Operating from our dedicated local workroom, we bypass mass production to focus entirely on precision tailoring. By bringing our curated designer showroom directly to your living space, we ensure every fabric selection perfectly complements your natural lighting and exact architectural style.',
+  body = 'We opened our doors in 2000 with a clear mission to provide St. Petersburg homeowners with uncompromising quality in <a href="/window-treatments-st-petersburg/">custom window treatments</a> and <a href="/services/furniture-reupholstery/">upholstery</a>. Operating from our dedicated local workroom in <a href="/areas/west-st-pete/">West St. Pete</a>, we bypass mass production to focus entirely on precision tailoring. By bringing our curated designer showroom directly to your living space, we ensure every fabric selection perfectly complements your natural lighting and exact architectural style.',
   pills = ['25+ Years Exp.', 'Local Workroom', 'Fully Insured'],
   image = '/images/services/custom-bedding-pillows/hero.webp',
   imageAlt = 'Custom bedding, pillows, and drapery designed and installed by Custom Fabric Creations in a St. Petersburg, FL home',
@@ -48,7 +48,7 @@ const {
       <h2 class="font-display text-4xl md:text-5xl text-ink-800 leading-tight mb-6">{heading}</h2>
       <div class="mb-8 space-y-4">
         {body.split('\n\n').map((para) => (
-          <p class="text-ink-500 leading-relaxed text-lg">{para}</p>
+          <p class="text-ink-500 leading-relaxed text-lg [&_a]:text-brand-600 [&_a:hover]:text-brand-500 [&_a]:underline [&_a]:underline-offset-2" set:html={para} />
         ))}
       </div>
 

@@ -13,7 +13,7 @@ interface Props {
 const {
   heading = 'St. Pete & Pinellas Neighborhoods We Serve',
   eyebrow = 'Our service area',
-  subtitle = 'Based in St. Petersburg, we bring the studio to homes across Pinellas County. Click any neighborhood to see local examples and book a complimentary in-home consultation.',
+  subtitle = 'Based in <a href="/areas/st-petersburg/">St. Petersburg</a> with a second studio in <a href="/areas/west-st-pete/">West St. Pete</a>, we bring the workroom to homes across Pinellas County. Click any neighborhood to see local examples and book a complimentary <a href="/contact/">in-home consultation</a>.',
   background = 'cream',
 } = Astro.props;
 
@@ -26,7 +26,7 @@ const tileBg = background === 'cream' ? 'bg-white' : 'bg-cream-50';
     <div class="text-center max-w-2xl mx-auto mb-12 md:mb-14">
       {eyebrow && <p class="eyebrow" style="letter-spacing: 0.3em;">{eyebrow}</p>}
       <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-ink-800 leading-tight mb-5">{heading}</h2>
-      {subtitle && <p class="text-ink-500 leading-relaxed">{subtitle}</p>}
+      {subtitle && <p class="text-ink-500 leading-relaxed [&_a]:text-brand-600 [&_a:hover]:text-brand-500 [&_a]:underline [&_a]:underline-offset-2" set:html={subtitle} />}
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">

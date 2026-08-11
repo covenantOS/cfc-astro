@@ -13,7 +13,7 @@ interface Props {
 const {
   heading = 'Bespoke Window Treatments and Master Upholstery',
   eyebrow = 'Premium Interior Solutions',
-  subtitle = 'We deliver flawless window styling and custom furniture restoration across St. Pete and the Pinellas coast. Backed by over 25 years of precision craftsmanship and trusted by hundreds of local homeowners.',
+  subtitle = 'We deliver flawless window styling and custom furniture restoration across <a href="/areas/st-petersburg/">St. Pete</a> and the Pinellas coast, from <a href="/services/custom-draperies-curtains/">custom drapery</a> to <a href="/services/plantation-shutters/">plantation shutters</a>. Backed by over 25 years of precision craftsmanship and trusted by hundreds of local homeowners.',
   limit,
   slugs,
   // Show the "View All Services" button when we're only showing a subset
@@ -67,7 +67,7 @@ const SERVICE_CARD_LABELS: Record<string, string> = {
     <div class="text-center max-w-3xl mx-auto mb-14">
       {eyebrow && <p class="eyebrow" style="letter-spacing: 0.3em;">{eyebrow}</p>}
       <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-ink-800 mb-5">{heading}</h2>
-      {subtitle && <p class="text-ink-500 text-lg leading-relaxed">{subtitle}</p>}
+      {subtitle && <p class="text-ink-500 text-lg leading-relaxed [&_a]:text-brand-600 [&_a:hover]:text-brand-500 [&_a]:underline [&_a]:underline-offset-2" set:html={subtitle} />}
     </div>
 
     <div class="grid gap-8 md:grid-cols-2">

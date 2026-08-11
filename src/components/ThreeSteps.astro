@@ -8,7 +8,7 @@ const steps = [
   {
     n: '1',
     title: 'Free In-Home Consultation',
-    body: 'We bring the designer fabric library and samples to your living room, evenings and weekends included. You see everything in your actual light, with no showroom trip and no pressure.',
+    body: 'We bring the designer fabric library and samples to your living room, evenings and weekends included, anywhere across <a href="/areas/">Pinellas County</a>. You see everything in your actual light, with no showroom trip and no pressure. <a href="/contact/">Book a free consultation</a> whenever you are ready.',
     icon: 'calendar',
   },
   {
@@ -20,7 +20,7 @@ const steps = [
   {
     n: '3',
     title: 'White-Glove Installation',
-    body: 'Our own team installs and finishes the job, never a subcontractor. We level, adjust, and confirm the fit, and you do not sign off until everything is perfect.',
+    body: 'Our own team installs and finishes the job, never a subcontractor. We level, adjust, and confirm the fit, including <a href="/services/motorized-shades/">motorized shades</a> that need their travel limits set. See finished work in our <a href="/gallery/">project gallery</a>.',
     icon: 'check',
   },
 ];
@@ -57,7 +57,7 @@ const steps = [
             <span class="absolute -top-2 -right-2 inline-flex items-center justify-center w-7 h-7 rounded-full bg-white text-brand-700 text-sm font-bold border border-brand-200 shadow-sm">{s.n}</span>
           </div>
           <h3 class="font-display text-xl text-ink-800 mb-3">{s.title}</h3>
-          <p class="text-ink-500 leading-relaxed text-[0.975rem]">{s.body}</p>
+          <p class="text-ink-500 leading-relaxed text-[0.975rem] [&_a]:text-brand-600 [&_a:hover]:text-brand-500 [&_a]:underline [&_a]:underline-offset-2" set:html={s.body} />
         </div>
       ))}
     </div>
