@@ -92,7 +92,7 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
     introHeading: 'A Local Studio That Knows St. Pete Windows',
     introParagraphs: [
       'St. Petersburg is not a one-size-fits-all town. The 1920s bungalows near Crescent Lake, the waterfront condos along Beach Drive, and the concrete-block ranches in between all bring different window challenges, and salt air off the bay is hard on cheap hardware.',
-      'We have measured, built, and installed window treatments across the city for more than two decades. You are not guessing whether the fit will be right or whether the product survives the humidity. You are working with the team that has already learned what lasts here.',
+      'We have measured, built, and installed window treatments across the city for more than two decades. You are not guessing whether the fit will be right or whether the product survives the humidity. You are working with the team that has already learned what lasts here, whether that means <a href="/services/plantation-shutters/">custom plantation shutters near you in St. Pete</a>, <a href="/services/custom-draperies-curtains/">drapery made and installed by our own workroom</a>, or <a href="/services/window-shades/">interior shades sized to each opening</a>.',
     ],
     introImage: '/images/areas/st-petersburg.webp',
     needsHeading: 'What St. Petersburg Homeowners Need From Custom Fabric Creations',
@@ -177,7 +177,7 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
     introHeading: 'Window Treatments Built for the West-Side Sun',
     introParagraphs: [
       'West St. Pete leans mid-century, which usually means wide windows, big sliders, and a lot of west-facing glass. The afternoon sun here is relentless, and it fades furniture and drives up cooling bills faster than most homeowners expect.',
-      'We design around that. The right mix of <a href="/services/window-shades/">solar shades</a>, <a href="/services/custom-draperies-curtains/">drapery</a>, and <a href="/services/plantation-shutters/">shutters</a> keeps these rooms cool and livable without giving up the light or the view, and we can add <a href="/services/outdoor-window-shades/">outdoor shades for the lanai</a>, <a href="/services/motorized-shades/">motorized shades</a> on the sliders, or new <a href="/services/drapery-hardware/">drapery hardware</a> in the same visit. Every piece is built and installed by our own St. Pete team.',
+      'We design around that. The right mix of <a href="/services/window-shades/">solar shades</a>, <a href="/services/custom-draperies-curtains/">drapery</a>, and <a href="/services/plantation-shutters/">plantation shutters for west-facing windows</a> keeps these rooms cool and livable without giving up the light or the view, and we can add <a href="/services/outdoor-window-shades/">outdoor shades for the lanai</a>, <a href="/services/motorized-shades/">motorized shades</a> on the sliders, or new <a href="/services/drapery-hardware/">drapery hardware</a> in the same visit. Every piece is built and installed by our own St. Pete team.',
       '<a href="/">Custom Fabric Creations</a> has run its workroom on this side of the city since 2000, and our West St. Pete studio is one of two locations serving Pinellas County. You can browse finished installations in our <a href="/gallery/">project gallery</a> or read what neighbors say on our <a href="/reviews/">reviews page</a>.',
     ],
     introImage: '/images/areas/west-st-pete.webp',
