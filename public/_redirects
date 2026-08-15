@@ -45,3 +45,8 @@
 /drapery-hardware           /services/drapery-hardware/                    301
 /bedding                    /services/custom-bedding-pillows/              301
 /re-upholstery              /services/furniture-reupholstery/              301
+
+# Removed at client request (2026-08-12). Redirect preserves any inbound
+# links and search traffic by sending it to the closest equivalent guide.
+/plantation-shutters-regret-downsides    /what-is-a-plantation-shutter/    301
+/plantation-shutters-regret-downsides/   /what-is-a-plantation-shutter/    301

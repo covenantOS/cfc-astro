@@ -30,7 +30,6 @@ const staticPages: Entry[] = [
   // Plantation-shutters guide cluster
   { path: '/plantation-shutters-cost-st-petersburg/',         changefreq: 'monthly', priority: '0.7' },
   { path: '/plantation-shutters-installation-st-petersburg/', changefreq: 'monthly', priority: '0.7' },
-  { path: '/plantation-shutters-regret-downsides/',           changefreq: 'monthly', priority: '0.7' },
 ];
 
 const serviceEntries: Entry[] = SERVICES.map((s) => ({
