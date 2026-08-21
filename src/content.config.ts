@@ -16,6 +16,7 @@ const services = defineCollection({
     faqs: faqSchema,
     // Optional hero EEAT / trust enhancements (opt-in per service).
     heroEyebrow: z.string().optional(),
+    heroImage: z.string().optional(),
     heroBullets: z.array(z.string()).optional(),
     heroShowRating: z.boolean().optional(),
     heroTrustBar: z.boolean().optional(),
