@@ -22,6 +22,9 @@
 /gallery     /gallery/  301
 /services    /services/ 301
 /areas       /areas/    301
+/blog        /blog/     301
+/cornices-vs-valances  /cornices-vs-valances/  301
+/what-is-a-plantation-shutter  /what-is-a-plantation-shutter/  301
 
 # WordPress author/feed artifacts that may have external backlinks
 /author/*    /about/    301

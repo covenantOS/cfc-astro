@@ -1,0 +1,148 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Hero from '~/components/Hero.astro';
+import FAQ from '~/components/FAQ.astro';
+import FinalCTA from '~/components/FinalCTA.astro';
+
+const faqs = [
+  {
+    q: 'What is the difference between a cornice and a valance?',
+    a: 'A cornice is a rigid top treatment: a wooden board, padded, then wrapped in fabric so it reads as a clean architectural box. A valance is a soft fabric top treatment that gathers, pleats, or swags. Both sit at the top of the window and hide hardware. The cornice holds a straight line. The valance moves.',
+  },
+  {
+    q: 'What is a swag valance?',
+    a: 'A swag is a valance style where the fabric is draped in loose curves across the top of the window, often with tails or jabots hanging at the sides. It is the formal, traditional version of a top treatment, common in dining rooms and living rooms that already have full drapery underneath.',
+  },
+  {
+    q: 'Can a cornice or valance go over existing blinds or shades?',
+    a: 'Often, yes. A board-mounted cornice or valance can sit in front of an existing headrail as long as there is enough depth and the proportions work. We check that at the in-home consultation. If the existing treatment sits too far forward, we tell you before anyone builds anything.',
+  },
+  {
+    q: 'How is a custom cornice built?',
+    a: 'In the workroom. We cut a wood board to the measured width, add batting for a padded face, wrap the face fabric so the pattern lands where it should, finish the edges with welt or a contrast band, and build returns so the cornice meets the wall. Then it is hung on the same visit as any drapery it was designed with.',
+  },
+  {
+    q: 'How long does a custom cornice or valance take?',
+    a: 'Most top treatments take three to five weeks from approved fabric to installation, depending on mill lead time and how detailed the design is. A simple tailored valance is faster than a multi-swag treatment with fringe and rosettes. We give a specific window at the estimate.',
+  },
+  {
+    q: 'Do cornices and valances work on bay windows and sliding doors?',
+    a: 'Yes. Bay windows often get a cornice or a run of swags that follow the angles. Sliding glass doors get a wide board-mounted treatment or a swag-and-tail valance that clears the doorway when the panels are open. Those spans are why a workroom builds them rather than a store kit.',
+  },
+  {
+    q: 'How much do custom cornices and valances cost?',
+    a: 'Most custom top treatments in Pinellas County run $250 to $700 per window, depending on size, fabric, and detailing. A simple tailored valance sits at the lower end. An upholstered box cornice or a multi-swag treatment with trim sits higher. The quote is itemized after the consultation.',
+  },
+  {
+    q: 'Do I need drapery under a cornice or valance?',
+    a: 'No. Plenty of kitchens, sunrooms, and bathrooms get a cornice or valance alone over blinds or shades. In a formal living or dining room we usually pair the top treatment with full drapery so the window has a finished top and a finished side. Same workroom, same fabric library, so they match.',
+  },
+];
+---
+
+<BaseLayout
+  title="Cornices vs Valances: Which Top Treatment Fits"
+  description="A cornice is a rigid upholstered box. A valance is soft fabric. How a St. Petersburg workroom builds both, plus swags, and which one belongs on your window."
+  pageType="article"
+  articleDate="2026-08-21"
+  faqs={faqs}
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Guides', url: '/blog/' },
+    { name: 'Cornices vs Valances', url: '/cornices-vs-valances/' },
+  ]}
+  ogImage="/images/new/custom-upholstered-cornices-sunroom.webp"
+>
+  <Hero
+    eyebrow="Guide"
+    title="Cornices vs Valances"
+    image="/images/new/custom-upholstered-cornices-sunroom.webp"
+    breadcrumbs={[
+      { name: 'Home', url: '/' },
+      { name: 'Cornices & Valances', url: '/services/custom-cornices-valances/' },
+      { name: 'Guide', url: '/cornices-vs-valances/' },
+    ]}
+    goldLine
+  />
+
+  <article class="py-20 md:py-28 bg-white">
+    <div class="container-narrow prose-cfc">
+
+  <p>A cornice is a padded wooden box wrapped in fabric and mounted over the top of a window. A valance is a soft fabric treatment that gathers, pleats, or swags in the same place. Both hide the rod or the headrail. Both finish a window that would otherwise look like it stopped halfway. The difference is structure: one holds a straight line, the other moves.</p>
+
+  <p>We build both in the St. Petersburg workroom, next to the <a href="/services/custom-draperies-curtains/">custom drapery</a> that often hangs underneath them. If you are choosing a top treatment and the catalog language is getting in the way, this is the version we use on the shop floor.</p>
+
+  <figure class="my-10">
+    <img src="/images/new/custom-upholstered-cornices-sunroom.webp" alt="Upholstered cornices wrapping a sunroom window bank, built by Custom Fabric Creations in St. Petersburg, FL" title="Upholstered Cornices | Custom Fabric Creations, St. Petersburg, FL" width="900" height="600" loading="lazy" decoding="async" class="w-full rounded-sm" />
+    <figcaption class="mt-3 text-sm text-ink-500">Board-mounted cornices following a sunroom corner, with contrast bands on the face.</figcaption>
+  </figure>
+
+  <h2>A cornice is carpentry that got upholstered</h2>
+
+  <p>Start with a board cut to the measured width of the window, usually a little wider than the glass so the treatment adds scale. We pad the face with batting so the fabric does not read as a wrapped plank. Then the face fabric goes on, pattern matched if it is a print, pulled tight, stapled on the back. Edges get welt, a contrast band, or a tape, depending on the room. Returns wrap the ends so you do not see a raw board from the side of the sofa.</p>
+
+  <p>That is why a cornice looks architectural. It is a small piece of millwork wearing fabric. Modern and transitional rooms like it because the line stays crisp. Kitchens and sunrooms like it because it hides a shade headrail without adding a lot of fabric that collects dust over the sink.</p>
+
+  <p>The same board can sit over <a href="/services/window-shades/">shades</a>, <a href="/services/custom-blinds/">blinds</a>, or <a href="/services/plantation-shutters/">plantation shutters</a>. The hard treatment does the light control. The cornice does the finish. That pairing is one of the cheaper ways to make a functional window look designed.</p>
+
+  <h2>A valance is fabric doing the same job</h2>
+
+  <p>A valance skips the rigid box. The fabric is still mounted on a board so it hangs level, but the face is gathered, knife-pleated, or left as a tailored flat panel. It has movement. It also uses a little more fabric than a cornice of the same width, which is useful when you want a pattern to show without committing to full drapery.</p>
+
+  <p>Tailored valances read clean in kitchens and family rooms. Soft pleated valances suit bedrooms that already have <a href="/services/custom-bedding-pillows/">custom bedding</a> in the same fabric. The workroom part is the same either way: we cut to the window, not to a store size, and we set the drop so the treatment covers the hardware without eating half the glass.</p>
+
+  <figure class="my-10">
+    <img src="/images/new/formal-custom-drapery-swag-valance.webp" alt="Gold swag-and-jabot valance over sheers and floor-length drapery in a St. Petersburg, FL dining room" title="Swag Valance | Custom Fabric Creations, St. Petersburg, FL" width="900" height="600" loading="lazy" decoding="async" class="w-full rounded-sm" />
+    <figcaption class="mt-3 text-sm text-ink-500">Swag and jabot over sheers, with the side panels tied back. Formal dining room work.</figcaption>
+  </figure>
+
+  <h2>Swags, jabots, and the formal version</h2>
+
+  <p>A swag is a valance that has been draped rather than pleated. The fabric falls in loose curves across the top of the window. Tails or jabots hang at the ends. Some designs add fringe, cord, or fabric rosettes at the gather points. This is the treatment people picture when they say "traditional drapery," and it is still one of the more requested looks we sew for dining rooms and living rooms in older <a href="/areas/st-petersburg/">St. Petersburg</a> homes.</p>
+
+  <p>Swags take more patterning than a box cornice. Each curve has to land at the same depth, and the tails have to finish at a length that matches the drapery beside them. That is workroom work. A kit from a catalog cannot follow a bay, a slider, or a window with crown molding in the way.</p>
+
+  <figure class="my-10">
+    <img src="/images/new/custom-swag-valance-sliding-doors.webp" alt="Champagne swag-and-tail valance over sliding glass doors by Custom Fabric Creations in St. Petersburg, FL" title="Swag Valance on Sliding Doors | Custom Fabric Creations, St. Petersburg, FL" width="900" height="600" loading="lazy" decoding="async" class="w-full rounded-sm" />
+    <figcaption class="mt-3 text-sm text-ink-500">Swag and tails on a three-panel slider. The side panels stack off the glass so the door still opens.</figcaption>
+  </figure>
+
+  <h2>Bay windows, sliders, and the openings kits miss</h2>
+
+  <p>A three-section bay is where a top treatment earns its keep. A cornice can be built in three boards that meet at the angles. A swag run can follow the same path, one swag per section. Either way, the rod or the board has to be measured to those corners, which is the same problem we solve on <a href="/drapery-near-me/">custom drapery</a> for bays and bows.</p>
+
+  <p>Sliding glass doors need a different call. The treatment has to clear the doorway when the panels are open. A wide cornice or a swag-and-tail valance can dress the span without blocking the slider, especially when the side drapery is tied back or stacked on a track. We spec the <a href="/services/drapery-hardware/">hardware</a> with the top treatment, not after it, so the returns and the brackets fit the board.</p>
+
+  <p>You can see more of those installs in the <a href="/gallery/">project gallery</a>. The long-form local drapery process, including pricing, is in the <a href="/custom-drapery-st-petersburg/">2026 St. Petersburg drapery guide</a>.</p>
+
+  <h2>Proportion is the whole job</h2>
+
+  <p>A cornice that is too shallow looks like a strip of leftover fabric. One that is too deep darkens the glass and makes a short window feel shorter. The right depth is a ratio of window height and ceiling height, and the right mount is usually above the frame rather than on it. Going up adds height for free. Going a little past the window on each side makes the glass look wider.</p>
+
+  <p>Ready-made valances get this wrong because they come in three drops and two widths. Your window is not one of those numbers. We mock the proportion against the actual opening at the consultation, including crown molding and any impact-window frame that limits where a bracket can go. That visit is the same in-home appointment we use for the rest of the <a href="/window-treatments-st-petersburg/">window treatment</a> lineup.</p>
+
+  <h2>Fabric, trim, and why a top treatment is the place to be bold</h2>
+
+  <p>A cornice or valance uses less yardage than a pair of floor-length panels. That is why we often put the stronger pattern on the top treatment and keep the drapery quieter, or the other way around. Contrast banding, welt, and a Kravet or Stout print that you would not commit to a whole sofa all work here. The fabric library is on our <a href="/brands/">brands page</a>. The useful step is still bringing samples into the room, because afternoon light in Pinellas is not showroom light.</p>
+
+  <p>For west-facing glass we think about lining even on a valance, because the top of the window takes sun all afternoon. For a kitchen, we think about a fabric that can be dusted. Those choices are why the piece still looks right a few summers later.</p>
+
+  <h2>What it costs, without a fake starting price</h2>
+
+  <p>Most custom cornices and valances we install in Pinellas County land between $250 and $700 per window. Fabric, width, and detailing move that number. A simple tailored valance on a standard kitchen window sits near the bottom. An upholstered box cornice on a wide slider, or a multi-swag treatment with fringe, sits near the top. The quote is itemized after we measure. Anything priced before that is a guess.</p>
+
+  <p>The workroom has been doing this work since 2000, which is the part that matters when a mount is awkward. Concrete block, vaulted ceilings, and impact windows are normal here. The board, the fabric, and the installer come from the same studio. If you want to see how we talk about the rest of the process, the <a href="/about/">about page</a> is the short version, and the <a href="/blog/">guides</a> cover the adjacent products.</p>
+
+  <p>If you already know you want a top treatment, start with the <a href="/services/custom-cornices-valances/">cornices and valances</a> service page, or <a href="/contact/">schedule a consultation</a> and we will mock the proportion on your actual window. Call (727) 914-5410 if you would rather talk first.</p>
+
+      <div class="mt-12 p-8 bg-cream-50 border-l-4 border-brand-500">
+        <h3 class="font-display text-2xl text-ink-800 mb-3">Questions About Your Project?</h3>
+        <p class="text-ink-600 mb-5">Call <a href="tel:+17279145410">(727) 914-5410</a> or <a href="/contact/">schedule a free in-home consultation</a>.</p>
+      </div>
+    </div>
+  </article>
+
+  {faqs.length > 0 && <FAQ items={faqs} heading="Frequently Asked Questions" eyebrow="FAQ" subtitle="Common questions about cornices, valances, and swags." />}
+
+  <FinalCTA />
+</BaseLayout>
