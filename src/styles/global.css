@@ -174,6 +174,12 @@ details[open] > summary ~ * {
   object-fit: cover;
 }
 
+/* Tall room photos: keep the seating in frame, not the window header. */
+.prose-cfc img[src*="furniture-reupholstery-2x"],
+.prose-cfc img[src*="furniture-reupholstery/bottom"] {
+  object-position: center 82%;
+}
+
 /* `.not-prose` opt-out: when a component inside .prose-cfc carries the
    `not-prose` class, its descendants should NOT inherit the prose color,
    italic, list, or border styles. Tailwind's @typography plugin handles
