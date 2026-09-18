@@ -32,8 +32,8 @@ const {
   image,
 } = Astro.props;
 
-// Correct geo for St. Petersburg, FL (replaces the Alabama coords in the old WP site)
-const GEO = { latitude: 27.7676, longitude: -82.6403 };
+// Main studio at 5001 4th St N, St. Petersburg, FL 33703
+const GEO = LOCATIONS.central.geo;
 
 const orgId = `${SITE.url}/#organization`;
 const placeId = `${SITE.url}/#place`;
@@ -55,9 +55,10 @@ const localBusiness = {
   description: SITE.description,
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'St. Petersburg',
-    addressRegion: 'FL',
-    postalCode: '33701',
+    streetAddress: LOCATIONS.central.street,
+    addressLocality: LOCATIONS.central.locality,
+    addressRegion: LOCATIONS.central.region,
+    postalCode: LOCATIONS.central.postalCode,
     addressCountry: 'US',
   },
   geo: {
@@ -135,9 +136,10 @@ const place = {
   hasMap: `https://www.google.com/maps/search/?api=1&query=${GEO.latitude},${GEO.longitude}`,
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'St. Petersburg',
-    addressRegion: 'FL',
-    postalCode: '33701',
+    streetAddress: LOCATIONS.central.street,
+    addressLocality: LOCATIONS.central.locality,
+    addressRegion: LOCATIONS.central.region,
+    postalCode: LOCATIONS.central.postalCode,
     addressCountry: 'US',
   },
 };
@@ -210,7 +212,10 @@ if (pageType === 'area' && areaTitle) {
     ],
     address: {
       '@type': 'PostalAddress',
-      addressLocality: areaTitle,
+      ...(areaSlugForLookup === 'st-petersburg' || areaSlugForLookup === 'west-st-pete'
+        ? { streetAddress: branchLocation.street, postalCode: branchLocation.postalCode }
+        : {}),
+      addressLocality: areaSlugForLookup === 'west-st-pete' ? 'St. Petersburg' : areaTitle,
       addressRegion: 'FL',
       addressCountry: 'US',
     },

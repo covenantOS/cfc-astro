@@ -195,6 +195,20 @@ const seoDescription = config.metaDescription ?? config.heroSubtitle;
           {config.localElements.paragraphs.map((p) => (
             <p class="text-ink-600 leading-relaxed mb-4" set:html={p}></p>
           ))}
+          {config.localElements.actions && config.localElements.actions.length > 0 && (
+            <div class="cta-group mt-6">
+              {config.localElements.actions.map((action) => (
+                <a
+                  href={action.href}
+                  class={action.variant === 'primary' ? 'btn-primary' : 'btn-ghost'}
+                  target={action.href.startsWith('http') ? '_blank' : undefined}
+                  rel={action.href.startsWith('http') ? 'noopener' : undefined}
+                >
+                  {action.label}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
         {config.localElements.mapEmbedSrc && (
           <div class="aspect-[4/3] overflow-hidden rounded-lg shadow-card lg:mt-2">

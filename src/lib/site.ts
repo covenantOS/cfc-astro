@@ -9,6 +9,11 @@ export const LOCATIONS = {
     areaSlug: 'st-petersburg',
     phone: '(727) 914-5410',
     phoneHref: 'tel:+17279145410',
+    street: '5001 4th St N',
+    locality: 'St. Petersburg',
+    region: 'FL',
+    postalCode: '33703',
+    geo: { latitude: 27.8214, longitude: -82.6388 },
     // Mon-Sat 9-5 (Sunday closed by omission).
     openingHours: {
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -22,6 +27,11 @@ export const LOCATIONS = {
     areaSlug: 'west-st-pete',
     phone: '(727) 498-2108',
     phoneHref: 'tel:+17274982108',
+    street: '3026 Central Ave Ste 551',
+    locality: 'St. Petersburg',
+    region: 'FL',
+    postalCode: '33712',
+    geo: { latitude: 27.7708, longitude: -82.6664 },
     // West St. Pete GBP: Mon-Sat 8am-8pm, Sunday closed.
     openingHours: {
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -60,8 +70,10 @@ export const SITE = {
   phoneHref: DEFAULT_LOCATION.phoneHref,
   email: 'info@customfabriccreations.net',
   address: {
-    locality: 'St. Petersburg',
-    region: 'FL',
+    street: LOCATIONS.central.street,
+    locality: LOCATIONS.central.locality,
+    region: LOCATIONS.central.region,
+    postalCode: LOCATIONS.central.postalCode,
     country: 'US',
   },
   hours: 'Monday-Saturday, 7:00am-7:00pm',
@@ -82,6 +94,7 @@ export const NAV: ReadonlyArray<{ label: string; href: string; children?: Readon
       { label: 'Cornices & Valances', href: '/services/custom-cornices-valances/' },
       { label: 'Drapery Hardware', href: '/services/drapery-hardware/' },
       { label: 'Outdoor Window Shades', href: '/services/outdoor-window-shades/' },
+      { label: 'Wallpaper', href: '/services/wallpaper/' },
       { label: 'Furniture Reupholstery', href: '/services/furniture-reupholstery/' },
       { label: 'Custom Bedding & Pillows', href: '/services/custom-bedding-pillows/' },
       { label: 'Custom Banquettes', href: '/services/custom-banquettes/' },
@@ -115,6 +128,7 @@ export const SERVICES = [
   { slug: 'custom-cornices-valances', title: 'Cornices & Valances' },
   { slug: 'drapery-hardware', title: 'Drapery Hardware' },
   { slug: 'outdoor-window-shades', title: 'Outdoor Window Shades' },
+  { slug: 'wallpaper', title: 'Wallpaper' },
   { slug: 'motorized-shades', title: 'Motorized Shades' },
   { slug: 'furniture-reupholstery', title: 'Furniture Reupholstery' },
   { slug: 'custom-bedding-pillows', title: 'Custom Bedding & Pillows' },

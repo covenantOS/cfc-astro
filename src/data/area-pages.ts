@@ -77,6 +77,7 @@ export interface AreaPageConfig {
     heading: string;
     paragraphs: string[];
     mapEmbedSrc?: string;
+    actions?: { label: string; href: string; variant?: 'primary' | 'ghost' }[];
   };
 }
 
@@ -124,6 +125,7 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
       { title: 'Window Shades', href: '/services/window-shades/', body: 'Solar, cellular, and Roman shades for cutting heat and glare on bright exposures without losing the view.' },
       { title: 'Furniture Reupholstery', href: '/services/furniture-reupholstery/', body: 'Reupholster heirloom and statement pieces in performance fabrics, coordinated with your new window treatments.' },
       { title: 'Motorized Shades', href: '/services/motorized-shades/', body: 'Remote, app, and voice control for the windows you run daily and the transoms you cannot reach at all.' },
+      { title: 'Wallpaper', href: '/services/wallpaper/', body: 'Custom wallpaper, grasscloth, and vinyl hung on St. Pete walls that are rarely square and never dry-wall-video flat.' },
     ],
     processHeading: 'How It Works in St. Petersburg',
     processIntro: 'A straightforward process, from the first call to the final walk-through.',
@@ -161,7 +163,21 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
       { q: 'Can you install on concrete-block walls?', a: 'Yes. Much of St. Pete is block construction. We anchor into block correctly so shutters and hardware sit flush and stay put, without cracking the surrounding finish.' },
       { q: 'Do you handle arched, transom, and floor-to-ceiling windows?', a: 'Yes. Specialty shapes are common in St. Pete homes. We template and build to the exact opening, including arches, transoms, and full-height sliders.' },
       { q: 'How long does a project take?', a: 'Most custom orders run a few weeks from approval to install, depending on the product and any specialty shapes. We give you a clear timeline before anything is ordered.' },
+      { q: 'Where is your St. Petersburg studio?', a: 'The main studio is at 5001 4th St N, St. Petersburg, FL 33703. Call (727) 914-5410. We still bring samples to your house. The address is where you find us, not a replacement for seeing the room in your light.' },
     ],
+    localElements: {
+      heading: 'Our St. Petersburg Studio',
+      paragraphs: [
+        'Custom Fabric Creations is at <strong>5001 4th St N, St. Petersburg, FL 33703</strong>. Phone <a href="tel:+17279145410" class="text-brand-600 hover:text-brand-500">(727) 914-5410</a>. This is the main studio for window treatments, wallpaper, and upholstery. Consultations still happen in your home.',
+        'We also keep a West St. Pete studio at 3026 Central Ave Ste 551, St. Petersburg, FL 33712. See <a href="/areas/west-st-pete/" class="text-brand-600 hover:text-brand-500">West St. Pete</a> for that location.',
+      ],
+      mapEmbedSrc: 'https://www.google.com/maps?q=5001+4th+St+N,+St.+Petersburg,+FL+33703&output=embed',
+      actions: [
+        { label: 'Get Directions', href: 'https://www.google.com/maps/dir/?api=1&destination=5001+4th+St+N,+St.+Petersburg,+FL+33703', variant: 'primary' },
+        { label: 'Call (727) 914-5410', href: 'tel:+17279145410', variant: 'ghost' },
+        { label: 'Schedule Consultation', href: '/contact/', variant: 'ghost' },
+      ],
+    },
   },
 
   'west-st-pete': {
