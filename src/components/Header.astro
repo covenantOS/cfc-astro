@@ -66,9 +66,12 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog',
     <nav class="hidden lg:flex items-center gap-8" aria-label="Primary">
       {primary.map((item) => (
         item.label === 'Services' ? (
-          <div class="group">
+          <div class="mega-root" data-mega="services">
             <a
               href={item.href}
+              data-mega-trigger
+              aria-expanded="false"
+              aria-haspopup="true"
               class:list={[
                 'flex items-center gap-1 text-sm font-semibold tracking-wider uppercase transition py-8',
                 isActive(item.href) ? 'text-brand-400' : 'text-white hover:text-brand-300',
@@ -80,7 +83,7 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog',
                 <path d="M1.5 4L6 8L10.5 4"/>
               </svg>
             </a>
-            <div class="absolute left-0 right-0 top-full z-50 opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto transition">
+            <div data-mega-panel class="mega-panel absolute left-0 right-0 top-full z-50">
               <div class="bg-cream-50 border-t border-brand-500/20 shadow-soft">
                 <div class="container-site py-8">
                   <p class="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-ink-500 mb-5">Featured services</p>
@@ -117,9 +120,12 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog',
             </div>
           </div>
         ) : item.label === 'Areas' ? (
-          <div class="group">
+          <div class="mega-root" data-mega="areas">
             <a
               href={item.href}
+              data-mega-trigger
+              aria-expanded="false"
+              aria-haspopup="true"
               class:list={[
                 'flex items-center gap-1 text-sm font-semibold tracking-wider uppercase transition py-8',
                 isActive(item.href) ? 'text-brand-400' : 'text-white hover:text-brand-300',
@@ -131,7 +137,7 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog',
                 <path d="M1.5 4L6 8L10.5 4"/>
               </svg>
             </a>
-            <div class="absolute left-0 right-0 top-full z-50 opacity-0 invisible pointer-events-none group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto transition">
+            <div data-mega-panel class="mega-panel absolute left-0 right-0 top-full z-50">
               <div class="bg-cream-50 border-t border-brand-500/20 shadow-soft">
                 <div class="container-site py-8 grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] items-start">
                   <div class="grid grid-cols-[minmax(0,1.35fr)_minmax(0,0.75fr)] gap-4">
@@ -150,21 +156,29 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog',
                       <p class="font-display text-2xl text-ink-800 group-hover/card:text-brand-700">{MEGA_SHOWROOM.title}</p>
                       <p class="mt-1 text-sm text-ink-600 leading-relaxed">{MEGA_SHOWROOM.body}</p>
                     </a>
-                    <a href={MEGA_WEST.href} class="group/card block">
-                      <div class="aspect-[4/3] overflow-hidden rounded-lg bg-ink-100 mb-3">
-                        <img
-                          src={MEGA_WEST.image}
-                          alt="Custom Fabric Creations West St. Pete studio, 3026 Central Ave Ste 551"
-                          class="w-full h-full object-cover transition duration-500 group-hover/card:scale-[1.03]"
-                          loading="lazy"
-                          decoding="async"
-                          width="400"
-                          height="300"
-                        />
-                      </div>
-                      <p class="font-display text-lg text-ink-800 group-hover/card:text-brand-700">{MEGA_WEST.title}</p>
-                      <p class="mt-1 text-sm text-ink-600 leading-relaxed">{MEGA_WEST.body}</p>
-                    </a>
+                    <div>
+                      <a href={MEGA_WEST.href} class="group/card block">
+                        <div class="aspect-[4/3] overflow-hidden rounded-lg bg-ink-100 mb-3">
+                          <img
+                            src={MEGA_WEST.image}
+                            alt="Custom Fabric Creations West St. Pete studio, 3026 Central Ave Ste 551"
+                            class="w-full h-full object-cover transition duration-500 group-hover/card:scale-[1.03]"
+                            loading="lazy"
+                            decoding="async"
+                            width="400"
+                            height="300"
+                          />
+                        </div>
+                        <p class="font-display text-lg text-ink-800 group-hover/card:text-brand-700">{MEGA_WEST.title}</p>
+                        <p class="mt-1 text-sm text-ink-600 leading-relaxed">{MEGA_WEST.body}</p>
+                      </a>
+                      <a
+                        href="https://www.google.com/maps/dir/?api=1&destination=3026+Central+Ave+Ste+551,+St.+Petersburg,+FL+33712"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn-primary mt-4 inline-flex text-sm"
+                      >Get directions</a>
+                    </div>
                   </div>
                   <div>
                     <p class="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-ink-500 mb-4">Areas we serve</p>
@@ -294,6 +308,20 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog',
   </div>
 </header>
 
+<style is:global>
+  .mega-panel {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 120ms ease, visibility 120ms ease;
+  }
+  .mega-root.is-open .mega-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+</style>
+
 <script>
   const toggle = document.getElementById('mobile-nav-toggle');
   const panel = document.getElementById('mobile-nav');
@@ -343,10 +371,60 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog',
 
   toggle?.addEventListener('click', () => setOpen(!isOpen));
 
-  // Close on Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && isOpen) setOpen(false);
+  // Desktop mega menus stay open while the pointer travels from the tab
+  // into the panel. CSS :hover dies in that gap. A short close delay does not.
+  const megaRoots = Array.from(document.querySelectorAll<HTMLElement>('.mega-root'));
+  let megaCloseTimer: number | undefined;
+
+  function setMegaOpen(root: HTMLElement, open: boolean) {
+    root.classList.toggle('is-open', open);
+    root.querySelector('[data-mega-trigger]')?.setAttribute('aria-expanded', String(open));
+  }
+
+  function closeAllMegas(except?: HTMLElement) {
+    megaRoots.forEach((root) => {
+      if (root !== except) setMegaOpen(root, false);
+    });
+  }
+
+  function scheduleMegaClose(root: HTMLElement) {
+    window.clearTimeout(megaCloseTimer);
+    megaCloseTimer = window.setTimeout(() => setMegaOpen(root, false), 400);
+  }
+
+  megaRoots.forEach((root) => {
+    const panelEl = root.querySelector<HTMLElement>('[data-mega-panel]');
+    const trigger = root.querySelector<HTMLElement>('[data-mega-trigger]');
+    const watch = [trigger, panelEl].filter(Boolean) as HTMLElement[];
+
+    watch.forEach((el) => {
+      el.addEventListener('mouseenter', () => {
+        window.clearTimeout(megaCloseTimer);
+        closeAllMegas(root);
+        setMegaOpen(root, true);
+      });
+      el.addEventListener('mouseleave', (e) => {
+        const next = e.relatedTarget as Node | null;
+        if (next && (root.contains(next) || panelEl?.contains(next))) return;
+        scheduleMegaClose(root);
+      });
+    });
+
+    trigger?.addEventListener('focus', () => {
+      window.clearTimeout(megaCloseTimer);
+      closeAllMegas(root);
+      setMegaOpen(root, true);
+    });
   });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllMegas();
+      if (isOpen) setOpen(false);
+    }
+  });
+
+  // Close after tapping any link so navigation feels smooth on slow connections.
 
   // Close after tapping any link so navigation feels smooth on slow connections.
   // We unlock scroll first so iOS Safari doesn't carry the lock into the next
