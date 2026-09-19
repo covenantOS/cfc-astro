@@ -240,7 +240,8 @@ const derivedTitle = imageTitle ?? derivedAlt;
       </aside>
     )}
   </div>
+  {goldLine && <div class="relative h-[3px] w-full bg-brand-500"></div>}
+  {bend && video && <HeroBend nextBg={bendColor} cutout />}
 </section>
 
-{goldLine && <div class="h-[3px] w-full bg-brand-500"></div>}
-{bend && <HeroBend nextBg={bendColor} />}
+{bend && !video && <HeroBend nextBg={bendColor} />}
