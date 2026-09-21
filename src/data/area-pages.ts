@@ -125,7 +125,7 @@ export const AREA_PAGES: Record<string, AreaPageConfig> = {
       { title: 'Window Shades', href: '/services/window-shades/', body: 'Solar, cellular, and Roman shades for cutting heat and glare on bright exposures without losing the view.' },
       { title: 'Furniture Reupholstery', href: '/services/furniture-reupholstery/', body: 'Reupholster heirloom and statement pieces in performance fabrics, coordinated with your new window treatments.' },
       { title: 'Motorized Shades', href: '/services/motorized-shades/', body: 'Remote, app, and voice control for the windows you run daily and the transoms you cannot reach at all.' },
-      { title: 'Wallpaper', href: '/services/wallpaper/', body: 'Custom wallpaper, grasscloth, and vinyl hung on St. Pete walls that are rarely square and never dry-wall-video flat.' },
+      { title: 'Wallpaper', href: '/services/wallpaper/', body: 'Designer wallpaper, grasscloth, and vinyl we sell for St. Pete rooms. Samples in your house, next to the fabric and the light.' },
     ],
     processHeading: 'How It Works in St. Petersburg',
     processIntro: 'A straightforward process, from the first call to the final walk-through.',
