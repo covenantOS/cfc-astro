@@ -138,34 +138,36 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog',
             </a>
             <div data-mega-panel class="mega-panel absolute left-0 right-0 top-full z-50">
               <div class="bg-cream-50 border-t border-brand-500/20 shadow-soft">
-                <div class="container-site py-5 grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] items-start">
-                  <a href={MEGA_SHOWROOM.href} class="group/card block max-w-sm">
-                    <div class="h-32 overflow-hidden rounded-md bg-ink-100 mb-2">
-                      <img
-                        src={MEGA_SHOWROOM.image}
-                        alt="Custom Fabric Creations showroom, 5001 4th St N, St. Petersburg, FL"
-                        class="w-full h-full object-cover transition duration-500 group-hover/card:scale-[1.03]"
-                        loading="lazy"
-                        decoding="async"
-                        width="480"
-                        height="192"
-                      />
-                    </div>
-                    <p class="font-display text-lg text-ink-800 group-hover/card:text-brand-700">{MEGA_SHOWROOM.title}</p>
-                    <p class="mt-1 text-xs text-ink-600 leading-relaxed">{MEGA_SHOWROOM.body}</p>
-                  </a>
-                  <div>
-                    <p class="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-ink-500 mb-3">Areas we serve</p>
-                    <ul class="grid grid-cols-2 gap-x-6 gap-y-2">
-                      {MEGA_AREA_LINKS.map((a) => (
-                        <li>
-                          <a href={`/areas/${a.slug}/`} class="text-sm text-ink-700 hover:text-brand-700">{a.title}</a>
+                <div class="container-site py-5">
+                  <div class="flex flex-wrap items-start gap-5">
+                    <a href={MEGA_SHOWROOM.href} class="group/card block w-56 shrink-0">
+                      <div class="h-28 overflow-hidden rounded-md bg-ink-100 mb-2">
+                        <img
+                          src={MEGA_SHOWROOM.image}
+                          alt="Custom Fabric Creations showroom, 5001 4th St N, St. Petersburg, FL"
+                          class="w-full h-full object-cover transition duration-500 group-hover/card:scale-[1.03]"
+                          loading="lazy"
+                          decoding="async"
+                          width="480"
+                          height="192"
+                        />
+                      </div>
+                      <p class="font-display text-lg text-ink-800 group-hover/card:text-brand-700">{MEGA_SHOWROOM.title}</p>
+                      <p class="mt-1 text-xs text-ink-600 leading-relaxed">{MEGA_SHOWROOM.body}</p>
+                    </a>
+                    <div class="min-w-0 max-w-md">
+                      <p class="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-ink-500 mb-3">Areas we serve</p>
+                      <ul class="grid grid-cols-2 gap-x-5 gap-y-1.5">
+                        {MEGA_AREA_LINKS.map((a) => (
+                          <li>
+                            <a href={`/areas/${a.slug}/`} class="text-sm text-ink-700 hover:text-brand-700">{a.title}</a>
+                          </li>
+                        ))}
+                        <li class="col-span-2 pt-1">
+                          <a href="/areas/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">All areas</a>
                         </li>
-                      ))}
-                      <li class="col-span-2 pt-2">
-                        <a href="/areas/" class="text-sm font-semibold text-brand-700 hover:text-brand-800">All areas</a>
-                      </li>
-                    </ul>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
