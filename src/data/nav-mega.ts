@@ -48,13 +48,6 @@ export const MEGA_SHOWROOM = {
   body: '5001 4th St N, St. Petersburg. Window treatments, wallpaper, and upholstery. We still come to your house.',
 } as const;
 
-export const MEGA_WEST = {
-  title: 'West St. Pete',
-  href: '/areas/west-st-pete/',
-  image: '/images/areas/west-st-pete.webp',
-  body: '3026 Central Ave Ste 551. Our second St. Pete studio.',
-} as const;
-
-const featuredAreaSlugs = new Set(['st-petersburg', 'west-st-pete']);
+const featuredAreaSlugs = new Set(['st-petersburg']);
 
 export const MEGA_AREA_LINKS = AREAS.filter((a) => !featuredAreaSlugs.has(a.slug));

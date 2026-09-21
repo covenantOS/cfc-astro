@@ -4,7 +4,6 @@ import {
   MEGA_FEATURED_SERVICES,
   MEGA_MORE_SERVICES,
   MEGA_SHOWROOM,
-  MEGA_WEST,
   MEGA_AREA_LINKS,
 } from '~/data/nav-mega';
 
@@ -139,47 +138,22 @@ const primary = NAV.filter(n => ['Home', 'Services', 'Areas', 'Gallery', 'Blog',
             </a>
             <div data-mega-panel class="mega-panel absolute left-0 right-0 top-full z-50">
               <div class="bg-cream-50 border-t border-brand-500/20 shadow-soft">
-                <div class="container-site py-5 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] items-start">
-                  <div class="grid grid-cols-[minmax(0,1.25fr)_minmax(0,0.85fr)] gap-3">
-                    <a href={MEGA_SHOWROOM.href} class="group/card block">
-                      <div class="h-32 overflow-hidden rounded-md bg-ink-100 mb-2">
-                        <img
-                          src={MEGA_SHOWROOM.image}
-                          alt="Custom Fabric Creations showroom, 5001 4th St N, St. Petersburg, FL"
-                          class="w-full h-full object-cover transition duration-500 group-hover/card:scale-[1.03]"
-                          loading="lazy"
-                          decoding="async"
-                          width="480"
-                          height="192"
-                        />
-                      </div>
-                      <p class="font-display text-lg text-ink-800 group-hover/card:text-brand-700">{MEGA_SHOWROOM.title}</p>
-                      <p class="mt-1 text-xs text-ink-600 leading-relaxed">{MEGA_SHOWROOM.body}</p>
-                    </a>
-                    <div>
-                      <a href={MEGA_WEST.href} class="group/card block">
-                        <div class="h-24 overflow-hidden rounded-md bg-ink-100 mb-2">
-                          <img
-                            src={MEGA_WEST.image}
-                            alt="Custom Fabric Creations West St. Pete studio, 3026 Central Ave Ste 551"
-                            class="w-full h-full object-cover transition duration-500 group-hover/card:scale-[1.03]"
-                            loading="lazy"
-                            decoding="async"
-                            width="320"
-                            height="144"
-                          />
-                        </div>
-                        <p class="font-display text-sm text-ink-800 group-hover/card:text-brand-700">{MEGA_WEST.title}</p>
-                        <p class="mt-1 text-xs text-ink-600 leading-relaxed">{MEGA_WEST.body}</p>
-                      </a>
-                      <a
-                        href="https://www.google.com/maps/dir/?api=1&destination=3026+Central+Ave+Ste+551,+St.+Petersburg,+FL+33712"
-                        target="_blank"
-                        rel="noopener"
-                        class="btn-primary mt-3 inline-flex text-xs px-4 py-2"
-                      >Get directions</a>
+                <div class="container-site py-5 grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] items-start">
+                  <a href={MEGA_SHOWROOM.href} class="group/card block max-w-sm">
+                    <div class="h-32 overflow-hidden rounded-md bg-ink-100 mb-2">
+                      <img
+                        src={MEGA_SHOWROOM.image}
+                        alt="Custom Fabric Creations showroom, 5001 4th St N, St. Petersburg, FL"
+                        class="w-full h-full object-cover transition duration-500 group-hover/card:scale-[1.03]"
+                        loading="lazy"
+                        decoding="async"
+                        width="480"
+                        height="192"
+                      />
                     </div>
-                  </div>
+                    <p class="font-display text-lg text-ink-800 group-hover/card:text-brand-700">{MEGA_SHOWROOM.title}</p>
+                    <p class="mt-1 text-xs text-ink-600 leading-relaxed">{MEGA_SHOWROOM.body}</p>
+                  </a>
                   <div>
                     <p class="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-ink-500 mb-3">Areas we serve</p>
                     <ul class="grid grid-cols-2 gap-x-6 gap-y-2">
